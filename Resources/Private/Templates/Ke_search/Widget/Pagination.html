@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:kesearch="http://typo3.org/ns/Tpwd/KeSearch/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:spaceless>
+    <div class="pagination">
+        <ul  class="list-pagination">
+            <li>
+                <kesearch:link piVars="{page: pagination.previous}" keepPiVars="1" class="arrow-previous {f:if(condition: '{pagination.previous}', then: '', else: 'disabled')}">
+                </kesearch:link>
+            </li>
+            <f:for each="{pagination.pages}" as="page">
+                <li class="text-xlarge">
+                    <kesearch:link piVars="{page: page}" keepPiVars="1" class="{f:if(condition: '{page} == {pagination.currentPage}', then: 'current')} text-xlarge">{page}</kesearch:link>
+                </li>
+            </f:for>
+            <li>
+                <kesearch:link piVars="{page: pagination.next}" keepPiVars="1" class="arrow-next {f:if(condition: '{pagination.next}', then: '', else: 'disabled')}"> </kesearch:link>
+            </li>
+        </ul>
+    </div>
+</f:spaceless>

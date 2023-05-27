@@ -1,0 +1,234 @@
+-----------------------------------------------
+------------------- COLORS --------------------
+-----------------------------------------------
+
+color-blue: '#0C3766',
+color-blue-1: '#05254B',
+color-blue-2: '#082B53',
+color-blue-3: '#08315D',
+color-blue-4: '#0D3767',
+color-blue-hover: '#001C3B',
+color-blue-hover-opacity: '#001c3b40',
+color-white: '#fff',
+color-black: '#000',
+color-grey: '#E6E7E9',
+color-light-grey: '#EAEDF2',
+color-dark-grey: '#8694A1',
+color-green: '#8BA188',
+color-brown: '#3A3A3A',
+color-light-brown: '#A8917B',
+color-powder: '#AB7F81',
+color-trugreen: '#BBD03A',
+color-transparent: 'transparent',
+
+****************************
+******  For Background
+****************************
+
+bg-color-blue: '#0C3766',
+bg-color-blue-1: '#05254B',
+bg-color-blue-2: '#082B53',
+bg-color-blue-3: '#08315D',
+bg-color-blue-4: '#0D3767',
+bg-color-blue-hover: '#001C3B',
+bg-color-blue-hover-opacity: '#001c3b40',
+bg-color-white: '#fff',
+bg-color-black: '#000',
+bg-color-grey: '#E6E7E9',
+bg-color-light-grey: '#EAEDF2',
+bg-color-dark-grey: '#8694A1',
+bg-color-green: '#8BA188',
+bg-color-brown: '#3A3A3A',
+bg-color-light-brown: '#A8917B',
+bg-color-powder: '#AB7F81',
+bg-color-trugreen: '#BBD03A',
+bg-color-transparent: 'transparent',
+
+
+****************************
+******  For Text
+****************************
+
+text-color-blue: '#0C3766',
+text-color-blue-1: '#05254B',
+text-color-blue-2: '#082B53',
+text-color-blue-3: '#08315D',
+text-color-blue-4: '#0D3767',
+text-color-blue-hover: '#001C3B',
+text-color-blue-hover-opacity: '#001c3b40',
+text-color-white: '#fff',
+text-color-black: '#000',
+text-color-grey: '#E6E7E9',
+text-color-light-grey: '#EAEDF2',
+text-color-dark-grey: '#8694A1',
+text-color-green: '#8BA188',
+text-color-brown: '#3A3A3A',
+text-color-light-brown: '#A8917B',
+text-color-powder: '#AB7F81',
+text-color-trugreen: '#BBD03A',
+text-color-transparent: 'transparent',
+
+
+
+
+
+-----------------------------------------------
+------------------- BUTTONS -------------------
+-----------------------------------------------
+
+btn-(color)
+btn-(color)-outlined
+btn-(color)-single-icon
+
+
+
+
+
+-----------------------------------------------
+------------------ HEADER BTN -----------------
+-----------------------------------------------
+
+header-btn
+
+<a class="header-btn" href="">
+    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="40.304" viewBox="0 0 52.96 40.304">
+        <g id="envelope" transform="translate(0 0)">
+            <g id="Group_83" data-name="Group 83" transform="translate(0 0)">
+            <path id="Path_5005" data-name="Path 5005" d="M46.5,57.75H6.476A6.482,6.482,0,0,0,0,64.226V91.577a6.482,6.482,0,0,0,6.476,6.476H46.484a6.482,6.482,0,0,0,6.476-6.476V64.237A6.475,6.475,0,0,0,46.5,57.75Zm3.518,33.827A3.522,3.522,0,0,1,46.5,95.095H6.476a3.522,3.522,0,0,1-3.518-3.518V64.237A3.522,3.522,0,0,1,6.476,60.72H46.484A3.522,3.522,0,0,1,50,64.237v27.34Z" transform="translate(0 -57.75)"/>
+            <path id="Path_5006" data-name="Path 5006" d="M83.043,123.109,96,111.494a1.482,1.482,0,0,0-1.983-2.2L76.151,125.323l-3.485-3.112c-.011-.011-.022-.022-.022-.033a2.192,2.192,0,0,0-.241-.208L58.223,109.28a1.482,1.482,0,0,0-1.972,2.214l13.106,11.714L56.306,135.426a1.485,1.485,0,0,0-.066,2.093,1.514,1.514,0,0,0,1.085.471,1.483,1.483,0,0,0,1.008-.395L71.581,125.2l3.594,3.211a1.476,1.476,0,0,0,1.972-.011l3.693-3.309,13.172,12.514a1.483,1.483,0,0,0,2.093-.055,1.485,1.485,0,0,0-.055-2.093Z" transform="translate(-49.643 -103.297)"/>
+            </g>
+        </g>
+    </svg>
+    <span>KONTAKT</span>
+</a>
+
+
+
+
+
+-----------------------------------------------
+--------------- SQUARE BUTTONS ----------------
+-----------------------------------------------
+square btn-(color)      
+square btn-(color)-outlined      
+
+
+
+
+-----------------------------------------------
+------------------- TITLES --------------------
+-----------------------------------------------
+title
+title-underline
+title-rectangle
+title-rectangle-w-underline
+
+
+
+
+-----------------------------------------------
+------------------ FONT SIZE ------------------
+-----------------------------------------------
+text-xs	
+    font-size: 0.75rem; /* 12px */
+    line-height: 1rem; /* 16px */
+
+text-sm	
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
+
+text-base	
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem; /* 24px */
+
+text-lg	
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
+
+text-xl	
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+
+text-2xl	
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+
+text-3xl	
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
+
+text-4xl	
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.5rem; /* 40px */
+
+text-5xl	
+    font-size: 3rem; /* 48px */
+    line-height: 1;
+
+text-6xl	
+    font-size: 3.75rem; /* 60px */
+    line-height: 1;
+
+text-7xl	
+    font-size: 4.5rem; /* 72px */
+    line-height: 1;
+
+text-8xl	
+    font-size: 6rem; /* 96px */
+    line-height: 1;
+
+text-9xl
+    -size: 8rem; /* 128px */
+    line-height: 1;
+
+
+
+
+
+
+-----------------------------------------------
+------------ TAILWIN GRID SYSTEM --------------
+-----------------------------------------------
+
+grid-cols-1       ----->      grid-template-columns: repeat(1, minmax(0, 1fr));
+grid-cols-2       ----->      grid-template-columns: repeat(2, minmax(0, 1fr));
+grid-cols-3       ----->      grid-template-columns: repeat(3, minmax(0, 1fr));
+grid-cols-4       ----->      grid-template-columns: repeat(4, minmax(0, 1fr));
+grid-cols-5       ----->      grid-template-columns: repeat(5, minmax(0, 1fr));
+grid-cols-6       ----->      grid-template-columns: repeat(6, minmax(0, 1fr));
+grid-cols-7       ----->      grid-template-columns: repeat(7, minmax(0, 1fr));
+grid-cols-8       ----->      grid-template-columns: repeat(8, minmax(0, 1fr));
+grid-cols-9       ----->      grid-template-columns: repeat(9, minmax(0, 1fr));
+grid-cols-10      ----->      grid-template-columns: repeat(10, minmax(0, 1fr));
+grid-cols-11      ----->      grid-template-columns: repeat(11, minmax(0, 1fr));
+grid-cols-12      ----->      grid-template-columns: repeat(12, minmax(0, 1fr));
+grid-cols-none    ----->      grid-template-columns: none;
+
+
+3 3 3 3    --->   parent = grid-cols-12     each-child = col-span-3
+4 4 4      --->   parent = grid-cols-12     each-child = col-span-3
+9 3        --->   parent = grid-cols-12     first-chils = col-span-9    second-child = col-span-3
+
+
+<div> ---> parent
+    <div></div> ---> first child
+    <div></div> ---> second child
+</div>
+
+
+<div class="grid-9_3 grid-cols-12">
+    <div class="col-span-9"></div>
+    <div class="sol-span-3"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="c{data.uid}" class="ce-share-links">
+    <div class="ce-texts">
+        <f:variable name="currentUrl"> <f:cObject typoscriptObjectPath="lib.currentURL" /> </f:variable>
+        <p class="placeholder-text-bold">
+            teilen
+        </p>
+        <f:variable name="url">
+            <f:uri.page addQueryString="true" absolute="true" />
+        </f:variable>
+        <a class="icon-twitter-blue " href="https://twitter.com/share?url={currentUrl}">Twitter</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={currentUrl}" class="icon-facebook-blue">Facebook</a>
+
+        <a href="https://www.linkedin.com/shareArticle/?mini=true&url={currentUrl}" class="icon-linkedin-blue">Linked:in</a>
+        <a href="whatsapp://send?text={currentUrl}" data-action="share/whatsapp/share" class="icon-whatsapp-blue">Whatsapp</a>
+        <a href="mailto:?&subject=&cc=&bcc=&body={currentUrl}" class="icon-email-blue">Mail</a>
+    </div>
+</div>
+
+</html>

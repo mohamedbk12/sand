@@ -1,0 +1,17 @@
+###############################################
+#### CE WIZARD: Full Width Image Download #####
+###############################################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_fullwidthimagedownload {
+            iconIdentifier = sandsitepackage-fullwidthimagedownload
+            title = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.fullwidthimagedownload
+            description = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.fullwidthimagedownload.description
+            tt_content_defValues {
+                CType = sandsitepackage_fullwidthimagedownload
+            }
+        }
+    }
+    show := addToList(sandsitepackage_fullwidthimagedownload)
+}

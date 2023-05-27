@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="main-slider slider-type-5-container relative default-container mx-auto mt-80" id="c{data.uid}">
+
+    <div class="swiper slider-type-5 swiper-initialized swiper-horizontal swiper-backface-hidden">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper" id="swiper-wrapper-d3c693d764ef55ab" aria-live="polite">
+            <f:for each="{records}" as="item">
+                <div class="swiper-slide" role="group" 
+                    style="width: 1519px;">
+                    <f:if condition="{item.image.0}">
+                        <div class="img">
+                            <f:image image="{item.image.0}" alt="alt text" />
+                        </div>
+                    </f:if>
+                    <div class="slider-right">
+                        <f:for each="{item.records}" as="item">
+                            <div class="bg-color-{item.data.color_select}">
+                                <h3 class="content-title">{item.data.header}</h3>
+                                <p class="content-paragraph">{item.data.subheader}</p>
+                             
+                                <f:link.typolink parameter="{item.data.link}" class="btn-{f:if(condition: '{item.data.color_select} == blue', then: 'white', else: 'blue')}-outlined">
+                                    {item.data.link_text}
+                                </f:link.typolink>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+    <!-- If we need navigation buttons -->
+    <div class="slider-prev slider-arr" tabindex="0" role="button" aria-label="Previous slide"
+        aria-controls="swiper-wrapper-d3c693d764ef55ab">
+        <svg id="back" xmlns="http://www.w3.org/2000/svg" width="12.565" height="23.779" viewBox="0 0 12.565 23.779">
+            <path id="Path_5002" data-name="Path 5002"
+                d="M114.141,11.889,124.88,1.15A.673.673,0,1,0,123.929.2L112.711,11.416a.671.671,0,0,0,0,.952L123.929,23.58a.677.677,0,0,0,.473.2.656.656,0,0,0,.473-.2.671.671,0,0,0,0-.952Z"
+                transform="translate(-112.513 0)"></path>
+        </svg>
+    </div>
+    <div class="slider-next slider-arr" tabindex="0" role="button" aria-label="Next slide"
+        aria-controls="swiper-wrapper-d3c693d764ef55ab">
+        <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="12.561" height="23.779" viewBox="0 0 12.561 23.779">
+            <path id="Path_5004" data-name="Path 5004"
+                d="M124.923,11.416,113.706.2a.673.673,0,0,0-.952.952l10.739,10.739L112.754,22.628a.675.675,0,0,0,.473,1.151.656.656,0,0,0,.473-.2l11.217-11.217A.669.669,0,0,0,124.923,11.416Z"
+                transform="translate(-112.556 0)"></path>
+        </svg>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <main>
+        <div class="layout-sidebar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 main">
+                        <!-- text section-->
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent"
+                            data="{pageUid: '{data.uid}', colPos: '2'}" />
+                    </div>
+                    <div class="col-lg-4 sidebar">
+                        <!-- sidebar section-->
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent"
+                            data="{pageUid: '{data.uid}', colPos: '3'}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Section -->
+        <div id="main">
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}" />
+        </div>
+    </main>
+
+</f:section>
+
+</html>

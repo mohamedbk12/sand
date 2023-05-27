@@ -1,0 +1,3121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'DINpro black';
+    src: url('../font/DINPro-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DINpro bold';
+    src: url('../font/DINPro-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DINpro light';
+    src: url('../font/DINPro-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DINpro medium';
+    src: url('../font/DINPro-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DINpro';
+    src: url('./font/DINPro.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'handtext';
+    src: url('../font/hand-font.ttf') format('truetype');
+}
+
+
+@layer components {
+
+    select::-ms-expand {
+        display: none;
+    }
+    
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+    }
+
+
+    /*-------------------------------------
+    --------------- GLOBAL  ---------------
+    -------------------------------------*/
+    body{
+        touch-action: manipulation;
+        @apply overflow-x-hidden DINpro-light
+    }
+
+    .no-scroll{
+        overflow: hidden !important;
+    }
+    
+    .d-none{
+        display: none !important;
+    }
+
+    .hidden-area:not(.active){
+        display: none;
+    }
+
+    .default-container{
+        @apply max-w-1920 mx-auto
+    }
+
+    .img-percent-75{
+        @apply flex items-center justify-center
+    }
+    .img-percent-75 img{
+        @apply w-3/5
+    }
+
+    .reverse > *:nth-child(1){ @apply order-12}
+    .reverse > *:nth-child(2){ @apply order-11}
+    .reverse > *:nth-child(3){ @apply order-10}
+    .reverse > *:nth-child(4){ @apply order-9}
+    .reverse > *:nth-child(5){ @apply order-8}
+    .reverse > *:nth-child(6){ @apply order-7}
+    .reverse > *:nth-child(7){ @apply order-6}
+    .reverse > *:nth-child(8){ @apply order-5}
+    .reverse > *:nth-child(9){ @apply order-4}
+    .reverse > *:nth-child(10){ @apply order-3}
+    .reverse > *:nth-child(11){ @apply order-2}
+    .reverse > *:nth-child(12){ @apply order-1}
+
+
+
+    :is(.bg-color-grey:not(.btn-grey), .bg-color-white:not(.btn-white), .bg-color-truiceblue) :is(.content-title, .content-date-text, .content-paragraph){
+        @apply text-color-blue fill-color-blue
+    }
+
+
+    .img-bg{
+        @apply relative overflow-hidden
+    }
+    .img-bg::before{
+        background: linear-gradient(45deg, #0c3766 20%, #0c386661);
+        @apply content-[''] absolute inset-0 transition-all
+    }
+
+    :is(.img-hover-white, .img-hover-blue){
+        @apply img-bg
+    }
+    :is(.img-hover, .img-hover-blue)::before{
+        @apply opacity-0 transition-all hover:opacity-100
+    }
+    :is(.img-hover, .img-hover-blue)::before{
+        @apply opacity-0 transition-all hover:opacity-100
+    }
+    .img-hover-blue::before{
+        background: linear-gradient(0deg, #0c3766 20%, #0c386661) !important;
+    }
+    .img-hover-white::before{
+        background: linear-gradient(0deg, #ffffff 20%, #0c386661) !important;
+    }
+
+    .img-bg-0{
+        @apply img-bg
+    }
+    .img-bg-0::before{
+        background: linear-gradient(0deg, #0c3766 20%, #0c386661) !important;
+    }
+    .img-bg-black{
+        @apply img-bg
+    }
+    .img-bg-black::before{
+        background: linear-gradient(-35deg, #00000071 20%, #00000038) !important;
+    }
+     
+
+    /* POSITION */
+    .play-icon{
+        @apply absolute cursor-pointer left-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4 z-10
+    }
+    .play-icon img{
+        @apply w-20
+    }
+    
+    
+    
+
+    /* DEVELOPER CLASSES */
+    .h{
+        @apply text-center block text-6xl mb-10 mt-5
+    }
+    .s{
+        @apply text-3xl mb-5 mt-5
+    }
+    
+
+
+    /*-------------------------------------
+    --------------- BUTTONS ---------------
+    -------------------------------------*/
+
+    .btn-transition{
+        @apply transition duration-75 ease-in
+    }
+
+
+    .btn,
+    .btn-outlined{
+        @apply mt-3 border lg:text-lg text-sm w-fit px-5 lg:h-10 h-9 flex gap-3 items-center justify-center btn-transition cursor-pointer whitespace-nowrap
+    }
+    .single{
+        @apply text-base w-fit h-10 flex gap-3 items-center justify-center btn-transition cursor-pointer whitespace-nowrap
+    }
+
+    /* BTN WHITE */
+    .btn-white{
+        @apply border-color-white bg-color-white text-color-blue fill-color-blue btn
+    }
+    .btn-white:not(.no-hover):hover{
+        @apply text-color-white fill-color-white bg-color-transparent
+    }
+
+    .btn-white-outlined{
+        @apply border-color-white text-color-white fill-color-white bg-color-transparent btn-outlined
+    }
+    .btn-white-outlined:not(.no-hover):hover{
+        @apply bg-color-white text-color-blue fill-color-blue
+    }
+
+    .btn-white-single-icon{
+        @apply text-color-white fill-color-white single
+    }
+
+    /* BTN BLUE */
+    .btn-blue{
+        @apply border-color-blue bg-color-blue text-color-white fill-color-white btn
+    }
+    .btn-blue:not(.no-hover):hover{
+        @apply text-color-blue fill-color-blue bg-color-transparent
+    }
+
+    .btn-blue-outlined{
+        @apply border-color-blue text-color-blue fill-color-blue bg-color-transparent btn-outlined
+    }
+    .btn-blue-outlined:not(.no-hover):hover{
+        @apply bg-color-blue text-color-white fill-color-white
+    }
+
+    .btn-blue-single-icon{
+        @apply text-color-blue fill-color-blue single
+    }
+
+    /* BTN BLACK */
+    .btn-black{
+        @apply border-color-black bg-color-black text-color-white fill-color-white btn
+    }
+    .btn-black:not(.no-hover):hover{
+        @apply text-color-black fill-color-black bg-color-transparent
+    }
+
+    .btn-black-outlined{
+        @apply border-color-black text-color-black fill-color-black bg-color-transparent btn-outlined
+    }
+    .btn-black-outlined:not(.no-hover):hover{
+        @apply bg-color-black text-color-white fill-color-white
+    }
+
+    .btn-black-single-icon{
+        @apply text-color-black fill-color-black single
+    }
+
+    /* BTN GREY */
+    .btn-grey{
+        @apply border-color-grey bg-color-grey text-color-white fill-color-white btn
+    }
+    .btn-grey:not(.no-hover):hover{
+        @apply text-color-grey fill-color-grey bg-color-transparent
+    }
+
+    .btn-grey-outlined{
+        @apply border-color-grey text-color-grey fill-color-grey bg-color-transparent btn-outlined
+    }
+    .btn-grey-outlined:not(.no-hover):hover{
+        @apply bg-color-grey text-color-white fill-color-white
+    }
+
+    .btn-grey-single-icon{
+        @apply text-color-grey fill-color-grey single
+    }
+
+    /* BTN LİGHT GREY */
+    .btn-light-grey{
+        @apply border-color-light-grey bg-color-light-grey text-color-white fill-color-white btn
+    }
+    .btn-light-grey:not(.no-hover):hover{
+        @apply text-color-light-grey fill-color-light-grey bg-color-transparent
+    }
+
+    .btn-light-grey-outlined{
+        @apply border-color-light-grey text-color-light-grey fill-color-light-grey bg-color-transparent btn-outlined
+    }
+    .btn-light-grey-outlined:not(.no-hover):hover{
+        @apply bg-color-light-grey text-color-white fill-color-white
+    }
+
+    .btn-light-grey-single-icon{
+        @apply text-color-light-grey fill-color-light-grey single
+    }
+
+    /* BTN DARK GREY */
+    .btn-dark-grey{
+        @apply border-color-dark-grey bg-color-dark-grey text-color-white fill-color-white btn
+    }
+    .btn-dark-grey:not(.no-hover):hover{
+        @apply text-color-dark-grey fill-color-dark-grey bg-color-transparent
+    }
+
+    .btn-dark-grey-outlined{
+        @apply border-color-dark-grey text-color-dark-grey fill-color-dark-grey bg-color-transparent btn-outlined
+    }
+    .btn-dark-grey-outlined:not(.no-hover):hover{
+        @apply bg-color-dark-grey text-color-white fill-color-white
+    }
+
+    .btn-dark-grey-single-icon{
+        @apply text-color-dark-grey fill-color-dark-grey single
+    }
+
+    /* BTN GREEN */
+    .btn-green{
+        @apply border-color-green bg-color-green text-color-white fill-color-white btn
+    }
+    .btn-green:not(.no-hover):hover{
+        @apply text-color-green fill-color-green bg-color-transparent
+    }
+
+    .btn-green-outlined{
+        @apply border-color-green text-color-green fill-color-green bg-color-transparent btn-outlined
+    }
+    .btn-green-outlined:not(.no-hover):hover{
+        @apply bg-color-green text-color-white fill-color-white
+    }
+
+    .btn-green-single-icon{
+        @apply text-color-green fill-color-green single
+    }
+
+    /* BTN BROWN */
+    .btn-brown{
+        @apply border-color-brown bg-color-brown text-color-white fill-color-white btn
+    }
+    .btn-brown:not(.no-hover):hover{
+        @apply text-color-brown fill-color-brown bg-color-transparent
+    }
+
+    .btn-brown-outlined{
+        @apply border-color-brown text-color-brown fill-color-brown bg-color-transparent btn-outlined
+    }
+    .btn-brown-outlined:not(.no-hover):hover{
+        @apply bg-color-brown text-color-white fill-color-white
+    }
+
+    .btn-brown-single-icon{
+        @apply text-color-brown fill-color-brown single
+    }
+
+    /* BTN LIGHT BROWN */
+    .btn-light-brown{
+        @apply border-color-light-brown bg-color-light-brown text-color-white fill-color-white btn
+    }
+    .btn-light-brown:not(.no-hover):hover{
+        @apply text-color-light-brown fill-color-light-brown bg-color-transparent
+    }
+
+    .btn-light-brown-outlined{
+        @apply border-color-light-brown text-color-light-brown fill-color-light-brown bg-color-transparent btn-outlined
+    }
+    .btn-light-brown-outlined:not(.no-hover):hover{
+        @apply bg-color-light-brown text-color-white fill-color-white
+    }
+
+    .btn-light-brown-single-icon{
+        @apply text-color-light-brown fill-color-light-brown single
+    }
+
+    /* BTN POWDER */
+    .btn-powder{
+        @apply border-color-powder bg-color-powder text-color-white fill-color-white btn
+    }
+    .btn-powder:not(.no-hover):hover{
+        @apply text-color-powder fill-color-powder bg-color-transparent
+    }
+
+    .btn-powder-outlined{
+        @apply border-color-powder text-color-powder fill-color-powder bg-color-transparent btn-outlined
+    }
+    .btn-powder-outlined:not(.no-hover):hover{
+        @apply bg-color-powder text-color-white fill-color-white
+    }
+
+    .btn-powder-single-icon{
+        @apply text-color-powder fill-color-powder single
+    }
+
+    /* BTN TRUGREEN */
+    .btn-trugreen{
+        @apply border-color-trugreen bg-color-trugreen text-color-white fill-color-white btn
+    }
+    .btn-trugreen:not(.no-hover):hover{
+        @apply text-color-trugreen fill-color-trugreen bg-color-transparent
+    }
+
+    .btn-trugreen-outlined{
+        @apply border-color-trugreen text-color-trugreen fill-color-trugreen bg-color-transparent btn-outlined
+    }
+    .btn-trugreen-outlined:not(.no-hover):hover{
+        @apply bg-color-trugreen text-color-white fill-color-white
+    }
+
+    .btn-trugreen-single-icon{
+        @apply text-color-trugreen fill-color-trugreen single
+    }
+
+
+
+    .square{
+        @apply p-0 w-10 h-10 aspect-square
+    }
+
+    .square-content{
+        @apply aspect-square border lg:text-xl text-sm w-fit p-5 lg:h-10 h-9 flex items-center justify-center whitespace-nowrap font-light transition-all
+    }
+
+    .white-square{
+        @apply border-color-white bg-color-white text-color-blue fill-color-blue square-content
+    }
+
+    .white-square-outlined{
+        @apply border-color-white text-color-white fill-color-white bg-color-transparent square-content
+    }
+
+    /* BTN BLUE */
+    .blue-square{
+        @apply border-color-blue bg-color-blue text-color-white fill-color-white square-content
+    }
+    .blue-square:hover{
+        @apply bg-color-white text-color-blue fill-color-blue
+    }
+
+    .blue-square-outlined{
+        @apply border-color-blue text-color-blue fill-color-blue bg-color-white square-content
+    }
+    .blue-square-outlined:hover{
+        @apply bg-color-blue text-color-white fill-color-white
+    }
+
+    /* BTN BLACK */
+    .black-square{
+        @apply border-color-black bg-color-black text-color-white fill-color-white square-content
+    }
+
+    .black-square-outlined{
+        @apply border-color-black text-color-black fill-color-black bg-color-transparent square-content
+    }
+
+    /* BTN GREY */
+    .grey-square{
+        @apply border-color-grey bg-color-grey text-color-white fill-color-white square-content
+    }
+
+    .grey-square-outlined{
+        @apply border-color-grey text-color-grey fill-color-grey bg-color-transparent square-content
+    }
+
+    /* BTN LİGHT GREY */
+    .light-square-grey{
+        @apply border-color-light-grey bg-color-light-grey text-color-white fill-color-white square-content
+    }
+
+    .light-square-grey-outlined{
+        @apply border-color-light-grey text-color-light-grey fill-color-light-grey bg-color-transparent square-content
+    }
+
+    /* BTN DARK GREY */
+    .dark-square-grey{
+        @apply border-color-dark-grey bg-color-dark-grey text-color-white fill-color-white square-content
+    }
+
+    .dark-square-grey-outlined{
+        @apply border-color-dark-grey text-color-dark-grey fill-color-dark-grey bg-color-transparent square-content
+    }
+
+    /* BTN GREEN */
+    .green-square{
+        @apply border-color-green bg-color-green text-color-white fill-color-white square-content
+    }
+
+    .green-square-outlined{
+        @apply border-color-green text-color-green fill-color-green bg-color-transparent square-content
+    }
+
+    /* BTN BROWN */
+    .brown-square{
+        @apply border-color-brown bg-color-brown text-color-white fill-color-white square-content
+    }
+
+    .brown-square-outlined{
+        @apply border-color-brown text-color-brown fill-color-brown bg-color-transparent square-content
+    }
+
+    /* BTN LIGHT BROWN */
+    .light-square-brown{
+        @apply border-color-light-brown bg-color-light-brown text-color-white fill-color-white square-content
+    }
+
+    .light-square-brown-outlined{
+        @apply border-color-light-brown text-color-light-brown fill-color-light-brown bg-color-transparent square-content
+    }
+
+    /* BTN POWDER */
+    .powder-square{
+        @apply border-color-powder bg-color-powder text-color-white fill-color-white square-content
+    }
+
+    .powder-square-outlined{
+        @apply border-color-powder text-color-powder fill-color-powder bg-color-transparent square-content
+    }
+
+    .powder-square-single-icon{
+        @apply text-color-powder fill-color-powder single square-content
+    }
+
+    /* BTN TRUGREEN */
+    .trugreen-square{
+        @apply border-color-trugreen bg-color-trugreen text-color-white fill-color-white square-content
+    }
+
+    .trugreen-square-outlined{
+        @apply border-color-trugreen text-color-trugreen fill-color-trugreen bg-color-transparent square-content
+    }
+
+    /* BTN TRUICEBLUE */
+    .truiceblue-square{
+        @apply border-color-truiceblue bg-color-truiceblue text-color-white fill-color-blue square-content
+    }
+
+    .truiceblue-square-outlined{
+        @apply border-color-truiceblue text-color-truiceblue fill-color-truiceblue bg-color-transparent square-content
+    }
+
+
+    /* SQUARE LIST */
+    .square-list{
+        @apply text-xxs DINpro-medium w-5 h-5 p-0 aspect-square inline-block -translate-y-px align-middle
+    }
+    .square-list span{
+        @apply flex items-center justify-center w-full h-full
+    }
+    
+    
+    
+    /*-------------------------------------
+    ---------------- HEADER ---------------
+    -------------------------------------*/
+    .header{
+        @apply /*border-b border-gray-100*/ bg-color-white
+    }
+    .header > div{
+        @apply h-20 flex items-center justify-between max-w-1920 mx-auto px-3 relative
+    }
+    .header > div .left{
+        @apply flex gap-10 lg:pt-3 pt-0 
+    }
+    .header > div .left .toggle-btn{
+        @apply flex items-center justify-center gap-1 md:flex-col flex-row-reverse lg:static absolute right-4 top-7 fill-color-blue text-color-blue z-10
+    }
+    .header > div .left .toggle-btn svg{
+        @apply lg:h-6 h-3
+    }
+    .header > div .left .toggle-btn span{
+        @apply lg:text-xs md:text-xxs text-sm
+    }
+    .header > div .left > a{
+        @apply flex lg:pt-2 pt-0 lg:h-14 h-8
+    }
+    .header.open-search > div .left > a{
+        @apply hidden
+    }
+    .header > div .toggler-menu{
+        @apply absolute left-0 lg:p-5 bg-color-white w-full top-full z-30
+    }
+    .header > div .toggler-menu > div{
+        @apply lg:py-10 py-5 lg:px-10 flex lg:flex-row flex-col
+    }
+    .header > div .toggler-menu > div .first{
+        @apply lg:max-w-full lg:w-72 lg:pr-6 lg:border-r lg:border-b-0 lg:mb-0 lg:pb-0 mb-3 pb-3 max-w-100-48 lg:mx-0 mx-auto w-full text-color-blue border-b border-color-blue border-opacity-30
+    }
+    .header > div .toggler-menu .nav-btns{
+        @apply lg:pl-14 lg:border-r border-color-blue border-opacity-30
+    }
+    .header > div .toggler-menu .nav-btns.sub{
+        @apply border-none lg:pl-10
+    }
+    .header > div .toggler-menu .nav-btns > div{
+        @apply flex flex-col
+    }
+    .header > div .toggler-menu .nav-btns > div.active{
+        @apply lg:flex hidden
+    }
+    .header > div .toggler-menu .nav-btns > div > a{
+        @apply min-w-[220px] flex items-center gap-3 justify-between py-2 px-6 text-xl text-color-blue fill-color-blue font-light hover:bg-color-blue hover:bg-opacity-5 transition-all cursor-pointer
+    }
+    .header > div .toggler-menu .nav-btns > div > a svg{
+        @apply lg:scale-100 scale-150
+    }
+    .header > div .toggler-menu .nav-btns > div > a.active svg{
+        @apply lg:rotate-180
+    }
+    .header > div .toggler-menu .nav-btns.sub > div > a{
+        @apply text-lg relative hover:bg-opacity-0 lg:pl-6 pl-6
+    }
+    .header > div .toggler-menu .nav-btns.sub > div > button{
+        @apply ml-6 lg:hidden
+    }
+    .header > div .toggler-menu .nav-btns.sub > div > a::before{
+        background: linear-gradient(90deg, rgba(3, 52, 79, 0.05), #00000000);
+        @apply content-[''] w-full h-full absolute left-0 right-0 opacity-0 hover:opacity-100 transition-all
+    }
+    .header > div .toggler-menu .close-toggle-menu{
+        @apply absolute lg:right-10 lg:top-10 right-6 top-6 fill-color-blue
+    }
+    .header > div .toggler-menu .mobile-header-btns{
+        @apply lg:hidden block pt-4 mt-4 border-t border-color-blue border-opacity-30 max-w-100-48 mx-auto w-full
+    }
+    .header > div .toggler-menu .mobile-header-btns .header-btn{
+        @apply px-6
+    }
+    .header-nav{
+        @apply flex items-center gap-2 h-full relative lg:pr-0 md:pr-10 pr-20 overflow-hidden
+    }
+    .header-nav::before{
+        @apply content-[''] w-36 min-w-[36px] h-1 absolute top-0 right-0 bg-color-blue
+    }
+    .header-nav > a:not(.show-mobile){
+        @apply lg:flex hidden
+    }
+    .header-btn{
+        @apply relative flex items-center gap-2 h-9 px-2 whitespace-nowrap cursor-pointer
+    }
+    .header-btn:not(.active)::before{
+        @apply content-[''] w-full h-3 absolute left-0 -bottom-9 bg-color-blue
+    }
+    .no-underline .header-btn:not(.active)::before{
+        @apply hidden
+    }
+    .header-btn:hover::before{
+        @apply -bottom-8 -translate-y-px
+    }
+    .header-btn svg{
+        @apply fill-color-blue w-4
+    }
+    .header-btn span{
+        @apply text-lg text-sm text-color-blue DINpro font-light
+    }
+
+    .search-wrapper{}
+    .search-wrapper .search{
+        @apply flex items-center gap-2
+    }
+    .search-wrapper.active .close{
+        @apply hidden
+    }
+    .search-wrapper:not(.active) .open{
+        @apply hidden
+    }
+    .search-wrapper form{
+        @apply relative flex items-center border-b border-color-blue border-opacity-80 h-8
+    }
+    .search-wrapper form input{
+        @apply outline-0 shadow-none px-3 h-8 pb-px bg-color-transparent text-color-blue lg:w-44 w-56
+    }
+
+
+
+
+
+    /*-------------------------------------
+    ---------------- FOOTER ---------------
+    -------------------------------------*/
+    footer{
+        background-image: radial-gradient(circle, #eee 0%, #eee 2px, #fff 2px, #fff 100%);
+        background-size: 20px 20px;
+        background-position: center center;
+        @apply relative bg-color-white
+    }
+    @media screen and (max-width: 668px) {
+        footer{ background-image: none;}
+    }
+    footer::before{
+        width: calc((100% - 1920px) / 2);
+        @apply content-[''] h-full bg-color-white absolute inline-block left-0 top-0 z-0
+    }
+    footer .go-top{
+        @apply absolute lg:right-10 right-5 top-0 -translate-y-1/3 bg-color-white border border-color-blue w-10 h-16 fill-color-blue hover:bg-color-blue hover:fill-color-white transition-all flex items-center justify-center z-50
+    }
+    footer > div{
+        @apply relative z-10
+    }
+    footer > div .top{
+        @apply max-w-1920 mx-auto flex lg:h-60 h-auto lg:flex-row flex-col lg:py-0 py-12
+    }
+    footer > div .top .left{
+        @apply w-full max-w-[600px] bg-color-white h-full lg:pt-20 lg:pl-3 pl-8
+    }
+    footer > div .top .left img{
+        @apply h-11
+    }
+    footer > div .top .right{ 
+        @apply flex lg:items-center justify-between lg:pl-20 pl-3 w-full lg:gap-12 lg:flex-row flex-col
+    }
+    footer > div .top .right .l{
+        @apply flex w-full max-w-[380px] lg:justify-between lg:gap-10 gap-7 lg:py-0 py-6
+    }
+    footer > div .top .right .l > div{
+        @apply bg-color-white p-2
+    }
+    footer > div .top .right .r{}
+    footer > div .top .right .r img{
+        @apply w-72 min-w-[18rem] bg-color-white p-3 px-5
+    }
+    footer > div .bottom{
+        @apply bg-color-white
+    }
+    footer > div .bottom > div{
+        @apply max-w-1920 mx-auto flex items-center md:flex-row flex-col-reverse md:gap-0 gap-5 justify-between px-3 py-4
+    }
+    footer > div .bottom > div span{
+        @apply text-color-blue
+    }
+    footer > div .bottom > div > div{
+        @apply flex gap-8
+    }
+    footer > div .bottom > div > div a{
+        @apply text-color-blue hover:underline
+    }
+    
+
+
+
+    /*-------------------------------------
+    ---------------- SLIDER ---------------
+    -------------------------------------*/
+
+    /* Slider Type 1 */
+    .slider-type-1-container .swiper{
+        @apply w-full lg:h-slider 
+    }
+    .slider-type-1-container .swiper .swiper-wrapper{
+        @apply w-full lg:h-full
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide{
+        @apply w-full h-full relative flex flex-col
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide img{
+        @apply w-full lg:h-full object-cover lg:min-h-[auto] h-96 min-h-[24rem]
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide .slider-white-box{
+        @apply text-color-blue bg-color-white
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide .slider-blue-box{
+        @apply text-color-white bg-color-blue
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide > div{
+        @apply lg:absolute lg:block lg:max-w-[600px] lg:h-auto lg:h-auto h-96 left-20 bottom-20 sm:px-8 sm:py-8 px-4 py-6 w-full flex flex-col items-center justify-center
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide > div b{
+        @apply lg:text-xs text-sm font-semibold lg:text-left mb-2 text-center lg:line-clamp-none line-clamp-1
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide > div h3{
+        @apply lg:text-2xl text-3xl font-thin DINpro-light lg:text-left text-center lg:line-clamp-none line-clamp-3
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide > div p{
+        @apply lg:text-sm text-base opacity-90 mt-2 DINpro-light lg:text-left text-center lg:line-clamp-none line-clamp-5
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide > div a{
+        @apply mx-auto
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide .slider-white-box a{
+        @apply btn-blue-outlined mt-10
+    }
+    .slider-type-1-container .swiper .swiper-wrapper .swiper-slide .slider-blue-box a{
+        @apply btn-white-outlined mt-10
+    }
+
+    .slider-type-1-container .slider-arr{
+        @apply hidden lg:flex fill-color-blue lg:w-11 lg:h-16 absolute lg:top-2/4 lg:-translate-y-1/2 top-full translate-y-7 z-10 m-0 shadow-none outline-none lg:bg-color-white flex items-center justify-center cursor-pointer
+    }
+    .slider-type-1-container .slider-arr svg{
+        @apply lg:scale-100 scale-75
+    }
+    .slider-type-1-container .slider-arr.slider-prev{
+        @apply lg:left-0 -translate-x-10 lg:-translate-x-0 left-2/4
+    }
+    .slider-type-1-container .slider-arr.slider-next{
+        @apply lg:right-0 translate-x-10 lg:translate-x-0 right-2/4
+    }
+    
+    .slider-type-1-container #swiper-pagination{
+        @apply z-10 top-unset lg:bottom-4 -bottom-6
+    }
+    .slider-type-1-container #swiper-pagination .swiper-pagination-bullet{
+        @apply rounded-none lg:bg-color-white bg-gray-400 w-2 h-2 opacity-60 cursor-pointer shadow-none outline-none
+    }
+    .slider-type-1-container #swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+        @apply bg-color-blue opacity-100
+    }
+
+
+
+    /* Slider Type 2 */
+    .slider-type-2-container .swiper{
+        @apply w-full lg:h-slider 
+    }
+    .slider-type-2-container .swiper .swiper-wrapper{
+        @apply w-full lg:h-full
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide{
+        @apply w-full h-full relative flex flex-col lg:pb-40
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide img{
+        @apply w-full lg:h-full object-cover lg:min-h-[auto] h-96 min-h-[24rem]
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide .slider-white-box{
+        @apply text-color-blue bg-color-white
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide .slider-blue-box{
+        @apply text-color-white bg-color-blue
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide > div{
+        @apply lg:absolute relative lg:max-w-[1600px] lg:h-auto lg:min-h-[160px] h-48 lg:w-10/12 w-full shadow-2xl lg:left-20 lg:-translate-y-24 bottom-0 sm:px-8 sm:py-8 px-4 py-6 flex flex-col
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide > div b{
+        @apply text-xs font-semibold mb-2 line-clamp-1
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide > div b::before{
+        @apply content-[''] h-px w-6 mr-2 inline-block -translate-y-1
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide .slider-white-box b::before{
+        @apply bg-color-blue
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide .slider-blue-box b::before{
+        @apply bg-color-white
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide > div h3{
+        @apply lg:text-4xl text-3xl font-thin DINpro-light lg:line-clamp-2 line-clamp-3 pr-20
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide > div button{
+        @apply absolute right-10 top-2/4 -translate-y-2/4
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide .slider-white-box button{
+        @apply btn-blue-outlined square mt-0
+    }
+    .slider-type-2-container .swiper .swiper-wrapper .swiper-slide .slider-blue-box button{
+        @apply btn-white-outlined square mt-0
+    }
+
+    .slider-type-2-container .slider-arr{
+        @apply hidden lg:flex fill-color-blue lg:w-11 lg:h-16 absolute lg:top-slider-type-2-arrow lg:-translate-y-1/2 top-full translate-y-7 z-10 m-0 shadow-none outline-none lg:bg-color-white items-center justify-center cursor-pointer
+    }
+    .slider-type-2-container .slider-arr svg{
+        @apply lg:scale-100 scale-75
+    }
+    .slider-type-2-container .slider-arr.slider-prev{
+        @apply lg:left-0 -translate-x-10 lg:-translate-x-0 left-2/4
+    }
+    .slider-type-2-container .slider-arr.slider-next{
+        @apply lg:right-0 translate-x-10 lg:translate-x-0 right-2/4
+    }  
+    
+
+
+
+    /* Slider Type 3 */
+
+    .slider-type-3-container .slider-type-3{
+        @apply pb-14
+    }
+    .slider-type-3-container .slider-type-3 .swiper-slide{
+        @apply lg:px-5 px-2
+    }
+    .slider-type-3-container .slider-type-3 .swiper-slide > div{
+        @apply lg:grid lg:grid-cols-12 lg:w-full w-[95%] lg:max-w-[1600px] max-w-[500px] mx-auto shadow-xl
+    }
+    .slider-type-3-container .slider-type-3 .swiper-slide > div .img{
+        @apply content-img col-span-3 relative overflow-visible
+    }
+    .slider-type-3-container .slider-type-3 .swiper-slide > div .img svg{
+        @apply absolute lg:right-10 lg:top-2 -bottom-14 -left-3 lg:w-24 w-16 translate-x-2/4 -translate-y-2/4 z-10
+    }
+    .slider-type-3-container .slider-type-3 .swiper-slide > div .txt{
+        @apply col-span-9 p-10 flex flex-col justify-between
+    }
+    .slider-type-3-container .slider-type-3 .swiper-slide > div .txt > div{
+        
+    }
+    .slider-type-3-container .slider-type-3 .swiper-slide > div .txt > div h3{
+        @apply content-title
+    }
+    .slider-type-3-container .slider-type-3 .swiper-slide > div .txt > div p{
+        @apply content-paragraph max-w-[800px] mt-5
+    }
+    .slider-type-3-container .slider-type-3 .swiper-slide > div .txt > a{
+        @apply mt-7
+    }
+    
+    .slider-type-3-container .slider-arr{
+        @apply hidden lg:flex fill-color-blue lg:w-11 lg:h-16 absolute lg:top-slider-type-2-arrow lg:-translate-y-1/2 top-full translate-y-7 z-10 m-0 shadow-none outline-none lg:bg-color-white items-center justify-center cursor-pointer
+    }
+    .slider-type-3-container .slider-arr svg{
+        @apply lg:scale-100 scale-75
+    }
+    .slider-type-3-container .slider-arr.slider-prev{
+        @apply lg:left-0 -translate-x-10 lg:-translate-x-0 left-2/4
+    }
+    .slider-type-3-container .slider-arr.slider-next{
+        @apply lg:right-0 translate-x-10 lg:translate-x-0 right-2/4
+    } 
+    
+    
+
+    /* Slider Type 4 */
+
+    .slider-type-4-container .slider-type-4{
+        @apply pb-14
+    }
+    .slider-type-4-container .slider-type-4 .swiper-slide{
+        @apply px-5
+    }
+    .slider-type-4-container .slider-type-4 .swiper-slide > div{
+        @apply lg:grid lg:grid-cols-12 gap-10 w-full max-w-[1600px] mx-auto
+    }
+    .slider-type-4-container .slider-type-4 .swiper-slide > div .img{
+        @apply content-img col-span-6 lg:min-h-0 min-h-[240px] lg:h-auto h-[240px] justify-center items-center
+    }
+    .slider-type-4-container .slider-type-4 .swiper-slide > div .img img{
+        @apply lg:max-w-full max-w-none lg:w-full w-unset
+    }
+    .slider-type-4-container .slider-type-4 .swiper-slide > div .txt{
+        @apply col-span-6 p-10 flex flex-col justify-between bg-color-white shadow-xl
+    }
+    .slider-type-4-container .slider-type-4 .swiper-slide > div .txt > div{}
+    .slider-type-4-container .slider-type-4 .swiper-slide > div .txt > div h3{
+        @apply content-title
+    }
+    .slider-type-4-container .slider-type-4 .swiper-slide > div .txt > div p{
+        @apply content-paragraph max-w-[800px] mt-5
+    }
+    .slider-type-4-container .slider-type-4 .swiper-slide > div .txt > a{
+        @apply mt-7
+    }
+    
+    .slider-type-4-container .slider-arr{
+        @apply hidden lg:flex fill-color-blue lg:w-11 lg:h-16 absolute lg:top-slider-type-2-arrow lg:-translate-y-1/2 top-full translate-y-7 z-10 m-0 shadow-none outline-none lg:bg-color-white items-center justify-center cursor-pointer
+    }
+    .slider-type-4-container .slider-arr svg{
+        @apply lg:scale-100 scale-75
+    }
+    .slider-type-4-container .slider-arr.slider-prev{
+        @apply lg:left-0 -translate-x-10 lg:-translate-x-0 left-2/4
+    }
+    .slider-type-4-container .slider-arr.slider-next{
+        @apply lg:right-0 translate-x-10 lg:translate-x-0 right-2/4
+    } 
+    
+    
+    
+
+
+    /* Slider Type 5 */
+    .slider-type-5-container .swiper{
+        @apply w-full lg:h-slider 
+    }
+    .slider-type-5-container .swiper .swiper-wrapper{
+        @apply w-full lg:h-full
+    }
+    .slider-type-5-container .swiper .swiper-wrapper .swiper-slide{
+        @apply w-full h-full relative flex lg:flex-row flex-col
+    }
+    .slider-type-5-container .swiper .swiper-wrapper .swiper-slide .img{
+        @apply content-img w-full lg:h-full lg:min-h-[auto] h-[300px] justify-center items-center
+    }
+    .slider-type-5-container .swiper .swiper-wrapper .swiper-slide .img img{
+        @apply lg:w-full h-full object-cover
+    }
+    .slider-type-5-container .swiper .swiper-wrapper .swiper-slide .slider-right{
+        @apply h-full lg:w-[700px] lg:min-w-[700px] w-full bg-color-blue flex flex-col
+    }
+    .slider-type-5-container .swiper .swiper-wrapper .swiper-slide .slider-right > div{
+        @apply h-full p-10
+    }
+    .slider-type-5-container .swiper .swiper-wrapper .swiper-slide .slider-right > div > p{
+        @apply mt-5
+    }
+    .slider-type-5-container .swiper .swiper-wrapper .swiper-slide .slider-right > div > a{
+        @apply mt-7
+    }
+
+
+
+    .slider-type-5-container .slider-arr{
+        @apply hidden lg:flex fill-color-blue lg:w-11 lg:h-16 absolute lg:-translate-y-1/2 top-2/4 -translate-y-2/4 z-10 m-0 shadow-none outline-none lg:bg-color-white items-center justify-center cursor-pointer
+    }
+    .slider-type-5-container .slider-arr svg{
+        @apply lg:scale-100 scale-75
+    }
+    .slider-type-5-container .slider-arr.slider-prev{
+        @apply lg:left-0 -translate-x-10 lg:-translate-x-0 left-2/4
+    }
+    .slider-type-5-container .slider-arr.slider-next{
+        @apply lg:right-0 translate-x-10 lg:translate-x-0 right-2/4
+    }  
+    
+    
+    
+    
+    
+    /*-------------------------------------
+    ------------- Extentions 1 ------------
+    -------------------------------------*/
+    /* .e1-i{
+        @apply x:w-20 3xl:w-32 2xl:w-28 w-28
+    }
+    .e1-h{
+        @apply text-white mt-7 inline-block DINpro-light font-normal 3xl:text-4xl 2xl:text-3xl x:text-xl
+    }
+    .e1-p{
+        @apply DINpro-light text-white mt-7 font-normal 3xl:text-2xl 2xl:text-xl x:text-base
+    } */
+
+    .content-icon{
+        @apply x:w-20 3xl:w-32 w-28 mb-8
+    }
+    .content-date-text{
+        @apply content-title font-light text-base mb-1 block
+    }
+    .content-title{
+        @apply text-white inline-block font-normal 3xl:text-4xl text-3xl mt-0
+    }
+    .content-title-4xl{
+        @apply content-title text-4xl
+    }
+    .content-title-5xl{
+        @apply content-title text-5xl
+    }
+    .content-title-6xl{
+        @apply content-title text-6xl
+    }
+    .content-title-7xl{
+        @apply content-title text-7xl
+    }
+    .content-title-8xl{
+        @apply content-title text-8xl
+    }
+    .content-title-9xl{
+        @apply content-title text-9xl
+    }
+    .content-title-10xl{
+        @apply content-title text-10xl leading-none
+    }
+    .content-title.border-bottom{
+        @apply border-b border-color-white pb-5 mb-3 w-full
+    }
+    .content-paragraph{
+        @apply DINpro-light text-white mt-4 font-normal 3xl:text-2xl text-xl
+    }
+    .content-paragraph-xl{
+        @apply content-paragraph 3xl:text-xl text-xl
+    }
+    .content-paragraph-3xl{
+        @apply content-paragraph 3xl:text-3xl text-xl
+    }
+    .content-paragraph-4xl{
+        @apply content-paragraph 3xl:text-4xl text-xl
+    }
+    .content-paragraph-5xl{
+        @apply content-paragraph 3xl:text-5xl text-xl
+    }
+    .content-button{
+        @apply lg:mt-20 mt-10
+    }
+
+    .content-bg{
+        @apply text-color-white p-12 relative
+    }
+    .content-bg-blur{
+        @apply backdrop-blur-xl
+    }
+    .content-bg-blur-2xl{
+        @apply backdrop-blur-2xl
+    }
+    .content-bg-blur-3xl{
+        @apply backdrop-blur-3xl
+    }
+
+    .content-filter{
+        @apply absolute inset-0
+    }
+    
+    .left-white{
+        /* @apply relative lg:px-24 lg:py-16 px-14 py-10 */
+        @apply relative px-24 py-16
+    }
+    .left-white::before{
+        content: '';
+        /* @apply absolute left-0 md:top-16 top-12 lg:w-20 lg:h-12 w-10 h-6 bg-color-white */
+        @apply absolute left-0 top-16 w-20 h-12 bg-color-white
+    }
+
+    .content-img{
+        @apply flex overflow-hidden
+    }
+    .content-img > img{
+        @apply w-full h-full object-cover
+    }
+        
+    .content-big-txt{
+        @apply font-bold text-16xl leading-big-txt
+    }
+
+    .content-bordered-y{
+        @apply border-b border-t border-color-blue py-4 flex flex-col gap-2
+    }    
+    .content-bordered-b{
+        @apply border-b  border-color-blue py-4 flex flex-col gap-2
+    }    
+
+
+    .content-underline{
+        @apply border-b border-color-blue w-full pb-2
+    }
+    
+   
+
+
+    /* POSITION OPTIONS */
+    .align-left *{
+        @apply lg:ml-0 lg:mr-auto lg:text-left
+    }
+    .align-right *{
+        @apply lg:ml-auto lg:mr-0 lg:text-right
+    }
+    .align-center, .align-center *{
+        @apply lg:mx-auto lg:text-center justify-center
+    }
+
+
+
+
+    /*-------------------------------------
+    ------------ CONTENT IMAGES -----------
+    -------------------------------------*/
+
+    .content-img-area{
+        @apply relative
+    }
+    
+    /* Content Img 1 */
+    .content-img-1{
+        @apply content-img-area
+    }
+    .content-img-1 .content-img{}
+    .content-img-1 .content-img img{}
+    .content-img-1 .content-img-txt{
+        @apply lg:max-w-[85%] mx-auto lg:max-h-[80%] lg:backdrop-blur-0 backdrop-blur-sm w-full lg:content-bg p-5 lg:absolute z-10 right-0 bottom-16
+    }
+    .content-img-1 .content-img-txt h3{
+        @apply content-title
+    }
+    .content-img-1 .content-img-txt p{
+        @apply content-paragraph mt-3
+    }
+
+    .content-img-1-white, .content-img-1-blue{
+        @apply content-img-1
+    }
+    
+    .content-img-1-white .content-img-txt{
+        @apply bg-color-white md:bg-opacity-90
+    }
+    .content-img-1-white .content-img-txt h3{
+        @apply text-color-blue
+    }
+    .content-img-1-white .content-img-txt p{
+        @apply text-color-blue
+    }
+
+    .content-img-1-blue .content-img-txt{
+        @apply bg-color-blue md:bg-opacity-90
+    }
+
+
+
+    /* Content Img 2 */
+    .content-img-2{
+        @apply content-img-area
+    }
+    .content-img-2 .content-img-txt p{
+        @apply content-paragraph text-color-blue mt-3
+    }
+
+
+
+    /* Content Img 3 */
+    /* .content-img-3{
+        @apply content-img-area
+    }
+    .content-img-3 .content-template-1{
+        @apply
+    } */
+
+    /* Content Img 4 */
+    /* .content-img-4{
+        @apply content-img-area
+    }
+    .content-img-4 .big-txt-area{
+        @apply absolute left-0 top-2/4 -translate-y-2/4 max-w-[660px] bg-color-white py-16 px-20
+    } */
+
+    /* Content Img 5 */
+    /* .content-img-5{
+        @apply relative
+    }
+    .content-img-5 .big-txt-area{
+        @apply absolute left-0 top-2/4 -translate-y-2/4 max-w-[900px] bg-color-white bg-opacity-90 py-16 pr-20 pl-44
+    }
+    .content-img-5 .big-txt-area h2{
+        @apply content-title text-7xl text-color-blue
+    }    
+    .content-img-5 .big-txt-area p{
+        @apply content-paragraph text-color-blue my-5
+    }    
+    .content-img-5 .big-txt-area .bordered{
+        @apply border-b border-t border-color-blue py-4 flex flex-col gap-2
+    }    
+    .content-img-5 .big-txt-area strong{
+        @apply content-title text-color-blue
+    }
+    .content-img-5 .big-txt-area span{
+        @apply lg-txt text-color-blue mt-0
+    } */
+
+
+
+    /* Content Img 6 */
+    .content-img-6{
+        @apply relative h-full
+    }
+    .content-img-6 .content-img{
+        @apply h-80
+    }
+    .content-img-6 > span{
+        @apply btn-blue absolute pointer-events-none mt-0
+    }
+    .content-img-6.top-left > span{
+        @apply top-0 left-0
+    }
+    .content-img-6.top-right > span{
+        @apply top-0 right-0
+    }
+    .content-img-6.bottom-left > span{
+        @apply bottom-0 left-0
+    }
+    .content-img-6.bottom-right > span{
+        @apply bottom-0 right-0
+    }
+    
+
+    /* Content Img 7 */
+    .content-img-7{}
+    
+
+
+    /* Content Long IMG */
+    .content-long-img{
+        @apply content-img-area
+    }
+    .content-long-img img{
+        @apply w-full bg-color-blue -z-10 3xl:static absolute inset-0 h-full object-cover
+    }
+    .content-long-img > div{ 
+        @apply 3xl:absolute left-0 top-0 w-full h-full
+    }
+    .content-long-img > div > div{
+        @apply overflow-hidden flex flex-col justify-end h-full 3xl:hover:bg-color-blue transition-all pb-5
+    }
+    .content-long-img > div > div.trugreen-hover{
+        @apply 3xl:hover:bg-color-trugreen
+    }
+    .content-long-img > div > div > div{
+        transform: translateY(calc(100% - 75px));
+        @apply min-h-[50%] p-10 h-fit transition-all duration-300
+    }
+
+    @media screen and (max-width: 1680px) {
+        .content-long-img > div > div > div{
+            transform: unset;
+        }
+    }
+
+    
+    .content-long-img > div > div:hover > div{
+        @apply 3xl:translate-y-0
+    }
+    .content-long-img > div > div > div .t{
+        @apply flex gap-2 mb-2
+    }
+    .content-long-img > div > div > div .t b{
+        @apply content-title text-3xl transition-all /*3xl:text-color-white text-color-blue*/
+    }
+    /* .content-long-img > div > div:hover > div .t b{
+        @apply 3xl:opacity-0 3xl:-translate-y-full
+    } */
+    .content-long-img > div > div > div .t strong{
+        @apply content-title text-3xl transition-all 3xl:line-clamp-1 /*3xl:text-color-white text-color-blue*/
+    }
+    .content-long-img > div > div:hover > div .t strong{
+        @apply 3xl:mb-0
+    }
+    .content-long-img > div > div > div p{
+        @apply content-paragraph mt-3 /*3xl:text-color-white text-color-blue*/
+    }
+
+
+
+    /*-------------------------------------
+    ----------- CONTENT TEMPLATES ---------
+    -------------------------------------*/
+
+    /* Content Template 1 */
+    .content-template-1{
+        @apply grid lg:gap-5 max-w-[500px]
+    }
+    .content-template-1 :is(.top, .top-blue){
+        @apply content-bg flex bg-color-white gap-8 p-7
+    }
+    .content-template-1 .top-blue{
+        @apply bg-color-blue
+    }
+    .content-template-1 :is(.top, .top-blue) > div:nth-child(1){
+        @apply flex items-start
+    }
+    .content-template-1 :is(.top, .top-blue) > div:nth-child(1) span{
+        @apply text-color-blue content-big-txt
+    }
+    .content-template-1 .top-blue > div:nth-child(1) span{
+        @apply text-color-white
+    }
+    .content-template-1 :is(.top, .top-blue) > div:nth-child(2) h2{
+        @apply content-title text-4xl text-color-blue leading-snug
+    }
+    .content-template-1 .top-blue > div:nth-child(2) h2{
+        @apply text-color-white
+    }
+    .content-template-1 .bottom{
+        @apply content-bg bg-color-white bg-opacity-90 px-10 py-10
+    }
+    .content-template-1 .content-paragraph{
+        @apply mt-4 
+    }
+    
+
+    /* Content Template 2 */
+    .content-template-2{
+        @apply max-w-[660px] bg-color-white py-16 lg:px-20 px-6
+    }
+    .content-template-2 h2{
+        @apply content-title-7xl text-color-blue
+    }    
+    .content-template-2 p{
+        @apply content-paragraph text-color-blue my-5
+    }  
+    .content-template-2 strong{
+        @apply content-title text-color-blue
+    }
+    .content-template-2 span{
+        @apply lg-txt text-color-blue mt-0
+    }
+    
+    
+    /* Content Template 3 */
+    .content-template-3{
+        @apply content-template-2 w-full lg:max-w-[900px] max-w-none bg-color-white bg-opacity-90 py-16 lg:pr-20 lg:pl-44 px-5
+    }
+
+
+
+
+    /* Content Template 4 */
+    .content-template-4{
+        @apply mt-40
+    }
+    .content-template-4 .title{
+        @apply text-center justify-center mb-40
+    }
+    .content-template-4 .bg{
+        /* @apply */
+    }
+    .content-template-4 .bg .default-container{
+        @apply grid lg:grid-cols-12 lg:gap-7 lg:px-0 px-3
+    }
+    .content-template-4 .bg .default-container > div{
+        @apply img-bg-0 img-hover lg:-translate-y-28
+    }
+    .content-template-4 .bg .default-container > div::before{
+        @apply opacity-0
+    }
+    .content-template-4 .bg .default-container > div img{
+        /* @apply */
+    }
+    .content-template-4 .bg .default-container > div .txt{
+        @apply absolute bottom-10 left-2/4 -translate-x-2/4 z-10 flex flex-col items-center opacity-0 transition-all duration-200 translate-y-10
+    }
+    .content-template-4 .bg .default-container > div:hover .txt{
+        @apply opacity-100 translate-y-0
+    }
+    .content-template-4 .bg .default-container > div .txt strong{
+        /* @apply */
+    }
+    .content-template-4 .bg .default-container > div .txt span{
+        @apply content-paragraph mt-2
+    }
+
+
+
+
+    /* Content Template 5 */
+    .content-template-5{
+        @apply flex flex-col xl:gap-10 gap-14 2080:pl-0 xl:pl-20
+    }
+    .content-template-5 > div{
+        @apply xl:grid flex flex-col grid-cols-12 xl:gap-10 gap-4 relative
+    }
+    .content-template-5 > div > div{
+        @apply col-span-4 bg-color-blue gap-5
+    }
+    .content-template-5 > div > strong{
+        @apply content-title xl:text-4xl xl:font-light bg-color-white text-color-blue xl:absolute -left-36 top-2/4 xl:-translate-y-2/4 xl:-rotate-90
+    }
+    .content-template-5 > div:not(:nth-child(1)) > div{
+        @apply bg-opacity-80 p-12
+    }
+    .content-template-5 > div:nth-child(1) > div{
+        @apply flex items-center justify-center flex-col px-12 py-14
+    }
+    .content-template-5 > div > div > ul{}
+    .content-template-5 > div > div > ul li{
+        @apply content-paragraph mt-2 list-style-square-white big
+    }
+
+
+
+
+    /* Content Template 6 */
+    .content-template-6{
+        
+    }
+    .content-template-6 .box{
+        @apply relative cursor-pointer
+    }
+    .content-template-6 .box .play-icon{
+        @apply absolute left-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4 z-10 w-32 opacity-80 transition-all duration-200
+    }
+    .content-template-6 .box:hover .play-icon{
+        @apply opacity-100
+    }
+    .content-template-6 .box .active-txt{
+        @apply flex items-center justify-center absolute inset-0 bg-color-blue bg-opacity-90 z-10
+    }
+    .content-template-6 .box .active-txt strong{
+        @apply content-title text-10xl DINpro-bold
+    }
+    .content-template-6 .box .active-txt span{
+        @apply content-title absolute left-2/4 -translate-x-2/4 bottom-10
+    }
+    .content-template-6 .box .hover-txt{
+        @apply flex flex-col p-12 justify-end absolute inset-0 bg-color-blue bg-opacity-90 z-10 opacity-0 hover:opacity-100 transition-all duration-200
+    }
+    .content-template-6 .box .hover-txt strong{
+        @apply content-title text-2xl relative
+    }
+    .content-template-6 .box .hover-txt strong::before{
+        @apply content-[''] absolute left-0 -bottom-1 h-px w-20 bg-color-white
+    }
+    .content-template-6 .box .hover-txt span{
+        @apply content-paragraph text-lg mt-4
+    }
+    .content-template-6 .box .hover-txt a{
+        @apply mt-5
+    }
+
+
+
+
+    /* Content Template 7 */
+    .content-template-7{
+       @apply xl:grid flex flex-col grid-cols-12 gap-10 
+    }
+    .content-template-7 .box{
+       @apply md:grid flex flex-col grid-cols-12 col-span-6 bg-color-truiceblue relative xl:h-[480px]
+    }
+    .content-template-7 .box .content-img{
+       @apply col-span-6
+    }
+    .content-template-7 .box .txt-area{
+        @apply col-span-6 md:p-10 p-4
+    }
+    .content-template-7 .box .txt-area strong{
+        @apply content-title text-color-blue relative leading-tight pb-3 mb-3
+    }
+    .content-template-7 .box .txt-area strong::before{
+        @apply content-[''] absolute left-0 -bottom-1 h-px w-[90%] max-w-[300px] bg-color-blue
+    }
+    .content-template-7 .box .txt-area span{
+        @apply content-paragraph text-color-blue leading-snug
+    }
+    .content-template-7 .box .abs-txt{
+        @apply md:absolute md:mt-0 mt-5 relative right-0 bottom-0 bg-color-white p-4 pl-20 md:max-w-[600px]
+    }
+    .content-template-7 .box .abs-txt p{
+        @apply content-paragraph text-color-blue md:mt-5 mt-0
+    }
+    .content-template-7 .box .abs-txt svg{
+        @apply absolute left-7 top-12
+    }
+
+
+
+
+    /* Content Template 7 */
+
+
+
+
+
+
+
+
+
+
+    /* Content Table */
+    .content-table{}
+    .content-table .th{
+        @apply content-paragraph mt-0 bg-color-blue px-5 py-3
+    }
+    .content-table .tb{}
+    .content-table .tb > div{
+        @apply grid grid-cols-12
+    }
+    .content-table .tb > div:nth-child(even){
+        @apply bg-color-blue bg-opacity-5
+    }
+    .content-table .tb > div > div{
+        @apply col-span-6 content-paragraph mt-0 text-color-blue px-5 py-3
+    }
+    .content-table .tb > div:nth-child(odd) > div:nth-child(1){
+        @apply border-r border-color-blue border-opacity-5
+    }
+   
+   
+    /* Content Table 2 */
+    .content-table-2{}
+    .content-table-2 > div{
+        
+    }
+    .content-table-2 .th{
+        @apply content-paragraph mt-0 px-5 py-3 text-color-blue DINpro-medium
+    }
+    .content-table-2 > div:not(.th){
+        @apply grid grid-cols-12 gap-5
+    }
+    .content-table-2 > div:not(.th) > div{
+        @apply col-span-6 content-paragraph mt-0 text-color-blue px-5 py-3 border-b border-color-blue border-opacity-10
+    }
+    .content-table-2 > .th + div > div{
+        @apply border-t
+    }
+    
+    
+    /* Content Table 3 */
+    .content-table-3{
+        @apply mt-6
+    }
+    .content-table-3 > div{
+        grid-template-columns: 300px repeat(5, 1fr);
+        @apply grid gap-7
+    }
+    .content-table-3 > div:nth-child(1) > div{
+        @apply border-t border-opacity-80
+    }
+    .content-table-3 > div > div{
+        @apply content-paragraph mt-0 text-xl px-5 py-4 text-color-blue border-b border-color-blue border-opacity-20
+    }
+    
+    
+    /* Content Table 4 */
+    .content-table-4{
+        @apply lg:flex hidden flex-col
+    }
+    .content-table-4 .col{
+        display: grid; grid-template-columns: 500px repeat(4, 1fr);
+    }
+    .content-table-4 .th{
+    }
+    .content-table-4 .th > div{
+        @apply content-paragraph mt-0 py-5 px-5
+    }
+    .content-table-4 .thead{}
+    .content-table-4 .tb{
+    }
+    .content-table-4 .tb:nth-of-type(odd){
+        @apply bg-color-truiceblue
+    }
+    .content-table-4 .tb > div{
+        @apply content-paragraph mt-0 text-color-blue p-4 text-xl
+    }
+
+
+    /* Content Table 5 */
+    .content-table-5{}
+    
+    
+
+    /* Content Table 6 */
+    .content-table-6{
+        @apply lg:block hidden
+    }
+    .content-table-6 .th{
+        grid-template-columns: var(--col);
+        @apply grid content-paragraph mt-0 bg-color-blue
+    }
+    .content-table-6 .th > div{
+        @apply text-center py-3 px-5
+    }
+    .content-table-6 .tb{}
+    .content-table-6 .tb > div{
+        grid-template-columns: var(--col);
+        @apply grid
+    }
+    .content-table-6 .tb > div:nth-child(odd){
+        @apply bg-color-blue bg-opacity-5
+    }
+    .content-table-6 .tb > div > div{
+        @apply content-paragraph mt-0 text-color-blue px-5 py-3
+    }
+    .content-table-6 .tb > div > div:not(:nth-child(1)){
+        @apply flex justify-center items-center gap-3
+    }
+    .content-table-6 .tb > div:nth-child(odd) > div:nth-child(1){
+        @apply border-r border-color-blue border-opacity-5
+    }
+    .content-table-6 .tb > div > div > div{
+        @apply p-0 h-6
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    /* Content Tabs */
+    .content-tabs{
+        /* @apply */
+    }
+    .content-tabs > div{
+        @apply flex items-center gap-3 py-3 px-5 cursor-pointer
+    }
+    .content-tabs > div:not(.active){
+        @apply border-t border-b border-r border-color-blue border-opacity-10
+    }
+    .content-tabs > div:nth-child(1):not(.active){
+        @apply border-l
+    }
+    .content-tabs > div.active{
+        @apply bg-color-blue
+    }
+    .content-tabs > div.active > div{
+        @apply white-square
+    }
+    .content-tabs > div.active > span{
+        @apply text-color-white
+    }
+    .content-tabs > div > div{
+        @apply blue-square
+    }
+    .content-tabs > div > span{
+        @apply content-paragraph mt-0 text-xl text-color-blue
+    }
+    
+    
+    
+    
+    
+
+    /* Product Template 1 */
+    .product-template-1{
+        @apply flex flex-col
+    }
+    .product-template-1 .img{
+        @apply content-img
+    }
+    .product-template-1 .img.long{
+        aspect-ratio: 1;
+    }
+    .product-template-1 .img.short{
+        aspect-ratio: 1.5;
+    }
+    .product-template-1 .img img{}
+    .product-template-1 .detail{
+        @apply p-10 h-full
+    }
+    .product-template-1 .detail strong{
+        @apply content-title line-clamp-1
+    }
+    .product-template-1 .detail p{
+        @apply content-paragraph mt-3 line-clamp-3 3xl:h-24 h-[5.65rem]
+    }
+    
+    
+    
+
+
+    /*-------------------------------------
+    ----------------- TITLE ---------------
+    -------------------------------------*/
+    .title{ 
+        @apply DINpro font-light text-4xl text-color-blue tracking-title flex items-center
+    }
+    .title span{
+        @apply relative
+    }
+
+    .title-underline{
+        @apply title
+    }
+    .title-underline span::after{
+        content: ''; 
+        @apply h-px w-full inline-block bg-color-blue absolute left-0 -bottom-px
+    }
+    
+    .title-rectangle{
+        @apply title
+    }
+    .title-rectangle::before{
+        content: ''; 
+        @apply h-9 w-20 min-w-[5rem] inline-block bg-color-blue mr-3 translate-y-px
+    }
+
+    .title-rectangle-w-underline{
+        @apply title-underline title-rectangle
+    }
+    
+
+    .sm-txt{
+        @apply content-paragraph text-sm text-color-blue
+    }
+    .sm-txt-bold{
+        @apply sm-txt font-bold
+    }
+    .md-txt{
+        @apply content-paragraph text-lg text-color-blue
+    }
+    .md-txt-bold{
+        @apply md-txt font-bold
+    }
+    .lg-txt{
+        @apply content-paragraph text-xl text-color-blue
+    }
+    .lg-txt-bold{
+        @apply lg-txt font-bold
+    }
+
+
+    /*-------------------------------------
+    --------------- LIST STYLES -----------
+    -------------------------------------*/
+    
+    .list-style{
+        @apply relative mr-2 inline-block -translate-y-1
+    }
+
+    .list-style-square{
+        @apply content-[''] w-2 h-2 list-style
+    }
+
+    .list-style-square-outlined{
+        @apply list-style-square border
+    }
+    .list-style-circle{
+        @apply rounded-full list-style-square
+    }
+    .list-style-circle-outlined{
+        @apply border list-style-circle
+    }
+
+    /* SQUARE */
+    /* List WHITE */
+    .list-style-square-transparent::before{
+        @apply bg-color-transparent list-style-square
+    }
+    .list-style-square-transparent-outlined::before{
+        @apply border-color-transparent list-style-square-outlined
+    }
+    
+    /* List WHITE */
+    .list-style-square-white::before{
+        @apply bg-color-white list-style-square
+    }
+    .list-style-square-white-outlined::before{
+        @apply border-color-white list-style-square-outlined
+    }
+
+    /* List BLUE */
+    .list-style-square-blue::before{
+        @apply bg-color-blue list-style-square
+    }
+    .list-style-square-blue-outlined::before{
+        @apply border-color-blue list-style-square-outlined
+    }
+
+    /* List BLACK */
+    .list-style-square-black::before{
+        @apply bg-color-black list-style-square
+    }
+    .list-style-square-black-outlined::before{
+        @apply border-color-black list-style-square-outlined
+    }
+
+    /* List GREY */
+    .list-style-square-grey::before{
+        @apply bg-color-grey list-style-square
+    }
+    .list-style-square-grey-outlined::before{
+        @apply border-color-grey list-style-square-outlined
+    }
+
+    /* List LİGHT GREY */
+    .list-style-square-light-grey::before{
+        @apply bg-color-light-grey list-style-square
+    }
+    .list-style-square-light-grey-outlined::before{
+        @apply border-color-light-grey list-style-square-outlined
+    }
+
+    /* List DARK GREY */
+    .list-style-square-dark-grey::before{
+        @apply bg-color-dark-grey list-style-square
+    }
+    .list-style-square-dark-grey-outlined::before{
+        @apply border-color-dark-grey list-style-square-outlined
+    }
+
+    /* List GREEN */
+    .list-style-square-green::before{
+        @apply bg-color-green list-style-square
+    }
+    .list-style-square-green-outlined::before{
+        @apply border-color-green list-style-square-outlined
+    }
+
+    /* List BROWN */
+    .list-style-square-brown::before{
+        @apply bg-color-brown list-style-square
+    }
+    .list-style-square-brown-outlined::before{
+        @apply border-color-brown list-style-square-outlined
+    }
+
+    /* List LIGHT BROWN */
+    .list-style-square-light-brown::before{
+        @apply bg-color-light-brown list-style-square
+    }
+    .list-style-square-light-brown-outlined::before{
+        @apply border-color-light-brown list-style-square-outlined
+    }
+
+    /* List POWDER */
+    .list-style-square-powder::before{
+        @apply bg-color-powder list-style-square
+    }
+    .list-style-square-powder-outlined::before{
+        @apply border-color-powder list-style-square-outlined
+    }
+
+    /* List TRUGREEN */
+    .list-style-square-trugreen::before{
+        @apply bg-color-trugreen list-style-square
+    }
+    .list-style-square-trugreen-outlined::before{
+        @apply border-color-trugreen list-style-square-outlined
+    }
+
+    /* List TRUICEBLUE */
+    .list-style-square-truiceblue::before{
+        @apply bg-color-truiceblue list-style-square
+    }
+    .list-style-square-truiceblue-outlined::before{
+        @apply border-color-truiceblue list-style-square-outlined
+    }
+
+    /* CIRCLE */
+    /* List WHITE */
+    .list-style-circle-white::before{
+        @apply bg-color-white list-style-circle
+    }
+    .list-style-circle-white-outlined::before{
+        @apply border-color-white list-style-circle-outlined
+    }
+
+    /* List BLUE */
+    .list-style-circle-blue::before{
+        @apply bg-color-blue list-style-circle
+    }
+    .list-style-circle-blue-outlined::before{
+        @apply border-color-blue list-style-circle-outlined
+    }
+
+    /* List BLACK */
+    .list-style-circle-black::before{
+        @apply bg-color-black list-style-circle
+    }
+    .list-style-circle-black-outlined::before{
+        @apply border-color-black list-style-circle-outlined
+    }
+
+    /* List GREY */
+    .list-style-circle-grey::before{
+        @apply bg-color-grey list-style-circle
+    }
+    .list-style-circle-grey-outlined::before{
+        @apply border-color-grey list-style-circle-outlined
+    }
+
+    /* List LİGHT GREY */
+    .list-style-circle-light-grey::before{
+        @apply bg-color-light-grey list-style-circle
+    }
+    .list-style-circle-light-grey-outlined::before{
+        @apply border-color-light-grey list-style-circle-outlined
+    }
+
+    /* List DARK GREY */
+    .list-style-circle-dark-grey::before{
+        @apply bg-color-dark-grey list-style-circle
+    }
+    .list-style-circle-dark-grey-outlined::before{
+        @apply border-color-dark-grey list-style-circle-outlined
+    }
+
+    /* List GREEN */
+    .list-style-circle-green::before{
+        @apply bg-color-green list-style-circle
+    }
+    .list-style-circle-green-outlined::before{
+        @apply border-color-green list-style-circle-outlined
+    }
+
+    /* List BROWN */
+    .list-style-circle-brown::before{
+        @apply bg-color-brown list-style-circle
+    }
+    .list-style-circle-brown-outlined::before{
+        @apply border-color-brown list-style-circle-outlined
+    }
+
+    /* List LIGHT BROWN */
+    .list-style-circle-light-brown::before{
+        @apply bg-color-light-brown list-style-circle
+    }
+    .list-style-circle-light-brown-outlined::before{
+        @apply border-color-light-brown list-style-circle-outlined
+    }
+
+    /* List POWDER */
+    .list-style-circle-powder::before{
+        @apply bg-color-powder list-style-circle
+    }
+    .list-style-circle-powder-outlined::before{
+        @apply border-color-powder list-style-circle-outlined
+    }
+
+    /* List TRUGREEN */
+    .list-style-circle-trugreen::before{
+        @apply bg-color-trugreen list-style-circle
+    }
+    .list-style-circle-trugreen-outlined::before{
+        @apply border-color-trugreen list-style-circle-outlined
+    }
+    
+    /* List TRUICEBLUE */
+    .list-style-circle-truiceblue::before{
+        @apply bg-color-truiceblue list-style-circle
+    }
+    .list-style-circle-truiceblue-outlined::before{
+        @apply border-color-truiceblue list-style-circle-outlined
+    }
+    
+    
+    
+    /* .list-style-check::before{
+        content: url('../images/symbols/list-tick-small.svg');
+        @apply w-2 h-2 bg-color-blue rounded-full list-style tr
+    } */
+    
+    
+    
+    .big::before{
+        height: 16px !important;
+        min-height: 16px !important;
+        min-width: 16px !important;
+        margin-right: 16px !important;
+        transform: translateY(-2px) !important;
+    }
+
+
+
+    /*-------------------------------------
+    ------------- SQUARE AARCHIVE ---------
+    -------------------------------------*/
+    .square-archive{
+        @apply 2xl:gap-12 gap-6
+    }
+
+
+
+
+    /*-------------------------------------
+    ------------- VERTICAL LINE -----------
+    -------------------------------------*/
+    .vertical-line{
+        @apply w-px my-2
+    }
+
+    .vertical-line-2x{ @apply vertical-line h-5}
+    .vertical-line-4x{ @apply vertical-line h-12}
+    .vertical-line-6x{ @apply vertical-line h-20}
+    .vertical-line-8x{ @apply vertical-line h-32}
+
+    .blue-vertical-line-2x,
+    .blue-vertical-line-4x,
+    .blue-vertical-line-6x,
+    .blue-vertical-line-8x{ @apply bg-color-blue }
+
+    .white-vertical-line-2x,
+    .white-vertical-line-4x,
+    .white-vertical-line-6x,
+    .white-vertical-line-8x{ @apply bg-color-white }
+
+    .blue-vertical-line-2x,
+    .white-vertical-line-2x{ @apply vertical-line-2x }
+    .blue-vertical-line-4x,
+    .white-vertical-line-4x{ @apply vertical-line-4x }
+    .blue-vertical-line-6x,
+    .white-vertical-line-6x{ @apply vertical-line-6x }
+    .blue-vertical-line-8x,
+    .white-vertical-line-8x{ @apply vertical-line-8x }
+
+
+
+
+    
+    /*-------------------------------------
+    ---------------- BAR LIST -------------
+    -------------------------------------*/
+    .bar-list-in{
+        @apply grid gap-1 w-full
+    }
+    .bar-list-in > div{
+        @apply bg-color-blue text-color-white grid grid-cols-70-1fr
+    }
+    .bar-list-in > div .icon{
+        @apply flex items-center justify-center
+    }
+    .bar-list-in > div .icon span{
+        @apply text-4xl DINpro font-light
+    }
+    .bar-list-in > div .text{
+        @apply pr-3 py-4
+    }
+    .bar-list-in > div .text p{
+        @apply content-paragraph mt-0
+    }
+
+    .bar-list-out{
+        @apply bar-list-in grid gap-1 w-full
+    }
+
+    .bar-list-out .icon{
+        @apply bg-color-white
+    }
+    .bar-list-out .icon span{
+        @apply text-color-blue
+    }
+    .bar-list-out .text{
+        @apply px-6
+    }
+    
+    
+
+
+    
+    /*-------------------------------------
+    ---------------- STEP AREA ------------
+    -------------------------------------*/
+    
+    .step-area{}
+    .step-area .steps{
+        @apply grid lg:grid-cols-12 grid-cols-3 border-t border-color-blue mt-3
+    }
+    .step-area .steps > div{
+        @apply lg:py-28 py-14 pr-16 pl-10
+    }
+    .step-area .steps > div:first-child{
+        @apply lg:pl-0
+    }
+    .step-area .steps > div .count{
+        @apply text-2xl h-12 mb-7
+    }
+    .step-area .steps > div .content-title{}
+    .step-area .steps > div .content-paragraph{
+        @apply mt-4
+    }
+
+
+
+
+
+
+    /*-------------------------------------
+    ----------------- FORM ----------------
+    -------------------------------------*/
+    .form-type-1 .inputs{
+        @apply sm:grid flex flex-col sm:grid-cols-12 grid-cols-6 gap-x-9 gap-y-5 mt-7
+    }
+    .input-area{
+        @apply flex flex-col col-span-6
+    }
+    .input-area label{
+        @apply content-paragraph text-color-blue mb-2 mt-0
+    }
+    .input-area .input{
+        @apply flex
+    }
+    .input-area .input input{
+        @apply w-full h-12 border border-color-grey-border outline-none text-color-blue px-4 text-lg focus:border-color-blue
+    }
+    .input-area .input textarea{
+        @apply w-full h-28 border border-color-grey-border outline-none text-color-blue p-4 text-lg focus:border-color-blue resize-none
+    }
+
+
+    .cb, .cb-big{
+        @apply relative mt-2
+    }
+    :is(.cb, .cb-big) input{
+        @apply absolute w-px h-px left-3 top-3
+    }
+    :is(.cb, .cb-big) input::before{
+        @apply content-['\f00c'] bg-color-white absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 w-5 h-5 border border-color-grey-border flex items-center justify-center font-awesome font-black text-color-white transition-all
+    }
+    .cb-big input::before{
+        @apply w-6 h-6
+    }
+    :is(.cb, .cb-big) input:checked::before{
+        @apply bg-color-blue
+    }
+    :is(.cb, .cb-big) label{
+        @apply content-paragraph text-base pl-8 text-color-blue cursor-pointer
+    }
+    .cb-big label{
+        @apply text-lg pl-10
+    }
+
+
+    
+    .select{
+        @apply relative
+    }
+    .select svg{
+        @apply absolute right-7 top-2/4 -translate-y-2/4
+    }
+    .select :where(select, input){
+        @apply outline-none
+    }
+    .select select option{
+        @apply text-color-blue
+    }
+    
+    .custom-dropdown{
+    }
+    .custom-dropdown .dropdown{
+        @apply absolute top-full bg-color-white w-full hidden flex-col shadow-xl z-20 max-h-[185px] overflow-y-auto
+    }
+    .custom-dropdown.active .dropdown{
+        @apply flex border-t border-gray-200
+    }
+    .custom-dropdown.active svg{
+        @apply rotate-180
+    }
+    .custom-dropdown .dropdown span{
+        @apply content-paragraph mt-0 text-color-blue px-5 py-2 text-lg hover:bg-color-blue hover:bg-opacity-5 cursor-pointer
+    }
+    
+
+
+
+    /*-------------------------------------
+    ------------ PRODUCT DETAIL -----------
+    -------------------------------------*/
+
+    .product-container{}
+    .route-area{
+        @apply flex md:flex-row flex-col md:items-center gap-6
+    }
+    .route{
+        @apply flex items-center gap-8 whitespace-nowrap md:overflow-x-auto overflow-hidden max-w-full
+    }
+    .route > a{
+        @apply hover:underline cursor-pointer content-paragraph text-base text-color-blue mt-0 relative
+    }
+    .route > a svg{
+        @apply absolute -right-4 translate-x-px top-2/4 -translate-y-2/4 inline-block pointer-events-none
+    }
+    .route > a:last-child{
+        @apply font-bold pointer-events-none
+    }
+
+    
+    
+    .product-area{
+        @apply flex lg:flex-row flex-col pt-12 2xl:gap-36 gap-12
+    }
+
+    
+    /* Product Gallery 1 */
+    .product-gallery{
+        @apply w-full flex flex-col 
+    }
+    .product-gallery .swiper-container { 
+        @apply w-full
+    }
+    .product-gallery .slider{
+        @apply relative overflow-hidden flex max-h-[633px] mb-8
+    }
+    .product-gallery .slider .swiper-wrapper{
+        @apply w-full h-full max-h-[633px]
+    }
+    .product-gallery .slider .swiper-wrapper .swiper-slide{
+        @apply w-full h-full max-h-[633px]
+    }
+    .product-gallery .slider .swiper-wrapper .swiper-slide img{
+        @apply w-full h-full object-cover max-h-[633px]
+    }
+    .product-gallery .slider :is(.swiper-button-next, .swiper-button-prev){
+        @apply text-color-blue
+    }
+    .product-gallery .slider .swiper-button-prev{}
+    .product-gallery .slider-thumbnail{
+        @apply lg:h-60 overflow-hidden
+    }
+    .product-gallery .slider-thumbnail .swiper-wrapper{}
+    .product-gallery .slider-thumbnail .swiper-wrapper .swiper-slide{
+        @apply h-fit aspect-square w-full overflow-hidden border border-gray-300
+    }
+    .product-gallery .slider-thumbnail .swiper-wrapper .swiper-slide.swiper-slide-thumb-active{
+        @apply border-gray-500
+    }
+    .product-gallery .slider-thumbnail .swiper-wrapper .swiper-slide img{
+        @apply w-full 2xl:h-full object-cover
+    }
+
+    
+
+    .detail-area{
+        @apply w-fit 2xl:min-w-[600px]
+    }
+    .detail-area h1{
+        @apply title text-4xl mb-2
+    }
+    .detail-area h2{
+        @apply mb-5 content-title text-color-blue text-2xl font-light
+    }
+    .detail-area .prices{}
+    .detail-area .prices .current-price{
+        @apply content-title text-color-blue DINpro-medium
+    }
+    .detail-area .explanation{
+        @apply lg:px-8 lg:py-5 p-3 border border-gray-200 mt-10
+    }
+    .detail-area .explanation p{
+        @apply content-paragraph text-color-blue mt-0
+    }
+    
+    .detail-area .icon-area{
+        @apply mt-10
+    }
+    .detail-area .icon-area strong{
+        @apply content-paragraph text-color-blue
+    }
+    .detail-area .icon-area .icons{
+        @apply flex mt-3 border-t border-b border-gray-200
+    }
+    .detail-area .icon-area .icons > div{
+        @apply w-full flex items-center justify-center
+    }
+    .detail-area .icon-area .icons img{
+        @apply md:px-10 px-6 py-5 h-24
+    }
+    .detail-area .icon-area .icons > div:not(:last-child){
+        @apply border-r border-gray-200
+    }
+
+    .detail-area .icon-area .boxes{
+        @apply flex mt-3 flex-wrap gap-4
+    }
+    .detail-area .icon-area .boxes.colors{
+        @apply md:flex grid grid-cols-12
+    }
+    .detail-area .icon-area .boxes.colors > span{
+        @apply col-span-6 whitespace-nowrap line-clamp-1 flex items-center break-all
+    }
+    .detail-area .icon-area .boxes > span{
+        @apply gap-3 mt-0 border border-gray-200 flex items-center md:px-5 px-3 py-2 content-paragraph text-color-blue
+    }
+    .detail-area .icon-area .boxes > span.pale{
+        @apply opacity-50
+    }
+    .detail-area .icon-area .boxes .color{
+        @apply w-5 h-5 min-w-[1.25rem]
+    }
+
+    .detail-area .icon-area .boxes.number > span{
+        @apply min-w-[60px] justify-center
+    }
+
+
+    .product-count-area{
+        @apply mt-12
+    }
+    .product-count-area > strong{
+        @apply content-paragraph text-color-blue text-5xl
+    }
+    .product-count-area .count-area{
+        @apply flex items-center gap-10 mt-5
+    }
+    .product-count-area .count-area > div{
+        @apply h-14 w-fit flex border border-gray-400
+    }
+    .product-count-area .count-area > div button{
+        @apply text-sm w-12 border-gray-400
+    }
+    .product-count-area .count-area > div .minus{
+        @apply border-r
+    }
+    .product-count-area .count-area > div .plus{
+        @apply border-l
+    }
+    .product-count-area .count-area > div input{
+        @apply outline-none w-20 text-color-blue text-center text-4xl px-3 font-light
+    }
+    .product-count-area .count-area > a{
+        @apply btn-blue mt-0 h-14
+    }
+
+
+    
+    .information-area{
+        @apply mt-40
+    }
+    .tabs-head-1{
+        @apply flex gap-1 border-t border-gray-200 lg:flex-nowrap flex-wrap lg:justify-start justify-center
+    }
+    .tabs-head-1 > a{
+        @apply w-full justify-center text-center items-center mt-0 content-paragraph flex py-3 px-6 bg-color-white border border-gray-200 hover:border-gray-400 text-color-blue cursor-pointer
+    }
+    .tabs-head-1 > a.active{
+        @apply bg-color-blue border-color-blue text-color-white
+    }
+    
+    .information-area .tabs-body{}
+    .information-area .tabs-body > div{
+        @apply pt-8
+    }
+    .information-area .tabs-body > div:not(.active){
+        @apply d-none
+    }
+
+    .information-area .tabs-body > div .image-and-info{
+        @apply mt-10
+    }
+    .information-area .tabs-body > div .image-and-info .images{
+        @apply relative lg:grid flex flex-col grid-cols-12 gap-x-20 gap-y-10 
+    }
+    .information-area .tabs-body > div .image-and-info .images > div{
+        @apply flex md:flex-row flex-col gap-5 col-span-6
+    }
+    .information-area .tabs-body > div .image-and-info .images > div img{ 
+        @apply w-32 h-32 min-w-[8rem] md:mx-0 mx-auto
+    }
+    .information-area .tabs-body > div .image-and-info .images > div > div{
+        @apply max-w-[1200px]
+    }
+    .information-area .tabs-body > div .image-and-info .images > div > div b{
+        @apply content-title text-color-blue lg:text-left text-center lg:justify-start justify-center lg:inline flex
+    }
+    .information-area .tabs-body > div .image-and-info .images > div > div p{
+        @apply content-paragraph mt-3 text-color-blue lg:text-left text-center
+    }
+    
+    .information-area .tabs-body > div .table{
+        @apply w-full max-w-[800px]
+    }
+    .information-area .tabs-body > div .table > div{
+        @apply gap-4 grid grid-cols-12
+    }
+    .information-area .tabs-body > div .table > div > div{
+        @apply col-span-6 content-paragraph text-xl mt-0 p-5 text-color-blue border-t border-gray-200
+    }
+    .information-area .tabs-body > div .table > div:nth-child(1) > div{
+        @apply border-none
+    }
+    
+    
+    
+    
+    /* Product Template 2 */
+    
+    .product-area2{
+        @apply flex xl:flex-row flex-col pt-12 gap-5
+    }
+    
+    /* Product Gallery 2 */
+    .product-gallery2{
+        @apply w-full flex flex-col
+    }
+    .product-gallery2 .swiper-container { 
+        @apply w-full
+    }
+    .product-gallery2 .slider{
+        aspect-ratio: 1.9;
+        @apply relative overflow-hidden flex mb-5
+    }
+    .product-gallery2 .slider .swiper-wrapper{
+        @apply w-full h-auto
+    }
+    .product-gallery2 .slider .swiper-wrapper .swiper-slide{
+        @apply w-full h-full 
+    }
+    .product-gallery2 .slider .swiper-wrapper .swiper-slide img{
+        @apply w-full h-full object-cover
+    }
+    .product-gallery2 .slider :is(.swiper-button-next, .swiper-button-prev){
+        @apply text-color-blue
+    }
+    .product-gallery2 .slider .swiper-button-prev{}
+    .product-gallery2 .slider-thumbnail{
+        @apply overflow-hidden relative
+    }
+    .product-gallery2 .slider-thumbnail::before{
+        @apply content-[''] absolute right-0 top-0 h-full w-20 bg-gradient-to-r from-transparent to-white inline-block z-10
+    }
+    .product-gallery2 .slider-thumbnail .swiper-wrapper{
+        
+    }
+    .product-gallery2 .slider-thumbnail .swiper-wrapper .swiper-slide{
+        aspect-ratio: 1.4;
+        @apply overflow-hidden border border-gray-300 
+    }
+    .product-gallery2 .slider-thumbnail .swiper-wrapper .swiper-slide.swiper-slide-thumb-active{
+        @apply border-gray-500
+    }
+    .product-gallery2 .slider-thumbnail .swiper-wrapper .swiper-slide img{
+        @apply w-full h-full object-cover
+    }
+    
+    
+    /* Product Detail Area 2 */
+    .detail-area2{
+        /* background-color: #F6F6F6;
+        @apply w-fit min-w-[600px] p-10 */
+        @apply w-fit xl:min-w-[600px]
+    }
+    .detail-area2 h1{
+        @apply title text-4xl mb-2
+    }
+    .detail-area2 h2{
+        @apply mb-5 content-title text-color-blue text-2xl font-light opacity-70
+    }
+    .detail-area2 .info-table{
+        @apply mt-5
+    }
+    .detail-area2 .info-table > div{
+        @apply grid grid-cols-12
+    }
+    .detail-area2 .info-table > div:nth-child(odd){
+        /* @apply bg-white bg-opacity-100 */
+        @apply bg-color-blue bg-opacity-5
+    }
+    .detail-area2 .info-table > div > div{
+        @apply col-span-6 content-paragraph mt-0 text-xl text-color-blue p-3
+    }
+    .detail-area2 .p-btn{
+        @apply btn-blue-outlined mx-auto mt-20 h-12 px-6 text-lg
+    }
+    
+    .detail-area2.blue-temp{
+        @apply bg-color-blue p-10 box-border
+    }
+    .detail-area2.blue-temp h1{
+        @apply text-color-white
+    }
+    .detail-area2.blue-temp h2{
+        @apply text-color-white
+    }
+    .detail-area2.blue-temp .info-table > div{
+        @apply grid grid-cols-12 /*border-b border-gray-50 border-opacity-20*/
+    }
+    .detail-area2.blue-temp .info-table > div:nth-child(odd){
+        @apply bg-white bg-opacity-5
+    }
+    .detail-area2.blue-temp .info-table > div:nth-child(even){}
+    .detail-area2.blue-temp .info-table > div > div{
+        @apply text-color-white
+    }
+    .detail-area2.blue-temp .p-btn{
+        @apply btn-white-outlined  mt-16
+    }
+    
+
+    /* Information Area 2 */
+    .information-area2{
+        @apply mt-40
+    }
+    .information-area2 .tabs-head{
+        @apply flex gap-1 lg:flex-nowrap flex-wrap lg:justify-stretch justify-center
+    }
+    .information-area2 .tabs-head > a{
+        @apply text-center items-center w-full mt-0 content-paragraph flex py-4 px-6 bg-color-blue bg-opacity-5 hover:bg-opacity-10 text-color-blue cursor-pointer justify-center transition-all
+    }
+    .information-area2 .tabs-head > a.active{
+        @apply bg-color-blue border-color-blue text-color-white
+    }
+    
+
+    .information-area2 .tabs-body{}
+    .information-area2 .tabs-body > div{
+        @apply pt-8
+    }
+    .information-area2 .tabs-body > div:not(.active){
+        @apply d-none
+    }    
+    .information-area2 .tabs-body > div .table{
+        @apply w-full max-w-[800px]
+    }
+    .information-area2 .tabs-body > div .table > div{
+        @apply gap-4 grid grid-cols-12
+    }
+    .information-area2 .tabs-body > div .table > div > div{
+        @apply col-span-6 content-paragraph text-xl mt-0 p-5 text-color-blue border-t border-gray-200
+    }
+    .information-area2 .tabs-body > div .table > div:nth-child(1) > div{
+        @apply border-none
+    }
+    
+    
+    
+    
+    .product-form{
+        @apply w-full lg:py-32 py-24 bg-color-blue bg-opacity-5 mt-40 relative
+    }
+    .product-form > img{
+        @apply absolute left-0 top-0 w-full h-full object-cover
+    }
+    .product-form > div{
+        @apply default-container px-3 flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 relative z-10
+    }
+    .product-form > div .form{
+        @apply p-10 px-12 bg-color-white w-full lg:max-w-[900px]
+    }
+    .product-form > div .form h3{}
+    .product-form > div .form p{}
+    .product-form > div .form-txt{
+        @apply w-full lg:min-w-[400px] lg:pt-32 xl:pl-40 lg:pl-20
+    }
+    .product-form > div .form-txt .content-title{}
+    .product-form > div .form-txt ul{}
+    .product-form > div .form-txt ul li{
+        @apply relative pl-6 content-paragraph mt-6 text-color-blue list-style-square-blue lg:max-w-[330px] max-w-[600px]
+    }
+    .product-form > div .form-txt ul li::before{
+        @apply absolute top-3 translate-y-px left-0 w-3 h-3
+    }
+    
+    
+    
+
+    /* Product Detail Area 3 */
+
+    .detail-area3{
+        @apply w-full flex items-end flex-col
+    }
+    .detail-area3 h1{
+        @apply title text-4xl mb-2 text-color-blue w-full xl:max-w-[600px]
+    }
+    .detail-area3 p{
+        @apply content-paragraph text-color-blue w-full xl:max-w-[600px]
+    }
+    .detail-area3 .p-btns{
+        @apply grid grid-cols-12 gap-5 mt-10 w-full xl:max-w-[600px]
+    }
+    .detail-area3 .p-btns > a{
+        @apply btn-blue col-span-6 flex w-full h-auto py-2
+    }
+    .detail-area3 .image-w-txt{
+        @apply relative w-full flex justify-end
+    }
+    .detail-area3 .image-w-txt > div{
+        @apply grid md:grid-cols-10 grid-cols-4 gap-6 mt-10 border-b border-color-blue pb-5 w-full xl:max-w-[600px]
+    }
+    /* .detail-area3 .image-w-txt > div > div{
+        @apply md:max-w-none max-w-[200px] md:mx-0 mx-auto
+    } */
+    .detail-area3 .image-w-txt > div > div .content-img{
+        @apply aspect-square relative
+    }
+    .detail-area3 .image-w-txt > div > div .content-img::before{
+        @apply content-[''] inline-block absolute inset-0 scale-125 bg-color-blue bg-opacity-5 opacity-0 transition-all cursor-pointer
+    }
+    .detail-area3 .image-w-txt > div > div .content-img:hover::before, .detail-area3 .image-w-txt > div > div.active .content-img::before{
+        @apply opacity-100
+    }
+    .detail-area3 .image-w-txt > div > div .content{
+        @apply absolute z-10 right-0 top-full translate-y-7 p-7 w-full bg-color-white shadow-product-info-detail max-w-[700px] transition-all opacity-0 pointer-events-none 
+    }
+    .detail-area3 .image-w-txt > div > div.active .content{
+        @apply translate-y-5 opacity-100 pointer-events-auto
+    }
+    .detail-area3 .image-w-txt > div > div .content .close{
+        @apply absolute right-5 top-5 cursor-pointer
+    }
+    .detail-area3 .image-w-txt > div > div .content .content-t{
+        @apply content-title text-color-blue
+    }
+    .detail-area3 .image-w-txt > div > div .content .content-p{
+        @apply content-paragraph text-color-blue mt-4
+    }
+    
+    
+    .p-texts{
+        @apply lg:grid grid-cols-12
+    }
+    .p-texts .list-style-square-blue{
+        @apply col-span-6 content-paragraph text-color-blue mt-0
+    }
+    .p-texts .list-style-square-blue::before{
+        @apply -translate-y-1
+    }
+    
+    
+    
+    
+    /* Long Image Container */
+    .long-image-container{
+        @apply w-full overflow-hidden relative flex justify-start
+    }
+    .long-image-container > div{
+        @apply lg:h-[600px] flex gap-6 w-fit
+    }
+    .long-image-container::after{
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.02) 0, #fff 100%);
+        @apply content-[''] absolute top-0 h-full w-16 inline-block z-10 right-0
+    }
+    .long-image-container > div > div{
+        @apply lg:w-80 lg:h-[600px] h-[450px]
+    }
+    .long-image-container > div .content-img{
+        @apply img-hover relative
+    }
+    .long-image-container > div .content-img::after{
+        @apply content-[''] absolute inset-0 bg-color-blue bg-opacity-80 z-10 opacity-0 transition-all duration-200
+    }
+    .long-image-container > div .content-img:hover::after{
+        @apply opacity-100 pointer-events-none
+    }
+    .long-image-container > div > div img{}
+    .long-image-container > div > div > div{
+        @apply flex flex-col absolute bottom-5 left-5 z-20 translate-y-10 transition-all duration-200
+    }
+    .long-image-container > div > div:hover > div{
+        @apply translate-y-0
+    }
+    .long-image-container > div > div > div span{
+        @apply content-paragraph mt-0
+    }
+    .long-image-container > div > div > div small{
+        @apply flex items-center gap-2 content-paragraph text-lg font-semibold mt-3 transition-all translate-y-3 opacity-0 duration-200
+    }
+    .long-image-container > div > div:hover > div small{
+        @apply translate-y-0 opacity-100
+    }
+    
+    
+    ::selection{
+        @apply bg-color-blue text-color-white
+    }
+
+
+
+    /*-------------------------------------
+    ----------- APPLICATION AREA ----------
+    -------------------------------------*/
+    .radius-area{
+        /* height: 1600px; */
+        @apply relative
+    }
+    .radius-area .left{}
+    .radius-area .left > div{
+        @apply gap-7 xl:max-w-[90%] flex md:flex-row flex-col
+    }
+    .radius-area .left > div .content-img{
+        @apply xl:w-52 xl:min-w-[13rem] xl:h-52 w-24 min-w-[6rem] h-24 aspect-square
+    }
+    .radius-area .right{
+        @apply xl:relative static
+    }
+    .radius-area .right .c-1{
+        width: 1600px;
+        @apply aspect-square bg-color-blue rounded-full xl:relative absolute xl:top-0 2xl:right-0 xl:right-[10%] right-0 top-2/4 xl:-translate-y-0 -translate-y-2/4 xl:translate-x-0 translate-x-2/4 -z-10 xl:opacity-100 opacity-10 
+    }
+    .radius-area .right .c-1 div:not(.content){
+        @apply aspect-square rounded-full absolute left-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4
+    }
+    .radius-area .right .c-2{
+        width: 1000px;
+        @apply bg-color-white
+    }
+    .radius-area .right .c-3{
+        width: 900px;
+        @apply bg-color-blue
+    }
+    .radius-area .right .c-4{
+        width: 530px;
+        @apply bg-color-white
+    }
+    .radius-area .right .c-4 .line{
+        width: 40px;
+        height: 330px;
+        border-radius: 0 !important;
+        @apply absolute bg-color-white absolute
+    }
+    
+    .radius-area .right .c-4 .line:nth-of-type(1){
+        transform: translateX(-338px) translateY(-739px) rotate(143deg);
+    }
+    .radius-area .right .c-4 .line:nth-of-type(2){
+        transform: translateX(-618px) translateY(-387px) rotate(115deg);
+    }
+    .radius-area .right .c-4 .line:nth-of-type(3){
+        transform: translateX(-619px) translateY(90px) rotate(69deg);
+    }
+    .radius-area .right .c-4 .line:nth-of-type(4){
+        transform: translateX(-319px) translateY(420px) rotate(-150deg);
+    }
+    
+    .radius-area .right .content{
+        @apply flex gap-4 justify-center items-center absolute
+    }
+    .radius-area .right .content span{
+        @apply content-title-7xl
+    }
+    .radius-area .right .content p{
+        @apply content-paragraph-4xl text-4xl mt-0 max-w-[170px]
+    }
+    .radius-area .right .content._1{
+        top: 105px;
+        left: 624px;
+    }
+    .radius-area .right .content._2{
+        top: 320px;
+        left: 195px;
+    }
+    .radius-area .right .content._3{
+        top: 749px;
+        left: 47px;
+    }
+    .radius-area .right .content._4{
+        bottom: 300px;
+        left: 220px;
+    }
+    .radius-area .right .content._5{
+        bottom: 100px;
+        left: 640px;
+    }
+    
+    
+    
+    
+    
+    
+    
+
+
+    /*-------------------------------------
+    -------------- PRODUCTS AREA ----------
+    -------------------------------------*/
+    .products-area{
+        @apply flex gap-10
+    }
+    .products-area .left{
+        @apply w-full max-w-[400px] xl:block hidden
+    }
+    .products-area .left ul{
+        @apply flex flex-col
+    }
+    .products-area .left ul li{
+        @apply relative content-paragraph mt-0 text-color-blue
+    }
+    .products-area .left ul li:not(:last-child){
+        @apply border-b border-color-blue border-opacity-10
+    }
+    .products-area .left ul li a{
+        @apply w-full flex items-center px-5 py-5 hover:bg-color-truiceblue hover:bg-opacity-40 transition-all
+    }
+    .products-area .left ul li span{
+        @apply absolute right-4 top-2/4 -translate-y-2/4
+    }
+    .products-area .right{
+        @apply w-full
+    }
+
+    .products{
+        @apply grid 3xl:grid-cols-12 md:grid-cols-8 grid-cols-4 gap-10
+    }
+    .products .product{
+        @apply col-span-4 border border-color-blue border-opacity-10
+    }
+    .products .product .p-title{
+        @apply flex flex-col p-5
+    }
+    .products .product .p-title strong{
+        @apply content-title text-color-blue
+    }
+    .products .product .p-title span{
+        @apply content-paragraph mt-3 text-color-blue text-opacity-60 text-lg
+    }
+    .products .product .p-img{
+        aspect-ratio: .9;
+        @apply w-full mb-0 flex items-center justify-center
+    }
+    .products .product .p-img img{
+        @apply w-full max-w-[90%]
+    }
+    .products .product .p-price{
+        @apply flex justify-between items-center h-12 relative
+    }
+    .products .product .p-price .top{
+        @apply -translate-y-full text-color-blue absolute top-2
+    }
+    .products .product .p-price > *{
+        @apply flex h-full items-center
+    }
+    .products .product .p-price small{
+        @apply content-paragraph mt-0 text-lg p-4
+    }
+    .products .product .p-price b{
+        @apply content-paragraph mt-0 text-color-white bg-color-blue p-4 ml-auto
+    }
+    .products .product .p-price.bg-color-white b{
+        @apply text-color-white
+    }
+    .products .product .tb{
+        @apply p-5
+    }
+    .products .product .tb > div{
+        @apply grid grid-cols-12
+    }
+    .products .product .tb > div > div{
+        @apply col-span-6
+    }
+    .products .product .tb > div > div span{
+        @apply content-paragraph mt-0 text-color-blue text-xl
+    }
+    .products .product .bottom-txt{
+        @apply content-paragraph mt-0 text-xl text-color-blue p-5 pt-0 inline-block
+    }
+
+
+
+    /* Products 2 */
+    .products-2{
+        @apply grid lg:grid-cols-12 md:grid-cols-8 grid-cols-4 gap-10
+    }
+    .products-2 .product{
+        @apply col-span-4 border border-color-blue border-opacity-10 hover:shadow-lg transition-all
+    }
+    .products-2 .product .p-img{
+        aspect-ratio: 1.5;
+        @apply w-full mb-0 flex items-center justify-center
+    }
+    .products-2 .product .p-img img{
+        @apply w-full
+    }
+    .products-2 .product .p-price{
+        @apply flex flex-col min-h-[5rem] justify-center px-4 pr-20 relative bg-color-blue
+    }
+    .products-2 .product .p-price span{
+        @apply content-paragraph mt-0 text-lg text-color-white
+    }
+    .products-2 .product .p-price strong{
+        @apply content-paragraph mt-0 text-color-white
+    }
+    .products-2 .product .p-price img{
+        @apply absolute top-2/4 -translate-y-2/4 right-5 h-2/4
+    }
+    .products-2 .product .tb{
+        @apply p-5
+    }
+    .products-2 .product .tb > div{
+        @apply grid grid-cols-12
+    }
+    .products-2 .product .tb > div > div{
+        @apply col-span-6
+    }
+    .products-2 .product .tb > div > div span{
+        @apply content-paragraph mt-0 text-color-blue text-xl
+    }
+    .products-2 .product .bottom-txt{
+        @apply content-paragraph mt-0 text-xl text-color-blue p-5 pt-0 inline-block
+    }
+    
+
+
+    /* Products 3 */
+    .products-3{
+        @apply grid lg:grid-cols-12 md:grid-cols-8 grid-cols-4 gap-10
+    }
+    .products-3 .product{
+        @apply col-span-4 border border-color-blue border-opacity-90
+    }
+    .products-3 .product .p-img{
+        aspect-ratio: 1;
+        @apply w-full mb-0 flex items-center justify-center relative mt-5
+    }
+    .products-3 .product .p-img img{
+        @apply w-full
+    }
+    .products-3 .product .p-img span{
+        @apply absolute left-0 top-0 bg-color-blue content-paragraph mt-0 py-2 px-5
+    }
+    .products-3 .product .p-title{
+        @apply flex flex-col p-7
+    }
+    .products-3 .product .p-title span{
+        @apply content-paragraph md:mt-2 mt-1 text-color-blue
+    }
+    .products-3 .product .p-title strong{
+        @apply content-title text-color-blue inline-block
+    }
+    .products-3 .product .p-title .sub{
+        @apply md:pt-4 pt-1
+    }
+    .products-3 .product .p-list{
+        @apply p-7
+    }
+    .products-3 .product .p-list ul{
+        
+    }
+    .products-3 .product .p-list ul li{
+        @apply content-paragraph mt-0 text-color-blue list-style-square-blue
+    }
+
+    
+    
+    
+    
+    
+    
+    /* Pagination */
+    .pagination{
+        @apply flex justify-center gap-3
+    }
+    .pagination > div{
+        @apply bg-color-truiceblue flex items-center justify-center square bg-opacity-40 border-none text-color-blue cursor-pointer hover:shadow-lg    transition-all
+    }
+    .pagination > div.active{
+        @apply blue-square
+    }
+    
+    
+    
+    /* Mobile Filter */
+    .mobile-filter{
+        @apply fixed z-[100] bg-color-white inset-0 p-5 flex flex-col opacity-0 translate-x-3/4 pointer-events-none transition-all duration-300
+    }
+    .mobile-filter.active{
+        @apply opacity-100 translate-x-0 pointer-events-auto
+    }
+    
+    /* Mobile Filter */
+    .mobile-categories{
+        @apply fixed z-[100] bg-color-white inset-0 p-5 flex flex-col opacity-0 -translate-x-3/4 pointer-events-none transition-all duration-300
+    }
+    .mobile-categories.active{
+        @apply opacity-100 -translate-x-0 pointer-events-auto
+    }
+
+    .mobile-categories .list-area{
+        max-height: calc(100vh - 100px);
+        @apply overflow-y-auto
+    }
+    .mobile-categories .list-area ul{
+        @apply flex flex-col
+    }
+    .mobile-categories .list-area ul li{
+        @apply relative content-paragraph text-sm mt-0 text-color-blue
+    }
+    .mobile-categories .list-area ul li:not(:last-child){
+        @apply border-b border-color-blue border-opacity-10
+    }
+    .mobile-categories .list-area ul li a{
+        @apply w-full flex items-center px-5 py-5 hover:bg-color-truiceblue hover:bg-opacity-40 transition-all
+    }
+    .mobile-categories .list-area ul li span{
+        @apply absolute right-4 top-2/4 -translate-y-2/4
+    }
+    
+    
+
+    
+    /*-------------------------------------
+    ---------------- ABSTRACT -------------
+    -------------------------------------*/
+    .abstract-1{
+        @apply relative w-fit
+    }
+    .abstract-1 .circle{
+        @apply w-96 aspect-square rounded-full border border-color-blue
+    }
+    .abstract-1 .circle:nth-of-type(1){
+        @apply translate-y-1/4
+    }
+    .abstract-1 .circle:nth-of-type(2){
+        @apply -translate-y-1/4
+    }
+    .abstract-1 .center{
+        @apply content-title text-color-blue bg-color-white py-2 absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4
+    }
+    .abstract-1 .line{
+        height: calc((100% - 25%) - 15%);
+        @apply absolute w-px -z-10 bg-color-blue top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4
+    }
+    .abstract-1 .arrow{
+        top: 16%;
+        @apply absolute left-2/4 -translate-x-2/4 rotate-90
+    }
+    .abstract-1 .xmark{
+        bottom: 16%;
+        @apply absolute left-2/4 -translate-x-2/4
+    }
+    .abstract-1 .txt{
+        @apply underline text-center content-paragraph mt-0 text-base bg-color-white text-color-blue absolute left-2/4 -translate-x-2/4
+    }
+    .abstract-1 .bottom{
+        bottom: 25%;
+    }
+    .abstract-1 .top{
+        top: 25%;
+    }
+
+
+    
+    .abstract-2{
+        @apply relative w-fit
+    }
+    .abstract-2 .circle{
+        @apply w-96 aspect-square border border-color-blue
+    }
+    .abstract-2 .circle:nth-of-type(1){
+        @apply translate-y-1/4 max-w-[22.5rem] mx-auto
+    }
+    .abstract-2 .circle:nth-of-type(2){
+        @apply -translate-y-1/4
+    }
+    .abstract-2 .center{
+        @apply content-title text-color-blue bg-color-white py-2 absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4
+    }
+    .abstract-2 .line{
+        height: calc((100% - 25%) - 15%);
+        @apply absolute w-px -z-10 bg-color-blue top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4
+    }
+    .abstract-2 .arrow{
+        top: 16%;
+        @apply absolute left-2/4 -translate-x-2/4 rotate-90
+    }
+    .abstract-2 .xmark{
+        bottom: 16%;
+        @apply absolute left-2/4 -translate-x-2/4
+    }
+    .abstract-2 .txt{
+        @apply underline text-center content-paragraph mt-0 text-base bg-color-white text-color-blue absolute left-2/4 -translate-x-2/4
+    }
+    .abstract-2 .bottom{
+        bottom: 25%;
+    }
+    .abstract-2 .top{
+        top: 25%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    /*-------------------------------------
+    ----------------- FONTS ---------------
+    -------------------------------------*/
+    
+    .DINpro-black {      
+        font-family: 'DINpro black', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .DINpro-bold {      
+        font-family: 'DINpro bold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .DINpro-light {      
+        font-family: 'DINpro light', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .DINpro-medium {      
+        font-family: 'DINpro medium', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    }
+    .DINpro-light {      
+        font-family: 'DINpro light', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .DINpro {      
+        font-family: 'DINpro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .handtext {      
+        font-family: 'handtext', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    
+    
+
+}
+
+
+

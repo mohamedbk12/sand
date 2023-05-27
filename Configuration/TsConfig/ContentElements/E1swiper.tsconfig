@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e1swiper ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e1swiper {
+            iconIdentifier = sandsitepackage-e1swiper
+            title = E-1 Swiper
+            description = Content to desplay a Swiper
+            tt_content_defValues {
+                CType = sandsitepackage_e1swiper
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e1swiper)
+}

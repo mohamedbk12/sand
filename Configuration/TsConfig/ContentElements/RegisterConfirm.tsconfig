@@ -1,0 +1,17 @@
+#########################################
+###### CE WIZARD: registerconfirm ######
+#########################################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_registerconfirm {
+            iconIdentifier = sandsitepackage-registerconfirm
+            title = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.registerconfirm
+            description = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.registerconfirm.description
+            tt_content_defValues {
+                CType = sandsitepackage_registerconfirm
+            }
+        }
+    }
+    show := addToList(sandsitepackage_registerconfirm)
+}

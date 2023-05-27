@@ -1,0 +1,20 @@
+#############
+#### RTE ####
+#############
+RTE {
+    default {
+        preset = sand_sitepackage
+    }
+}
+
+RTE.default.proc.entryHTMLparser_db {
+    stripEmptyTags = 1
+    stripEmptyTags.tags = p
+
+    # Since rtehtmlarea adds non breaking spaces in empty <p> tags we need to
+    # tell the parser that &nbsp; should be treated as an empty string:
+    stripEmptyTags.treatNonBreakingSpaceAsEmpty = 1
+    tags {
+        p.rmTagIfNoAttrib = 1
+    }
+}

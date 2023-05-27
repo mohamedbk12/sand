@@ -1,0 +1,24 @@
+tt_content.sandsitepackage_jumpmarks =< lib.contentElement
+tt_content.sandsitepackage_jumpmarks  {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = Jumpmarks
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_sand_sitepackage_teaser_item
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+            }
+            orderBy = sorting
+        }
+    }
+}

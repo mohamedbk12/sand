@@ -1,0 +1,105 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="c{data.uid}"  class="ce-membership-teaser">
+    <div class="container">
+        <f:if condition="{data.header}">
+            <div class="headline">
+                <f:render partial="Header/CustomHeader"
+                        arguments="{header:data.header,header:data.header,layout:data.header_layout}" />
+            </div>
+        </f:if>
+        <div class="row membership-teaser ">
+            <f:for each="{records}" as="item">
+                <div class="col-sm-6 item">
+                    <div class="teaser">
+                        <f:if condition="{item.image.0}">
+                            <div class="teaser-image">
+                                <f:render partial="Image/Image" arguments="{image : item.image.0, desktopMaxWidth: 80, tabletMaxWidth: 80, mobileMaxWidth: 80, loading: 'lazy'}" />
+                            </div>
+                        </f:if>
+                        <div class="teaser-content">
+                            <div class="line-text">
+                                <f:if condition="{item.data.header}">
+                                    <div class="text-large blue bold">{item.data.header}</div>
+                                </f:if>
+                                <f:if condition="{item.data.subheader}">
+                                    <div class="medium-title">{item.data.subheader}</div>
+                                </f:if>
+                                <f:if condition="{item.records}">
+                                    <ul class="check">
+                                        <f:for each="{item.records}" as="val">
+                                            <li>{val.data.header}</li>
+                                        </f:for>
+                                    </ul>
+                                </f:if>
+                            </div>
+                        </div>
+                        <div class="teaser-bottom">
+                            <f:if condition="{item.data.link_text}">
+                                <div class="h3-big blue">{item.data.link_text}</div>
+                            </f:if>
+                            <f:if condition="{item.data.email}">
+                                <div class="icon-email-transparent-blue ">
+                                    <a href="mailto:{item.data.email}">
+                                        <f:if condition="{item.data.buttonslanguage} == en">
+                                            <f:then>
+                                                <f:translate key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:askConditionAndService.en" />
+                                            </f:then>
+                                            <f:else>
+                                                <f:translate key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:askConditionAndService" />
+                                            </f:else>
+                                        </f:if>
+                                    </a>
+                                </div>
+                            </f:if>
+
+                            <f:if condition="{item.file.0}">
+                                <div class="d-flex">
+                                    <a href="/fileadmin{item.file.0.originalFile.identifier}" target="_blank" class="download-link-down">
+                                        <f:if condition="{item.data.bodytext}">
+                                           <f:then>
+                                                {item.data.bodytext}
+                                            </f:then>
+                                            <f:else>
+                                        <f:translate key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:paticipationCondition" />
+                                            </f:else>
+                                        </f:if>
+                                    </a>
+                                </div>
+                            </f:if>
+                            <f:if condition="{item.data.tel}">
+                                <div class="d-flex">
+                                    <f:link.typolink parameter="{item.data.tel}" class="secondary-button">
+                                        <f:if condition="{item.data.buttonslanguage} == en">
+                                            <f:then>
+                                                <f:translate key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:learnMore.en" />
+                                            </f:then>
+                                            <f:else>
+                                                <f:translate key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:learnMore" />
+                                            </f:else>
+                                        </f:if>
+                                        
+                                    </f:link.typolink>
+                                </div>
+                            </f:if>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <f:if condition="{item.data.link}">
+                            <f:link.typolink parameter="{item.data.link}" class="primary-button">
+                                <f:if condition="{item.data.buttonslanguage} == en">
+                                    <f:then>
+                                        <f:translate key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:applicationAdmission.en" />
+                                    </f:then>
+                                    <f:else>
+                                        <f:translate key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:applicationAdmission" />
+                                    </f:else>
+                                </f:if>
+                            </f:link.typolink>
+                        </f:if>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</div>
+</html>

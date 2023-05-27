@@ -1,0 +1,38 @@
+@import 'EXT:sf_register/Configuration/TypoScript/maximal/constants.typoscript'
+plugin.tx_sfregister{
+    settings {
+        
+        usergroupPostAccept = 3
+        usergroupPostConfirm = 2
+        usergroupPostSave = 1
+
+        redirectPostActivationPageId = 163
+        redirectPostRegistrationPageId = 154
+        adminEmail {
+            toName = SAND Admin
+            toEmail = test@meddev-media.com
+             
+            fromName = SAND Webseite
+            fromEmail = no-reply@sand.org
+
+            replyName = 
+            replyEmail =
+        }
+
+        emailSitename = SAND
+        
+        userEmail {
+            fromName = SAND Webseite
+            fromEmail = no-reply@sand.org
+
+            replyName = 
+            replyEmail = 
+        }
+
+        emailName = SAND Webseite
+        emailAddress = no-reply@sand.org
+
+
+    }
+
+}

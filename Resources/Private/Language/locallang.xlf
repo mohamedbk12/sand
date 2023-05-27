@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-04-24UTC07:47:560">
+        <header>
+            <authorName>Ingo Möller</authorName>
+            <authorEmail>moeller@meddev-media.com</authorEmail>
+        </header>
+        <body>
+            <!--Search Form-->
+            <trans-unit id="form.legend">
+                <source>Suchbegriff</source>
+            </trans-unit>
+            
+            <trans-unit id="form.formPlaceholder">
+                <source>Geben Sie hier einen Suchbegriff ein</source>
+            </trans-unit>
+            <trans-unit id="form.subbmit">
+                <source>Suchen</source>
+            </trans-unit>
+            <trans-unit id="form.reset_button">
+                <source>Filter zurücksetzen</source>
+            </trans-unit>
+            <trans-unit id="form.numberOfResult">
+                <source>Anzahl der Treffer :</source>
+            </trans-unit>
+            <trans-unit id="cookiesReset">
+				<source>Cookie-Einstellungen</source>
+			</trans-unit>
+
+            <!-- News -->
+            <trans-unit id="tx_news.extended">
+                <source>Extended</source>
+            </trans-unit>
+            <trans-unit id="tx_news.search_text">
+                <source>Volltextsuche</source>
+            </trans-unit>
+            <trans-unit id="tx_news.search_text_placeholder">
+                <source>z.B.: Nachhaltigkeit</source>
+            </trans-unit>
+            <trans-unit id="tx_news.all_categories">
+                <source>Alle</source>
+            </trans-unit>
+            <trans-unit id="tx_news.categorie">
+                <source>kategorie</source>
+            </trans-unit>
+            <trans-unit id="tx_news.from_date">
+                <source>von</source>
+            </trans-unit>
+            <trans-unit id="tx_news.end_date">
+                <source>bis</source>
+            </trans-unit>
+            <trans-unit id="tx_news.press_releases">
+                <source>Pressemeldungen</source>
+            </trans-unit>
+            <trans-unit id="tx_news.statements">
+                <source>Statements</source>
+            </trans-unit>
+            <trans-unit id="tx_news.market_data">
+                <source>Marktdaten</source>
+            </trans-unit>
+            <trans-unit id="tx_news.apply_filters">
+                <source>suchen</source>
+            </trans-unit>
+            <trans-unit id="tx_news.reset_filter">
+                <source>Suche zurücksetzen</source>
+            </trans-unit>
+           <trans-unit id="tx_news.no_result_found">
+                <source>Zur eingegebenen Anfrage gibt es keine Treffer. Bitte überprüfen Sie die Eingabe</source>
+            </trans-unit>
+           <trans-unit id="tx_news.search_result">
+                <source>Suchergebnis</source>
+            </trans-unit>            
+            <!-- Teaser Membership -->
+            <trans-unit id="paticipationCondition">
+                <source>Teilnahmebedingungen</source>
+            </trans-unit>
+            <trans-unit id="downloadPdf">
+                <source>Download Pdf Label</source>
+            </trans-unit>
+            <trans-unit id="learnMore">
+                <source>Mehr erfahren</source>
+            </trans-unit>
+            <trans-unit id="applicationAdmission">
+                <source>zum aufnahmeantrag</source>
+            </trans-unit>
+            <trans-unit id="askConditionAndService">
+                <source>Konditionen und Leistungen erfragen</source>
+            </trans-unit>
+            <trans-unit id="learnMore.en">
+                <source>Read more</source>
+            </trans-unit>
+            <trans-unit id="applicationAdmission.en">
+                <source>Application form</source>
+            </trans-unit>
+            <trans-unit id="askConditionAndService.en">
+                <source>Ask for conditions and services</source>
+            </trans-unit>            
+            <!-- Download -->
+            <trans-unit id="download">
+                <source>Download</source>
+            </trans-unit>
+
+            <!-- Cookies Banner -->
+            <trans-unit id="youtube_cookies">
+                <source>Mit Klick auf „Inhalt anzeigen“ stimmen Sie zu, dass YouTube Cookies setzt und personenbezogene Daten erhebt, welche ggf. in Drittländer übertragen werden, die kein mit der EU vergleichbares Datenschutzniveau aufweisen. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</source>
+            </trans-unit>
+            <!-- fe_users -->
+    	    <trans-unit id="gtc_accept">
+				<source>I accept</source>
+			</trans-unit>
+    	    <trans-unit id="gtc_terms">
+				<source>the Terms and Conditions</source>
+			</trans-unit>
+			<trans-unit id="privacy_agree">
+				<source>I agree with the information on</source>
+			</trans-unit>
+			<trans-unit id="privacy_data_protection">
+				<source>data protection</source>
+			</trans-unit>
+            <trans-unit id="gtc_checked">
+				<source>not accepted</source>
+			</trans-unit>
+			<trans-unit id="gtc_checked1">
+				<source>accepted</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

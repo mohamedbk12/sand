@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file target-language="de" datatype="plaintext" original="messages" date="2020-06-29UTC07:45:380">
+        <header>
+            <authorName>Ingo Möller</authorName>
+            <authorEmail>möller@meddev-media.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="male">
+                <target>Herr</target>
+            </trans-unit>
+            <trans-unit id="female">
+                <target>Frau</target>
+            </trans-unit>
+            <trans-unit id="placeholder.company">
+				<source>Company</source>
+				<target>Name des Unternehmens</target>
+			</trans-unit>
+			<trans-unit id="placeholder.address">
+				<source>Street and House Number</source>
+				<target>Straße und Hausnummer des Unternehmens</target>
+			</trans-unit>
+			<trans-unit id="placeholder.zip">
+				<source>Zip</source>
+				<target>Postleitzahl des Unternehmens</target>
+			</trans-unit>
+			<trans-unit id="placeholder.city">
+				<source>City</source>
+				<target>Ort des Unternehmens</target>
+			</trans-unit>
+			<trans-unit id="placeholder.firstName">
+				<source>First Name</source>
+				<target>Vorname</target>
+			</trans-unit>
+			<trans-unit id="placeholder.lastName">
+				<source>Last Name</source>
+				<target>Nachname</target>
+			</trans-unit>
+			<trans-unit id="placeholder.title">
+				<source>Title</source>
+				<target>z.B.: Prof</target>
+			</trans-unit>
+			<trans-unit id="placeholder.position">
+				<source>Position</source>
+				<target>Position</target>
+			</trans-unit>
+			<trans-unit id="placeholder.email">
+				<source>Email</source>
+				<target>max@mustermann.de</target>
+			</trans-unit>
+			<trans-unit id="placeholder.telephone">
+				<source>telephone </source>
+				<target>+49 123 1234567</target>
+			</trans-unit>
+				<trans-unit id="placeholder.position">
+				<source>Position in the company </source>
+				<target>Position im Unternehmen</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,23 @@
+<div class="header-nav_intern">
+    
+    <f:security.ifAuthenticated>
+        <div class="container">
+            <div class="header">
+                <h1 class="headline">Hallo <f:cObject typoscriptObjectPath="lib.username" /></h1>
+                <h2>Mein Mitgliederbereich</h2>
+            </div>
+        </div>
+    </f:security.ifAuthenticated>
+
+    <f:if condition="{subNavigation}">
+        <div class="nav_intern">
+            <div class="container">
+                <ul>
+                    <f:for each="{subNavigation}" as="page">
+                        <li class="underline-links-white "><a class="link {f:if(condition:'{page.active}',then:'active')}" href="{page.link}">{page.title}</a></li>
+                    </f:for>
+                </ul>
+            </div>
+        </div>
+    </f:if>
+</div>

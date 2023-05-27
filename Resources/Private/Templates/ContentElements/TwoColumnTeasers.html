@@ -1,0 +1,49 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="c{data.uid}" class="ce-teasers-two-column ">
+    <div class="container content">
+        <div class="row teasers-item">
+            <f:if condition="{data.colPos} == 3">
+                <f:then>
+                    <f:variable name="colSize" value="12" />
+                </f:then>
+                <f:else>
+                    <f:variable name="colSize" value="6" />
+                </f:else>
+            </f:if>
+            <f:for each="{records}" as="item">
+                <div class="col-md-{colSize} teaser-item ">
+                    <div class="teaser">
+                        <f:if condition="{item.image.0}">
+                            <div class="teaser-image">
+                                <f:render partial="Image/Image"
+                                    arguments="{image : item.image.0, desktopMaxWidth: 590, tabletMaxWidth: 900, mobileMaxWidth: 767, loading: 'lazy'}" />
+                            </div>
+                        </f:if>
+                        <div class="teaser-content">
+                            <div class="info ">
+                                <div class="headers line-text">
+                                    <f:if condition="{item.data.subheader}">
+                                        <p class="text-default-bold"> {item.data.subheader} </p>
+                                    </f:if>
+                                    <f:if condition="{item.data.header}">
+                                        <h3>{item.data.header}</h3>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </div>
+
+                        <f:if condition="{item.data.link}">
+                            <div class="button-teaser">
+                                <f:link.typolink parameter="{item.data.link}" class="primary-button">
+                                    {item.data.link_text}
+                                </f:link.typolink>
+                            </div>
+                        </f:if>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</div>
+
+</html>

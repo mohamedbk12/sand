@@ -1,0 +1,78 @@
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+    config:
+        contentsCss: "EXT:sand_sitepackage/Resources/Public/Css/rte.css"
+
+        stylesSet:
+            - { name: "Blue", element: "p", attributes: { 'class': 'blue' } }
+            - { name: "Text XX-Small", element: "p", attributes: { 'class': 'text-xxsmall' } }
+            - { name: "Text XS-Small", element: "p", attributes: { 'class': 'text-xsmall' } }
+            - { name: "Text Small", element: "p", attributes: { 'class': 'text-small' } }
+            - { name: "Placeholder Text", element: "p", attributes: { 'class': 'placeholder-text' } }
+            - { name: "Placeholder Text Bold", element: "p", attributes: { 'class': 'placeholder-text-bold' } }
+            - { name: "Text Default Small", element: "p", attributes: { 'class': 'text-default-small' } }
+            - { name: "Text Default Smaller", element: "p", attributes: { 'class': 'text-default-smaller' } }
+            - { name: "Text Default", element: "p", attributes: { 'class': 'text-default' } }
+            - { name: "Text Default Bold", element: "p", attributes: { 'class': 'text-default-bold' } }
+            - { name: "Link", element: "p", attributes: { 'class': 'link' } }
+            - { name: "Medium Text", element: "p", attributes: { 'class': 'medium-text' } }
+            - { name: "Text Teaser", element: "p", attributes: { 'class': 'text-teaser' } }
+            - { name: "Text Teaser Bold", element: "p", attributes: { 'class': 'text-teaser-bold' } }
+            - { name: "Text Large", element: "p", attributes: { 'class': 'text-large' } }
+            - { name: "Text X-Large", element: "p", attributes: { 'class': 'text-xlarge' } }
+            - { name: "Text No Margin", element: "p", attributes: { 'class': 'no-margin' } }
+            - { name: "H2 Heading Gold", element: "h2", attributes: { 'class': 'h1-tag' } }
+            - { name: "Link Blue", element: "a", attributes: { 'class': 'a-link-blue' } }
+            - { name: "Arrow Right", element: "a", attributes: { 'class': 'arrow-right' } }
+            - { name: "Arrow Next", element: "a", attributes: { 'class': 'arrow-next' } }
+            - { name: "Primary Button", element: "a", attributes: { 'class': 'primary-button' } }
+            - { name: "Secondary Button", element: "a", attributes: { 'class': 'secondary-button' } }
+            - { name: "Arrow Next Blue", element: "a", attributes: { 'class': 'arrow-next-blue' } }
+            - { name: "Arrow Next black", element: "a", attributes: { 'class': 'arrow-next-black' } }
+            - { name: "Round Arrow Right", element: "a", attributes: { 'class': 'round-arrow-right' } }
+            - { name: "Download Icon Big", element: "a", attributes: { 'class': 'download-link' } }
+            - { name: "Download Icon Small", element: "a", attributes: { 'class': 'download-link-down' } }
+            - { name: "Download Link Up", element: "a", attributes: { 'class': 'download-link-up' } }
+            - { name: "Download Link Right", element: "a", attributes: { 'class': 'download-link-right' } }
+            - { name: "Email Icon", element: "a", attributes: { 'class': 'icon-email-transparent-blue' } }
+            - { name: "Tel Icon", element: "a", attributes: { 'class': 'icon-mobile-transparent-blue' } }
+            - { name: "Arrows List", element: "ul", attributes: { 'class': 'arrow' } }
+            - { name: "Lines List", element: "ul", attributes: { 'class': 'line' } }
+
+        toolbarGroups:
+            - { name: styles, groups: [ format, styles ] }
+            - { name: basicstyles, groups: [ basicstyles ] }
+            - { name: paragraph, groups: [ list, indent, blocks, align ] }
+            - "/"
+            - { name: links, groups: [ links ] }
+            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+            - { name: editing, groups: [ spellchecker ] }
+            - { name: insert, groups: [ insert ] }
+            - { name: tools, groups: [ table, specialchar ] }
+            - { name: document, groups: [ mode ] }
+
+        format_tags: "p;h1;h2;h3;h4;pre"
+
+        justifyClasses:
+            - text-left
+            - text-center
+            - text-right
+            - text-justify
+
+        extraPlugins:
+            - justify
+
+        removePlugins:
+            - image
+
+        removeButtons:
+            - Anchor
+            - Underline
+            - Strike
+            
+        extraAllowedContent:
+            - img[!src,alt,width,height]

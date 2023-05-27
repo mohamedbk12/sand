@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: Text ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_text {
+            iconIdentifier = sandsitepackage-text
+            title = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.text
+            description = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.text.description
+            tt_content_defValues {
+                CType = sandsitepackage_text
+            }
+        }
+    }
+    show := addToList(sandsitepackage_text)
+}

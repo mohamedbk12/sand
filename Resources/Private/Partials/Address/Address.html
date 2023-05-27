@@ -1,0 +1,47 @@
+{namespace ttaddr=FriendsOfTYPO3\TtAddress\ViewHelpers}
+{namespace meddev=Meddev\SandSitepackage\ViewHelpers}
+
+<f:section name="contact">
+    <div class="social-media">
+        <f:if condition="{address.email}">
+            <div class="icon-email-transparent-blue icon">
+                <a href="mailto:{address.email}">{address.email}</a>
+            </div>
+        </f:if>
+
+        <f:if condition="{address.phone}">
+            <div class="icon-phone-transparent-blue icon">
+                <a href="tel:{address.phone}">{address.phone}</a>
+            </div>
+        </f:if>
+
+        <f:if condition="{address.mobile}">
+            <div class="icon-mobile-transparent-blue icon">
+                <a href="tel:{address.mobile}">{address.mobile}</a>
+            </div>
+        </f:if>
+
+        <f:if condition="{address.fax}">
+            <div class="icon-fax-transparent-blue icon">
+                <a href="tel:{address.fax}">{address.fax}</a>
+            </div>
+        </f:if>
+
+        <f:if condition="{address.linkedin}">
+            <div class="icon-linkedin-transparent-blue icon">
+                <a href="{address.linkedin}" target="_blank"><meddev:convertLinkedinUrl url="{address.linkedin}"/></a>
+            </div>
+        </f:if>
+
+        <f:comment>
+            <f:if condition="{address.www}">
+                <meta itemprop="url" content="{f:uri.typolink(parameter:address.www)}"/>
+                <li>
+                    <i class="fas fa-link"></i>
+                    {f:translate(key:'label.www')}:
+                    <f:link.typolink parameter="{address.www}">{address.wwwSimplified}</f:link.typolink>
+                </li>
+            </f:if>
+        </f:comment>
+    </div>
+</f:section>

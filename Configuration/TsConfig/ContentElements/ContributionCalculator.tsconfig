@@ -1,0 +1,17 @@
+###############################################
+#### CE WIZARD: Full Width Image Download #####
+###############################################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_contributioncalculator {
+            iconIdentifier = sandsitepackage-contributioncalculator
+            title = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.contributioncalculator
+            description = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.contributioncalculator.description
+            tt_content_defValues {
+                CType = sandsitepackage_contributioncalculator
+            }
+        }
+    }
+    show := addToList(sandsitepackage_contributioncalculator)
+}

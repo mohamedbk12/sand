@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="presse-item">
+	<div class="info line-box">
+		<div class="headers">
+			<f:if condition="{newsItem.datetime}">
+				<p class="text-default-medium blue">
+					<f:format.date format="d.m.Y">{newsItem.datetime}</f:format.date>
+				</p>
+			</f:if>
+			<f:if condition="{newsItem.title}">
+
+				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}"
+					additionalAttributes="{itemprop:'url'}">
+					<h3 class="text-large blue">{newsItem.title}</h3>
+				</n:link>
+
+			</f:if>
+		</div>
+
+		<div class="body-text">
+			<f:if condition="{newsItem.teaser}">
+				<f:then>
+					<div class="text-teaser">
+						<p>{newsItem.teaser}</p>
+					</div>
+				</f:then>
+				<f:else>
+					<div class="text-teaser">
+						<f:format.crop maxCharacters="200">{newsItem.bodytext -> f:format.html(parseFuncTSPath: 'lib.parseFunc')}</f:format.crop>
+					</div>
+				</f:else>
+			</f:if>
+		</div>
+	</div>
+</div>
+
+
+
+</html>

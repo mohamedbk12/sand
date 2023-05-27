@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="c{data.uid}" class="ce-teaser-grid {f:if(condition: '{data.background}', then: '',else: 'bg-cyan')}">
+    <div class="container">
+        <div class="row">
+            <f:for each="{records}" as="item" iteration="iterator">
+                <f:if condition="{item.data.image_position} == 'big-box'">
+                    <f:then>
+                        <f:render partial="TeaserGrid/ItemBig" arguments="{teaser: item,settings:settings,iterator:iterator,col: data.colPos}"  />
+                    </f:then>
+                    <f:else>
+                        <f:render partial="TeaserGrid/Item" arguments="{teaser: item,settings:settings,iterator:iterator,col: data.colPos}" />
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
+    </div>
+</div>
+
+</html>

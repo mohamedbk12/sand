@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/output.css">
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- SPLIDE -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+</head>
+<body class="">
+    <header class="header">
+        <div class="">
+            <div class="left">
+                <button class="toggle-btn" id="navbar-toggle-btn">
+                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="25" height="27" viewBox="0 0 40 27">
+                        <g id="Group_85" data-name="Group 85" transform="translate(-393.627 -388)">
+                            <rect id="Rectangle_49" data-name="Rectangle 49" width="40" height="3" transform="translate(393.627 388)"/>
+                            <rect id="Rectangle_50" data-name="Rectangle 50" width="40" height="3" transform="translate(393.627 400)"/>
+                            <rect id="Rectangle_51" data-name="Rectangle 51" width="40" height="3" transform="translate(393.627 412)"/>
+                        </g>
+                    </svg>                          
+                    <span class="">MENU</span>
+                </button>
+                <a class="" href=""><img class="h-full" src="./assets/images/logo/header-logo.svg" alt=""></a>
+            </div>
+            <div class="right h-full">
+                <nav class="header-nav">
+                    <a class="header-btn search-wrapper show-mobile" id="search-wrapper">
+                        <div class="search open-search-btn">
+                            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="52" height="48.617" viewBox="0 0 48.606 48.617">
+                                <g id="magnifying-glass" transform="translate(0 0)">
+                                <path id="Path_5007" data-name="Path 5007" d="M48.236,46.138,36.421,34.323a20.746,20.746,0,1,0-2.048,2.048L46.188,48.186a1.465,1.465,0,0,0,1.024.431,1.42,1.42,0,0,0,1.024-.431A1.457,1.457,0,0,0,48.236,46.138ZM2.95,20.73a17.819,17.819,0,1,1,17.819,17.83A17.839,17.839,0,0,1,2.95,20.73Z" transform="translate(-0.05 0)"/>
+                            </g>
+                            </svg>
+                            <span class="close hidden lg:inline">SUCHE</span>
+                        </div>
+                        <form action="" class="open">
+                            <svg class="" xmlns="http://www.w3.org/2000/svg" width="52" height="48.617" viewBox="0 0 48.606 48.617">
+                                <g id="magnifying-glass" transform="translate(0 0)">
+                                    <path id="Path_5007" data-name="Path 5007" d="M48.236,46.138,36.421,34.323a20.746,20.746,0,1,0-2.048,2.048L46.188,48.186a1.465,1.465,0,0,0,1.024.431,1.42,1.42,0,0,0,1.024-.431A1.457,1.457,0,0,0,48.236,46.138ZM2.95,20.73a17.819,17.819,0,1,1,17.819,17.83A17.839,17.839,0,0,1,2.95,20.73Z" transform="translate(-0.05 0)"/>
+                                </g>
+                            </svg>
+                            <input type="text" placeholder="Suche">
+                            <button type="button" class="close-search-btn">
+                                <svg class="" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 30.406 30.406">
+                                    <g id="Group_88" data-name="Group 88" transform="translate(-959.682 -388.217)">
+                                      <rect id="Rectangle_50" data-name="Rectangle 50" width="40" height="3" transform="translate(961.804 388.217) rotate(45)"/>
+                                      <rect id="Rectangle_52" data-name="Rectangle 52" width="40" height="3" transform="translate(959.682 416.501) rotate(-45)"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </form>
+                    </a>
+                    <a class="header-btn" href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="40.304" viewBox="0 0 52.96 40.304">
+                            <g id="envelope" transform="translate(0 0)">
+                              <g id="Group_83" data-name="Group 83" transform="translate(0 0)">
+                                <path id="Path_5005" data-name="Path 5005" d="M46.5,57.75H6.476A6.482,6.482,0,0,0,0,64.226V91.577a6.482,6.482,0,0,0,6.476,6.476H46.484a6.482,6.482,0,0,0,6.476-6.476V64.237A6.475,6.475,0,0,0,46.5,57.75Zm3.518,33.827A3.522,3.522,0,0,1,46.5,95.095H6.476a3.522,3.522,0,0,1-3.518-3.518V64.237A3.522,3.522,0,0,1,6.476,60.72H46.484A3.522,3.522,0,0,1,50,64.237v27.34Z" transform="translate(0 -57.75)"/>
+                                <path id="Path_5006" data-name="Path 5006" d="M83.043,123.109,96,111.494a1.482,1.482,0,0,0-1.983-2.2L76.151,125.323l-3.485-3.112c-.011-.011-.022-.022-.022-.033a2.192,2.192,0,0,0-.241-.208L58.223,109.28a1.482,1.482,0,0,0-1.972,2.214l13.106,11.714L56.306,135.426a1.485,1.485,0,0,0-.066,2.093,1.514,1.514,0,0,0,1.085.471,1.483,1.483,0,0,0,1.008-.395L71.581,125.2l3.594,3.211a1.476,1.476,0,0,0,1.972-.011l3.693-3.309,13.172,12.514a1.483,1.483,0,0,0,2.093-.055,1.485,1.485,0,0,0-.055-2.093Z" transform="translate(-49.643 -103.297)"/>
+                              </g>
+                            </g>
+                        </svg>
+                        <span>KONTAKT</span>
+                    </a>
+                    <a class="header-btn" href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" viewBox="0 0 58.316 58.316">
+                            <path id="Path_5012" data-name="Path 5012" d="M49.776,8.54A29.158,29.158,0,0,0,8.54,49.776,29.158,29.158,0,0,0,49.776,8.54ZM12.655,48.9a16.682,16.682,0,0,1,16.5-14.681,16.619,16.619,0,0,1,16.5,14.68,25.687,25.687,0,0,1-33.007,0Zm16.5-18.2a8.856,8.856,0,1,1,8.856-8.856A8.867,8.867,0,0,1,29.158,30.7ZM48.6,46.008A20.087,20.087,0,0,0,36.03,32a12.273,12.273,0,1,0-13.738,0,20.069,20.069,0,0,0-12.58,14,25.741,25.741,0,1,1,38.892,0Z"/>
+                        </svg>
+                        <span>LOGIN</span>
+                    </a>
+                    <a class="header-btn" href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" viewBox="0 0 13.8 13.8">
+                            <g id="world-2-svgrepo-com" transform="translate(-2.1 -1.618)">
+                              <path id="Path_5301" data-name="Path 5301" d="M16.892,6l-.964.723a1.314,1.314,0,0,1-.788.263H12.934a1.036,1.036,0,0,0-.927.573h0a1.036,1.036,0,0,0,.271,1.266L13.591,9.9a3.942,3.942,0,0,1,1.422,3.486L15,13.5a5.257,5.257,0,0,1-.344,1.372l-.392.98" transform="translate(-3.224 -1.238)" fill="none" stroke="#0c3766" stroke-width="0.8"/>
+                              <path id="Path_5302" data-name="Path 5302" d="M2.5,10.305l2.127-.355a1.314,1.314,0,0,1,1.512,1.512l-.088.53a2.192,2.192,0,0,0,1.182,2.321h0a1.644,1.644,0,0,1,.86,1.869l-.337,1.348" transform="translate(0 -2.587)" fill="none" stroke="#0c3766" stroke-width="0.8"/>
+                              <circle id="Ellipse_1" data-name="Ellipse 1" cx="6.5" cy="6.5" r="6.5" transform="translate(2.5 2.018)" fill="none" stroke="#0c3766" stroke-width="0.8"/>
+                            </g>
+                        </svg>
+                        <span>DEUTSCHLAND | DE</span>
+                    </a>
+                    <a class="header-btn" href="">
+                        <svg id="cube-svgrepo-com" xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 16 16">
+                            <path id="Path_5303" data-name="Path 5303" d="M2,13.15l7,2.875,7-2.875V5.006L9,2.13,2,5.006ZM15.333,12.7l-6,2.465V8.111l6-2.453ZM9,2.852l5.7,2.343L9,7.528,3.3,5.195ZM2.667,5.658l6,2.453v7.057l-6-2.465Z" transform="translate(-0.667 -0.71)"/>
+                            <path id="Path_5304" data-name="Path 5304" d="M0,0H16V16H0Z" fill="none"/>
+                        </svg>
+                        <span>ZU MYSANDDEBURRER</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="toggler-menu shadow-xl hidden" id="navbar-toggle-menu">
+                <div class="toggler-menu-wrapper">
+                    <button class="close-toggle-menu" id="close-toggle-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 30.406 30.406">
+                            <g id="Group_88" data-name="Group 88" transform="translate(-959.682 -388.217)">
+                              <rect id="Rectangle_50" data-name="Rectangle 50" width="40" height="3" transform="translate(961.804 388.217) rotate(45)"/>
+                              <rect id="Rectangle_52" data-name="Rectangle 52" width="40" height="3" transform="translate(959.682 416.501) rotate(-45)"/>
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="first">
+                        <div>
+                            <span class="handtext text-3xl leading-snug">Wir Lieben Trumpf</span>
+                        </div>
+                        <div class="mt-5">
+                            <span class="text-xl DINpro-light font-light">Alle Trumpf Maschinen</span>
+                            <a href="" class="btn-blue-single-icon">
+                                Merh Erfahren
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22.886" height="10.329" viewBox="0 0 22.886 10.329">
+                                    <path id="Path_5010" data-name="Path 5010" d="M-405.842,33.7a.59.59,0,0,0-.837,0l-3.562,3.562V17a.6.6,0,0,0-.6-.6.6.6,0,0,0-.6.6V37.263l-3.557-3.562a.59.59,0,0,0-.837,0,.59.59,0,0,0,0,.837l4.573,4.573a.59.59,0,0,0,.421.174.589.589,0,0,0,.421-.174l4.573-4.573A.6.6,0,0,0-405.842,33.7Z" transform="translate(-16.4 -405.671) rotate(-90)"/>
+                                </svg>                                  
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-btns">
+                        <div>
+                            <a data-submenu="__1">Maschinen
+                                <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="4" height="17.038" viewBox="0 0 9 17.038">
+                                    <path id="Path_5004" data-name="Path 5004" d="M121.417,8.179,113.38.142a.482.482,0,0,0-.682.682l7.695,7.695L112.7,16.213a.484.484,0,0,0,.339.825.47.47,0,0,0,.339-.143l8.037-8.037A.48.48,0,0,0,121.417,8.179Z" transform="translate(-112.556 0)"/>
+                                </svg>
+                            </a>
+                            <a data-submenu="__2">Services
+                                <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="4" height="17.038" viewBox="0 0 9 17.038">
+                                    <path id="Path_5004" data-name="Path 5004" d="M121.417,8.179,113.38.142a.482.482,0,0,0-.682.682l7.695,7.695L112.7,16.213a.484.484,0,0,0,.339.825.47.47,0,0,0,.339-.143l8.037-8.037A.48.48,0,0,0,121.417,8.179Z" transform="translate(-112.556 0)"/>
+                                </svg>
+                            </a>
+                            <a data-submenu="__3">Unternehmen
+                                <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="4" height="17.038" viewBox="0 0 9 17.038">
+                                    <path id="Path_5004" data-name="Path 5004" d="M121.417,8.179,113.38.142a.482.482,0,0,0-.682.682l7.695,7.695L112.7,16.213a.484.484,0,0,0,.339.825.47.47,0,0,0,.339-.143l8.037-8.037A.48.48,0,0,0,121.417,8.179Z" transform="translate(-112.556 0)"/>
+                                </svg>
+                            </a>
+                            <a>Referenzen</a>
+                            <a>Kontakt</a>
+                        </div>
+                    </div>
+                    <div class="nav-btns sub">
+                        <div id="__1" class="">
+                            <button class="btn-blue-single-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="26.126" viewBox="0 0 57.885 26.126">
+                                    <path id="Path_5011" data-name="Path 5011" d="M-390.307,60.16a1.492,1.492,0,0,0-2.118,0l-9.009,9.009V17.906a1.5,1.5,0,0,0-1.506-1.506,1.5,1.5,0,0,0-1.506,1.506V69.169l-9-9.009a1.492,1.492,0,0,0-2.118,0,1.492,1.492,0,0,0,0,2.118l11.567,11.567a1.491,1.491,0,0,0,1.065.441,1.491,1.491,0,0,0,1.065-.441L-390.3,62.277A1.527,1.527,0,0,0-390.307,60.16Z" transform="translate(74.285 416) rotate(90)"/>
+                                  </svg>
+                                Zurücks
+                            </button>
+                            <a>Laserschneidanlagen</a>
+                            <a>Abkantpressen</a>
+                            <a>Stanzmaschinen</a>
+                            <a>Kombimaschinen</a>
+                            <a>Trutools </a>
+                        </div>
+                        <div id="__2" class="">
+                            <button class="btn-blue-single-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="26.126" viewBox="0 0 57.885 26.126">
+                                    <path id="Path_5011" data-name="Path 5011" d="M-390.307,60.16a1.492,1.492,0,0,0-2.118,0l-9.009,9.009V17.906a1.5,1.5,0,0,0-1.506-1.506,1.5,1.5,0,0,0-1.506,1.506V69.169l-9-9.009a1.492,1.492,0,0,0-2.118,0,1.492,1.492,0,0,0,0,2.118l11.567,11.567a1.491,1.491,0,0,0,1.065.441,1.491,1.491,0,0,0,1.065-.441L-390.3,62.277A1.527,1.527,0,0,0-390.307,60.16Z" transform="translate(74.285 416) rotate(90)"/>
+                                  </svg>
+                                Zurücks
+                            </button>
+                            <a>Laserschneidanlagen 1111</a>
+                            <a>Abkantpressen 1111</a>
+                            <a>Stanzmaschinen 1111</a>
+                            <a>Kombimaschinen 1111</a>
+                            <a>Trutools 1111</a>
+                        </div>
+                        <div id="__3" class="">
+                            <button class="btn-blue-single-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="26.126" viewBox="0 0 57.885 26.126">
+                                    <path id="Path_5011" data-name="Path 5011" d="M-390.307,60.16a1.492,1.492,0,0,0-2.118,0l-9.009,9.009V17.906a1.5,1.5,0,0,0-1.506-1.506,1.5,1.5,0,0,0-1.506,1.506V69.169l-9-9.009a1.492,1.492,0,0,0-2.118,0,1.492,1.492,0,0,0,0,2.118l11.567,11.567a1.491,1.491,0,0,0,1.065.441,1.491,1.491,0,0,0,1.065-.441L-390.3,62.277A1.527,1.527,0,0,0-390.307,60.16Z" transform="translate(74.285 416) rotate(90)"/>
+                                  </svg>
+                                Zurücks
+                            </button>
+                            <a>Laserschneidanlagen 2222</a>
+                            <a>Abkantpressen 2222</a>
+                            <a>Stanzmaschinen 2222</a>
+                            <a>Kombimaschinen 2222</a>
+                            <a>Trutools 2222</a>
+                        </div>
+                    </div>
+                    <div class="mobile-header-btns no-underline">
+                        <a class="header-btn" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="40.304" viewBox="0 0 52.96 40.304">
+                                <g id="envelope" transform="translate(0 0)">
+                                  <g id="Group_83" data-name="Group 83" transform="translate(0 0)">
+                                    <path id="Path_5005" data-name="Path 5005" d="M46.5,57.75H6.476A6.482,6.482,0,0,0,0,64.226V91.577a6.482,6.482,0,0,0,6.476,6.476H46.484a6.482,6.482,0,0,0,6.476-6.476V64.237A6.475,6.475,0,0,0,46.5,57.75Zm3.518,33.827A3.522,3.522,0,0,1,46.5,95.095H6.476a3.522,3.522,0,0,1-3.518-3.518V64.237A3.522,3.522,0,0,1,6.476,60.72H46.484A3.522,3.522,0,0,1,50,64.237v27.34Z" transform="translate(0 -57.75)"/>
+                                    <path id="Path_5006" data-name="Path 5006" d="M83.043,123.109,96,111.494a1.482,1.482,0,0,0-1.983-2.2L76.151,125.323l-3.485-3.112c-.011-.011-.022-.022-.022-.033a2.192,2.192,0,0,0-.241-.208L58.223,109.28a1.482,1.482,0,0,0-1.972,2.214l13.106,11.714L56.306,135.426a1.485,1.485,0,0,0-.066,2.093,1.514,1.514,0,0,0,1.085.471,1.483,1.483,0,0,0,1.008-.395L71.581,125.2l3.594,3.211a1.476,1.476,0,0,0,1.972-.011l3.693-3.309,13.172,12.514a1.483,1.483,0,0,0,2.093-.055,1.485,1.485,0,0,0-.055-2.093Z" transform="translate(-49.643 -103.297)"/>
+                                  </g>
+                                </g>
+                            </svg>
+                            <span>KONTAKT</span>
+                        </a>
+                        <a class="header-btn" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" viewBox="0 0 58.316 58.316">
+                                <path id="Path_5012" data-name="Path 5012" d="M49.776,8.54A29.158,29.158,0,0,0,8.54,49.776,29.158,29.158,0,0,0,49.776,8.54ZM12.655,48.9a16.682,16.682,0,0,1,16.5-14.681,16.619,16.619,0,0,1,16.5,14.68,25.687,25.687,0,0,1-33.007,0Zm16.5-18.2a8.856,8.856,0,1,1,8.856-8.856A8.867,8.867,0,0,1,29.158,30.7ZM48.6,46.008A20.087,20.087,0,0,0,36.03,32a12.273,12.273,0,1,0-13.738,0,20.069,20.069,0,0,0-12.58,14,25.741,25.741,0,1,1,38.892,0Z"/>
+                            </svg>
+                            <span>LOGIN</span>
+                        </a>
+                        <a class="header-btn" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" viewBox="0 0 13.8 13.8">
+                                <g id="world-2-svgrepo-com" transform="translate(-2.1 -1.618)">
+                                  <path id="Path_5301" data-name="Path 5301" d="M16.892,6l-.964.723a1.314,1.314,0,0,1-.788.263H12.934a1.036,1.036,0,0,0-.927.573h0a1.036,1.036,0,0,0,.271,1.266L13.591,9.9a3.942,3.942,0,0,1,1.422,3.486L15,13.5a5.257,5.257,0,0,1-.344,1.372l-.392.98" transform="translate(-3.224 -1.238)" fill="none" stroke="#0c3766" stroke-width="0.8"/>
+                                  <path id="Path_5302" data-name="Path 5302" d="M2.5,10.305l2.127-.355a1.314,1.314,0,0,1,1.512,1.512l-.088.53a2.192,2.192,0,0,0,1.182,2.321h0a1.644,1.644,0,0,1,.86,1.869l-.337,1.348" transform="translate(0 -2.587)" fill="none" stroke="#0c3766" stroke-width="0.8"/>
+                                  <circle id="Ellipse_1" data-name="Ellipse 1" cx="6.5" cy="6.5" r="6.5" transform="translate(2.5 2.018)" fill="none" stroke="#0c3766" stroke-width="0.8"/>
+                                </g>
+                            </svg>
+                            <span>DEUTSCHLAND | DE</span>
+                        </a>
+                        <a class="header-btn" href="">
+                            <svg id="cube-svgrepo-com" xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 16 16">
+                                <path id="Path_5303" data-name="Path 5303" d="M2,13.15l7,2.875,7-2.875V5.006L9,2.13,2,5.006ZM15.333,12.7l-6,2.465V8.111l6-2.453ZM9,2.852l5.7,2.343L9,7.528,3.3,5.195ZM2.667,5.658l6,2.453v7.057l-6-2.465Z" transform="translate(-0.667 -0.71)"/>
+                                <path id="Path_5304" data-name="Path 5304" d="M0,0H16V16H0Z" fill="none"/>
+                            </svg>
+                            <span>ZU MYSANDDEBURRER</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="min-h-fill default-container py-10 px-3">
+        <div class="product-container">
+            <div class="route-area">
+                <div class="route">
+                    <a href="">Home
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5.673" height="10.301" viewBox="0 0 12.673 22.301">
+                            <path id="Path_5296" data-name="Path 5296" d="M919.074,469.713a1.525,1.525,0,0,0-2.144,0l-1.737,1.74-2.878,2.883-.657.657-1.766,1.767-1.517,1.517-2.14-2.138h0l-.272-.272-.317-.317-4.971-4.972-.865-.865a1.516,1.516,0,1,0-2.145,2.145l8.57,8.56,1.075,1.073a1.527,1.527,0,0,0,1.067.449,1.478,1.478,0,0,0,1.066-.449l1.083-1.083,8.55-8.55A1.511,1.511,0,0,0,919.074,469.713Z" transform="translate(-469.267 919.52) rotate(-90)" fill="#0c3766"/>
+                        </svg>
+                    </a>
+                    <a href="">Products
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5.673" height="10.301" viewBox="0 0 12.673 22.301">
+                            <path id="Path_5296" data-name="Path 5296" d="M919.074,469.713a1.525,1.525,0,0,0-2.144,0l-1.737,1.74-2.878,2.883-.657.657-1.766,1.767-1.517,1.517-2.14-2.138h0l-.272-.272-.317-.317-4.971-4.972-.865-.865a1.516,1.516,0,1,0-2.145,2.145l8.57,8.56,1.075,1.073a1.527,1.527,0,0,0,1.067.449,1.478,1.478,0,0,0,1.066-.449l1.083-1.083,8.55-8.55A1.511,1.511,0,0,0,919.074,469.713Z" transform="translate(-469.267 919.52) rotate(-90)" fill="#0c3766"/>
+                        </svg>
+                    </a>
+                    <a href="">Deburring & edge-rounding
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5.673" height="10.301" viewBox="0 0 12.673 22.301">
+                            <path id="Path_5296" data-name="Path 5296" d="M919.074,469.713a1.525,1.525,0,0,0-2.144,0l-1.737,1.74-2.878,2.883-.657.657-1.766,1.767-1.517,1.517-2.14-2.138h0l-.272-.272-.317-.317-4.971-4.972-.865-.865a1.516,1.516,0,1,0-2.145,2.145l8.57,8.56,1.075,1.073a1.527,1.527,0,0,0,1.067.449,1.478,1.478,0,0,0,1.066-.449l1.083-1.083,8.55-8.55A1.511,1.511,0,0,0,919.074,469.713Z" transform="translate(-469.267 919.52) rotate(-90)" fill="#0c3766"/>
+                        </svg>
+                    </a>
+                    <a href="">Deburring disc M14-115 Standard</a>
+                </div>
+            </div>
+            <div class="product-area2">
+                <div class="img-area w-full xl:max-w-[1000px] min-w-0">
+                    <div class="product-gallery2">
+                        <div class="swiper-container slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/images/theme2/product_image_1.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/theme2/product_image_2.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/theme2/product_image_3.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/theme2/product_image_4.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/theme2/product_image_1.png" alt=""></div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-container slider-thumbnail">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/images/theme2/product_image_1.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/theme2/product_image_2.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/theme2/product_image_3.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/theme2/product_image_4.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/theme2/product_image_1.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-area2">
+                    <h1>TRUMPF TRULASER 3050 L20 - Fiber | 6 KW </h1>
+                    <h2>Laserschneidanlagen</h2>
+                    <div class="info-table">
+                        <div>
+                            <div>Prodükte Nummer</div>
+                            <div>DE2022/1005</div>
+                        </div>
+                        <div>
+                            <div>Manufacturer</div>
+                            <div>TRUMPF</div>
+                        </div>
+                        <div>
+                            <div>Model</div>
+                            <div>Trumpf Trulaser 3050 </div>
+                        </div>
+                        <div>
+                            <div>Year</div>
+                            <div>2022</div>
+                        </div>
+                        <div>
+                            <div>Source Type</div>
+                            <div>Fiber laser</div>
+                        </div>
+                        <div>
+                            <div>Power</div>
+                            <div>5000 Watt</div>
+                        </div>
+                        <div>
+                            <div>Table Size mm</div>
+                            <div>3000 x 1500 x 150</div>
+                        </div>
+                        <div>
+                            <div>Steuerung</div>
+                            <div>Siemens Sinumerik 840D</div>
+                        </div>
+                    </div>
+                    <a class="p-btn">
+                        <span>Maschine Anfragen</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22.886" height="10.329" viewBox="0 0 22.886 10.329">
+                            <path id="Path_5010" data-name="Path 5010" d="M-405.842,33.7a.59.59,0,0,0-.837,0l-3.562,3.562V17a.6.6,0,0,0-.6-.6.6.6,0,0,0-.6.6V37.263l-3.557-3.562a.59.59,0,0,0-.837,0,.59.59,0,0,0,0,.837l4.573,4.573a.59.59,0,0,0,.421.174.589.589,0,0,0,.421-.174l4.573-4.573A.6.6,0,0,0-405.842,33.7Z" transform="translate(-16.4 -405.671) rotate(-90)"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="information-area2 mt-40">
+                <div class="tabs-head">
+                    <a class="active">Maschine anfragen</a>
+                    <a>Technical Data</a>
+                    <a>Accessories</a>
+                </div>
+                <div class="tabs-body">
+                    <div class="active">
+                        <div class="description grid lg:grid-cols-12 gap-10">
+                            <div class="col-span-6">
+                                <div class="content-img">
+                                    <img src="./assets/images/theme2/product_image_5.png" alt="">
+                                </div>
+                                <h3 class="content-bordered-y content-title text-color-blue mt-5">Areas of application</h3>
+                                <p class="content-paragraph text-color-blue">TruHeat MF Series 3000 / 5000 / 7000 is a family of powerful and extremely versatile medium frequency generators for inducton heating applications. Specifically designed for high performance processes, these generators are offered in a wide variety of configurations and parameters.</p>
+                                <p class="content-paragraph text-color-blue">Specifically designed for high performance processes, these generators are offered in a wide variety of configurations and parameters.</p>
+                            </div>
+                            <div class="col-span-6">
+                                <div class="content-table">
+                                    <div class="th">MACHINE INFORMATION</div>
+                                    <div class="tb">
+                                        <div>
+                                            <div>Laser on</div>
+                                            <div>17500 Hours</div>
+                                        </div>
+                                        <div>
+                                            <div>Beam on</div>
+                                            <div>9000 Hours</div>
+                                        </div>
+                                        <div>
+                                            <div>Used Country</div>
+                                            <div>Germany</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-table mt-5">
+                                    <div class="th">CUTTING INFORMATION</div>
+                                    <div class="tb">
+                                        <div>
+                                            <div>Aluminiyum Max</div>
+                                            <div>20 mm</div>
+                                        </div>
+                                        <div>
+                                            <div>Crome Max</div>
+                                            <div>15 mm</div>
+                                        </div>
+                                        <div>
+                                            <div>Stanly steel</div>
+                                            <div>25 mm</div>
+                                        </div>
+                                        <div>
+                                            <div>Copper Max</div>
+                                            <div>15 mm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="grid lg:grid-cols-12 gap-10">
+                            <div class="col-span-6">
+                                <h3 class="content-title text-color-blue px-5">Maschinen size</h3>
+                                <h4 class="content-paragraph content-bordered-y text-color-blue py-3 px-5 mt-3 border-opacity-10">TruLaser 5030</h4>
+                                <div class="content-table-2 mt-5">
+                                    <div class="th">Working range</div>
+                                    <div>
+                                        <div>X axis</div>
+                                        <div>3000 mm</div>
+                                    </div>
+                                    <div>
+                                        <div>Y axis</div>
+                                        <div>1500 mm</div>
+                                    </div>
+                                    <div>
+                                        <div>Z axis</div>
+                                        <div>115 mm</div>
+                                    </div>
+                                    <div class="th">Workpiece</div>
+                                    <div>
+                                        <div>Max. weight</div>
+                                        <div>1800 kg[3]</div>
+                                    </div>
+                                    <div class="th">Max. speed</div>
+                                    <div>
+                                        <div>Simultaneous</div>
+                                        <div>300 m / min</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-6">
+                                <h3 class="content-title text-color-blue px-5">Table size</h3>
+                                <h4 class="content-paragraph content-bordered-y text-color-blue py-3 px-5 mt-3 border-opacity-10">TruLaser 5030</h4>
+                                <div class="content-table-2 mt-5">
+                                    <div class="th">Working range</div>
+                                    <div>
+                                        <div>X axis</div>
+                                        <div>3000 mm</div>
+                                    </div>
+                                    <div>
+                                        <div>Y axis</div>
+                                        <div>1500 mm</div>
+                                    </div>
+                                    <div>
+                                        <div>Z axis</div>
+                                        <div>115 mm</div>
+                                    </div>
+                                    <div class="th">Workpiece</div>
+                                    <div>
+                                        <div>Max. weight</div>
+                                        <div>1800 kg[3]</div>
+                                    </div>
+                                    <div class="th">Max. speed</div>
+                                    <div>
+                                        <div>Simultaneous</div>
+                                        <div>300 m / min</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="grid lg:grid-cols-12 gap-10">
+                            <div class="content-img-6 bottom-left col-span-4">
+                                <div class="content-img">
+                                    <img src="./assets/images/theme/__6.png" alt="">
+                                </div>
+                                <span>Application</span>
+                            </div>
+                            <div class="content-img-6 bottom-left col-span-4">
+                                <div class="content-img">
+                                    <img src="./assets/images/theme/__3.png" alt="">
+                                </div>
+                                <span>After</span>
+                            </div>
+                            <div class="content-img-6 bottom-left col-span-4">
+                                <div class="content-img">
+                                    <img src="./assets/images/theme/__7.png" alt="">
+                                </div>
+                                <span>Before</span>
+                            </div>
+                        </div>
+                        <div class="lg:grid lg:grid-cols-12 flex flex-col lg:gap-10 gap-14 mt-7">
+                            <div class="col-span-6">
+                                <h3 class="content-title text-color-blue">TruHeat MF</h3>
+                                <p class="content-paragraph text-color-blue mt-5">TruHeat MF Series 3000 / 5000 / 7000 is a family of powerful and extremely versatile medium frequency generators for inducton heating applications. Specifically designed for high performance processes, these generators are offered in a wide variety of configurations and parameters. Individual models re available with an output power of 10 Kilowatt (kW) to 250 kW over a frequency range of 3 kilohertz (kHz) to 200 kHz.</p>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="content-bordered-y">
+                                    <h3 class="content-title text-color-blue">Industry Solutions</h3>
+                                    <span class="content-paragraph mt-0 text-color-blue">per bend</span>
+                                </div>
+                                <p class="content-paragraph text-color-blue mt-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="content-bordered-y">
+                                    <h3 class="content-title text-color-blue">Industry Solutions</h3>
+                                    <span class="content-paragraph mt-0 text-color-blue">per bend</span>
+                                </div>
+                                <p class="content-paragraph text-color-blue mt-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-area mt-60">
+                <div class="grid grid-cols-12 bg-color-white">
+                    <div class="col-span-12 lg:col-span-9 content-img relative">
+                        <img src="./assets/images/theme/photo-1.png" alt="">
+                        <span class="play-icon">
+                            <img src="./assets/images/theme2/play-icon.png" alt="">
+                        </span>
+                    </div>
+                    <div class="col-span-12 lg:col-span-3 lg:p-12 flex lg:py-28 p-5 py-10">
+                        <div class="flex flex-col h-full justify-between">
+                            <div>
+                                <h2 class="content-title">2020/21 Mali Yılı</h2>
+                                    <p class="content-paragraph">Satış ve servis çalışanları hayatlarını yolda geçiriyor. Onlar
+                                        TRUMPF firmasının "dışarıdaki" yüzleridir. 2020/21
+                                        faaliyet raporunda her gün müşterilerimiz için yollarda olan ve
+                                        Corona pandemisi sırasında çok özel
+                                        zorlukları aşan TRUMPF'da çalışan 14 kişi ile tanışıyoruz.</p>
+                            </div>
+                            <a href="" class="content-button btn-blue-outlined ml-auto">Ayrıntılı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-gallery mt-60">
+                <div class="swiper-container single-slider md:hidden mb-10 overflow-hidden relative">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide w-full content-img aspect-square"><img src="./assets/images/theme/__1.png" alt=""></div>
+                        <div class="swiper-slide w-full content-img aspect-square"><img src="./assets/images/theme/__2.png" alt=""></div>
+                        <div class="swiper-slide w-full content-img aspect-square"><img src="./assets/images/theme/__3.png" alt=""></div>
+                        <div class="swiper-slide w-full content-img aspect-square"><img src="./assets/images/theme/__4.png" alt=""></div>
+                        <div class="swiper-slide w-full content-img aspect-square"><img src="./assets/images/theme/__5.png" alt=""></div>
+                        <div class="swiper-slide w-full content-img aspect-square"><img src="./assets/images/theme/__6.png" alt=""></div>
+                        <div class="swiper-slide w-full content-img aspect-square"><img src="./assets/images/theme/__7.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="content-img-7 flex lg:gap-10 gap-4">
+                    <div class="w-full max-w-[360px] md:flex hidden flex-col lg:gap-10 gap-4">
+                        <div class="content-img h-full">
+                            <img src="./assets/images/theme2/_1.png" alt="">
+                        </div>
+                        <div class="content-img h-full">
+                            <img src="./assets/images/theme2/_4.png" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col lg:gap-10 gap-4">
+                        <div class="content-img lg:h-72 h-full md:flex hidden">
+                            <img src="./assets/images/theme2/_2.png" alt="">
+                        </div>
+                        <div class="lg:content-bg p-8 lg:min-w-0 min-w-[240px] lg:h-44 h-fit bg-color-blue flex flex-col items-center justify-center">
+                            <h3 class="content-title mt-0 text-center">Trumpf 5030 <br> FIBER 6 KW   2019 Model</h3>
+                        </div>
+                        <div class="content-img lg:h-72 h-full md:flex hidden">
+                            <img src="./assets/images/theme2/_5.png" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full max-w-[360px] md:flex hidden flex-col lg:gap-10 gap-4">
+                        <div class="content-img h-full">
+                            <img src="./assets/images/theme2/_3.png" alt="">
+                        </div>
+                        <div class="content-img h-full">
+                            <img src="./assets/images/theme2/_6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-form">
+        <div>
+            <div class="form">
+                <h3 class="content-title text-color-blue">Request for quotation</h3>
+                <p class="content-paragraph mt-3 text-color-blue max-w-[500px]">LASERSCHNEIDANLAGE TRUMPF TRULASER 5060, 5000 WATT, LM-1831</p>
+                <form action="" class="form-type-1">
+                    <div class="inputs">
+                        <div class="input-area sm:col-span-12">
+                            <label for="">Ihre Nachricht*</label>
+                            <div class="input">
+                                <input type="text" required="">
+                            </div>
+                        </div>
+                        <div class="input-area">
+                            <label for="">E-Mail*</label>
+                            <div class="input">
+                                <input type="text" required="">
+                            </div>
+                        </div>
+                        <div class="input-area">
+                            <label for="">Telefonnummer</label>
+                            <div class="input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="input-area sm:col-span-4">
+                            <label for="">Anrede*</label>
+                            <div class="input">
+                                <input type="text" required="">
+                            </div>
+                        </div>
+                        <div class="input-area sm:col-span-4">
+                            <label for="">Name*</label>
+                            <div class="input">
+                                <input type="text" required="">
+                            </div>
+                        </div>
+                        <div class="input-area sm:col-span-4">
+                            <label for="">Nachname*</label>
+                            <div class="input">
+                                <input type="text" required="">
+                            </div>
+                        </div>
+                        <div class="input-area">
+                            <label for="">Funktion</label>
+                            <div class="input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="input-area">
+                            <label for="">Unternehmen*</label>
+                            <div class="input">
+                                <input type="text" required="">
+                            </div>
+                        </div>
+                        <div class="input-area sm:col-span-12">
+                            <label for="">Adresszeile*</label>
+                            <div class="input">
+                                <input type="text" required="">
+                            </div>
+                        </div>
+                        <div class="input-area">
+                            <label for="">PLZ*</label>
+                            <div class="input">
+                                <input type="text" required="">
+                            </div>
+                        </div>
+                        <div class="input-area">
+                            <label for="">Stadt*</label>
+                            <div class="input">
+                                <input type="text" required="">
+                            </div>
+                        </div>
+                        <div class="input-area sm:col-span-12">
+                            <label for="">Land*</label>
+                            <div class="input">
+                                <input type="text" required="">
+                            </div>
+                        </div>
+                        <div class="input-area sm:col-span-12">
+                            <label for="">Wie sind Sie auf uns aufmerksam geworden?</label>
+                            <div class="input">
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cb mt-5">
+                        <input id="___1" type="checkbox">
+                        <label for="___1">Ich habe die Datenschutzerklärung gelesen und akzeptiere diese.</label>
+                    </div>
+                    <div class="cb">
+                        <input id="___2" type="checkbox" required="">
+                        <label for="___2">Ich bin damit einverstanden Informationen von per E-Mail zu erhalten</label>
+                    </div>
+                    <button class="btn-blue mt-8 w-full h-auto py-3">Einsenden</button>
+                </form>
+            </div>
+            <div class="form-txt">
+                <h3 class="content-title text-color-blue">Versatile use</h3>
+                <ul>
+                    <li>How many shifts are being run at capacity each day?</li>
+                    <li>What technologies do you utilize (laser cutting, punching, etc.)?</li>
+                    <li>Which material mix and which formats do you process?</li>
+                    <li>How high is your total production throughput and how much per year?</li>
+                    <li>What is your standard batch size?</li>
+                </ul>
+            </div>            
+        </div>
+        <img src="./assets/images/theme2/form-bg.png" alt="">
+    </div>
+    
+    <footer class="mt-80">
+        <button class="go-top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10.892" height="24.133" viewBox="0 0 10.892 24.133">
+                <path id="Path_5010" data-name="Path 5010" d="M-405.288,34.644a.622.622,0,0,0-.883,0l-3.756,3.756V17.028a.627.627,0,0,0-.628-.628.627.627,0,0,0-.628.628V38.4l-3.751-3.756a.622.622,0,0,0-.883,0,.622.622,0,0,0,0,.883l4.823,4.823a.622.622,0,0,0,.444.184.622.622,0,0,0,.444-.184l4.823-4.823A.636.636,0,0,0-405.288,34.644Z" transform="translate(-405.108 40.533) rotate(180)"/>
+            </svg>
+        </button>
+        <div>
+            <div class="top">
+                <div class="left">
+                    <img src="./assets/images/logo/header-logo.svg" alt="">
+                </div>
+                <div class="right">
+                    <div class="l">
+                        <div class="no-underline">
+                            <a class="header-btn" href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28.246" height="20" viewBox="0 0 28.246 49.765">
+                                    <path id="facebook" d="M17.947,49.765H9.978a2.417,2.417,0,0,1-2.414-2.414V29.375H2.914A2.417,2.417,0,0,1,.5,26.961v-7.7a2.417,2.417,0,0,1,2.414-2.414h4.65V12.988a13.133,13.133,0,0,1,3.473-9.409A12.508,12.508,0,0,1,20.258,0l6.078.01a2.417,2.417,0,0,1,2.41,2.414V9.575a2.416,2.416,0,0,1-2.413,2.414l-4.092,0c-1.248,0-1.566.25-1.634.327-.112.127-.245.487-.245,1.48v3.047h5.664a2.454,2.454,0,0,1,1.194.3,2.423,2.423,0,0,1,1.242,2.111l0,7.7a2.416,2.416,0,0,1-2.414,2.413H20.361V47.351a2.417,2.417,0,0,1-2.414,2.414Zm-7.466-2.917h6.963V28.069a1.614,1.614,0,0,1,1.612-1.612h6.486l0-6.7H19.055a1.613,1.613,0,0,1-1.611-1.612V13.8a4.969,4.969,0,0,1,.976-3.41,4.945,4.945,0,0,1,3.82-1.314l3.589,0V2.926l-5.573-.009c-6.029,0-9.775,3.859-9.775,10.071v5.163A1.614,1.614,0,0,1,8.87,19.762H3.418v6.7H8.87a1.613,1.613,0,0,1,1.611,1.612ZM26.33,2.927h0Zm0,0" transform="translate(-0.5 0)" fill="#0c3766"/>
+                                  </svg>
+                                <span>Facebook</span>
+                            </a>
+                            <a class="header-btn" href="">
+                                <svg id="instagram" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14.265 14.266">
+                                    <path id="Path_5022" data-name="Path 5022" d="M10.4,0H3.861A3.866,3.866,0,0,0,0,3.862V10.4a3.866,3.866,0,0,0,3.862,3.861H10.4A3.866,3.866,0,0,0,14.264,10.4V3.862A3.866,3.866,0,0,0,10.4,0Zm3.025,10.4A3.029,3.029,0,0,1,10.4,13.429H3.861A3.029,3.029,0,0,1,.835,10.4V3.862A3.029,3.029,0,0,1,3.861.836H10.4a3.029,3.029,0,0,1,3.025,3.025Zm0,0" transform="translate(0.001 0)" fill="#0c3766"/>
+                                    <path id="Path_5023" data-name="Path 5023" d="M119.9,116a3.9,3.9,0,1,0,3.9,3.9A3.9,3.9,0,0,0,119.9,116Zm0,6.965a3.064,3.064,0,1,1,3.064-3.064A3.068,3.068,0,0,1,119.9,122.969Zm0,0" transform="translate(-112.772 -112.772)" fill="#0c3766"/>
+                                    <path id="Path_5024" data-name="Path 5024" d="M359.129,66.285a1.153,1.153,0,1,0,1.153,1.153A1.154,1.154,0,0,0,359.129,66.285Zm0,1.469a.316.316,0,1,1,.316-.316A.317.317,0,0,1,359.129,67.754Zm0,0" transform="translate(-348.003 -64.438)" fill="#0c3766"/>
+                                </svg>                                  
+                                <span>İnstagram</span>
+                            </a>
+                            <a class="header-btn" href="">
+                                <svg id="Group_182" data-name="Group 182" xmlns="http://www.w3.org/2000/svg" width="13.542" height="14.896" viewBox="0 0 13.542 14.896">
+                                    <g id="group-38svg" transform="translate(0)">
+                                      <path id="path-1_31_" d="M31.038,76.514H28.461a.61.61,0,0,1-.562-.279.574.574,0,0,1,0-.607L30.3,71.441,29.166,69.1a.761.761,0,0,1,.033-.685c.1-.154.258-.416.551-.416h2.577c.233,0,.429.159.584.474L34.2,71.212a.593.593,0,0,1-.023.581L31.6,76.24A.6.6,0,0,1,31.038,76.514ZM28.613,75.8h2.421l2.508-4.328-1.271-2.693a.658.658,0,0,0-.041-.072H29.852c-.016.023-.032.05-.043.066h0a.122.122,0,0,0,0,.032l1.212,2.49a.356.356,0,0,1-.011.332Z" transform="translate(-27.811 -66.347)" fill="#0c3766"/>
+                                      <path id="path-2_21_" d="M246.06,14.9h-2.577a.609.609,0,0,1-.561-.279L239.7,9.1a.676.676,0,0,1-.006-.658l4.511-8.06A.679.679,0,0,1,244.772,0h2.578a.677.677,0,0,1,.561.374.692.692,0,0,1,.007.664l-4.331,7.73L246.623,14a.59.59,0,0,1-.563.9Zm-2.569-.709h2.422l-3.041-5.237a.355.355,0,0,1,0-.352L247.286.713l0,0h-2.447a.219.219,0,0,0-.014.022l-4.5,8.035Z" transform="translate(-234.457)" fill="#0c3766"/>
+                                    </g>
+                                </svg>
+                                <span>Xing</span>
+                            </a>
+                        </div>
+                        <div class="no-underline">
+                            <a class="header-btn" href="">
+                                <span>Company details</span>
+                            </a>
+                            <a class="header-btn" href="">                              
+                                <span>Privacy</span>
+                            </a>
+                            <a class="header-btn" href="">
+                                <span>About Us</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="r">
+                        <img src="./assets/images/symbols/trumpf_logo_blau.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div>
+                    <span>©2022 Copyright SANDDEBURRER</span>
+                    <div>
+                        <a href="">Imprint</a>
+                        <a href="">Disclaimer</a>
+                        <a href="">Privacy statement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./assets/js/app.js"></script>
+<script>
+    var sliderThumbnail = new Swiper('.slider-thumbnail', {
+        spaceBetween: 20,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            998: {
+                slidesPerView: 4.5,
+            },
+            668: {
+                slidesPerView: 3.5,
+            },
+            0:{
+                slidesPerView: 2.5,
+            }
+        }
+    });
+
+    var slider = new Swiper('.slider', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: sliderThumbnail
+        }
+    });
+
+    var singleSlider = new Swiper('.single-slider', {
+        spaceBetween: 10,
+        slidesPerView: 1,
+    });
+</script>
+</html>

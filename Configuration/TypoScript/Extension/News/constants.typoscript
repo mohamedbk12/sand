@@ -1,0 +1,18 @@
+// ########################
+// #### News Extension ####
+// ########################
+@import 'EXT:news/Configuration/TypoScript/constants.txt'
+
+plugin.tx_news {
+    view {
+        templateRootPath = EXT:sand_sitepackage/Resources/Private/Templates/News/
+        partialRootPath = EXT:sand_sitepackage/Resources/Private/Partials/News/
+        layoutRootPath = EXT:sand_sitepackage/Resources/Private/Layouts/News/
+    }
+
+    settings {
+        # CUSTOM SETTING
+        categoryListPid = 88
+        cssFile = 
+    }
+}

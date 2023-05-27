@@ -1,0 +1,164 @@
+<html xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/SearchForm.html
+-->
+{f:translate(key:'dateFormat')}
+{f:translate(key: "LLL:EXT:ke_search/Resources/Private/Language/locallang_searchbox.xlf:dateformat.dateWithYear")}
+<f:translate key="list_nonewsfound" />
+<f:section name="content">
+	<div class="ce-news-search">
+		<n:searchForm object="{search}" class="needs-validation" name="search" pageUid="{settings.listPid}"
+			method="get">
+
+
+			<f:variable name="canBeOpened" value="0"></f:variable>
+			<f:if condition="{search.minimumDate} && {control}">
+				<f:variable name="canBeOpened" value="1"></f:variable>
+			</f:if>
+			<f:variable name="isOpen" value="{f:if(condition: canBeOpened, then: 'open')}"></f:variable>
+			<f:variable name="isActive" value="{f:if(condition: canBeOpened, then: 'active')}"></f:variable>
+			<input type="hidden" id="control" value="{control}" name="tx_news_pi1[control]">
+			<input type="hidden" id="checksearchAction" value="{checksearchAction}">
+			<div class="arrow-right-accordion {isActive}">Suchoptionen einblenden</div>
+			<div class="accordion-section {isOpen}">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="placeholder-text">
+								<f:translate
+									key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.search_text" />
+							</label>
+							<f:form.textfield type="search" id="news-subject" property="subject"
+								class="text-default form-control"
+								placeholder='{f:translate(key: "LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.search_text_placeholder")}' />
+							<div class="invalid-feedback">
+								<f:translate
+									key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.error_message" />
+							</div>
+						</div>
+					</div>
+					<f:comment>
+						<!-- Removed for now -->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="placeholder-text">
+									<f:translate
+										key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.categorie" />
+								</label>
+
+								<f:form.select class="form-select form-control" property="category"
+									options="{categories}" optionLabelField="displayName"
+									data="{'placeholder': 'title'}" optionLabelField="title"
+									prependOptionLabel='{f:translate(key: "LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.all_categories")}' />
+								<div class="invalid-feedback">
+									<f:translate
+										key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.error_message" />
+								</div>
+							</div>
+						</div>
+					</f:comment>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-12">
+						<div class="form-group">
+							<label>
+								<f:translate
+									key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.from_date" />
+							</label>
+							<div class="datepicker-month-section">
+								<div class="date_pick">
+
+									<div class="fake_input">
+										<p>Datum</p>
+									</div>
+									<input class="picker_date" name="tx_news_pi1[minimumDate]" type="hidden"
+										maxlength="4" value="{date.minimumDate}">
+									<div class="date_selector">
+										<div class="years">
+											<a class="picker-left picker-select-arrow"></a>
+											<f:form.textfield id="news-minimumDate" property="minimumDate" type="text"
+												class="year-selected" placeholder="Datum" readonly="true" />
+											<a class="picker-right picker-select-arrow"></a>
+										</div>
+										<div class="months"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-12">
+						<div class="form-group">
+							<label>
+								<f:translate
+									key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.end_date" />
+							</label>
+							<div class="datepicker-month-section">
+								<div class="date_pick">
+									<div class="fake_input">
+										<p>Datum</p>
+									</div>
+									<input class="picker_date" name="tx_news_pi1[maximumDate]" type="hidden"
+										maxlength="4" value="{date.maximumDate}">
+									<div class="date_selector">
+										<div class="years">
+											<a class="picker-left picker-select-arrow"></a>
+											<f:form.textfield id="news-maximumDate" property="maximumDate" type="text"
+												class="year-selected" placeholder="Datum" readonly="true" />
+											<a class="picker-right picker-select-arrow"></a>
+										</div>
+										<div class="months"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<f:if condition="{demand.categories}">
+				<div class="form-group checkbox-group ">
+					<div class="checkbox-section">
+						<f:for each="{categories}" as="category" key="key">
+							<f:if condition="{demendedCategories} > 1 ">
+								<f:for each="{demand.categories}" as="selectedCategory">
+									<f:if condition="{category.uid} == {selectedCategory}">
+										<f:variable name="Found" value="0" />
+										<f:for each="{selected}" as="arrayselected" key="keyselected">
+											<f:if condition="{key} == {keyselected}">
+												<f:variable name="Found" value="1" />
+											</f:if>
+										</f:for>
+										<div class="form-check form-check-inline">
+											<f:form.checkbox class="form-check-input" name="searchcateg[category][]"
+												value="{category.uid}" checked="{Found} == 1" id="{category.uid}" />
+											<!-- <input class="form-check-input" data-category="{category.uid}" name="tx_news_pi1[search][category][]" type="checkbox" id="inlineCheckbox1" value="{category.uid}"> -->
+											<label class="form-check-label" for="{category.uid}">
+												{category.title}
+											</label>
+										</div>
+									</f:if>
+								</f:for>
+							</f:if>
+						</f:for>
+					</div>
+				</div>
+			</f:if>
+			<div class="form-group buttons-group">
+				<div class="buttons-section">
+					<button class="primary-button" type="submit" value="">
+						<f:translate
+							key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.apply_filters" />
+					</button>
+					<input class="secondary-button" type="submit" name="tx_news_pi1[reset]"
+						value="{f:translate(key: 'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.reset_filter')}" />
+
+
+				</div>
+			</div>
+		</n:searchForm>
+	</div>
+</f:section>
+
+</html>

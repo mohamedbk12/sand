@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="c{data.uid}" class="sticky-links">
+    <ul>
+        <li>
+            <f:if condition="{data.header}">
+                <f:link.typolink parameter="{data.header}">
+                    <div class="icon-link icon-lock"></div>
+                    <p>Mitglieder</p>
+                </f:link.typolink>
+            </f:if>
+        </li>
+        <li>
+            <f:if condition="{data.subheader}">
+                <f:link.typolink parameter="{data.subheader}">
+                    <div class="icon-link icon-newspaper"></div>
+                    <p>Presse</p>
+                </f:link.typolink>
+            </f:if>
+        </li>
+        <li>
+            <f:if condition="{data.link}">
+                <f:link.typolink parameter="{data.link}">
+                    <div class="icon-link icon-beep"></div>
+                    <p>Positionen</p>
+                </f:link.typolink>
+            </f:if>
+        </li>
+    </ul>
+</div>
+</html>

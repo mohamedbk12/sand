@@ -1,0 +1,34 @@
+#
+# TCEMAIN
+#
+TCEMAIN {
+    permissions.groupid = 1
+    permissions.user = show, editcontent, edit, delete, new
+    permissions.group = show, editcontent, edit, delete, new
+
+    table{
+        tt_content {
+            disablePrependAtCopy = 1
+            disableHideAtCopy = 0
+        }
+        pages {
+            disablePrependAtCopy = 1
+            disableHideAtCopy = 0
+        }
+    }
+    linkHandler{
+        tx_news{
+            handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
+            # A translatable label can be used with LLL:EXT:theme/locallang.xml:label
+            label = News
+            configuration {
+            table = tx_news_domain_model_news
+            # Default storage pid
+            storagePid = 16
+            # Hide the page tree by setting it to 1
+            hidePageTree = 1
+            }
+            scanAfter = page
+        }
+    }
+}

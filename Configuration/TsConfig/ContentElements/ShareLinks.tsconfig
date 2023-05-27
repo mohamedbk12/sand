@@ -1,0 +1,17 @@
+####################################
+#### CE WIZARD: Contact Teaser #####
+####################################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_sharelinks {
+            iconIdentifier = sandsitepackage-sharelinks
+            title = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.sharelinks
+            description = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.sharelinks.description
+            tt_content_defValues {
+                CType = sandsitepackage_sharelinks
+            }
+        }
+    }
+    show := addToList(sandsitepackage_sharelinks)
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-26T07:34:54Z" product-name="sf_register">
+		<header/>
+		<body>
+			<trans-unit id="title_none">
+				<source>Please select</source>
+			</trans-unit>
+			<trans-unit id="gender_3">
+				<source>Other</source>
+			</trans-unit>
+			<trans-unit id="gender">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="address">
+				<source>Street and House Number</source>
+			</trans-unit>
+			<trans-unit id="mobilephone">
+				<source>PO number/ cost center</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

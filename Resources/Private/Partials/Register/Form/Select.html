@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:register="http://typo3.org/ns/Evoweb/SfRegister/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{isOverrided}">
+	<f:then>
+		<div class="col-md-6 field-spacing {fieldName}">
+			<div class="form-group">
+				<label for="{fieldName}">
+					<f:translate id="{fieldName}" />
+					<f:render partial="Required" arguments="{field: fieldName}" />
+				</label>
+				<f:if condition="{req}">
+					<f:then>
+						<register:form.translatedSelect property="{fieldName}" id="{fieldName}"
+							options="{options.values}" class="form-control form-select" required="required" />
+					</f:then>
+					<f:else>
+						<register:form.translatedSelect property="{fieldName}" id="{fieldName}"
+							options="{options.values}" class="form-control form-select" />
+					</f:else>
+
+				</f:if>
+
+				<div class="invalid-feedback">
+					<f:translate
+						key="LLL:EXT:sand_connectedforms/Resources/Private/Language/locallang.xlf:tx_sand_connectedforms.required_entry" />
+				</div>
+			</div>
+		</div>
+	</f:then>
+
+	<f:else>
+		<div class="col-md-6 field-spacing {fieldName}">
+			<div class="form-group">
+				<label for="{fieldName}">
+					<f:translate id="{fieldName}" />
+					<f:render partial="Required" arguments="{field: fieldName}" />
+				</label>
+
+				<register:form.translatedSelect property="{fieldName}" id="{fieldName}" options="{options.values}"
+					class="form-control form-select" />
+				<f:render partial="FieldError" arguments="{for: 'user', field: fieldName}" />
+			</div>
+		</div>
+	</f:else>
+</f:if>
+
+</html>

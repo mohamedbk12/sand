@@ -1,0 +1,37 @@
+######################
+#### EXTENSION ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/FluidStyledContent/setup.typoscript" condition="extension.isLoaded('fluid_styled_content') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Felogin/setup.typoscript" condition="extension.isLoaded('felogin') == 1" >
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/SfRegister/setup.typoscript"  condition="extension.isLoaded('sf_register') == 1">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Form/setup.typoscript" condition="extension.isLoaded('form') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Seo/setup.typoscript" condition="extension.isLoaded('seo') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Ke_search/setup.typoscript" condition="extension.isLoaded('ke_search') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript" condition="extension.isLoaded('news') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Tt_address/setup.typoscript" condition="extension.isLoaded('tt_address') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Sand_sitepackage/setup.typoscript">
+
+#####################
+#### OVERWRITING ####
+#####################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:sand_sitepackage/Configuration/TypoScript/ContentElements/" extensions="typoscript">
+
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+
+##############
+#### CONFIG ##
+##############
+@import 'EXT:sand_sitepackage/Configuration/TypoScript/Page/config.typoscript'
+
+##############
+#### PAGE ####
+##############
+@import 'EXT:sand_sitepackage/Configuration/TypoScript/Page/page.typoscript'
+
+##############
+#### LIB #####
+##############
+@import 'EXT:sand_sitepackage/Configuration/TypoScript/Page/lib.typoscript'

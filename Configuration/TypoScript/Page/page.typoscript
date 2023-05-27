@@ -1,0 +1,198 @@
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = EXT:sand_sitepackage/Resources/Public/Icons/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        # Template names will be generated automatically by converting the applied
+        # backend_layout, there is no explicit mapping necessary anymore.
+        #
+        # BackendLayout Key
+        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        #
+        # Backend Record
+        # uid: 1 -> 1.html
+        #
+        # Database Entry
+        # value: -1 -> None.html
+        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+        templateRootPaths {
+            0 = EXT:sand_sitepackage/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:sand_sitepackage/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:sand_sitepackage/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = media
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                levels = 2
+                includeSpacer = 1
+                as = mainnavigation
+            }
+            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            30 {
+                special = directory
+                special.value = 15
+                levels = 3
+                includeSpacer = 1
+                as = footerNavigation
+            } 
+
+            40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            40 {
+                special = directory
+                special.value = 2
+                levels = 3
+                includeSpacer = 1
+                as = topNavigation
+            } 
+
+
+            50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            50 {
+                special = directory
+                special.value = 20
+                levels = 3
+                includeSpacer = 1
+                as = footersubNavigation
+            } 
+        }
+         settings < plugin.tx_sandsitepackage.settings
+         
+    }
+
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        description = {$page.meta.description}
+        description {
+            override.field = description
+        }
+        author = {$page.meta.author}
+        author {
+            override.field = author
+        }
+        keywords = {$page.meta.keywords}
+        keywords {
+            override.field = keywords
+        }
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+        og:image {
+            attribute = property
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    data = levelfield:-1, media, slide
+                }
+                maxItems = 1
+                renderObj = COA
+                renderObj {
+                    10 = IMG_RESOURCE
+                    10 {
+                        file {
+                            import.data = file:current:uid
+                            treatIdAsReference = 1
+                            width = 1280c
+                            height = 720c
+                        }
+                        stdWrap {
+                            typolink {
+                                parameter.data = TSFE:lastImgResourceInfo|3
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+       headerData {
+
+        100 = TEXT
+        100.value (
+          
+        )
+
+        1000 = TEXT
+        1000.value (
+
+        )
+    }
+
+    includeCSSLibs {
+
+    }
+
+    includeCSS {
+        sand_sitepackage_layout = EXT:sand_sitepackage/Resources/Public/Dist/dist.main.min.css
+        sand_sitepackage_layout2 = EXT:sand_sitepackage/Resources/Public/Dist/input.css
+        swiper = https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css
+    }
+
+    includeJSLibs {
+        swiper_js = https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js
+    }
+
+    includeJS {
+    swiper_jslib = https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js
+    }
+
+    includeJSFooterlibs {
+        ajax = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js
+   }
+
+    includeJSFooter {
+        sand_sitepackage_scripts = EXT:sand_sitepackage/Resources/Public/Dist/dist.main.min.js
+        sand_sitepackage_scripts.forceOnTop = 1
+    }
+}

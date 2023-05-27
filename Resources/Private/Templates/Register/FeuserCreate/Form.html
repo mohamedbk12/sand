@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="LoggedOut"/>
+
+<f:section name="Main">
+	<div class="ce-text  ">
+		<div class=" mx-auto">
+			<div class="headline">
+				<h1 class="">{settings.createheader}</h1>
+			</div>
+			<div class="text">
+				<f:format.html>{settings.creatertefield}</f:format.html>
+			</div>
+		</div>
+	</div>
+	<f:form action="preview" name="user" id="sfrForm"  class="needs-validation" object="{user}" enctype="multipart/form-data" novalidate="novalidate">
+			<div class="field-spacing">
+				<div class="text-default-small">
+					Pflichtfelder 
+					<span class="required">*</span>
+				</div>
+			</div>
+
+			<f:render partial="FormErrors" arguments="{for: 'user', type: 'mailError'}"/>
+
+		
+		
+		<div class="form-row">
+			<f:for each="{settings.fields.selected}" as="fieldName" iteration="iteration">
+				<f:alias map="{options: '{settings.fields.configuration.{fieldName}}'}">
+				<f:variable name="req" value="false"></f:variable>
+				<f:if condition="{settings.validation.create.{fieldName}.1}">
+					<f:then>
+						<f:variable name="fieldStringName" value="{settings.validation.create.{fieldName}.1}"></f:variable>
+					</f:then>
+					<f:else>
+						<f:variable name="fieldStringName" value="{settings.validation.create.{fieldName}}"></f:variable>
+					</f:else>
+				</f:if>
+				<f:if condition="{fieldStringName -> f:format.raw()} -> f:format.stripTags() -> f:format.trim() -> f:format.raw() -> f:format.nl2br() -> f:format.trim() -> f:format.raw() -> f:format.substr(search: 'Required')}">
+					<f:variable name="req" value="true"></f:variable>	
+				</f:if>
+					<f:render partial="Form/{options.partial}"
+						arguments="{req:req, isOverrided:1 ,user: user, fieldName: fieldName, options: options, settings: settings, iteration: iteration}"/>
+				</f:alias>
+			</f:for>
+		</div>
+	</f:form>
+	<f:comment>
+		<div class="mandatory">
+			<f:format.raw><f:translate id="info_mandatory_fields"/></f:format.raw>
+		</div>
+	</f:comment>
+</f:section>
+
+</html>

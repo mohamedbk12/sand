@@ -1,0 +1,7 @@
+tt_content.sandsitepackage_text =< lib.contentElement
+tt_content.sandsitepackage_text {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = Text
+}

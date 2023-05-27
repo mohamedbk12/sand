@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-06-29UTC07:45:380">
+        <header>
+            <authorName>Ingo Möller</authorName>
+            <authorEmail>möller@meddev-media.com</authorEmail>
+        </header>
+        <body>
+           <trans-unit id="gtc_accept">
+				<source>I accept</source>
+                <target>Ich akzeptiere die </target>
+			</trans-unit>
+    	    <trans-unit id="gtc_terms">
+				<source>the Terms and Conditions</source>
+				<target>AGB</target>
+			</trans-unit>
+			<trans-unit id="privacy_agree">
+				<source>I agree with the information on </source>
+                <target>Ich stimme den Angaben zum</target>
+			</trans-unit>
+           	<trans-unit id="privacy_data_protection">
+				<source>data protection</source>
+                <target>Datenschutz</target>
+			</trans-unit>
+			<trans-unit id="gtc_checked">
+				<source>not accepted</source>
+				<target>nicht akzeptiert</target>
+			</trans-unit>
+			<trans-unit id="gtc_checked1">
+				<source>accepted</source>
+				<target>akzeptiert</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

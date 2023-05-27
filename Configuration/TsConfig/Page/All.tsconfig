@@ -1,0 +1,17 @@
+#
+# PageTS for sand_sitepackage
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TsConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+
+####################
+#### Extensions ####
+####################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:sand_sitepackage/Configuration/TsConfig/Page/Extension" extensions="tsconfig">
+
+##########################
+#### CONTENT ELEMENTS ####
+##########################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:sand_sitepackage/Configuration/TsConfig/ContentElements/" extensions="tsconfig">

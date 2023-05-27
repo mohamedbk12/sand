@@ -1,0 +1,129 @@
+#Import maximal config for Sf_register
+@import 'EXT:sf_register/Configuration/TypoScript/maximal/setup.typoscript'
+@import 'EXT:sand_sitepackage/Configuration/TypoScript/Extension/SfRegister/Fields.typoscript'
+plugin.tx_sfregister.settings.fields.configuration {
+  gender {
+    values {
+      1 = title_none
+      2 = gender_1
+      3 = gender_2
+      4 = gender_3
+    }
+  }
+}
+plugin.tx_sfregister{
+    persistence {
+        storagePid = 3
+    }
+    view {
+         templateRootPaths {
+            0 = EXT:sf_register/Resources/Private/Templates/
+            1 = EXT:sand_sitepackage/Resources/Private/Templates/Register/
+         }
+
+        partialRootPaths {
+            0 = EXT:sf_register/Resources/Private/Partials/
+            1 = EXT:sand_sitepackage/Resources/Private/Partials/Register/
+        }
+
+        layoutRootPaths {
+            0 = EXT:sf_register/Resources/Private/Layouts/
+            1 = EXT:sand_sitepackage/Resources/Private/Layouts/Register/
+        }
+     }
+
+    settings {
+        validation.create {
+            company {
+                1 = "Evoweb.SfRegister:Required"
+            }
+            address {
+                1 = "Evoweb.SfRegister:Required"
+            }
+            gender {
+                1 = "Evoweb.SfRegister:Required"
+            }
+            zip {
+                1 = "Evoweb.SfRegister:Required"
+            }
+            city {
+                1 = "Evoweb.SfRegister:Required"
+            }
+            passwordRepeat {
+                1 = "Evoweb.SfRegister:Required"
+                2 = "StringLength", options={"minimum": 7, "maximum": 40}
+                3 = "Evoweb.SfRegister:Repeat"
+            }
+              password {
+                1 = "Evoweb.SfRegister:Required"
+                2 = "StringLength", options={"minimum": 7, "maximum": 40}
+            }
+        }
+        forwardToEditAfterSave = {$plugin.tx_sfregister.settings.forwardToEditAfterSave}
+
+        # enable double opt in
+        confirmEmailPostCreate = 1
+
+        useEmailAddressAsUsername = 1
+        acceptEmailPostConfirm = 0
+
+        # notify user
+        notifyUserPostCreateSave = 1
+        notifyUserPostCreateConfirm = 1
+
+        # notify admin
+        notifyAdminPostCreateSave = 0
+        notifyAdminPostCreateConfirm = 0
+        notifyAdminPostCreateAccept= 0 
+        notifyAdminPostCreateRefuse = 0
+
+        PostCreateSave= 1
+        usergroupPostSave = {$plugin.tx_sfregister.settings.usergroupPostSave}
+        usergroupPostConfirm  = {$plugin.tx_sfregister.settings.usergroupPostConfirm}
+        sitename = {$plugin.tx_sfregister.settings.emailSitename}
+        redirectCheckbox = {$plugin.tx_sfregister.settings.redirectCheckbox}
+
+         adminEmail {
+            toName = {$plugin.tx_sfregister.settings.adminEmail.toName}
+            toEmail = {$plugin.tx_sfregister.settings.adminEmail.toEmail}
+
+            fromName = {$plugin.tx_sfregister.settings.adminEmail.fromName}
+            fromEmail = {$plugin.tx_sfregister.settings.adminEmail.fromEmail}
+
+            replyName = {$plugin.tx_sfregister.settings.adminEmail.replyName}
+            replyEmail = {$plugin.tx_sfregister.settings.adminEmail.replyEmail}
+        }
+
+        userEmail {
+            fromName = {$plugin.tx_sfregister.settings.userEmail.fromName}
+            fromEmail = {$plugin.tx_sfregister.settings.userEmail.fromEmail}
+
+            replyName = {$plugin.tx_sfregister.settings.userEmail.replyName}
+            replyEmail = {$plugin.tx_sfregister.settings.userEmail.replyEmail}
+        }
+
+
+        notifyAdmin {
+            createSave = 0
+            createConfirm = 0
+            createRefuse = 0
+            createAccept = 0
+            createDecline =
+            inviteInvite =
+            resendMail =
+        }
+
+        notifyUser {
+            createSave = 1
+            createConfirm = 0
+            createRefuse = 0
+            createAccept = 1
+            createDecline = 
+            resendMail = 0
+        }
+        registrationFields {
+            gtc_page_id = 100
+            privacy_page_id = 13
+        }
+    }
+}

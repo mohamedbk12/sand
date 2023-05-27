@@ -1,0 +1,30 @@
+<div class="vcard item" itemscope itemtype="http://schema.org/Person">
+    <div class="image-person">
+        <f:if condition="{address.firstImage}">
+            <figure>
+                <f:render partial="Image/Image"
+                    arguments="{image : address.firstImage, desktopMaxWidth: 400, tabletMaxWidth: 400, mobileMaxWidth: 104, loading: 'lazy'}" />
+            </figure>
+        </f:if>
+    </div>
+    <div class="contact bg-cyan">
+        <div class="info-person">
+            <f:if condition="{address.fullName}">
+                <h3 class="medium-text blue">
+                    {address.fullName}
+                </h3>
+            </f:if>
+            <f:if condition="{address.position}">
+                <p>{address.position}</p>
+            </f:if>
+         
+            <f:render section="contact" partial="Address" arguments="{_all}"/>
+            
+            <f:if condition="{address.description}">
+                <div class="links">
+                    <f:format.html>{address.description}</f:format.html>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</div>

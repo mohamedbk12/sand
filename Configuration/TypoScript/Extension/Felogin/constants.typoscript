@@ -1,0 +1,27 @@
+########################
+#### FRONTEND LOGIN ####
+########################
+styles.content.loginform {
+    templateFile = EXT:sand_sitepackage/Resources/Private/Templates/Felogin/FrontendLogin.html
+
+    redirectMode = referer
+
+    redirectFirstMethod = GET
+
+    # cat=Frontend Login/04_EMail/100; type=string; label= Email Sender Address: email address used as sender of the change password emails
+    emailFrom = noreply@sand.de
+    # cat=Frontend Login/04_EMail/101; type=string; label= Email Sender Name: Name used as sender of the change password emails
+    emailFromName = sand-team
+    # cat=Frontend Login/04_EMail/102; type=string; label= Reply to email Address: Reply to address used in the change password emails
+    replyToEmail = noreply@sand.de
+
+ 
+}
+plugin {
+  tx_felogin_login {
+    view {
+      # cat=Frontend Login/02_Template/102; type=string; label= Path to template root (FE)
+      templateRootPath = EXT:sand_sitepackage/Resources/Private/Templates/Felogin/
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:variable name="desktopMaxWidth" value="{f:if(condition: '{desktopMaxWidth}', then: '{desktopMaxWidth}', else: '1440')}" />
+<f:variable name="tabletMaxWidth" value="{f:if(condition: '{tabletMaxWidth}', then: '{tabletMaxWidth}', else: '768')}" />
+<f:variable name="mobileMaxWidth" value="{f:if(condition: '{mobileMaxWidth}', then: '{mobileMaxWidth}', else: '375')}" />
+
+<f:variable name="desktopMaxHeight" value="{f:if(condition: '{desktopMaxHeight}', then: '{desktopMaxHeight}', else: '650')}" />
+<f:variable name="tabletMaxHeight" value="{f:if(condition: '{tabletMaxHeight}', then: '{tabletMaxHeight}', else: '650')}" />
+<f:variable name="mobileMaxHeight" value="{f:if(condition: '{mobileMaxHeight}', then: '{mobileMaxHeight}', else: '560')}" />
+
+<f:variable name="source1">{f:uri.image(image: '{image}', crop:'{image.crop}',cropVariant:'default', treatIdAsReference:'1', maxWidth: '{desktopMaxWidth}' ,maxHeight:'{desktopMaxHeight}')}</f:variable>
+<f:variable name="source2">{f:uri.image(image: '{image}', crop:'{image.crop}',cropVariant:'tablet', treatIdAsReference:'1', maxWidth: '{tabletMaxWidth}' ,maxHeight:'{tabletMaxHeight}')}</f:variable>
+<f:variable name="imgsrc">{f:uri.image(image: '{image}', crop:'{image.crop}',cropVariant:'mobile', treatIdAsReference:'1', maxWidth: '{mobileMaxWidth}' ,maxHeight:'{mobileMaxHeight}')}</f:variable>
+
+<figure>
+    <f:if condition="{image.properties.link}">
+        <f:then>
+            <f:link.typolink parameter="{image.properties.link}">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="{source1}" />
+                    <source media="(min-width: 768px)" srcset="{source2}" />
+                    <img src="{imgsrc}" alt="{image.properties.alternative}" title="{image.properties.title}" class="{class}" longdesc="{image.properties.description}" loading="{f:if(condition: '{loading}', then: '{loading}', else: 'lazy')}" />      
+                </picture>     
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+            <picture>
+                <source media="(min-width: 1200px)" srcset="{source1}" />
+                <source media="(min-width: 768px)" srcset="{source2}" />
+                <img src="{imgsrc}" alt="{image.properties.alternative}" title="{image.properties.title}" class="{class}" longdesc="{image.properties.description}" loading="{f:if(condition: '{loading}', then: '{loading}', else: 'lazy')}" />
+            </picture>
+         </f:else>
+    </f:if>  
+</figure>
+
+</html>

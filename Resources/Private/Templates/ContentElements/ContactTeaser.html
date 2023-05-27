@@ -1,0 +1,65 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div id="c{data.uid}" class="ce-contact-teaser">
+    <div class="row contact-teaser">
+        <f:for each="{records}" as="item">
+            <div class="item">
+                <div class="image-person">
+                    <f:if condition="{item.image.0}">
+                        <f:render partial="Image/Image" arguments="{image : item.image.0, desktopMaxWidth: 320, tabletMaxWidth: 320, mobileMaxWidth: 120, loading: 'lazy'}" />
+                    </f:if>
+                </div>
+                <div class="contact">
+                    <div class="info-person">
+                        <f:if condition="{item.data.header}">
+                            <h3 class="medium-text blue">
+                                {item.data.header}
+                            </h3>
+                        </f:if>
+                        <f:if condition="{item.data.subheader}">
+                            <p>{item.data.subheader}</p>
+                        </f:if>
+                        <div class="social-media">
+                            <f:if condition="{item.data.email}">
+                                <div class="icon-email-transparent-blue icon">
+                                    <a href="mailto:{item.data.email}">{item.data.email}</a>
+                                </div>
+                            </f:if>
+                            <f:if condition="{item.data.tel}">
+                                <div class="icon-mobile-transparent-blue icon">
+                                    <a href="tel:{item.data.tel}">{item.data.tel}</a>
+                                </div>
+                            </f:if>
+                            <f:if condition="{item.data.link_text}">
+                                <div class="icon-linkedin-transparent-blue icon">
+                                    <a href="{item.data.link_text}" target="_blank">{item.data.link_text}</a>
+                                </div>
+                            </f:if>
+                        </div>
+
+                        <f:if condition="{item.data.links_title} || {item.records}">
+                            <div class="links">
+                                <f:if condition="{item.data.links_title}">
+                                    <div class="placeholder-text-bold">{item.data.links_title}</div>
+                                </f:if>
+                                <ul class="list-links">
+                                    <f:for each="{item.records}" as="val">
+                                        <f:if condition="{val.data.link}">
+                                            <li>
+                                                <f:link.typolink parameter="{val.data.link}" class="a-link">
+                                                    {val.data.link_text}
+                                                </f:link.typolink>
+                                            </li>
+                                        </f:if>
+                                    </f:for>
+                                </ul>
+                            </div>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>
+
+</html>

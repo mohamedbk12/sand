@@ -1,0 +1,52 @@
+lib {
+    contentElement {
+        settings {
+            meddev {
+               pageUids {
+                  home =
+                }
+            }
+        }
+    }
+
+   logo = IMAGE
+   logo {
+     file = EXT:sand_sitepackage/Resources/Public/images/logo/header-logo.svg
+      layoutKey = default
+      layout {
+         default {
+            element = <img src="###SRC###" class="h-full"  alt="sand-logo">
+         }
+      }
+   }
+   logo_footer = IMAGE
+   logo_footer {
+     file = EXT:sand_sitepackage/Resources/Public/images/symbols/trumpf_logo_blau.svg
+      layoutKey = default
+      layout {
+         default {
+            element = <img src="###SRC###"  alt="trumpf_logo_blau-logo">
+         }
+      }
+   }
+   logo_mobile = IMAGE
+   logo_mobile {
+     file = EXT:sand_sitepackage/Resources/Public/Img/Logo/sand-small.svg
+      layoutKey = default
+      layout {
+         default {
+            element = <img src="###SRC###" class="logo-mobile" width="131px"  height="41px" alt="sand-logo" >
+         }
+      }
+   }
+    gtm_iframe = TEXT
+    gtm_iframe.value (
+   )
+
+    username = USER_INT
+    username.userFunc = Meddev\SandSitepackage\UserFunc\Misc->getUsername
+
+   currentURL= TEXT
+   currentURL.data = getIndpEnv:TYPO3_REQUEST_URL
+
+}

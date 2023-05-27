@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-04-24UTC07:47:560">
+        <header>
+            <authorName>Ingo Möller</authorName>
+            <authorEmail>moeller@meddev-media.com</authorEmail>
+        </header>
+        <body>
+            <!-- Global Variables -->
+            <trans-unit id="header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="subheader">
+                <source>Subheader</source>
+            </trans-unit>
+            <trans-unit id="bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="image">
+				<source>Image</source>
+			</trans-unit>
+            <trans-unit id="imagePosition">
+				<source>Image Position</source>
+			</trans-unit>
+            <trans-unit id="buttonslanguage">
+				<source>Buttons Languages</source>
+			</trans-unit>
+            <trans-unit id="media">
+				<source>Media</source>
+			</trans-unit>
+            <trans-unit id="file">
+				<source>File</source>
+			</trans-unit>
+            <trans-unit id="link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="linkText">
+                <source>Link Text</source>
+            </trans-unit>
+            <trans-unit id="date">
+                <source>Date</source>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="tel">
+                <source>Telephone</source>
+            </trans-unit>
+            <trans-unit id="selectContainer">
+                <source>Select Container</source>
+            </trans-unit>
+            <trans-unit id="container">
+                <source>Container</source>
+            </trans-unit>
+            <trans-unit id="figcaption">
+                <source>Fig Caption</source>
+            </trans-unit>
+            <trans-unit id="copyright">
+                <source>Copyright</source>
+            </trans-unit>
+           
+            <!-- Inline Table -->
+            <trans-unit id="tx_sand_sitepackage_teaser_item">
+                <source>Teaser Item</source>
+            </trans-unit>
+
+            <!-- SfRegister fields -->
+            <trans-unit id="title">
+                <source>Tile</source>
+            </trans-unit>
+            <trans-unit id="position">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="placeholder.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="placeholder.address">
+				<source>Street and House Number</source>
+			</trans-unit>
+			<trans-unit id="placeholder.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="placeholder.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="placeholder.firstName">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="placeholder.lastName">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="placeholder.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="placeholder.gender">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="placeholder.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="placeholder.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="placeholder.telephone">
+				<source>telephone </source>
+			</trans-unit>
+			<trans-unit id="placeholder.position">
+				<source>Position in the company </source>
+			</trans-unit>
+            <!--Contents Elements-->
+
+            <!-- Partners -->
+            <trans-unit id="partners">
+                <source>Partners</source>
+            </trans-unit>
+            <!-- Hero -->
+            <trans-unit id="hero">
+                <source>Hero</source>
+            </trans-unit>
+            <!-- Subpageheader -->
+            <trans-unit id="subpageheader">
+                <source>Subpage header</source>
+            </trans-unit>
+            <trans-unit id="background">
+                <source>Background</source>
+            </trans-unit>
+            <!-- Social Media Wall -->
+            <trans-unit id="socialmediawall">
+                <source>Social Media Wall</source>
+            </trans-unit>
+            <!-- Teaser Grid -->
+            <trans-unit id="teasergrid">
+                <source>Teaser Grid</source>
+            </trans-unit>
+            <trans-unit id="teaserType">
+                <source>Teaser Type</source>
+            </trans-unit>
+            <trans-unit id="colorSelect">
+                <source>Color Select</source>
+            </trans-unit>
+            <trans-unit id="white">
+                <source>White</source>
+            </trans-unit>
+            <trans-unit id="blue">
+                <source>Blue</source>
+            </trans-unit>
+            <trans-unit id="lightBlue">
+                <source>Light Blue</source>
+            </trans-unit>
+            <trans-unit id="darkBlue">
+                <source>Dark Blue</source>
+            </trans-unit>
+            <trans-unit id="green">
+                <source>Green</source>
+            </trans-unit>
+            <trans-unit id="boxSize">
+                <source>Box Size</source>
+            </trans-unit>
+            <!-- Download -->
+            <trans-unit id="download">
+                <source>Download Images</source>
+            </trans-unit>
+            <!-- Contact Teaser -->
+            <!-- This CE title was changed from "Contact Teaser" to "Board member teaser" -->
+            <trans-unit id="contactteaser">
+                <source>Board member teaser</source>
+            </trans-unit>
+            <trans-unit id="sharelinks">
+                <source>Share Links</source>
+            </trans-unit>
+             <!-- Sticky Links -->
+            <trans-unit id="stickylinks">
+                <source>Sticky Links</source>
+            </trans-unit> 
+             <!-- Newsletter Placeholder -->
+            <trans-unit id="newsletterplaceholder">
+                <source>Newsletter Placeholder</source>
+            </trans-unit> 
+                       
+            <trans-unit id="memberslink">
+                <source>Members
+                    link</source>
+            </trans-unit>   
+                         
+            <trans-unit id="presslink">
+                <source>Press
+                    link</source>
+            </trans-unit>           
+                       
+            <trans-unit id="positionslink">
+                <source>Positions link</source>
+            </trans-unit> 
+
+            <trans-unit id="name">
+                <source>
+                    Name</source>
+            </trans-unit>
+            <trans-unit id="address">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="linkedin">
+                <source>
+                    LinkedIn</source>
+            </trans-unit>
+            <trans-unit id="link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="linksTitle">
+                <source>Links
+                    title</source>
+            </trans-unit>
+            <trans-unit id="second_link">
+                <source>Second Link</source>
+            </trans-unit>
+            <trans-unit id="second_linkText">
+                <source>Second Link
+                    title</source>
+            </trans-unit>
+            <!-- registerconfirm-->
+            <trans-unit id="registerconfirm">
+                <source>Register Confirm</source>
+            </trans-unit>
+            <!-- JumpMarks-->
+            <trans-unit id="jumpmarks">
+                <source>Jumpmarks</source>
+            </trans-unit>
+            <!-- Two Column Teasers -->
+            <trans-unit id="twocolumnteasers">
+                <source>Two
+                    Column Teasers</source>
+            </trans-unit>
+            <!-- Two Column Teasers -->
+            <trans-unit id="text">
+                <source>Text</source>
+            </trans-unit>
+            <!-- Member Teaser -->
+            <trans-unit id="quoteteaser">
+                <source>Quote
+                    Teaser</source>
+            </trans-unit>            
+            <trans-unit id="author">
+                <source>Author</source>
+            </trans-unit>           
+            <trans-unit id="author_info">
+                <source>Author
+                    Info</source>
+            </trans-unit>
+            <!-- Download List -->
+            <trans-unit id="downloadlist">
+                <source>Download List</source>
+            </trans-unit>
+            <!-- Sidebar Download List -->
+            <trans-unit id="sidebardownloadlist">
+                <source>Sidebar
+                    Download List</source>
+            </trans-unit>
+            <!-- Full Width Image Download -->
+            <trans-unit id="fullwidthimagedownload">
+                <source>Full Width Image Download</source>
+            </trans-unit>
+            <!-- contribution calculator -->
+            <trans-unit id="contributioncalculator">
+                <source>Contribution Calculator</source>
+            </trans-unit>
+            <trans-unit id="showicon">
+                <source>Show Icon</source>
+            </trans-unit>
+            <trans-unit id="placeholder">
+                <source>Placeholder</source>
+            </trans-unit>
+            <trans-unit id="calculate_button">
+                <source>Calculate Button</source>
+            </trans-unit>
+            <!-- Teaser Membership -->
+            <trans-unit id="teasermembership">
+                <source>Teaser
+                    Membership</source>
+            </trans-unit>  
+            <trans-unit id="linksHeader">
+                <source>Links Header</source>
+            </trans-unit>
+            <trans-unit id="paticipationCondition">
+                <source>
+                    Teilnahmebedingungen</source>
+            </trans-unit>
+            <trans-unit id="downloadPdf">
+                <source>
+                    Download Pdf Label</source>
+            </trans-unit>
+            <trans-unit id="learnMore">
+                <source>Mehr erfahren</source>
+            </trans-unit>
+            <trans-unit id="applicationAdmission">
+                <source>zum
+                    aufnahmeantrag</source>
+            </trans-unit>
+            <trans-unit id="askConditionAndService">
+                <source>Konditionen und Leistungen
+                    erfragen email</source>
+            </trans-unit>   
+            <trans-unit id="highimage">
+                <source>High quality image</source>
+            </trans-unit>
+            <!-- Internal External Links -->
+            <trans-unit id="internalexternallinks">
+                <source>Internal
+                    External Links</source>
+            </trans-unit>      
+            <trans-unit id="linkType">
+                <source>Link Type</source>
+            </trans-unit>
+            <!--End Contents Elements-->
+            <!-- news -->
+            <trans-unit id="tx_news_domain_model_news.pressreleases">
+                <source>Press
+                    releases</source>
+            </trans-unit>
+
+            <trans-unit id="tx_news_domain_model_news.statement">
+                <source>statement</source>
+            </trans-unit>
+
+            <trans-unit id="tx_news_domain_model_news.market_data">
+                <source>Market
+                    data</source>
+            </trans-unit>            
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,279 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<header class="header">
+   <div class="">
+      <div class="left">
+         <button class="toggle-btn" id="navbar-toggle-btn">
+            <svg class="" xmlns="http://www.w3.org/2000/svg" width="25" height="27" viewBox="0 0 40 27">
+               <g id="Group_85" data-name="Group 85" transform="translate(-393.627 -388)">
+                  <rect id="Rectangle_49" data-name="Rectangle 49" width="40" height="3"
+                     transform="translate(393.627 388)"></rect>
+                  <rect id="Rectangle_50" data-name="Rectangle 50" width="40" height="3"
+                     transform="translate(393.627 400)"></rect>
+                  <rect id="Rectangle_51" data-name="Rectangle 51" width="40" height="3"
+                     transform="translate(393.627 412)"></rect>
+               </g>
+            </svg>
+            <span class="">MENU</span>
+         </button>
+         <a class="" href=""><f:cObject typoscriptObjectPath="lib.logo" /></a>
+      </div>
+      <div class="right h-full">
+         <nav class="header-nav">
+            <a class="header-btn search-wrapper show-mobile" id="search-wrapper">
+               <div class="search open-search-btn">
+                <svg class="close" enable-background="new 0 0 512 512" id="Layer_1"
+                     version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <g>
+                        <path
+                           d="M202.7,405.5c-54.2,0-105.1-21.1-143.4-59.4c-79.1-79.1-79.1-207.7,0-286.8C97.7,21,148.6,0,202.7,0   C256.9,0,307.8,21,346.1,59.3c38.3,38.3,59.4,89.2,59.4,143.4c0,54.2-21.1,105.1-59.4,143.4C307.8,384.4,256.9,405.5,202.7,405.5z    M202.7,21.1c-48.5,0-94.2,18.9-128.5,53.2c-70.8,70.8-70.8,186.1,0,257c34.3,34.3,79.9,53.2,128.5,53.2   c48.5,0,94.2-18.9,128.5-53.2c34.3-34.3,53.2-79.9,53.2-128.5c0-48.5-18.9-94.2-53.2-128.5C296.9,39.9,251.3,21.1,202.7,21.1z">
+                        </path>
+                        <path
+                           d="M501.5,512c-2.7,0-5.4-1-7.5-3.1L331.2,346.1c-4.1-4.1-4.1-10.8,0-14.9c4.1-4.1,10.8-4.1,14.9,0L509,494   c4.1,4.1,4.1,10.8,0,14.9C506.9,511,504.2,512,501.5,512z">
+                        </path>
+                     </g>
+                  </svg>
+                  <span class="close hidden lg:inline">SUCHE</span>
+               </div>
+               <form action="" class="open">
+                  <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512"
+                     xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <g>
+                        <path
+                           d="M202.7,405.5c-54.2,0-105.1-21.1-143.4-59.4c-79.1-79.1-79.1-207.7,0-286.8C97.7,21,148.6,0,202.7,0   C256.9,0,307.8,21,346.1,59.3c38.3,38.3,59.4,89.2,59.4,143.4c0,54.2-21.1,105.1-59.4,143.4C307.8,384.4,256.9,405.5,202.7,405.5z    M202.7,21.1c-48.5,0-94.2,18.9-128.5,53.2c-70.8,70.8-70.8,186.1,0,257c34.3,34.3,79.9,53.2,128.5,53.2   c48.5,0,94.2-18.9,128.5-53.2c34.3-34.3,53.2-79.9,53.2-128.5c0-48.5-18.9-94.2-53.2-128.5C296.9,39.9,251.3,21.1,202.7,21.1z">
+                        </path>
+                        <path
+                           d="M501.5,512c-2.7,0-5.4-1-7.5-3.1L331.2,346.1c-4.1-4.1-4.1-10.8,0-14.9c4.1-4.1,10.8-4.1,14.9,0L509,494   c4.1,4.1,4.1,10.8,0,14.9C506.9,511,504.2,512,501.5,512z">
+                        </path>
+                     </g>
+                  </svg>
+                  <input type="text" placeholder="Suche">
+                  <button type="button" class="close-search-btn">
+                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                        viewBox="0 0 30.406 30.406">
+                        <g id="Group_88" data-name="Group 88" transform="translate(-959.682 -388.217)">
+                           <rect id="Rectangle_50" data-name="Rectangle 50" width="40" height="3"
+                              transform="translate(961.804 388.217) rotate(45)"></rect>
+                           <rect id="Rectangle_52" data-name="Rectangle 52" width="40" height="3"
+                              transform="translate(959.682 416.501) rotate(-45)"></rect>
+                        </g>
+                     </svg>
+                  </button>
+               </form>
+            </a>
+            <f:for each="{topNavigation}" as="topNavigationItem" iteration="i">
+               <f:if condition="{topNavigationItem.data.uid} == 3">
+                  <a class="header-btn" href="{topNavigationItem.link}" target="{topNavigationItem.target}"
+                     title="{topNavigationItem.title}">
+                     <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512"
+                        xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                           <path
+                              d="M501.5,428.2H10.5c-5.8,0-10.5-4.7-10.5-10.5V94.3c0-5.8,4.7-10.5,10.5-10.5h490.9   c5.8,0,10.5,4.7,10.5,10.5v323.3C512,423.5,507.3,428.2,501.5,428.2z M21.1,407.1h469.8V104.9H21.1V407.1z">
+                           </path>
+                           <path
+                              d="M256,266.5c-2,0-4-0.6-5.8-1.7L4.7,103.1c-4.9-3.2-6.2-9.7-3-14.6c3.2-4.9,9.7-6.2,14.6-3L256,243.4   L495.7,85.5c4.9-3.2,11.4-1.9,14.6,3c3.2,4.9,1.9,11.4-3,14.6L261.8,264.8C260,266,258,266.5,256,266.5z">
+                           </path>
+                           <path
+                              d="M10.6,428.2c-2.9,0-5.9-1.2-8-3.6c-3.8-4.4-3.4-11.1,1-14.9l211.5-184.1c4.4-3.8,11.1-3.4,14.9,1   c3.8,4.4,3.4,11.1-1,14.9L17.5,425.6C15.5,427.4,13,428.2,10.6,428.2z">
+                           </path>
+                           <path
+                              d="M501.4,428.2c-2.5,0-4.9-0.9-6.9-2.6L283.1,241.6c-4.4-3.8-4.9-10.5-1-14.9c3.8-4.4,10.5-4.9,14.9-1   l211.5,184.1c4.4,3.8,4.9,10.5,1,14.9C507.3,427,504.4,428.2,501.4,428.2z">
+                           </path>
+                        </g>
+                     </svg>
+                     <span>{topNavigationItem.title}</span>
+                  </a>
+               </f:if>
+               <f:if condition="{topNavigationItem.data.uid} == 4">
+                  <a class="header-btn" href="{topNavigationItem.link}" target="{topNavigationItem.target}"
+                     title="{topNavigationItem.title}">
+                     <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512"
+                        xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                           <path
+                              d="M256,274.1c-75.6,0-137.1-61.5-137.1-137.1S180.4,0,256,0c75.6,0,137.1,61.5,137.1,137.1   S331.6,274.1,256,274.1z M256,20.4c-64.3,0-116.6,52.3-116.6,116.6S191.7,253.7,256,253.7c64.3,0,116.6-52.3,116.6-116.6   S320.3,20.4,256,20.4z">
+                           </path>
+                           <path
+                              d="M493.9,512c-5.6,0-10.2-4.6-10.2-10.2c0-125.5-102.1-227.6-227.6-227.6c-125.5,0-227.6,102.1-227.6,227.6   c0,5.6-4.6,10.2-10.2,10.2s-10.2-4.6-10.2-10.2c0-66.3,25.8-128.6,72.7-175.4s109.2-72.7,175.4-72.7s128.6,25.8,175.4,72.7   s72.7,109.2,72.7,175.4C504.1,507.4,499.5,512,493.9,512z">
+                           </path>
+                        </g>
+                     </svg>
+                     <span>{topNavigationItem.title}</span>
+                  </a>
+                  <a class="header-btn" href="">
+                <svg id="Calque_1" style="enable-background:new 0 0 512 512;"
+                        version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path class="st0"
+                           d="M512,256c0-75.8-33.1-144-85.6-190.9c0,0,0,0,0,0c-0.7-0.7-1.4-1.4-2.2-1.9  C379.2,23.9,320.3,0,256,0C191.6,0,132.6,24,87.5,63.4c-0.5,0.4-1.1,0.9-1.5,1.4C33.3,111.7,0,180,0,256  c0,75.7,33.1,143.9,85.5,190.8c0,0,0,0.1,0.1,0.1c0.7,0.8,1.4,1.4,2.2,2c45,39.3,103.9,63.1,168.2,63.1  c64.4,0,123.4-23.9,168.4-63.4c0.6-0.4,1.1-0.9,1.7-1.5C478.8,400.2,512,331.9,512,256z M416.8,422.5  c-13.2-10.6-27.3-19.9-42.1-27.6c12.8-36.6,20.5-79.8,21.7-126.7h90.9C484.1,328.6,457.7,383,416.8,422.5z M268.2,390.4  c25.9,1.4,51.2,7,75,16.7c-18.9,43.1-45.5,72.7-75,79.2V390.4z M268.2,366v-97.8H372c-1.2,42.5-8.4,82.4-20,116.2  C325.5,373.6,297.2,367.4,268.2,366z M268.2,243.8V146c29-1.4,57.3-7.6,83.8-18.4c11.6,33.8,18.8,73.7,20,116.2H268.2z M268.2,121.6  V25.7c29.5,6.5,56.1,36,75,79.2C319.4,114.5,294.1,120.2,268.2,121.6z M329.1,36.2c25.2,8.4,48.5,21,69,37  c-10.2,8-21.1,15-32.4,21.1C355.5,71.2,343.1,51.5,329.1,36.2z M243.8,25.7v95.9c-25.9-1.4-51.3-7-75-16.7  C187.7,61.8,214.3,32.2,243.8,25.7z M146.3,94.3c-11.3-6.1-22.1-13.1-32.4-21.1c20.5-16,43.8-28.6,69-37  C168.9,51.5,156.5,71.2,146.3,94.3z M243.8,146v97.8H140c1.2-42.5,8.4-82.4,20-116.2C186.5,138.4,214.8,144.6,243.8,146z   M243.8,268.2V366c-29,1.4-57.3,7.6-83.8,18.4c-11.6-33.8-18.8-73.7-20-116.2H243.8z M243.8,390.4v95.9c-29.5-6.5-56.1-36-75-79.2  C192.6,397.5,217.9,391.8,243.8,390.4z M183,475.8c-25.2-8.4-48.5-21-69-37c10.2-8,21.1-15,32.4-21.1  C156.5,440.8,168.9,460.5,183,475.8z M365.7,417.7c11.3,6.1,22.1,13.1,32.4,21.1c-20.5,16-43.8,28.6-69,37  C343.1,460.5,355.5,440.8,365.7,417.7z M487.3,243.8h-90.9c-1.2-46.9-8.9-90.1-21.7-126.7c14.8-7.8,28.9-17,42.1-27.6  C457.7,129,484.1,183.4,487.3,243.8z M95.2,89.5c13.2,10.6,27.3,19.9,42.1,27.6c-12.8,36.6-20.5,79.8-21.7,126.7H24.7  C27.9,183.4,54.3,129,95.2,89.5z M24.7,268.2h90.9c1.2,46.9,8.9,90.1,21.7,126.7c-14.8,7.8-28.9,17-42.1,27.6  C54.3,383,27.9,328.6,24.7,268.2z"
+                           id="XMLID_13_"></path>
+                     </svg>
+                     <span>DEUTSCHLAND | DE</span>
+                  </a>
+               </f:if>
+               <f:if condition="{topNavigationItem.data.uid} == 5">
+                  <a class="header-btn" href="{topNavigationItem.link}" target="{topNavigationItem.target}"
+                     title="{topNavigationItem.title}">
+                     <svg id="cube-svgrepo-com" xmlns="http://www.w3.org/2000/svg" width="50" height="40"
+                        viewBox="0 0 16 16">
+                        <path id="Path_5303" data-name="Path 5303"
+                           d="M2,13.15l7,2.875,7-2.875V5.006L9,2.13,2,5.006ZM15.333,12.7l-6,2.465V8.111l6-2.453ZM9,2.852l5.7,2.343L9,7.528,3.3,5.195ZM2.667,5.658l6,2.453v7.057l-6-2.465Z"
+                           transform="translate(-0.667 -0.71)"></path>
+                        <path id="Path_5304" data-name="Path 5304" d="M0,0H16V16H0Z" fill="none"></path>
+                     </svg>
+                     <span>{topNavigationItem.title}</span>
+                  </a>
+               </f:if>
+            </f:for>
+         </nav>
+      </div>
+      <div class="toggler-menu shadow-xl hidden" id="navbar-toggle-menu">
+         <div class="toggler-menu-wrapper">
+            <button class="close-toggle-menu" id="close-toggle-menu">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 30.406 30.406">
+                  <g id="Group_88" data-name="Group 88" transform="translate(-959.682 -388.217)">
+                     <rect id="Rectangle_50" data-name="Rectangle 50" width="40" height="3"
+                        transform="translate(961.804 388.217) rotate(45)"></rect>
+                     <rect id="Rectangle_52" data-name="Rectangle 52" width="40" height="3"
+                        transform="translate(959.682 416.501) rotate(-45)"></rect>
+                  </g>
+               </svg>
+            </button>
+            <div class="first">
+               <div>
+                  <span class="handtext text-3xl leading-snug">Wir Lieben Trumpf</span>
+               </div>
+               <div class="mt-5">
+                  <span class="text-xl DINpro-light font-light">Alle Trumpf Maschinen</span>
+                  <a href="" class="btn-blue-single-icon">
+                     Merh Erfahren
+                     <svg xmlns="http://www.w3.org/2000/svg" width="22.886" height="10.329" viewBox="0 0 22.886 10.329">
+                        <path id="Path_5010" data-name="Path 5010"
+                           d="M-405.842,33.7a.59.59,0,0,0-.837,0l-3.562,3.562V17a.6.6,0,0,0-.6-.6.6.6,0,0,0-.6.6V37.263l-3.557-3.562a.59.59,0,0,0-.837,0,.59.59,0,0,0,0,.837l4.573,4.573a.59.59,0,0,0,.421.174.589.589,0,0,0,.421-.174l4.573-4.573A.6.6,0,0,0-405.842,33.7Z"
+                           transform="translate(-16.4 -405.671) rotate(-90)"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            <div class="nav-btns">
+               <div>
+                  <f:for each="{mainnavigation}" as="mainnavigationItem" iteration="i">
+                     <f:if condition="{i.cycle} <= 3">
+                        <f:then>
+                           <a data-submenu="__{i.cycle}">
+                              {mainnavigationItem.title}
+                              <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="4" height="17.038"
+                                 viewBox="0 0 9 17.038">
+                                 <path id="Path_5004" data-name="Path 5004"
+                                    d="M121.417,8.179,113.38.142a.482.482,0,0,0-.682.682l7.695,7.695L112.7,16.213a.484.484,0,0,0,.339.825.47.47,0,0,0,.339-.143l8.037-8.037A.48.48,0,0,0,121.417,8.179Z"
+                                    transform="translate(-112.556 0)"></path>
+                              </svg>
+                           </a>
+                        </f:then>
+                        <f:else>
+                           <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}"
+                              title="{mainnavigationItem.title}">
+                              {mainnavigationItem.title}
+                           </a>
+                        </f:else>
+
+                     </f:if>
+                  </f:for>
+               </div>
+            </div>
+            <div class="nav-btns sub">
+               <f:for each="{mainnavigation}" as="mainnavigationItem" iteration="i">
+                  <f:if condition="{i.cycle} <= 3">
+                     <f:if condition="{mainnavigationItem.hasSubpages}">
+                        <div id="__{i.cycle}" class="" style="display: none;">
+                           <button class="btn-blue-single-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="26.126"
+                                 viewBox="0 0 57.885 26.126">
+                                 <path id="Path_5011" data-name="Path 5011"
+                                    d="M-390.307,60.16a1.492,1.492,0,0,0-2.118,0l-9.009,9.009V17.906a1.5,1.5,0,0,0-1.506-1.506,1.5,1.5,0,0,0-1.506,1.506V69.169l-9-9.009a1.492,1.492,0,0,0-2.118,0,1.492,1.492,0,0,0,0,2.118l11.567,11.567a1.491,1.491,0,0,0,1.065.441,1.491,1.491,0,0,0,1.065-.441L-390.3,62.277A1.527,1.527,0,0,0-390.307,60.16Z"
+                                    transform="translate(74.285 416) rotate(90)"></path>
+                              </svg>
+                              Zurücks
+                           </button>
+                           <f:for each="{mainnavigationItem.children}" as="childrenNavigationItem" iteration="i">
+                              <a href="{childrenNavigationItem.link}" target="{childrenNavigationItem.target}"
+                                 title="{childrenNavigationItem.title}">
+                                 {childrenNavigationItem.title}
+                              </a>
+                           </f:for>
+                        </div>
+                     </f:if>
+                  </f:if>
+               </f:for>
+            </div>
+            <div class="mobile-header-btns no-underline">
+               <f:for each="{topNavigation}" as="topNavigationItem" iteration="i">
+                  <f:if condition="{topNavigationItem.data.uid} == 3">
+                     <a class="header-btn" href="{topNavigationItem.link}" target="{topNavigationItem.target}"
+                        title="{topNavigationItem.title}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="40.304" viewBox="0 0 52.96 40.304">
+                           <g id="envelope" transform="translate(0 0)">
+                              <g id="Group_83" data-name="Group 83" transform="translate(0 0)">
+                                 <path id="Path_5005" data-name="Path 5005"
+                                    d="M46.5,57.75H6.476A6.482,6.482,0,0,0,0,64.226V91.577a6.482,6.482,0,0,0,6.476,6.476H46.484a6.482,6.482,0,0,0,6.476-6.476V64.237A6.475,6.475,0,0,0,46.5,57.75Zm3.518,33.827A3.522,3.522,0,0,1,46.5,95.095H6.476a3.522,3.522,0,0,1-3.518-3.518V64.237A3.522,3.522,0,0,1,6.476,60.72H46.484A3.522,3.522,0,0,1,50,64.237v27.34Z"
+                                    transform="translate(0 -57.75)"></path>
+                                 <path id="Path_5006" data-name="Path 5006"
+                                    d="M83.043,123.109,96,111.494a1.482,1.482,0,0,0-1.983-2.2L76.151,125.323l-3.485-3.112c-.011-.011-.022-.022-.022-.033a2.192,2.192,0,0,0-.241-.208L58.223,109.28a1.482,1.482,0,0,0-1.972,2.214l13.106,11.714L56.306,135.426a1.485,1.485,0,0,0-.066,2.093,1.514,1.514,0,0,0,1.085.471,1.483,1.483,0,0,0,1.008-.395L71.581,125.2l3.594,3.211a1.476,1.476,0,0,0,1.972-.011l3.693-3.309,13.172,12.514a1.483,1.483,0,0,0,2.093-.055,1.485,1.485,0,0,0-.055-2.093Z"
+                                    transform="translate(-49.643 -103.297)"></path>
+                              </g>
+                           </g>
+                        </svg>
+                        <span>{topNavigationItem.title}</span>
+                     </a>
+                  </f:if>
+                  <f:if condition="{topNavigationItem.data.uid} == 4">
+                     <a class="header-btn" href="{topNavigationItem.link}" target="{topNavigationItem.target}"
+                        title="{topNavigationItem.title}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" viewBox="0 0 58.316 58.316">
+                           <path id="Path_5012" data-name="Path 5012"
+                              d="M49.776,8.54A29.158,29.158,0,0,0,8.54,49.776,29.158,29.158,0,0,0,49.776,8.54ZM12.655,48.9a16.682,16.682,0,0,1,16.5-14.681,16.619,16.619,0,0,1,16.5,14.68,25.687,25.687,0,0,1-33.007,0Zm16.5-18.2a8.856,8.856,0,1,1,8.856-8.856A8.867,8.867,0,0,1,29.158,30.7ZM48.6,46.008A20.087,20.087,0,0,0,36.03,32a12.273,12.273,0,1,0-13.738,0,20.069,20.069,0,0,0-12.58,14,25.741,25.741,0,1,1,38.892,0Z">
+                           </path>
+                        </svg>
+                        <span>{topNavigationItem.title}</span>
+                     </a>
+                     <a class="header-btn" href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" viewBox="0 0 13.8 13.8">
+                           <g id="world-2-svgrepo-com" transform="translate(-2.1 -1.618)">
+                              <path id="Path_5301" data-name="Path 5301"
+                                 d="M16.892,6l-.964.723a1.314,1.314,0,0,1-.788.263H12.934a1.036,1.036,0,0,0-.927.573h0a1.036,1.036,0,0,0,.271,1.266L13.591,9.9a3.942,3.942,0,0,1,1.422,3.486L15,13.5a5.257,5.257,0,0,1-.344,1.372l-.392.98"
+                                 transform="translate(-3.224 -1.238)" fill="none" stroke="#0c3766" stroke-width="0.8">
+                              </path>
+                              <path id="Path_5302" data-name="Path 5302"
+                                 d="M2.5,10.305l2.127-.355a1.314,1.314,0,0,1,1.512,1.512l-.088.53a2.192,2.192,0,0,0,1.182,2.321h0a1.644,1.644,0,0,1,.86,1.869l-.337,1.348"
+                                 transform="translate(0 -2.587)" fill="none" stroke="#0c3766" stroke-width="0.8"></path>
+                              <circle id="Ellipse_1" data-name="Ellipse 1" cx="6.5" cy="6.5" r="6.5"
+                                 transform="translate(2.5 2.018)" fill="none" stroke="#0c3766" stroke-width="0.8">
+                              </circle>
+                           </g>
+                        </svg>
+                        <span>DEUTSCHLAND | DE</span>
+                     </a>
+                  </f:if>
+                  <f:if condition="{topNavigationItem.data.uid} == 5">
+                     <a class="header-btn" href="{topNavigationItem.link}" target="{topNavigationItem.target}"
+                        title="{topNavigationItem.title}">
+                        <svg id="cube-svgrepo-com" xmlns="http://www.w3.org/2000/svg" width="50" height="40"
+                           viewBox="0 0 16 16">
+                           <path id="Path_5303" data-name="Path 5303"
+                              d="M2,13.15l7,2.875,7-2.875V5.006L9,2.13,2,5.006ZM15.333,12.7l-6,2.465V8.111l6-2.453ZM9,2.852l5.7,2.343L9,7.528,3.3,5.195ZM2.667,5.658l6,2.453v7.057l-6-2.465Z"
+                              transform="translate(-0.667 -0.71)"></path>
+                           <path id="Path_5304" data-name="Path 5304" d="M0,0H16V16H0Z" fill="none"></path>
+                        </svg>
+                        <span>{topNavigationItem.title}</span>
+                     </a>
+                  </f:if>
+               </f:for>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+</html>

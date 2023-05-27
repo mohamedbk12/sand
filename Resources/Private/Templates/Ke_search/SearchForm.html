@@ -1,0 +1,99 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:kesearch="http://typo3.org/ns/Tpwd/KeSearch/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="General" />
+<!--
+=====================
+Templates/SearchForm.html
+-->
+<f:section name="content">
+	<div class="container">
+		<div class="SearchForm">
+			<form method="get" id="form_kesearch_pi1" name="form_kesearch_pi1"
+				action="{f:uri.page(pageUid: targetpage)}">
+				<div class="row search-row">
+					<f:comment>
+						<!-- Replace the URL with the speaking URL -->
+					</f:comment>
+					<f:if condition="{isEmptySearch} == FALSE">
+						<f:format.raw>
+							<script>history.replaceState(null, '', '</f:format.raw><kesearch:link keepPiVars="1" uriOnly="1" /><f:format.raw>');</script>
+						</f:format.raw>
+					</f:if>
+					<f:if condition="{lparam}">
+						<input type="hidden" name="L" value="{lparam}" />
+					</f:if>
+					<f:if condition="{mpparam}">
+						<input type="hidden" name="MP" value="{mpparam}" />
+					</f:if>
+					<f:if condition="{typeparam}">
+						<input type="hidden" name="type" value="{typeparam}" />
+					</f:if>
+					
+					<div class="col-lg-6 col-md-7 col-sm-8 input-search">
+						<label class="placeholder-text">
+							<f:translate
+								key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:form.legend" />
+						</label>
+						<input type="search" id="ke_search_sword" name="tx_kesearch_pi1[sword]"
+							value="{searchword -> f:format.raw()}" placeholder="{f:translate(key: 'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:form.formPlaceholder')}"
+							class="ke_search_sword" {f:if(condition: '{extConf.allowEmptySearch} == 0' ,
+							then: 'required' )} minlength="{extConf.searchWordLength}" />
+					</div>
+
+					<f:if condition="{page}">
+						<input id="kesearchpagenumber" type="hidden" name="tx_kesearch_pi1[page]" value="{page}" />
+					</f:if>
+
+					<input id="resetFilters" type="hidden" name="tx_kesearch_pi1[resetFilters]" value="0" />
+					<f:if condition="{sortByField}">
+						<input id="sortByField" type="hidden" name="tx_kesearch_pi1[sortByField]"
+							value="{sortByField}" />
+					</f:if>
+					<f:if condition="{sortByDir}">
+						<input id="sortByDir" type="hidden" name="tx_kesearch_pi1[sortByDir]" value="{sortByDir}" />
+					</f:if>
+
+					<f:if condition="{filters}">
+						<div id="kesearch_filters">
+							<f:render partial="Filters"
+								arguments="{conf: conf, numberofresults: numberofresults, resultrows: resultrows, filters: filters}" />
+						</div>
+					</f:if>
+					<f:comment>
+						<span class="resetbutt"><a href="{resetUrl}" class="resetButton secondary-button"><span>
+									<f:translate
+										key="LLL:EXT:ke_search/Resources/Private/Language/locallang_searchbox.xlf:reset_button" />
+								</span></a></span>
+					</f:comment>
+					<div class="col-lg-3 col-md-4 col-sm-4 filter1">
+							<span class="submitbutt"><input type="submit" class="ke_search_button primary-button"
+									value="{f:translate(key: 'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:form.subbmit')}" /></span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-1 filter2">
+
+					</div>
+
+				</div>
+				<f:comment>
+					<div class="row">
+						<div class="col-md-3 col-sm-5 filter3">
+							<span class="submitbutt"><input type="submit" class="ke_search_button primary-button"
+									value="{f:translate(key: 'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:form.subbmit')}" /></span>
+						</div>
+						<div class="col-sm-4 resetbut-link">
+							<a href="{resetUrl}" class="resetButton secondary-button"><span>
+									<f:translate
+										key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:form.reset_button" />
+										</span>
+							</a>
+						</div>
+					</div>
+				</f:comment>
+			</form>
+		</div>
+	</div>
+</f:section>
+
+</html>

@@ -1,0 +1,143 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<!--
+	=======================
+	Partials/List/Item.html
+	=======================
+	-->
+<div class="{f:if(condition: '{col} == 2', then: 'teaser col-lg-12', else: 'teaser col-lg-8')}">
+    <div
+        class="card {teaser.data.color_select} {f:if(condition: '{teaser.data.color_select} == bg-white', then: 'blue', else: 'white')}">
+        <f:if condition="{teaser}">
+            <f:if condition="{teaser.media}">
+                <f:then>
+                    <div class="row teaser-row no-gutters">
+                        <div class="col-6">
+                            <f:link.typolink parameter="{teaser.data.link}">
+                                <div class="card-body">
+                                    <!-- header -->
+                                    <div class="header">
+                                        <f:if condition="{teaser.data.subheader}">
+                                            <p class="teaser-category text-default-small">{teaser.data.subheader}</p>
+                                        </f:if>
+
+                                        <f:if condition="{teaser.data.header}">
+                                         <f:format.html><h3 class="h3-big card-title">{teaser.data.header}</h3></f:format.html>
+                                        </f:if>
+                                    </div>
+
+                                    <!-- teaser -->
+                                    <f:if condition="{teaser.data.bodytext}">
+                                        <div class="teaser-text">
+                                            <div itemprop="description">{teaser.data.bodytext ->
+                                                f:format.crop(maxCharacters: '200', respectWordBoundaries:'1') ->
+                                                f:format.html()}</div>
+                                        </div>
+                                    </f:if>
+
+                                    <!-- footer information -->
+                                    <div class="footer">
+                                        <p class="medium-text bold">
+                                            <!-- date -->
+                                            <span class="teaser-date">
+                                                <time itemprop="datePublished"
+                                                    datetime="{f:format.date(date:teaser.datetime, format:'Y-m-d')}">
+                                                    <f:format.date format="d.m.Y">{teaser.data.date}</f:format.date>
+                                                </time>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="icon icon-plus"></div>
+
+                                </div>
+                            </f:link.typolink>
+                        </div>
+                        <div class="col-6">
+                            <f:if condition="{teaser.media.0.originalFile.properties.type} == 4">
+                                <f:then>
+                                    <div class="teasar-media-wrap" data-youtube-id="{teaser.media.0.contents}">
+                                        <div class="teasar-media-overlay">
+                                            <div class="card-media">
+                                                <div class="card-body">
+                                                    <!-- header -->
+                                                    <div class="header">
+                                                        <p class="teaser-category text-default-small">Externer Inhalt
+                                                        </p>
+                                                        <h3 class="card-title">YouTube Video</h3>
+                                                    </div>
+                                                    <!-- teaser -->
+                                                    <f:if condition="{teaser.data.bodytext}">
+                                                        <div class="teaser-text">
+                                                            <div itemprop="description">
+                                                                <f:translate
+                                                                    key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:youtube_cookies" />
+                                                            </div>
+                                                        </div>
+                                                    </f:if>
+                                                    <div class="d-flex">
+                                                        <a href="#"
+                                                            class="secondary-button-dark-bg display-youtube-video">Inhalt
+                                                            anzeigen</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="video-wrapper"></div>
+                                    </div>
+                                </f:then>
+                                <f:else>
+                                    <div class="teasar-media-wrap">
+                                        <figure>
+                                            <picture>
+                                                <f:render partial="Image/Image" arguments="{image : teaser.media.0, desktopMaxWidth: 358, tabletMaxWidth: 900, mobileMaxWidth: 767, loading: 'lazy'}" />
+                                            </picture>
+                                        </figure>
+                                    </div>
+                                </f:else>
+                            </f:if>
+
+                        </div>
+                    </div>
+                </f:then>
+                <f:else>
+                    <f:link.typolink parameter="{teaser.data.link}">
+                        <div class="card-body">
+                            <!-- header -->
+                            <div class="header">
+                                <f:if condition="{teaser.data.subheader}">
+                                    <p class="teaser-category text-default-small">{teaser.data.subheader}</p>
+                                </f:if>
+
+                                        <f:format.html><h3 class="card-title">{teaser.data.header}</h3></f:format.html>
+                            </div>
+
+                            <!-- teaser -->
+                            <f:if condition="{teaser.data.bodytext}">
+                                <div class="teaser-text">
+                                    <div itemprop="description">{teaser.data.bodytext -> f:format.crop(maxCharacters:
+                                        '400', respectWordBoundaries:'1') -> f:format.html()}</div>
+                                </div>
+                            </f:if>
+
+                            <!-- footer information -->
+                            <div class="footer">
+                                <p class="medium-text bold">
+                                    <!-- date -->
+                                    <span class="teaser-date">
+                                        <time itemprop="datePublished"
+                                            datetime="{f:format.date(date:teaser.datetime, format:'Y-m-d')}">
+                                            <f:format.date format="d.m.Y">{teaser.data.date}</f:format.date>
+                                        </time>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="icon icon-plus"></div>
+
+                        </div>
+                    </f:link.typolink>
+                </f:else>
+            </f:if>
+        </f:if>
+    </div>
+</div>
+
+</html>

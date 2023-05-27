@@ -1,0 +1,35 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}"  class="ce-text {data.space_before_class} {data.space_after_class}">
+        <f:switch expression="{data.select_container}">
+            <f:case value="col-md-8 px-0 mx-auto">
+                    <div class="{data.select_container}">
+                        <f:if condition="{data.header}">
+                            <div class="headline">
+                                <f:render partial="Header/CustomHeader"
+                                            arguments="{header:data.header,header:data.header,layout:data.header_layout}" />
+                            </div>
+                        </f:if>
+                        
+                        <div class="text">
+                            <f:format.html>{data.bodytext}</f:format.html>
+                        </div>
+                    </div>
+            </f:case>
+            <f:defaultCase>
+                    <div class="{data.select_container}">
+                        <f:if condition="{data.header}">
+                            <div class="headline">
+                                <f:render partial="Header/CustomHeader"
+                                            arguments="{header:data.header,header:data.header,layout:data.header_layout}" />
+                            </div>
+                        </f:if>
+                        
+                        <div class="text">
+                            <f:format.html>{data.bodytext}</f:format.html>
+                        </div>
+                    </div>
+            </f:defaultCase>
+        </f:switch>
+    </div>
+
+</html>

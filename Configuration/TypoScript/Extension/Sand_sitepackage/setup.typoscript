@@ -1,0 +1,67 @@
+plugin.tx_sandsitepackage {
+    settings {
+
+        template {
+
+            # switched by condition
+            showInternMenu = 0
+        }
+
+        pageUids {
+            home = {$plugin.tx_sandsitepackage.settings.pageUids.home}
+            terms = {$plugin.tx_sandsitepackage.settings.pageUids.terms}
+            privacypolicy = {$plugin.tx_sandsitepackage.settings.pageUids.privacypolicy}
+            imprint = {$plugin.tx_sandsitepackage.settings.pageUids.imprint}
+            newslist = {$plugin.tx_sandsitepackage.settings.pageUids.newslist}
+            newsdetail = {$plugin.tx_sandsitepackage.settings.pageUids.newsdetail}
+            search = {$plugin.tx_sandsitepackage.settings.pageUids.search}
+            login = {$plugin.tx_sandsitepackage.settings.pageUids.login}
+            intern = {$plugin.tx_sandsitepackage.settings.pageUids.intern}
+            register = {$plugin.tx_sandsitepackage.settings.pageUids.register}
+            thxpage = {$plugin.tx_sandsitepackage.settings.pageUids.thxpage}
+            thxpageen = {$plugin.tx_sandsitepackage.settings.pageUids.thxpageen}
+        }
+
+        header {
+            mainSiteLink = {$plugin.tx_sandsitepackage.settings.header.mainSiteLink}
+        }
+
+        footer {
+            facebook = {$plugin.tx_sandsitepackage.settings.footer.facebook}
+            instagram = {$plugin.tx_sandsitepackage.settings.footer.instagram}
+            xing = {$plugin.tx_sandsitepackage.settings.footer.xing}
+            copyright = {$plugin.tx_sandsitepackage.settings.footer.copyright}
+        }
+
+        socialMedia{
+            linkedin =  {$plugin.tx_sandsitepackage.settings.socialMedia.linkedin}
+            youtube =   {$plugin.tx_sandsitepackage.settings.socialMedia.youtube}
+            facebook =   {$plugin.tx_sandsitepackage.settings.socialMedia.facebook}
+        }     
+    }
+}
+
+[{$plugin.tx_sandsitepackage.settings.pageUids.intern} in tree.rootLineIds]
+plugin.tx_sandsitepackage.settings.template.showInternMenu = 1
+[end]
+
+config.tx_extbase {
+   settings {
+      meddev {
+         pageUids {
+            home = {$plugin.tx_sandsitepackage.settings.pageUids.home}
+            terms = {$plugin.tx_sandsitepackage.settings.pageUids.terms}
+            privacypolicy = {$plugin.tx_sandsitepackage.settings.pageUids.privacypolicy}
+            imprint = {$plugin.tx_sandsitepackage.settings.pageUids.imprint}
+            newslist = {$plugin.tx_sandsitepackage.settings.pageUids.newslist}
+            newsdetail = {$plugin.tx_sandsitepackage.settings.pageUids.newsdetail}
+            search = {$plugin.tx_sandsitepackage.settings.pageUids.search}
+            login = {$plugin.tx_sandsitepackage.settings.pageUids.login}
+            intern = {$plugin.tx_sandsitepackage.settings.pageUids.intern}
+            register = {$plugin.tx_sandsitepackage.settings.pageUids.register}
+            thxpage = {$plugin.tx_sandsitepackage.settings.pageUids.thxpage}
+            thxpageen = {$plugin.tx_sandsitepackage.settings.pageUids.thxpageen}
+         }
+      }
+   }
+}

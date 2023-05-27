@@ -1,0 +1,21 @@
+
+#############################################################
+#### EXTENSIONS                                          ####
+#### Manual inclusion to keep control over loading order ####
+#############################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/FluidStyledContent/constants.typoscript" condition="extension.isLoaded('fluid_styled_content') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Felogin/constants.typoscript" condition="extension.isLoaded('felogin') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/SfRegister/constants.typoscript"  condition="extension.isLoaded('sf_register') == 1">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Form/constants.typoscript" condition="extension.isLoaded('form') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Seo/constants.typoscript" condition="extension.isLoaded('seo') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Ke_search/constants.typoscript" condition="extension.isLoaded('ke_search') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript" condition="extension.isLoaded('news') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sand_sitepackage/Configuration/TypoScript/Extension/Tt_address/constants.typoscript" condition="extension.isLoaded('tt_address') == 1">
+
+
+<INCLUDE_TYPOSCRIPT: source="DIR: ./Constants" extensions="typoscript">
+
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">

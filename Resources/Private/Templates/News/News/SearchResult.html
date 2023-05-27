@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/SearchResult.html
+-->
+
+<f:section name="content">
+	<div class="ce-news-result ">
+		<div class="container">
+			<div class="news-list">
+				<f:if condition="{pagination.paginator.paginatedItems}">
+					<f:then>
+						<div class="header newsroom">
+							<h3 class="medium-text blue">
+								<f:translate
+									key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.search_result" />
+								({recordNumber})
+							</h3>
+						</div>
+						<f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+							<f:render partial="List/Item"
+								arguments="{newsItem: newsItem, settings:settings, className:className, view:'list'}" />
+						</f:for>
+						<f:if condition="{settings.search.paginate.insertBelow}">
+							<f:render partial="List/Pagination"
+								arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+						</f:if>
+					</f:then>
+					<f:else>
+						<f:translate
+							key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:tx_news.no_result_found" />
+
+					</f:else>
+				</f:if>
+			</div>
+		</div>
+
+	</div>
+</f:section>
+
+
+</html>

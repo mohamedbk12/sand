@@ -1,0 +1,8 @@
+tt_content.sandsitepackage_stickylinks =< lib.contentElement
+tt_content.sandsitepackage_stickylinks {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = StickyLinks
+
+}

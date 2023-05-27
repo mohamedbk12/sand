@@ -1,0 +1,74 @@
+<div class="pagination">
+    <f:if condition="{pagination.allPageNumbers -> f:count()} > 1">
+        <ul class="list-pagination">
+            <f:if
+                condition="{pagination.previousPageNumber} && {pagination.previousPageNumber} >= {pagination.firstPageNumber}">
+                <f:then>
+                    <li>
+                        <a class="arrow-previous"
+                            href="{f:uri.action(action:actionName, arguments:{currentPage: pagination.previousPageNumber},addQueryString:1)}"
+                            title="{f:translate(key:'pagination.previous')}">
+                        </a>
+                    </li>
+                </f:then>
+                <f:else>
+                    <li>
+                        <a class="arrow-previous disabled" title="{f:translate(key:'pagination.previous')}">
+                        </a>
+                    </li>
+                </f:else>
+            </f:if>
+            <f:if condition="{pagination.displayRangeStart} != {pagination.firstPageNumber}">
+                <li class="first">
+                    <a class="text-xlarge" href="{f:uri.action(action:actionName, arguments:{currentPage: 1},addQueryString:1)}" title="{f:translate(key:'pagination.first')}">
+                        {pagination.firstPageNumber}
+                    </a>
+                </li>
+            </f:if>
+            <f:if condition="{pagination.hasLessPages}">
+                <li class="text-xlarge">…</li>
+            </f:if>
+            <f:for each="{pagination.allPageNumbers}" as="page">
+                <f:if condition="{page} == {paginator.currentPageNumber}">
+                    <f:then>
+                        <li>
+                            <div class="text-xlarge">{page}</div>
+                        </li>
+                    </f:then>
+                    <f:else>
+                        <li class="text-xlarge">
+                            <a class="text-xlarge"
+                                href="{f:uri.action(action:actionName, arguments:{currentPage: page},addQueryString:1)}">{page}</a>
+                        </li>
+                    </f:else>
+                </f:if>
+            </f:for>
+            <f:if condition="{pagination.hasMorePages}">
+                <li class="text-xlarge">…</li>
+            </f:if>
+            <f:if condition="{pagination.displayRangeEnd} != {pagination.lastPageNumber}">
+                <li class="last">
+                    <a class="text-xlarge" href="{f:uri.action(action:actionName, arguments:{currentPage: pagination.lastPageNumber},addQueryString:1)}" title="{f:translate(key:'pagination.last')}">
+                        {pagination.lastPageNumber}
+                    </a>
+                </li>
+            </f:if>
+            <f:if condition="{pagination.nextPageNumber} && {pagination.nextPageNumber} <= {pagination.lastPageNumber}">
+                <f:then>
+                    <li>
+                        <a class="arrow-next"
+                            href="{f:uri.action(action:actionName, arguments:{currentPage: pagination.nextPageNumber},addQueryString:1)}"
+                            title="{f:translate(key:'pagination.next')}">
+                        </a>
+                    </li>
+                </f:then>
+                <f:else>
+                    <li>
+                        <a class="arrow-next disabled" title="{f:translate(key:'pagination.previous')}">
+                        </a>
+                    </li>
+                </f:else>
+            </f:if>
+        </ul>
+    </f:if>
+</div>

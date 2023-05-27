@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-04-24UTC07:47:560">
+        <header>
+            <authorName>Ingo Möller</authorName>
+            <authorEmail>moeller@meddev-media.com</authorEmail>
+        </header>
+        <body>
+           <!-- BACKEND LAYOUTS -->
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.main">
+                <source>Main</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.main_hochschulatlas">
+                <source>Main (Hochschulatlas)</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.sidebar">
+                <source>Sidebar</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.news">
+                <source>News</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.main">
+                <source>Main Section</source>
+            </trans-unit>
+              <trans-unit id="backend_layout.column.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.text">
+                <source>Text</source>
+            </trans-unit>
+             <trans-unit id="backend_layout.column.sidebar">
+                <source>Sidebar</source>
+            </trans-unit>
+
+            <!--Contents Elements-->
+
+            <!-- Partners -->
+            <trans-unit id="content_element.partners">
+                <source>Partners</source>
+            </trans-unit>
+            <trans-unit id="content_element.partners.description">
+                <source>Content Element for displaying partners in a slider view.</source>
+            </trans-unit>
+            <!-- Hero -->
+            <trans-unit id="content_element.hero">
+                <source>Hero</source>
+            </trans-unit>
+            <trans-unit id="content_element.hero.description">
+                <source>Content Element for displaying the hero of the website.</source>
+            </trans-unit>
+            <!-- Subpageheader -->
+            <trans-unit id="content_element.subpageheader">
+                <source>Subpage Header</source>
+            </trans-unit>
+            <trans-unit id="content_element.subpageheader.description">
+                <source>Content Element for displaying the subpage header of the website.</source>
+            </trans-unit>
+            <!-- Social Media Wall -->
+            <trans-unit id="content_element.socialmediawall">
+                <source>Social Media Wall</source>
+            </trans-unit>
+            <trans-unit id="content_element.socialmediawall.description">
+                <source>Content Element for displaying social media wall.</source>
+            </trans-unit>
+            <!-- Teaser Grid -->
+            <trans-unit id="content_element.teasergrid">
+                <source>Teaser Grid</source>
+            </trans-unit>
+            <trans-unit id="content_element.teasergrid.description">
+                <source>Content Element for displaying teaser grid elements.</source>
+            </trans-unit>
+            <!-- Download -->
+            <trans-unit id="content_element.download">
+                <source>Download</source>
+            </trans-unit>
+            <trans-unit id="content_element.download.description">
+                <source>Content Element for downloading images with a high quality.</source>
+            </trans-unit>
+            <!-- Contact Teaser -->
+            <!-- This CE title was changed from "Contact Teaser" to "Board member teaser" -->
+            <trans-unit id="content_element.contactteaser">
+                <source>Board member teaser</source>
+            </trans-unit>
+            <trans-unit id="content_element.contactteaser.description">
+                <source>Content Element to display contact teasers.</source>
+            </trans-unit>
+            <trans-unit id="content_element.sharelinks">
+                <source>Share Links Buttons</source>
+            </trans-unit>
+            <trans-unit id="content_element.sharelinks.description">
+                <source>Content Element to display Share Links Buttons.</source>
+            </trans-unit>            
+            <!-- Sticky Links -->
+            <trans-unit id="content_element.stickylinks">
+                <source>Sticky Links</source>
+            </trans-unit>
+            <trans-unit id="content_element.stickylinks.description">
+                <source>Content Element to display  Sticky Links.</source>
+            </trans-unit>           
+            <!-- Sticky Links -->
+            <trans-unit id="content_element.newsletterplaceholder">
+                <source>Newsletter Placeholder</source>
+            </trans-unit>
+            <trans-unit id="content_element.newsletterplaceholder.description">
+                <source>Content Element to display Newsletter Placeholder</source>
+            </trans-unit>        
+            <!-- two column teasers -->
+            <trans-unit id="content_element.twocolumnteasers">
+                <source>Two Column Teasers</source>
+            </trans-unit>
+            <trans-unit id="content_element.twocolumnteasers.description">
+                <source>Content Element to display two column teasers.</source>
+            </trans-unit>             
+            <!-- Member Teaser -->
+            <trans-unit id="content_element.quoteteaser">
+                <source>Quote Teaser</source>
+            </trans-unit>
+            <trans-unit id="content_element.quoteteaser.description">
+                <source>Content Element to display Quote Teaser.</source>
+            </trans-unit>               
+            <!-- Jumpmarks -->
+            <trans-unit id="content_element.jumpmarks">
+                <source>Jumpmarks</source>
+            </trans-unit>
+            <trans-unit id="content_element.jumpmarks.description">
+                <source>Content Element to display jumpmarks links to differents sections in the website.</source>
+            </trans-unit>
+            <!-- Text -->
+            <trans-unit id="content_element.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="content_element.text.description">
+                <source>Content Element to display an RTE text in the website.</source>
+            </trans-unit>
+            <!-- Download List -->
+            <trans-unit id="content_element.downloadlist">
+                <source>Download List</source>
+            </trans-unit>
+            <trans-unit id="content_element.downloadlist.description">
+                <source>Content Element to display download list.</source>
+            </trans-unit>
+            <!-- Sidebar Download List -->
+            <trans-unit id="content_element.sidebardownloadlist">
+                <source>Sidebar Download List</source>
+            </trans-unit>
+            <trans-unit id="content_element.sidebardownloadlist.description">
+                <source>Content Element to display download list in the sidebar.</source>
+            </trans-unit>
+            <!-- Full Width Image Download -->
+            <trans-unit id="content_element.fullwidthimagedownload">
+                <source>Full Width Image Download</source>
+            </trans-unit>
+            <trans-unit id="content_element.fullwidthimagedownload.description">
+                <source>Content Element to display full width image with a download button.</source>
+            </trans-unit>            
+            <!-- contribution calculator -->
+            <trans-unit id="content_element.contributioncalculator">
+                <source>Contribution Calculator</source>
+            </trans-unit>
+            <trans-unit id="content_element.contributioncalculator.description">
+                <source>Content Element to display Contribution Calculator.</source>
+            </trans-unit>
+            <!-- Teaser Membership -->
+            <trans-unit id="content_element.teasermembership">
+                <source>Teaser Membership</source>
+            </trans-unit>
+            <trans-unit id="content_element.teasermembership.description">
+                <source>Content Element to display some teasers memberships.</source>
+            </trans-unit>
+             <!-- Internal External Links -->
+            <trans-unit id="content_element.internalexternallinks">
+                <source>Internal External Links</source>
+            </trans-unit>      
+            <trans-unit id="content_element.internalexternallinks.description">
+                <source>Content Element to display some internal and external links.</source>
+            </trans-unit>  
+
+             <!-- Register Confirm -->
+            <trans-unit id="content_element.registerconfirm">
+                <source>Register Confirm</source>
+            </trans-unit>      
+            <trans-unit id="content_element.registerconfirm.description">
+                <source>Content Element to display Register Confirm.</source>
+            </trans-unit>  
+             <!-- fe_users -->
+            <trans-unit id="fe_users.position">
+				<source>Position</source>
+			</trans-unit>
+            <trans-unit id="fe_users.title">
+				<source>Title</source>
+			</trans-unit>   
+            <!--End Contents Elements-->
+        
+        </body>
+    </file>
+</xliff>

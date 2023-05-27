@@ -1,0 +1,18 @@
+@import 'EXT:sf_register/Configuration/TypoScript/Fields/setup.typoscript'
+plugin.tx_sfregister.settings.fields.configuration {
+    title {
+        partial = Select
+        backendLabel = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:title
+    }
+    position {
+        partial = Textfield
+        backendLabel = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:position
+    }
+    gtc {
+        partial = Gtc  
+    }
+    privacy {
+        partial = Privacy
+    }
+    
+}

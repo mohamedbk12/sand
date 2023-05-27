@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2021-04-17T20:22:32Z" product-name="felogin">
+        <header/>
+        <body>
+            <trans-unit id="welcome_header">
+                <source>Login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="welcome_message">
+                <source>Please log in to take advantage of the club benefits.</source>
+                <target>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich anzumelden.</target>
+            </trans-unit>
+            <trans-unit id="forgot_header" resname="forgot_header">
+                <target>Passwort vergessen?</target>
+            </trans-unit>
+            <trans-unit id="reset_password" resname="reset_password">
+				<source>Reset Password</source>
+                <target>Passwort vergessen</target>
+			</trans-unit>
+            <trans-unit id="enter_email" resname="enter_email">
+                <target>E-Mail-Adresse eingeben</target>
+            </trans-unit>
+            <trans-unit id="enter_newpw" resname="enter_newpw">
+                <target>Neues Passwort eingeben</target>
+            </trans-unit>
+            <trans-unit id="password_recovery_link" resname="password_recovery_link">
+                <target>Neues Passwort setzen</target>
+            </trans-unit>
+            <trans-unit id="forgot_reset_message" resname="forgot_reset_message">
+                <target>Bitte geben Sie Ihre zur Registrierung genutzte E-Mail-Adresse ein. Anweisungen zum Zurücksetzen Ihres Passworts werden Ihnen umgehend per E-Mail zugesandt.</target>
+            </trans-unit>
+            <trans-unit id="change_password_done_message" resname="change_password_done_message">
+                <target>Ihr Passwort wurde gespeichert. Sie können sich nun mit Ihrem neuen Passwort anmelden.</target>
+            </trans-unit>
+            <trans-unit id="enter_your_data" resname="enter_your_data">
+                <target>E-Mail-Adresse</target>
+            </trans-unit>
+            <trans-unit id="forgot_reset_message_emailSent" resname="forgot_reset_message_emailSent">
+                <target>Eine E-Mail wurde an die in Ihrem Konto registrierte Adresse gesendet und enthält einen Link zum Zurücksetzen Ihres Passworts. Wenn Sie keine E-Mail erhalten, kann Ihr Konto oder Ihre E-Mail-Adresse nicht gefunden werden.</target>
+            </trans-unit>
+            <trans-unit id="forgot_validate_reset_password_html" resname="forgot_validate_reset_password_html" xml:space="preserve">
+                <target>&lt;p&gt;Guten Tag %s,&lt;/p&gt;
+            &lt;p&gt;Sie haben Ihr Passwort für Ihr Kundenkonto auf www.vdiv.de vergessen?&lt;br /&gt;Über den folgenden Link können Sie Ihr Passwort zurücksetzen: &lt;/p&gt;
+            &lt;p&gt;%s&lt;/p&gt;
+            &lt;p&gt;Aus Sicherheitsgründen ist dieser Link nur 24 Stunden aktiv. Wenn Sie den Link vorher nicht aufrufen, müssen Sie die Schritte zum Zurücksetzen des Passworts wiederholen.&lt;/p&gt;
+            &lt;p&gt;Sollten Sie Ihr Passwort nicht zurücksetzen wollen, ignorieren Sie diese E-Mail.&lt;br /&gt;Bei Fragen zu Ihrem Kundenkonto, steht Ihnen die VDIV-Geschäftsstelle zur Verfügung.  &lt;/p&gt;
+                </target>
+            </trans-unit>
+            <trans-unit id="forgot_validate_reset_password_plaintext" resname="forgot_validate_reset_password" xml:space="preserve">
+                <target>Guten Tag %s,
+
+            Diese E-Mail wurde als Antwort auf Ihre Anfrage gesendet, Ihr Passwort zurückzusetzen. Bitte klicken Sie auf den Link unten.
+            %s
+
+            Aus Sicherheitsgründen ist dieser Link nur 24 Stunden aktiv. Wenn Sie den Link vorher nicht aufrufen, müssen Sie die Schritte zum Zurücksetzen des Passworts wiederholen.
+
+            Sollten Sie Ihr Passwort nicht zurücksetzen wollen, ignorieren Sie diese E-Mail.
+            Bei Fragen zu Ihrem Kundenkonto, steht Ihnen die VDIV-Geschäftsstelle zur Verfügung.</target>
+            </trans-unit>
+            <trans-unit id="error_message" xml:space="preserve">
+                <target>Bei der Anmeldung trat ein Fehler auf. Eventuell ist ihr Benutzer noch nicht freigeschaltet oder Sie haben den Benutzernamen oder das Passwort nicht korrekt eingegeben. Bitte stellen Sie sicher, dass Sie sie korrekt eingeben, berücksichtigen Sie dabei bitte die Groß- und Kleinschreibung. Möglicherweise ist in Ihrem Browser auch das Setzen von Cookies nicht gestattet.</target>
+            </trans-unit>
+            <!-- Extend -->
+            <trans-unit id="signedUp" resname="signedUp">
+                <source>You are signed up</source>
+                <target>Sie sind angemeldet</target>
+            </trans-unit>
+            <trans-unit id="emailAdress">
+                <source>Your email address</source>
+                <target>Ihre E-Mail-Adresse</target>
+            </trans-unit>
+            <trans-unit id="username">
+                <source>E-Mail</source>
+                <target>Benutzername</target>
+            </trans-unit>
+            <trans-unit id="password">
+                <source>Password</source>
+                <target>Passwort</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

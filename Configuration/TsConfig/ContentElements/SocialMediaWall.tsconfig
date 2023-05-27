@@ -1,0 +1,17 @@
+##############################################
+####### CE WIZARD: Social Media Wall #########
+##############################################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_socialmediawall {
+            iconIdentifier = sandsitepackage-socialmediawall
+            title = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.socialmediawall
+            description = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.socialmediawall.description
+            tt_content_defValues {
+                CType = sandsitepackage_socialmediawall
+            }
+        }
+    }
+    show := addToList(sandsitepackage_socialmediawall)
+}

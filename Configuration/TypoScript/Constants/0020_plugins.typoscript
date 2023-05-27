@@ -1,0 +1,42 @@
+plugin.tx_sandsitepackage {
+    settings {
+            ###################
+            #### PAGE UIDs ####
+            ###################
+            pageUids {
+                home = 1
+                terms = 
+                privacypolicy = 
+                imprint = 
+                newslist = 
+                newsdetail = 
+                search = 27
+                login = 17
+                intern = 87
+                register = 56
+                thxpage = 58
+                thxpageen = 59
+            }
+
+            #######################
+            #### FOOTER INFOS ####
+            #######################
+            footer {
+                facebook = www.facebook.com
+                instagram = www.instagram.com
+                xing = www.XING.COM
+                copyright = ©2022 Copyright SANDDEBURRER
+            }
+            header{
+                mainSiteLink = 
+            }
+            #######################
+            #### SOCIAL MEDIAS ####
+            #######################
+            socialMedia{
+                linkedin = https://www.linkedin.com/company/bundesverband-des-deutschen-versandhandels/?originalSubdomain=de   
+                youtube =  https://www.youtube.com/@versandverband/featured
+                facebook = https://www.facebook.com/sand.ECommerceVerband/
+        }  
+    }
+}

@@ -1,0 +1,17 @@
+##############################
+#### CE WIZARD: Download #####
+##############################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_download {
+            iconIdentifier = sandsitepackage-download
+            title = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.download
+            description = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:content_element.download.description
+            tt_content_defValues {
+                CType = sandsitepackage_download
+            }
+        }
+    }
+    show := addToList(sandsitepackage_download)
+}

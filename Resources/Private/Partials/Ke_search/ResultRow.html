@@ -1,0 +1,52 @@
+<!--
+	=====================
+	Partials/ResultRow.html
+-->
+
+<div class="result-list-item result-list-item-type-{resultrow.type}">
+	<f:if condition="{conf.resultsNumeration}">
+		<!-- <span class="result-number">{resultrow.number}.</span> -->
+	</f:if>
+	<!-- <span class="clearer">&nbsp;</span> -->
+	<div class="add-info">
+		<div class="add-info-url">
+			<p>
+				{resultrow.url} ( {resultrow.date_timestamp -> f:format.date(format: 'd.m.Y')} )
+			</p>
+			<f:if condition="{conf.showResultUrl}">
+				<p><f:format.raw>{resultrow.url}</f:format.raw>
+				<f:if condition="{conf.showDate}">
+					(<f:format.date>{resultrow.date_timestamp}</f:format.date>)<br />
+				</f:if>
+				<br />
+				</p>
+			</f:if>
+		</div>
+		<f:if condition="{resultrow.type} == 'cal'">
+			<f:then>
+				<f:comment>
+					<!-- Special cal date rendering -->
+				</f:comment>
+				<f:render partial="CalDate" arguments="{resultrow: resultrow}" />
+				<br />
+			</f:then>
+			<f:else>
+				<f:comment>
+					<!-- Default date rendering -->
+				</f:comment>
+			</f:else>
+		</f:if>
+		<f:if condition="{conf.showTags}">
+			<i>{f:translate(key:
+				'LLL:EXT:ke_search/Resources/Private/Language/locallang_searchbox.xlf:label_tags')}:</i>
+			{resultrow.tags}<br />
+		</f:if>
+	</div>
+	<div class="result-titel-row">
+		<f:format.raw>{resultrow.title}</f:format.raw>
+	</div>
+
+	<span class="result-teaser text-teaser">
+		<f:format.raw>{resultrow.teaser}</f:format.raw>
+	</span>
+</div>

@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="col-md-6 field {fieldName}">
+	<label  class="mb-20"><f:translate id="{fieldName}" /></label>
+	<f:render partial="Required" arguments="{field: fieldName}" />
+	<f:form.hidden property="{fieldName}" />
+	<input  type="text" class="form-control bg-form " readonly placeholder="<f:if condition="{options.values.{user.{fieldName}}}" >
+		<f:then><f:translate id="{options.values.{user.{fieldName}}}"/></f:then>
+		<f:else><f:translate id="{fieldName}_none"/></f:else>
+	</f:if>" >
+
+</div>
+
+</html>

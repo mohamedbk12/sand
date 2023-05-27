@@ -1,0 +1,61 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="c{data.uid}" class="ce-download-image">
+    <div class="container">
+        <div class="download-image">
+            <div class="headline">
+                <f:if condition="{data.header}">
+                    <f:render partial="Header/CustomHeader"
+                        arguments="{header:data.header,header:data.header,layout:data.header_layout}" />
+                </f:if>
+            </div>
+            <f:for each="{records}" as="item">
+                <div class="image-item">
+                    <f:if condition="{item.data.header}">
+                        <p class="medium-title">
+                            {item.data.header}
+                        </p>
+                    </f:if>
+                    <div class="row download">
+                        <f:for each="{item.records}" as="item">
+                            <div class="col-xl-5 col-lg-6 col-xs-6 ">
+                                <f:if condition="{item.image.0}">
+                                    <f:render partial="Image/Image" arguments="{image : item.image.0, desktopMaxWidth: 455, tabletMaxWidth: 380, mobileMaxWidth: 240, loading: 'lazy'}" />
+                                </f:if>
+
+                                <div class="block-info">
+                                    <f:if condition="{item.data.header}">
+                                        <div class="info">
+                                            <p class="medium-text">
+                                                {item.data.header}
+                                            </p>
+                                        </div>
+                                    </f:if>
+                                    <!-- <div class="download">
+                                        <a href="/fileadmin{item.image.0.originalFile.identifier}"
+                                            download="{item.image.0.originalFile.name}"
+                                            class="download-link placeholder-text-bold">
+                                            <div class="text-download">Download</div>
+                                        </a>
+                                    </div> -->
+                                    <f:if condition="{item.highimage}">
+                                        <div class="download">
+                                            <a href="/fileadmin{item.highimage.0.originalFile.identifier}"
+                                                download="{item.highimage.0.originalFile.name}"
+                                                class="download-link placeholder-text-bold">
+                                                <div class="text-download">
+                                                    <f:translate key="LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang.xlf:download" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</div>
+
+</html>

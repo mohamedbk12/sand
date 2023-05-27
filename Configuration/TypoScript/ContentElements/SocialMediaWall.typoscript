@@ -1,0 +1,8 @@
+tt_content.sandsitepackage_socialmediawall =< lib.contentElement
+tt_content.sandsitepackage_socialmediawall {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = SocialMediaWall
+    
+}
