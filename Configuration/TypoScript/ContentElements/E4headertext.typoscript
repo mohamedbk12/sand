@@ -1,0 +1,18 @@
+tt_content.sandsitepackage_e4headertext =< lib.contentElement
+tt_content.sandsitepackage_e4headertext {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = E4headertext
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+        dataProcessing {
+        50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        50 {
+            references.fieldName = image
+            as = image
+        }
+    }
+}

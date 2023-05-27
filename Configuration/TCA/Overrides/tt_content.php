@@ -99,6 +99,16 @@ $columns = [
             'softref' => 'typolink'
         ],
     ],
+    'bodytext' => [
+        'label' => $ll . 'bodytext',
+        'config' => [
+            'type' => 'text',
+            'eval' => 'trim',
+            'enableRichtext' => true,
+            'cols' => 40,
+            'rows' => 4
+        ],
+    ], 
     'link_text' => [
         'label' => $ll . 'linkText',
         'config' => [

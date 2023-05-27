@@ -1,0 +1,17 @@
+##############################
+#### CE WIZARD: e4headertext #####
+##############################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e4headertext {
+            iconIdentifier = sandsitepackage-e4headertext
+            title = E-4  Header Text
+            description = Content to desplay swiper with two columns on the side 
+            tt_content_defValues {
+                CType = sandsitepackage_e4headertext
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e4headertext)
+}

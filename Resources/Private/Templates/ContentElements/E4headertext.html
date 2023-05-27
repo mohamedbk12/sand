@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="default-container mt-40" id="c{data.uid}">
+    <f:if condition="{image.0}">
+        <div class="content-img h-96">
+            <f:image image="{image.0}"  />
+        </div>
+    </f:if>
+    <div class="flex flex-col items-center lg:p-16 p-8 lg:w-[90%] w-[95%] mx-auto -translate-y-28 bg-color-white">
+        <f:if condition="{data.header}"><div class="title mb-2 text-center">{data.header}</div></f:if>
+        <f:format.html>{data.bodytext}</f:format.html>
+    </div>
+</div>
+</html>
