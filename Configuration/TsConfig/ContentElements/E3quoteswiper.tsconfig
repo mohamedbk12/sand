@@ -1,0 +1,17 @@
+##############################
+#### CE WIZARD: e3quoteswiper #####
+##############################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e3quoteswiper {
+            iconIdentifier = sandsitepackage-e3quoteswiper
+            title = E-3  Quote Swiper
+            description = Content to desplay swiper with two columns on the side 
+            tt_content_defValues {
+                CType = sandsitepackage_e3quoteswiper
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e3quoteswiper)
+}

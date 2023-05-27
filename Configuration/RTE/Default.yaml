@@ -8,6 +8,8 @@ editor:
         contentsCss: "EXT:sand_sitepackage/Resources/Public/Css/rte.css"
 
         stylesSet:
+            - { name: "text color blue", element: "p", attributes: { 'class': 'text-color-blue' } }
+            - { name: "content-paragraph mt-5 text-center", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-center' } }
             - { name: "Blue", element: "p", attributes: { 'class': 'blue' } }
             - { name: "Text XX-Small", element: "p", attributes: { 'class': 'text-xxsmall' } }
             - { name: "Text XS-Small", element: "p", attributes: { 'class': 'text-xsmall' } }
