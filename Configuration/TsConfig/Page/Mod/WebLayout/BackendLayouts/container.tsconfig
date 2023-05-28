@@ -1,0 +1,29 @@
+################################
+#### BACKENDLAYOUT: DEFAULT ####
+################################
+mod {
+    web_layout {
+        BackendLayouts {
+            container {
+                title = default container
+                icon = EXT:sand_sitepackage/Resources/Public/Img/BackendLayouts/default.png
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = container
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

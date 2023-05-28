@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e5boxes ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e5boxes {
+            iconIdentifier = sandsitepackage-e5boxes
+            title = E-5 Boxes
+            description = Content to desplay boxes with text and link
+            tt_content_defValues {
+                CType = sandsitepackage_e5boxes
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e5boxes)
+}

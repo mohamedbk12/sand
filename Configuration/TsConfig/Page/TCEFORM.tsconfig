@@ -4,10 +4,10 @@
 TCEFORM {
     pages {
         backend_layout{
-            keepItems = pagets__default, pagets__main, pagets__sidebar, pagets__news, pagets__main_hochschulatlas
+            keepItems = pagets__default, pagets__main, pagets__sidebar, pagets__news, pagets__container
         }
         backend_layout_next_level{
-            keepItems = pagets__default, pagets__main, pagets__sidebar, pagets__news, pagets__main_hochschulatlas
+            keepItems = pagets__default, pagets__main, pagets__sidebar, pagets__news, pagets__container
         }
     }
     tt_content {
