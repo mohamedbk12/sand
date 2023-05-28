@@ -1,0 +1,18 @@
+tt_content.sandsitepackage_e6textwithimagebar =< lib.contentElement
+tt_content.sandsitepackage_e6textwithimagebar {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = E6textwithimagebar
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+        dataProcessing {
+        50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        50 {
+            references.fieldName = image
+            as = image
+        }
+    }
+}
