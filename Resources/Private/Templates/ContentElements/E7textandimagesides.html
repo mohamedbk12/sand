@@ -1,0 +1,89 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<!-- content style -->
+<f:if condition="{data.slider_type} == 6/6">
+    <f:then>
+        <f:variable name="className1" value="col-span-12 lg:col-span-6 content-img" />
+        <f:variable name="className2" value="align-center col-span-12 lg:col-span-6 p-12 flex items-center" />
+    </f:then>
+    <f:else>
+        <f:if condition="{data.slider_type} == 3/9">
+            <f:then>
+                <f:variable name="className1" value="col-span-12 lg:col-span-3 content-img" />
+                <f:variable name="className2"
+                    value="{f:if(condition: '{data.image_position}', then: 'align-right')} col-span-12 lg:col-span-9 p-12 flex items-center" />
+            </f:then>
+            <f:else>
+                <f:if condition="{data.slider_type} == 4/8">
+                    <f:then>
+                        <f:variable name="className1" value="col-span-12 lg:col-span-4 content-img" />
+                        <f:variable name="className2"
+                            value="{f:if(condition: '{data.image_position}', then: 'align-right')} col-span-12 lg:col-span-8 p-12 flex items-center" />
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{data.slider_type}== 8/4">
+                            <f:then>
+                                <f:variable name="className1" value="col-span-12 lg:col-span-8 content-img" />
+                                <f:variable name="className2"
+                                    value="{f:if(condition: '{data.image_position}', then: 'align-right')} col-span-12 lg:col-span-4 p-12 flex items-center" />
+                            </f:then>
+                            <f:else>
+                                <f:variable name="className1"
+                                    value="col-span-12 lg:col-span-8 xl:col-span-9 content-img" />
+                                <f:variable name="className2"
+                                    value="{f:if(condition: '{data.image_position}', then: 'align-right')} col-span-12 lg:col-span-4 xl:col-span-3 p-12 flex items-center" />
+                            </f:else>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:else>
+</f:if>
+
+<div class="grid grid-cols-12 bg-color-{data.background} {data.image_position}" id="c{data.uid}">
+    <!-- btn style -->
+    <f:if condition="{data.background} == blue || {data.background} == green">
+        <f:then>
+            <f:variable name="className" value="content-button btn-white-outlined" />
+        </f:then>
+        <f:else>
+            <f:variable name="className" value="content-button btn-blue-outlined" />
+        </f:else>
+    </f:if>
+
+
+
+    <div class="{className1}">
+        <f:if condition="{image.0}">
+            <f:image image="{image.0}" />
+        </f:if>
+    </div>
+    <div class="{className2}">
+        <div>
+            <f:if condition="{data.header}">
+                <h2 class="content-title">{data.header}</h2>
+            </f:if>
+            <f:if condition="{data.bodytext}">
+                <f:format.html>{data.bodytext}</f:format.html>
+            </f:if>
+            <f:if condition="{data.link}">
+                <f:link.typolink parameter="{data.link}" class="{className}">{data.link_text}</f:link.typolink>
+            </f:if>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+</html>

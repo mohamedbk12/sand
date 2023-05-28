@@ -1,0 +1,18 @@
+tt_content.sandsitepackage_e7textandimagesides =< lib.contentElement
+tt_content.sandsitepackage_e7textandimagesides {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = E7textandimagesides
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+        dataProcessing {
+        50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        50 {
+            references.fieldName = image
+            as = image
+        }
+    }
+}

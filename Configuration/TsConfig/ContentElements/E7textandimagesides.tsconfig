@@ -1,0 +1,17 @@
+##############################
+#### CE WIZARD: e7textandimagesides #####
+##############################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e7textandimagesides {
+            iconIdentifier = sandsitepackage-e7textandimagesides
+            title = E-7  Text and image sides
+            description = Content to desplay text with image
+            tt_content_defValues {
+                CType = sandsitepackage_e7textandimagesides
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e7textandimagesides)
+}
