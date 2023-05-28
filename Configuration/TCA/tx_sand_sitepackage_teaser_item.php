@@ -403,6 +403,15 @@ return [
                 'eval' => 'trim',
             ],
         ],   
+        'show_image' => [
+            'label' => $ll . '',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    ['Show image', '1'],
+                ],
+            ]
+        ],
     ],
 ];
 

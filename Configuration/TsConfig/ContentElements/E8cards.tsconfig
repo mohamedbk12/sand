@@ -1,0 +1,17 @@
+##############################
+#### CE WIZARD: e8cards #####
+##############################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e8cards {
+            iconIdentifier = sandsitepackage-e8cards
+            title = E-8  Cards
+            description = Content to desplay text with image
+            tt_content_defValues {
+                CType = sandsitepackage_e8cards
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e8cards)
+}

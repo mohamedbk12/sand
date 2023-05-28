@@ -1,0 +1,72 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{data.slider_type} == '2/2/2/2/3image'">
+    <f:then>
+        <f:render partial="E8cards/Partial2-2-2-2-3image" arguments="{_all}" />
+    </f:then>
+    <f:else>
+        <f:if condition="{data.slider_type} == '2/2/2/2/2'">
+            <f:then>
+                <f:render partial="E8cards/Partial2-2-2-2-2" arguments="{_all}" />
+            </f:then>
+            <f:else>
+                <f:if condition="{data.slider_type}== '2/2/2/3image'">
+                    <f:then>
+                        <f:render partial="E8cards/Partial2-2-2-3image" arguments="{_all}" />
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{data.slider_type}== '3/3/3/3'">
+                            <f:then>
+                                <f:render partial="E8cards/Partial3-3-3-3" arguments="{_all}" />
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{data.slider_type} == '2/2/3image'">
+                                    <f:then>
+                                        <f:render partial="E8cards/Partial2-2-3image" arguments="{_all}" />
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{data.slider_type} == '4/4/4'">
+                                            <f:then>
+                                                <f:render partial="E8cards/Partial4-4-4" arguments="{_all}" />
+                                            </f:then>
+                                            <f:else>
+                                                <f:if condition="{data.slider_type} == '2/3image'">
+                                                    <f:then>
+                                                        <f:render partial="E8cards/Partial2-3image"
+                                                            arguments="{_all}" />
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:if condition="{data.slider_type} == '6/6'">
+                                                            <f:then>
+                                                                <f:render partial="E8cards/Partial6-6"
+                                                                    arguments="{_all}" />
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{data.slider_type} == '12image'">
+                                                                    <f:then>
+                                                                        <f:render partial="E8cards/Partial12image"
+                                                                            arguments="{_all}" />
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <f:render partial="E8cards/Partial12"
+                                                                            arguments="{_all}" />
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:else>
+</f:if>
+
+</html>

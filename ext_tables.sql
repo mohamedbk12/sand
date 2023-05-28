@@ -49,6 +49,7 @@ CREATE TABLE tx_sand_sitepackage_teaser_item (
     date date default NULL,
     color_select varchar(255) DEFAULT '' NOT NULL,
     box_type varchar(255) DEFAULT '' NOT NULL,
+    show_image varchar(255) DEFAULT '' NOT NULL,
 );
 
 #
