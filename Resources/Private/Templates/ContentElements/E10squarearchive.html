@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="square-archive default-container" id="c{data.uid}">
+    <f:link.typolink parameter="{data.link}" class="btn-blue-outlined ml-auto mb-10">
+        <span>{data.link_text}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13.001" height="13" viewBox="0 0 13.001 13">
+            <path
+                d="M1697,8089v-3h3v3Zm-5,0v-3h3v3Zm-5,0v-3h3v3Zm10-5v-3h3v3Zm-5,0v-3h3v3Zm-5,0v-3h3v3Zm10-5v-3h3v3Zm-5,0v-3h3v3Zm-5,0v-3h3v3Z"
+                transform="translate(-1687 -8076)"></path>
+        </svg>
+    </f:link.typolink>
+    <div class="grid lg:grid-cols-12 grid-cols-4">
+
+        <f:for each="{records}" as="item" iteration="count">
+            <div
+                class="{f:if(condition: '{item.data.color_select} == white', then: 'col-span-4 bg-color-white p-12 border border-color-blue relative pb-28 min-h-[500px]', else: 'col-span-4 bg-color-{item.data.color_select} p-12 relative pb-28 min-h-[500px]')}">
+                <b class="content-date-text">{item.data.subheader} - <f:format.date format="d.m.Y">{item.data.date}
+                    </f:format.date> </b>
+                <h2 class="content-title">{item.data.header}</h2>
+                <f:format.html>{item.data.bodytext}</f:format.html>
+                <f:if condition="{item.data.link}">
+                    <f:link.typolink parameter="{item.data.link}"
+                        class="{f:if(condition: '{item.data.color_select} == white', then: 'square btn-blue-outlined ml-auto mt-7 absolute right-6 bottom-6', else: 'square btn-white-outlined ml-auto mt-7 absolute right-6 bottom-6')}">
+                        <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="9" height="17.038"
+                            viewBox="0 0 9 17.038">
+                            <path id="Path_5004" data-name="Path 5004"
+                                d="M121.417,8.179,113.38.142a.482.482,0,0,0-.682.682l7.695,7.695L112.7,16.213a.484.484,0,0,0,.339.825.47.47,0,0,0,.339-.143l8.037-8.037A.48.48,0,0,0,121.417,8.179Z"
+                                transform="translate(-112.556 0)"></path>
+                        </svg>
+                    </f:link.typolink>
+                </f:if>
+            </div>
+        </f:for>
+    </div>
+</div>
+
+</html>

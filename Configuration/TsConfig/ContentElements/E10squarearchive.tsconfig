@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e10squarearchive ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e10squarearchive {
+            iconIdentifier = sandsitepackage-e10squarearchive
+            title = E-10 Square archive
+            description = Content to desplay Square archive
+            tt_content_defValues {
+                CType = sandsitepackage_e10squarearchive
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e10squarearchive)
+}
