@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e11road ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e11road {
+            iconIdentifier = sandsitepackage-e11road
+            title = E-11 Road
+            description = Content to desplay Road
+            tt_content_defValues {
+                CType = sandsitepackage_e11road
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e11road)
+}
