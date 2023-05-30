@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e9blocks ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e9blocks {
+            iconIdentifier = sandsitepackage-e9blocks
+            title = E-9 Blocks
+            description = Content to desplay Blocks
+            tt_content_defValues {
+                CType = sandsitepackage_e9blocks
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e9blocks)
+}

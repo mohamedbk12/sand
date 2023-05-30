@@ -1,0 +1,60 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="square-archive default-container" id="c{data.uid}">
+    <f:link.typolink parameter="{data.link}" class="btn-blue-outlined ml-auto mb-10">
+        <span>{data.link_text}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13.001" height="13" viewBox="0 0 13.001 13">
+            <path
+                d="M1697,8089v-3h3v3Zm-5,0v-3h3v3Zm-5,0v-3h3v3Zm10-5v-3h3v3Zm-5,0v-3h3v3Zm-5,0v-3h3v3Zm10-5v-3h3v3Zm-5,0v-3h3v3Zm-5,0v-3h3v3Z"
+                transform="translate(-1687 -8076)"></path>
+        </svg>
+    </f:link.typolink>
+    <f:if condition="{data.slider_type} == '3/3/3/3'">
+        <f:then>
+            <f:render partial="E9blocks/Partial3-3-3-3" arguments="{_all}" />
+        </f:then>
+        <f:else>
+            <f:if condition="{data.slider_type} == '4/4/4'">
+                <f:then>
+                    <f:render partial="E9blocks/Partial4-4-4" arguments="{_all}" />
+                </f:then>
+                <f:else>
+                    <f:if condition="{data.slider_type}== '6/6'">
+                        <f:then>
+                            <f:render partial="E9blocks/Partial6-6" arguments="{_all}" />
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{data.slider_type}== '8(4/4)/4'">
+                                <f:then>
+                                    <f:render partial="E9blocks/Partial8444" arguments="{_all}" />
+                                </f:then>
+                                <f:else>
+                                    <f:if condition="{data.slider_type} == '8(8/8)/4'">
+                                        <f:then>
+                                            <f:render partial="E9blocks/Partial8884" arguments="{_all}" />
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{data.slider_type} == '8/4image'">
+                                                <f:then>
+                                                    <f:render partial="E9blocks/Partial84image" arguments="{_all}" />
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{data.slider_type} == '12'">
+                                                        <f:then>
+                                                            <f:render partial="E9blocks/Partial12" arguments="{_all}" />
+                                                        </f:then>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </f:else>
+            </f:if>
+        </f:else>
+    </f:if>
+</div>
+
+</html>
