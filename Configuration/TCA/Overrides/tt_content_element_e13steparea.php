@@ -14,10 +14,9 @@ $ll = 'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:';
 /***************
  * Add Content Element
  */
-if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits'])) {
-    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits'] = [];
+if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e13steparea'])) {
+    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e13steparea'] = [];
 }
-
 
 /***************
  * Add content element to selector list
@@ -26,9 +25,9 @@ if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits']
     'tt_content',
     'CType',
     [
-        'e-12 Benefits',
-        'sandsitepackage_e12benefits',
-        'sandsitepackage-e12benefits'
+        'E-13 Step area',
+        'sandsitepackage_e13steparea',
+        'sandsitepackage-e13steparea'
     ],
     '--div--',
     'after'
@@ -37,19 +36,18 @@ if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits']
 /***************
  * Assign Icon
  */
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['sandsitepackage_e12benefits'] = 'sandsitepackage-e12benefits';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['sandsitepackage_e13steparea'] = 'sandsitepackage-e13steparea';
 
 /***************
  * Configure element type
  */
-
-$GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits'] = array_replace_recursive(
-    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits'],
+$GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e13steparea'] = array_replace_recursive(
+    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e13steparea'],
     [
         'showitem' => '
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-            tx_sand_sitepackage_teaser_item,
+            header,bodytext,tx_sand_sitepackage_teaser_item,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
             --palette--;;language,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
@@ -62,7 +60,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits'] = array_re
     ]
 );
 
-$GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits']['columnsOverrides'] = [
+$GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e13steparea']['columnsOverrides'] = [
     'tx_sand_sitepackage_teaser_item' => [
         'config' => [
             'overrideChildTca' => [
@@ -70,9 +68,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits']['columnsOv
                     '1' => [
                         'showitem' => '
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            header,
-                            image_position,
-                            tx_sand_sitepackage_teaser_item2,
+                            header,bodytext,color_select,
                             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
@@ -81,38 +77,22 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits']['columnsOv
                     ],
                 ],
                 'columns' => [
-                    'image_position' => [
-                        'label' => $ll . 'address',
+                    'color_select' => [
+                        'label' => 'Background color',
                         'config' => [
                             'type' => 'select',
                             'renderType' => 'selectSingle',
                             'items' => [
-                                ['bar-list-in', 'bar-list-in'],
-                                ['bar-list-out', 'bar-list-out'],
+                                ['blue', 'blue'],
+                                ['green', 'green'],
+                                ['powder', 'powder'],
+                                ['white', 'white'],
                             ],
                         ]
                     ],
-                    'tx_sand_sitepackage_teaser_item2' => [
-                        'config' => [
-                            'overrideChildTca' => [
-                                'types' => [
-                                    '1' => [
-                                        'showitem' => '
-                            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            bodytext,
-                            --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
-                            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
-                            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
-                            --palette--;;hiddenLanguagePalette,
-                        '
-                                    ],
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
+                ]
             ],
+            'maxitems' => 4,
         ],
     ],
-
 ];

@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e13steparea ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e13steparea {
+            iconIdentifier = sandsitepackage-e13steparea
+            title = E-13 Step area
+            description = Content to desplay Blocks
+            tt_content_defValues {
+                CType = sandsitepackage_e13steparea
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e13steparea)
+}

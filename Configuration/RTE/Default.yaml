@@ -11,6 +11,8 @@ editor:
             - { name: "text color blue", element: "p", attributes: { 'class': 'text-color-blue' } }
             - { name: "content-paragraph mt-5 text-center", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-center' } }
             - { name: "content-paragraph", element: "p", attributes: { 'class': 'content-paragraph' } }
+            - { name: "content-paragraph text-color-blue mt-3 max-w-[980px]", element: "p", attributes: { 'class': 'content-paragraph text-color-blue mt-3 max-w-[980px]' } }
+            - { name: "content-paragraph text-color-blue", element: "p", attributes: { 'class': 'content-paragraph text-color-blue' } }
 
             - { name: "Blue", element: "p", attributes: { 'class': 'blue' } }
             - { name: "Text XX-Small", element: "p", attributes: { 'class': 'text-xxsmall' } }

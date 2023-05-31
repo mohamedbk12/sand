@@ -1,0 +1,20 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="step-area" id="c{data.uid}">
+
+    <h2 class="title-rectangle short">{data.header}</h2>
+    <f:format.html>{data.bodytext}</f:format.html>
+    <div class="steps">
+        <f:for each="{records}" as="item" iteration="i">
+            <div
+                class="{f:if(condition: '{item.data.color_select} == white', then: 'col-span-3', else: 'col-span-3 bg-color-{item.data.color_select}')}">
+                <div
+                    class="count {f:if(condition: '{item.data.color_select} == white', then: 'blue-square', else: 'white-square')}">
+                    0{i.cycle}</div>
+                <strong class="content-title {f:if(condition: '{item.data.color_select} == white', then: 'text-color-blue')}">{item.data.header}</strong>
+                <f:format.html>{item.data.bodytext}</f:format.html>
+            </div>
+        </f:for>
+    </div>
+</div>
+
+</html>
