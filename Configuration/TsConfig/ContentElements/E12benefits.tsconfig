@@ -1,0 +1,17 @@
+####################################
+#### CE WIZARD: Contact Teaser #####
+####################################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e12benefits {
+            iconIdentifier = sandsitepackage-e12benefits
+            title = E-12 Benefits
+            description = content element to desplay list of benifits
+            tt_content_defValues {
+                CType = sandsitepackage_e12benefits
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e12benefits)
+}

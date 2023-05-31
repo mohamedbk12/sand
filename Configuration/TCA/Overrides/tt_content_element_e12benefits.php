@@ -14,9 +14,9 @@ $ll = 'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:';
 /***************
  * Add Content Element
  */
-    if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_contactteaser'])) {
-        $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_contactteaser'] = [];
-    }
+if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits'])) {
+    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits'] = [];
+}
 
 
 /***************
@@ -26,9 +26,9 @@ $ll = 'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:';
     'tt_content',
     'CType',
     [
-        'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:contactteaser',
-        'sandsitepackage_contactteaser',
-        'sandsitepackage-contactteaser'
+        'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:e12benefits',
+        'sandsitepackage_e12benefits',
+        'sandsitepackage-e12benefits'
     ],
     '--div--',
     'after'
@@ -37,16 +37,16 @@ $ll = 'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:';
 /***************
  * Assign Icon
  */
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['sandsitepackage_contactteaser'] = 'sandsitepackage-contactteaser';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['sandsitepackage_e12benefits'] = 'sandsitepackage-e12benefits';
 
 /***************
  * Configure element type
  */
 
-    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_contactteaser'] = array_replace_recursive(
-        $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_contactteaser'],
-        [
-            'showitem' => '
+$GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits'] = array_replace_recursive(
+    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits'],
+    [
+        'showitem' => '
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
             tx_sand_sitepackage_teaser_item,
@@ -59,60 +59,52 @@ $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['sandsitepackage_conta
             rowDescription,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
         '
-        ]
-    );
+    ]
+);
 
-    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_contactteaser']['columnsOverrides'] = [
-        'tx_sand_sitepackage_teaser_item' => [
-            'config' => [
-                'overrideChildTca' => [
-                    'types' => [
-                        '1' => [
-                            'showitem' => '
+$GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e12benefits']['columnsOverrides'] = [
+    'tx_sand_sitepackage_teaser_item' => [
+        'config' => [
+            'overrideChildTca' => [
+                'types' => [
+                    '1' => [
+                        'showitem' => '
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            image,
                             header,
-                            subheader,
-                            email,
-                            tel,
-                            link_text,
-                            links_title,
+                            image_position,
                             tx_sand_sitepackage_teaser_item2,
                             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
                             --palette--;;hiddenLanguagePalette,
                         '
-                        ],
                     ],
-                    'columns' => [
-                        'header' => [
-                            'label' => $ll . 'name',
-                        ],
-                        'subheader' => [
-                            'label' => $ll . 'address',
-                            'config' => [
-                                'type' => 'input',
-                                'eval' => 'trim',
+                ],
+                'columns' => [
+                    'image_position' => [
+                        'label' => $ll . 'address',
+                        'config' => [
+                            'type' => 'select',
+                            'renderType' => 'selectSingle',
+                            'items' => [
+                                ['bar-list-in', 'bar-list-in'],
+                                ['bar-list-out', 'bar-list-out'],
                             ],
-                        ],
-                        'link_text' => [
-                            'label' => $ll . 'linkedin'
-                        ],
-                        'tx_sand_sitepackage_teaser_item2' => [
-                            'config' => [
-                                'overrideChildTca' => [
-                                    'types' => [
-                                        '1' => [
-                                            'showitem' => '
+                        ]
+                    ],
+                    'tx_sand_sitepackage_teaser_item2' => [
+                        'config' => [
+                            'overrideChildTca' => [
+                                'types' => [
+                                    '1' => [
+                                        'showitem' => '
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            --palette--;' . $ll . 'link;linkpalette,
+                            bodytext,
                             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
                             --palette--;;hiddenLanguagePalette,
                         '
-                                        ],
                                     ],
                                 ],
                             ],
@@ -121,5 +113,6 @@ $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['sandsitepackage_conta
                 ],
             ],
         ],
+    ],
 
-    ];
+];

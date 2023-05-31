@@ -1,9 +1,9 @@
-tt_content.sandsitepackage_contactteaser =< lib.contentElement
-tt_content.sandsitepackage_contactteaser {
+tt_content.sandsitepackage_e12benefits =< lib.contentElement
+tt_content.sandsitepackage_e12benefits {
     ################
     ### TEMPLATE ###
     ################
-    templateName = ContactTeaser
+    templateName = E12benefits
 
     ##########################
     ### DATA PREPROCESSING ###
