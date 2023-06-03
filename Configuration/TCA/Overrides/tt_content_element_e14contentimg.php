@@ -68,7 +68,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e14contentimg']['columns
                     '1' => [
                         'showitem' => '
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            header,bodytext,color_select,image,
+                            image_position,header,bodytext,color_select,image,tx_sand_sitepackage_teaser_item2,
                             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
@@ -88,9 +88,38 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e14contentimg']['columns
                             ],
                         ]
                     ],
+                    'image_position' => [
+                        'label' => 'display type',
+                        'config' => [
+                            'type' => 'select',
+                            'renderType' => 'selectSingle',
+                            'items' => [
+                                ['1 Image', 'col-span-6 grid grid-cols-12'],
+                                ['3 Image', 'col-span-6 lg:grid flex flex-col md:gap-12 gap-6 grid-cols-12'],
+                            ],
+                        ]
+                    ],
+                    'tx_sand_sitepackage_teaser_item2' => [
+                        'config' => [
+                            'overrideChildTca' => [
+                                'types' => [
+                                    '1' => [
+                                        'showitem' => '
+                                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
+                                header,image,
+                                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
+                                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
+                                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
+                                --palette--;;hiddenLanguagePalette,
+                            '
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
                 ]
             ],
-            'maxitems' => 4,
+
         ],
     ],
 ];
