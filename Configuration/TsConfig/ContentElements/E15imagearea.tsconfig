@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e15imagearea ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e15imagearea {
+            iconIdentifier = sandsitepackage-e15imagearea
+            title = E-15 Image area
+            description = Content to desplay Blocks
+            tt_content_defValues {
+                CType = sandsitepackage_e15imagearea
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e15imagearea)
+}

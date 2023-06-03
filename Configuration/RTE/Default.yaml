@@ -13,6 +13,12 @@ editor:
             - { name: "content-paragraph", element: "p", attributes: { 'class': 'content-paragraph' } }
             - { name: "content-paragraph text-color-blue mt-3 max-w-[980px]", element: "p", attributes: { 'class': 'content-paragraph text-color-blue mt-3 max-w-[980px]' } }
             - { name: "content-paragraph text-color-blue", element: "p", attributes: { 'class': 'content-paragraph text-color-blue' } }
+            - { name: "content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4", element: "div", attributes: { 'class': 'content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4' } }
+            - { name: "h2", element: "h2", attributes: { 'class': ' ' } }
+            - { name: "content-bordered-y", element: "div", attributes: { 'class': 'content-bordered-y' } }
+            - { name: "strong", element: "strong", attributes: { 'class': ' ' } }
+            - { name: "span", element: "span", attributes: { 'class': ' ' } }
+            - { name: "div", element: "div", attributes: { 'class': ' ' } }
 
             - { name: "Blue", element: "p", attributes: { 'class': 'blue' } }
             - { name: "Text XX-Small", element: "p", attributes: { 'class': 'text-xxsmall' } }

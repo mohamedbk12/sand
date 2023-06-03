@@ -1,0 +1,19 @@
+tt_content.sandsitepackage_e15imagearea =< lib.contentElement
+tt_content.sandsitepackage_e15imagearea {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = E15imagearea
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+        dataProcessing {
+        50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        50 {
+            references.fieldName = image
+            as = image
+        }
+    }
+
+}
