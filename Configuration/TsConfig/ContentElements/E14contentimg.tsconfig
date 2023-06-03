@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e14contentimg ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e14contentimg {
+            iconIdentifier = sandsitepackage-e14contentimg
+            title = E-14 Content image
+            description = Content to desplay Blocks
+            tt_content_defValues {
+                CType = sandsitepackage_e14contentimg
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e14contentimg)
+}

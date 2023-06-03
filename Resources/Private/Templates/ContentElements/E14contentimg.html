@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="default-container md:grid flex flex-col gap-5 grid-cols-12" id="c{data.uid}">
+    <f:for each="{records}" as="item" iteration="i">
+        <div class="content-img-1-{item.data.color_select} col-span-6">
+            <f:if condition="{item.image.0}">
+                <div class="content-img">
+                    <f:image image="{item.image.0}" />
+                </div>
+            </f:if>
+            <div class="content-img-txt">
+                <h3>{item.data.header}</h3>
+                <f:if condition="{item.data.bodytext}">
+                    <f:format.html>{item.data.bodytext}</f:format.html>
+                </f:if>
+            </div>
+        </div>
+
+    </f:for>
+</div>
+<br>
+</html>
