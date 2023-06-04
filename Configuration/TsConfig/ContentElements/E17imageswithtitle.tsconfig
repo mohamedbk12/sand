@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e17imageswithtitle ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e17imageswithtitle {
+            iconIdentifier = sandsitepackage-e17imageswithtitle
+            title = E-17 Images with titles
+            description = Content to desplay Blocks
+            tt_content_defValues {
+                CType = sandsitepackage_e17imageswithtitle
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e17imageswithtitle)
+}
