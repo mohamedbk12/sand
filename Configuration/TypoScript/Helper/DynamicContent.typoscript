@@ -62,3 +62,10 @@ lib.dynamicContent {
     }
     90 = RESTORE_REGISTER
 }
+
+lib.contentElementRendering = RECORDS
+lib.contentElementRendering {
+	tables = tt_content
+	source.current = 1
+	dontCheckPid = 1
+}

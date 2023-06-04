@@ -1,0 +1,57 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="default-container grid grid-cols-12" id="c{data.uid}">
+    <div class="content-img-area col-span-12">
+        <div class="content-img">
+            <f:if condition="{image.0}">
+                <f:image image="{image.0}" />
+            </f:if>
+        </div>
+
+        <div class="content-template-3 lg:absolute left-0 top-2/4 lg:-translate-y-2/4">
+            <div>
+                <h2>{data.header}</h2>
+                <f:format.html>{data.bodytext}</f:format.html>
+
+                <div class="gallery lg:grid flex flex-col gap-y-0 gap-x-6 grid-cols-12 mt-10">
+                    <f:for each="{records}" as="item" iteration="i">
+                        <f:if condition="{i.index} == 2 ">
+                            <f:then>
+                                <div class="content-img-2 col-span-12">
+                                    <div class="content-img h-full">
+                                        <f:if condition="{item.image.0}">
+                                            <f:image image="{item.image.0}" />
+                                        </f:if>
+                                    </div>
+                                    <div class="content-img-txt">
+                                        <p class="list-style-square-blue">{item.data.header}</p>
+                                    </div>
+                                </div>
+                            </f:then>
+                            <f:else>
+                                <div class="content-img-2 col-span-6">
+                                    <div class="content-img h-52">
+                                        <f:if condition="{item.image.0}">
+                                            <f:image image="{item.image.0}" />
+                                        </f:if>
+                                    </div>
+                                    <div class="content-img-txt">
+                                        <p class="list-style-square-blue">{item.data.header}</p>
+                                    </div>
+                                </div>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<br>
+
+
+
+
+</html>

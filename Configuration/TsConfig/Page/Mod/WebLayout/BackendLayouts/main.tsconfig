@@ -18,9 +18,6 @@ mod {
                                         name = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:backend_layout.column.header
                                         colPos = 1
                                         colspan = 12
-                                          allowed{
-                                            CType = sandsitepackage_hero, textpic, textmedia
-                                        }   
                                     }
                                 }
                             }
@@ -30,10 +27,6 @@ mod {
                                         name = LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_be.xlf:backend_layout.column.main
                                         colPos = 0
                                         colspan = 12
-                                        allowed{
-                                            CType = list, table, textpic, textmedia, sandsitepackage_hero, sandsitepackage_text, sandsitepackage_teasergrid, sandsitepackage_socialmediawall, sandsitepackage_stickylinks, sandsitepackage_newsletterplaceholder, sandsitepackage_contactteaser, sandsitepackage_sharelinks, sandsitepackage_download, sandsitepackage_downloadlist, sandsitepackage_quoteteaser, sandsitepackage_twocolumnteasers, sandsitepackage_fullwidthimagedownload, sandsitepackage_contributioncalculator, sandsitepackage_partners, sandsitepackage_internalexternallinks
-                                            list_type = news_pi1, ttaddress_listview, sandmembers_listview, sandevents_detailview, sandmall_list, sandmall_details, sandmall_manageoffers, sandevents_requestform
-                                        }
                                     }
                                 }
                             }

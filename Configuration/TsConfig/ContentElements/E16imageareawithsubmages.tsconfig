@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e16imageareawithsubmages ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e16imageareawithsubmages {
+            iconIdentifier = sandsitepackage-e16imageareawithsubmages
+            title = E-16 Image area with sub images
+            description = Content to desplay Blocks
+            tt_content_defValues {
+                CType = sandsitepackage_e16imageareawithsubmages
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e16imageareawithsubmages)
+}
