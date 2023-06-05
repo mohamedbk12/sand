@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="content-long-img" id="c{data.uid}">
+    <f:image image="{image.0}" />
+    <div class="grid 3xl:grid-cols-10 grid-cols-2">
+        <f:for each="{records}" as="item" iteration="i">
+            <div class="{item.data.image_position} {item.data.color_select}">
+                <div>
+                    <div class="t">
+                        <b>0{i.index}</b>
+                        <strong>{item.data.header}</strong>
+                    </div>
+                    <f:format.html>{item.data.bodytext}</f:format.html>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>
+
+<br>
+
+</html>

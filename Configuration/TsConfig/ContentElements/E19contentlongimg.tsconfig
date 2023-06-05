@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e19contentlongimg ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e19contentlongimg {
+            iconIdentifier = sandsitepackage-e19contentlongimg
+            title = E-19 Content long image
+            description = Content to desplay texts
+            tt_content_defValues {
+                CType = sandsitepackage_e19contentlongimg
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e19contentlongimg)
+}
