@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e18texts ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e18texts {
+            iconIdentifier = sandsitepackage-e18texts
+            title = E-18 Texts
+            description = Content to desplay texts
+            tt_content_defValues {
+                CType = sandsitepackage_e18texts
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e18texts)
+}

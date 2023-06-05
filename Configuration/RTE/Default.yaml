@@ -19,6 +19,7 @@ editor:
             - { name: "strong", element: "strong", attributes: { 'class': ' ' } }
             - { name: "span", element: "span", attributes: { 'class': ' ' } }
             - { name: "div", element: "div", attributes: { 'class': ' ' } }
+            - { name: "content-title text-color-blue", element: "h3", attributes: { 'class': 'content-title text-color-blue' } }
 
             - { name: "Blue", element: "p", attributes: { 'class': 'blue' } }
             - { name: "Text XX-Small", element: "p", attributes: { 'class': 'text-xxsmall' } }
