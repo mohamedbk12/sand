@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e20contentimg2 ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e20contentimg2 {
+            iconIdentifier = sandsitepackage-e20contentimg2
+            title = E-20 content image 2
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e20contentimg2
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e20contentimg2)
+}

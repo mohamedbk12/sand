@@ -20,6 +20,9 @@ editor:
             - { name: "span", element: "span", attributes: { 'class': ' ' } }
             - { name: "div", element: "div", attributes: { 'class': ' ' } }
             - { name: "content-title text-color-blue", element: "h3", attributes: { 'class': 'content-title text-color-blue' } }
+            - { name: "h3 white", element: "h3", attributes: { 'class': 'content-title' } }
+            - { name: "h2 with buttom border", element: "h2", attributes: { 'class': 'content-title border-bottom' } }
+            - { name: "h2 with buttom border", element: "h2", attributes: { 'class': 'content-title border-bottom' } }
 
             - { name: "Blue", element: "p", attributes: { 'class': 'blue' } }
             - { name: "Text XX-Small", element: "p", attributes: { 'class': 'text-xxsmall' } }
