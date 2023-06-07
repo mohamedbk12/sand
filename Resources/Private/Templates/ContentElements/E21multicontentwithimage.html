@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="relative h-[1300px]" id="c{data.uid}">
+    <div class="content-img">
+        <f:image image="{image.0}" class="h-full" />
+    </div>
+    <div class="lg:absolute static left-32 top-2/4 lg:-translate-y-2/4 lg:max-w-[700px]">
+        <f:for each="{records}" as="item" iteration="i">
+            <div class="lg:content-bg py-10 px-5 p-14 bg-color-white {item.data.color_select}">
+                <h3 class="content-title">
+                    <svg class="rotate-180 inline-block md:-translate-y-1 -translate-y-1 md:h-8 h-5"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 19 44">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_1" data-name="Rectangle 1" width="19" height="44" fill="#0c3766">
+                                </rect>
+                            </clipPath>
+                        </defs>
+                        <g id="Group_1" data-name="Group 1" clip-path="url(#clip-path)">
+                            <path id="Path_1" data-name="Path 1"
+                                d="M6.541,22,18.872,1.252a1.124,1.124,0,0,0,.095-.8C18.9.179,18.74,0,18.564,0H13.075a.376.376,0,0,0-.308.215L.128,21.482a1.116,1.116,0,0,0,0,1.037L12.767,43.785a.376.376,0,0,0,.308.215h5.489c.176,0,.336-.179.4-.452a1.124,1.124,0,0,0-.095-.8Z"
+                                fill="#0c3766"></path>
+                        </g>
+                    </svg>
+                    {item.data.header}
+                </h3>
+                <f:format.html>{item.data.bodytext}</f:format.html>
+            </div>
+        </f:for>
+    </div>
+</div>
+
+</html>

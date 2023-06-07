@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e21multicontentwithimage ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e21multicontentwithimage {
+            iconIdentifier = sandsitepackage-e21multicontentwithimage
+            title = E-21 Multi content image 2
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e21multicontentwithimage
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e21multicontentwithimage)
+}
