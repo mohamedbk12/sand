@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e22contentImagewithbackgroundcolor ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e22contentImagewithbackgroundcolor {
+            iconIdentifier = sandsitepackage-e22contentImagewithbackgroundcolor
+            title = E-22 content Image with  background color
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e22contentImagewithbackgroundcolor
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e22contentImagewithbackgroundcolor)
+}
