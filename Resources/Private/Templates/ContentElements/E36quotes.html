@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="content-template-7" id="c{data.uid}">
+    <f:for each="{records}" as="item" iteration="i">
+        <div class="box">
+            <div class="content-img">
+                <f:if condition="{item.image.0}">
+                    <f:image image="{item.image.0}" />
+                </f:if>
+            </div>
+            <div class="txt-area">
+                <strong>{item.data.header}</strong>
+                <span>{item.data.subheader} <br> {item.data.link_text} </span>
+                <div class="abs-txt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#0C3766" viewBox="0 0 24 24">
+                        <path
+                            d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z">
+                        </path>
+                    </svg>
+                    <f:format.html>{item.data.bodytext}</f:format.html>
+                </div>
+            </div>
+        </div>
+    </f:for>
+</div>
+<br>
+</html>

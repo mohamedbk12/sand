@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e23chartflow ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e36quotes {
+            iconIdentifier = sandsitepackage-e36quotes
+            title = E-36 quotes 
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e36quotes
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e36quotes)
+}
