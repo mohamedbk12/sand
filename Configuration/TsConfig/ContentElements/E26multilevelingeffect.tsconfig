@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e26multilevelingeffect ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e26multilevelingeffect {
+            iconIdentifier = sandsitepackage-e26multilevelingeffect
+            title = E-26 multi leveling effect
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e26multilevelingeffect
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e26multilevelingeffect)
+}
