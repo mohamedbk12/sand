@@ -24,6 +24,10 @@ editor:
             - { name: "h2 with buttom border", element: "h2", attributes: { 'class': 'content-title border-bottom' } }
             - { name: "h2 with buttom border", element: "h2", attributes: { 'class': 'content-title border-bottom' } }
             - { name: "left blue text", element: "div", attributes: { 'class': 'content-paragraph mt-5' } }
+            - { name: "blue text mt5", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-color-blue' } }
+            - { name: "bordered text", element: "div", attributes: { 'class': 'content-bordered-y mt-12' } }
+            - { name: "blue bold font", element: "span", attributes: { 'class': 'content-title mt-0 text-color-blue text-7xl DINpro-bold font-bold' } }
+            - { name: "blue font", element: "span", attributes: { 'class': 'content-title mt-0 text-color-blue mb-6' } }
 
             - { name: "Blue", element: "p", attributes: { 'class': 'blue' } }
             - { name: "Text XX-Small", element: "p", attributes: { 'class': 'text-xxsmall' } }
