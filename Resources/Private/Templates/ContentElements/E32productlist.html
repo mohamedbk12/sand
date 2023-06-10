@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div id="c{data.uid}">
+    <div class="title-rectangle">{data.header}</div>
+    <p class="content-paragraph mt-3 text-color-blue pl-24 max-w-[1500px]">{data.subheader}
+    </p>
+    <div class="lg:grid flex flex-col 3xl:grid-cols-12 lg:grid-cols-8 mt-10">
+        <f:for each="{records}" as="item" iteration="i">
+            <div
+                class="col-span-4 lg:grid flex grid-cols-12 lg:gap-20 gap-10 items-center hover:shadow-product-info-detail transition-all p-5">
+                <div class="content-img col-span-4 lg:w-auto w-36 min-w-[9rem]">
+                    <f:if condition="{item.image.0}">
+                        <f:image image="{item.image.0}" />
+                    </f:if>
+                </div>
+                <div class="col-span-8 lg:w-auto w-full">
+                    <strong class="content-title text-color-blue">{item.data.header}</strong>
+                    <p class="content-paragraph mt-3 text-color-blue">{item.data.subheader}</p>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>
+
+</html>
