@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e29process ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e29process {
+            iconIdentifier = sandsitepackage-e29process
+            title = E-29 process
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e29process
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e29process)
+}

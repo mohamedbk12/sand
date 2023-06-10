@@ -454,6 +454,27 @@ return [
                 'eval' => 'trim',
             ],
         ],
+        'total' => [
+            'label' => 'Total',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+            ],
+        ],
+        'used' => [
+            'label' => 'Used',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+            ],
+        ],
+        'usedpercent' => [
+            'label' => 'Used percent',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+            ],
+        ],
     ],
 ];
 

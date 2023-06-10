@@ -54,6 +54,9 @@ CREATE TABLE tx_sand_sitepackage_teaser_item (
     outputfrequency varchar(1024) DEFAULT '' NOT NULL,
     outputpower varchar(255) DEFAULT '' NOT NULL,
     machinename varchar(255) DEFAULT '' NOT NULL,
+    total varchar(1024) DEFAULT '' NOT NULL,
+    used varchar(255) DEFAULT '' NOT NULL,
+    usedpercent varchar(255) DEFAULT '' NOT NULL,
 );
 
 #
