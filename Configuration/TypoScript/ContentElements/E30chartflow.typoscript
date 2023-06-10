@@ -1,13 +1,20 @@
-tt_content.sandsitepackage_partners =< lib.contentElement
-tt_content.sandsitepackage_partners {
+tt_content.sandsitepackage_e30chartflow =< lib.contentElement
+tt_content.sandsitepackage_e30chartflow {
     ################
     ### TEMPLATE ###
     ################
-    templateName = Partners
+    templateName = E30chartflow
 
-    ##########################
+##########################
     ### DATA PREPROCESSING ###
     ##########################
+    dataProcessing {
+        50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        50 {
+            references.fieldName = image
+            as = image
+        }
+    }
     dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
         10 {
@@ -18,11 +25,10 @@ tt_content.sandsitepackage_partners {
                 intval = 1
                 wrap = tt_content=|
             }
-
             orderBy = sorting
-            dataProcessing {
-                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-                10 {
+                dataProcessing {
+                20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                20 {
                     references.fieldName = image
                     as = image
                 }

@@ -14,8 +14,8 @@ $ll = 'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:';
 /***************
  * Add Content Element
  */
-if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_teasergrid'])) {
-    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_teasergrid'] = [];
+if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e30chartflow'])) {
+    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e30chartflow'] = [];
 }
 
 /***************
@@ -25,9 +25,9 @@ if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_teasergrid'])
     'tt_content',
     'CType',
     [
-        'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:teasergrid',
-        'sandsitepackage_teasergrid',
-        'sandsitepackage-teasergrid'
+        'E-30 chart flow',
+        'sandsitepackage_e30chartflow',
+        'sandsitepackage-e30chartflow'
     ],
     '--div--',
     'after'
@@ -36,19 +36,18 @@ if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_teasergrid'])
 /***************
  * Assign Icon
  */
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['sandsitepackage_teasergrid'] = 'sandsitepackage-teasergrid';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['sandsitepackage_e30chartflow'] = 'sandsitepackage-e30chartflow';
 
 /***************
  * Configure element type
  */
-$GLOBALS['TCA']['tt_content']['types']['sandsitepackage_teasergrid'] = array_replace_recursive(
-    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_teasergrid'],
+$GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e30chartflow'] = array_replace_recursive(
+    $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e30chartflow'],
     [
         'showitem' => '
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-            header,header_layout,background,
-            tx_sand_sitepackage_teaser_item,
+           tx_sand_sitepackage_teaser_item,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
             --palette--;;language,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
@@ -61,7 +60,8 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_teasergrid'] = array_rep
     ]
 );
 
-$GLOBALS['TCA']['tt_content']['types']['sandsitepackage_teasergrid']['columnsOverrides'] = [
+
+$GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e30chartflow']['columnsOverrides'] = [
     'tx_sand_sitepackage_teaser_item' => [
         'config' => [
             'overrideChildTca' => [
@@ -69,14 +69,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_teasergrid']['columnsOve
                     '1' => [
                         'showitem' => '
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            color_select,
-                            image_position,
-                            subheader,
-                            header,
-                            bodytext,
-                            date,
-                            link,
-                            media,
+                            box_type,header,subheader,bodytext,
                             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
@@ -85,34 +78,25 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_teasergrid']['columnsOve
                     ],
                 ],
                 'columns' => [
-                    'subheader' => [
-                        'label' => 'LLL:EXT:sand_sitepackage/Resources/Private/Language/locallang_db.xlf:teaserType',
-                        'config' => [
-                            'type' => 'input',
-                            'eval' => 'trim',
-                        ],
-                    ],
-                    'bodytext' => [
-                        'config' => [
-                            'enableRichtext' => false,
-                            'rows' => 6
-                        ],
-                    ],
-                    'link' => [
-                        'config' => [
-                            'eval' => 'trim,required',
-                        ],
-                    ],
-                    'image_position' => [
-                        'label' => $ll.'boxSize',
+                    'box_type' => [
+                        'label' => 'Type',
                         'config' => [
                             'type' => 'select',
                             'renderType' => 'selectSingle',
                             'items' => [
-                                ['Big Box', 'big-box'],
-                                ['Small Box', 'small-box'],
+                                ['Circle', 'circle'],
+                                ['Square', 'square'],
                             ],
                         ]
+                    ],
+                    'header' => [
+                        'label' => 'First content',
+                    ],
+                    'subheader' => [
+                        'label' => 'Seconde content',
+                    ],
+                    'bodytext' => [
+                        'label' => 'Third content',
                     ],
                 ]
             ],

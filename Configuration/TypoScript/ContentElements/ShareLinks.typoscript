@@ -1,8 +1,0 @@
-tt_content.sandsitepackage_sharelinks =< lib.contentElement
-tt_content.sandsitepackage_sharelinks {
-    ################
-    ### TEMPLATE ###
-    ################
-    templateName = ShareLinks
-
-}

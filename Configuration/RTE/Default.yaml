@@ -28,6 +28,7 @@ editor:
             - { name: "bordered text", element: "div", attributes: { 'class': 'content-bordered-y mt-12' } }
             - { name: "blue bold font", element: "span", attributes: { 'class': 'content-title mt-0 text-color-blue text-7xl DINpro-bold font-bold' } }
             - { name: "blue font", element: "span", attributes: { 'class': 'content-title mt-0 text-color-blue mb-6' } }
+            - { name: "buttom text", element: "span", attributes: { 'class': 'txt bottom' } }
 
             - { name: "Blue", element: "p", attributes: { 'class': 'blue' } }
             - { name: "Text XX-Small", element: "p", attributes: { 'class': 'text-xxsmall' } }

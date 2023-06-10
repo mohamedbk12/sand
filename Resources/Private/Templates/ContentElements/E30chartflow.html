@@ -1,0 +1,73 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="grid lg:grid-cols-12 grid-cols-6" id="c{data.uid}">
+    <f:for each="{records}" as="item" iteration="i">
+        <f:if condition="{item.data.box_type} == circle">
+            <f:then>
+                <div class="col-span-6">
+                    <div class="abstract-1">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <span class="center">{item.data.header}</span>
+                        <div class="line"></div>
+                        <span class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9.664" height="18.295"
+                                viewBox="0 0 9.664 18.295">
+                                <path id="Path_5004" data-name="Path 5004"
+                                    d="M122.071,8.783l-8.63-8.63a.518.518,0,0,0-.732.732l8.262,8.262-8.262,8.262a.52.52,0,0,0,.364.886.505.505,0,0,0,.364-.153l8.63-8.63A.515.515,0,0,0,122.071,8.783Z"
+                                    transform="translate(-112.556 0)" fill="#0c3766"></path>
+                            </svg>
+                        </span>
+                        <span class="xmark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15.318" height="15.318"
+                                viewBox="0 0 15.318 15.318">
+                                <g id="Group_88" data-name="Group 88" transform="translate(-959.682 -388.217)">
+                                    <rect id="Rectangle_50" data-name="Rectangle 50" width="20.151" height="1.511"
+                                        transform="translate(960.751 388.217) rotate(45)" fill="#0c3766"></rect>
+                                    <rect id="Rectangle_52" data-name="Rectangle 52" width="20.151" height="1.511"
+                                        transform="translate(959.682 402.466) rotate(-45)" fill="#0c3766"></rect>
+                                </g>
+                            </svg>
+                        </span>
+                        <span class="txt top">{item.data.subheader}</span>
+                        <f:format.html>{item.data.bodytext}</f:format.html>
+                    </div>
+                </div>
+            </f:then>
+            <f:else>
+                <div class="col-span-6">
+                    <div class="abstract-2">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <span class="center">{item.data.header}</span>
+                        <div class="line"></div>
+                        <span class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9.664" height="18.295"
+                                viewBox="0 0 9.664 18.295">
+                                <path id="Path_5004" data-name="Path 5004"
+                                    d="M122.071,8.783l-8.63-8.63a.518.518,0,0,0-.732.732l8.262,8.262-8.262,8.262a.52.52,0,0,0,.364.886.505.505,0,0,0,.364-.153l8.63-8.63A.515.515,0,0,0,122.071,8.783Z"
+                                    transform="translate(-112.556 0)" fill="#0c3766"></path>
+                            </svg>
+                        </span>
+                        <span class="xmark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15.318" height="15.318"
+                                viewBox="0 0 15.318 15.318">
+                                <g id="Group_88" data-name="Group 88" transform="translate(-959.682 -388.217)">
+                                    <rect id="Rectangle_50" data-name="Rectangle 50" width="20.151" height="1.511"
+                                        transform="translate(960.751 388.217) rotate(45)" fill="#0c3766"></rect>
+                                    <rect id="Rectangle_52" data-name="Rectangle 52" width="20.151" height="1.511"
+                                        transform="translate(959.682 402.466) rotate(-45)" fill="#0c3766"></rect>
+                                </g>
+                            </svg>
+                        </span>
+                        <span class="txt top">{item.data.subheader}</span>
+                        <f:format.html>{item.data.bodytext}</f:format.html>
+                    </div>
+                </div>
+            </f:else>
+        </f:if>
+    </f:for>
+</div>
+
+
+
+</html>

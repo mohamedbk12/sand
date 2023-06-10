@@ -1,7 +1,0 @@
-tt_content.sandsitepackage_registerconfirm =< lib.contentElement
-tt_content.sandsitepackage_registerconfirm {
-    ################
-    ### TEMPLATE ###
-    ################
-    templateName = RegisterConfirm
-}

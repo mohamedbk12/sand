@@ -1,8 +1,0 @@
-tt_content.sandsitepackage_newsletterplaceholder =< lib.contentElement
-tt_content.sandsitepackage_newsletterplaceholder {
-    ################
-    ### TEMPLATE ###
-    ################
-    templateName = newsletterplaceholder
-
-}
