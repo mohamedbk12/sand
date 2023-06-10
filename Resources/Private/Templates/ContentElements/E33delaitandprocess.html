@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<br>
+<div class="default-container px-3">
+    <div class="content-template-5 " id="c{data.uid}">
+        <f:for each="{records}" as="item" iteration="i">
+            <div>
+                <strong>{item.data.header}</strong>
+                <f:for each="{item.records}" as="item2" iteration="i">
+                    <f:if condition="{item2.data.color_select} == delait">
+                        <f:then>
+                            <div>
+                                <span class="content-title">{item2.data.header}</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="196" height="16" viewBox="0 0 196 16">
+                                    <image id="Vektör_Akıllı_Nesne_kopya_2" data-name="Vektör Akıllı Nesne kopya 2"
+                                        width="196" height="16"
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAAAQCAYAAABJCdBSAAAABHNCSVQICAgIfAhkiAAAAbNJREFUaEPtWl1KxDAY3K764AEEBRFEQUHBK6j44ILoi1fYU+0VfFEEfRD1CoKigkUQYQUP4IM/3RlppMSkrKUqSScwLM32azPTDP3SfEmWZS1Pm0D/PjAPrAB934nqlwIBKDCFMV4AD0AHeHaNOfEYgmY4BZaBV2ABuA+AtIYoBXwKzOKPW2AMuATWXaZwGcI2wy4CD6SzFIhAgW1w2CszhW0ImSGCpy4KpQoUTXGFMzeBRxNRNMQ0Os8ArhleAAaeSFwpEKECTJcOgXEgBVaNKYwhaIZzYC43wxZ+uYZQkwKxKuA0BQ1RNMMH2Hd/wQy8h934eesJeI9VcfGqpMAooiY9kV+pTaUrfw+iKXpA27wpaIhrHCzWdANdRgqErEBKQ9zlqVLIRDR2KVCHAjf/mTKRAFOmtzqY6BrRKDCSp0yJg9GfpEy8rxbV0cwnERlSAe+i2sTLFEMqqdOCV2ADDLjZzM+uXDKsAZ9vH3tjjqY4BpYAlmxolzr4Zy8ClgKlu9Uq3dB8aZICPy7dMOKouK9J06QZXCsX9xVNcYSDGUDl382YNDGzNOXfXDPsAM7y7wGvV4rMqQ6AIAAAAABJRU5ErkJggg==">
+                                    </image>
+                                </svg>
+                                <strong class="content-title font-bold text-center">{item2.data.subheader}</strong>
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <div>
+                                <f:format.html>{item2.data.bodytext}</f:format.html>
+                            </div>
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </div>
+        </f:for>
+    </div>
+</div>
+
+
+</html>

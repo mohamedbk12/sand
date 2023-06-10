@@ -32,6 +32,7 @@ editor:
             - { name: "square li", element: "li", attributes: { 'class': 'content-paragraph mt-2 list-style-square-white' } }
             - { name: "normal li", element: "li", attributes: { 'class': 'content-paragraph mt-2 list-style-square-transparent' } }
             - { name: "px-10", element: "div", attributes: { 'class': 'content-paragraph mt-0 py-4 px-10' } }
+            - { name: "default li", element: "li", attributes: { 'class': ' ' } }
 
 
             - { name: "Blue", element: "p", attributes: { 'class': 'blue' } }
