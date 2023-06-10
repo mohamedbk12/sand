@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="md:grid flex flex-col grid-cols-12 w-full max-w-[1500px] mx-auto relative" id="c{data.uid}">
+    <div class="col-span-6 flex flex-col items-end">
+        <div class="w-full bg-color-powder content-img" style="aspect-ratio: 1.25;">
+            <f:if condition="{records.0.image.0}">
+                <f:image image="{records.0.image.0}" />
+            </f:if>
+        </div>
+        <div class="md:flex hidden w-[70%] bg-color-green content-img" style="aspect-ratio: .875;">
+            <f:if condition="{records.1.image.0}">
+                <f:image image="{records.1.image.0}" />
+            </f:if>
+        </div>
+    </div>
+    <div class="col-span-6 md:flex hidden flex-col w-full lg:mt-60 mt-[40%] bg-color-blue content-img"
+        style="aspect-ratio: .9375;">
+        <f:if condition="{records.2.image.0}">
+            <f:image image="{records.2.image.0}" />
+        </f:if>
+    </div>
+    <div
+        class="txt md:absolute md:-translate-y-0 -translate-y-10 bg-color-white lg:p-14 p-7 lg:top-20 top-5 right-0 md:max-w-[65%] max-w-[95%] md:mx-0 mx-auto md:shadow-none shadow-xl">
+        <strong class="content-title lg:text-4xl text-xl">{data.header}</strong>
+        <p class="content-paragraph lg:text-2xl text-sm lg:mt-5 mt-3">{data.subheader}</p>
+    </div>
+</div>
+
+</html>
