@@ -1,0 +1,38 @@
+tt_content.sandsitepackage_e24specifications =< lib.contentElement
+tt_content.sandsitepackage_e24specifications {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = E24specifications
+
+##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+        50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        50 {
+            references.fieldName = image
+            as = image
+        }
+    }
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_sand_sitepackage_teaser_item
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+            }
+            orderBy = sorting
+                dataProcessing {
+                20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                20 {
+                    references.fieldName = image
+                    as = image
+                }
+            }
+        }
+    }
+}

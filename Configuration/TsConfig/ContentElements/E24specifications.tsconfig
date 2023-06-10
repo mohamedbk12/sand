@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e24specifications ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e24specifications {
+            iconIdentifier = sandsitepackage-e24specifications
+            title = E-24 specifications
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e24specifications
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e24specifications)
+}
