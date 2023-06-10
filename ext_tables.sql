@@ -17,8 +17,6 @@ CREATE TABLE tt_content (
     link varchar(1024) DEFAULT '' NOT NULL,
     background varchar(1024) DEFAULT '' NOT NULL,
     link_text varchar(1024) DEFAULT '' NOT NULL,
-    second_link varchar(1024) DEFAULT '' NOT NULL,
-    second_link_text varchar(1024) DEFAULT '' NOT NULL,
     show_icon varchar(1024) DEFAULT '' NOT NULL,
     calculate_button varchar(1024) DEFAULT '' NOT NULL,
     select_container varchar(255) DEFAULT '' NOT NULL,
@@ -50,6 +48,12 @@ CREATE TABLE tx_sand_sitepackage_teaser_item (
     color_select varchar(255) DEFAULT '' NOT NULL,
     box_type varchar(255) DEFAULT '' NOT NULL,
     show_image varchar(255) DEFAULT '' NOT NULL,
+        mainsfrequency varchar(1024) DEFAULT '' NOT NULL,
+    voltage varchar(1024) DEFAULT '' NOT NULL,
+    powerconsumption varchar(1024) DEFAULT '' NOT NULL,
+    outputfrequency varchar(1024) DEFAULT '' NOT NULL,
+    outputpower varchar(255) DEFAULT '' NOT NULL,
+    machinename varchar(255) DEFAULT '' NOT NULL,
 );
 
 #

@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="content-table-4" id="c{data.uid}">
+    <div class="th col bg-color-blue">
+        <div>{data.header}</div>
+        <f:for each="{records}" as="item" iteration="i">
+            <div>{records.{i.index}.data.machinename}</div>
+        </f:for>
+    </div>
+    <div class="thead bg-color-blue-7 text-center p-4">
+        <span class="content-paragraph mt-0">{data.header}</span>
+    </div>
+    <div class="tb col">
+        <div>Output power</div>
+        <f:for each="{records}" as="item" iteration="i">
+            <div>{records.{i.index}.data.outputpower}</div>
+        </f:for>
+    </div>
+    <div class="tb col">
+        <div>Output frequency</div>
+        <f:for each="{records}" as="item" iteration="i">
+            <div>{records.{i.index}.data.outputfrequency}</div>
+        </f:for>
+    </div>
+    <div class="tb col">
+        <div>Mains power consumption</div>
+        <f:for each="{records}" as="item" iteration="i">
+            <div>{records.{i.index}.data.powerconsumption}</div>
+        </f:for>
+    </div>
+    <div class="tb col">
+        <div>Mains voltage</div>
+        <f:for each="{records}" as="item" iteration="i">
+            <div>{records.{i.index}.data.voltage}</div>
+        </f:for>
+    </div>
+    <div class="tb col">
+        <div>Mains frequency</div>
+        <f:for each="{records}" as="item" iteration="i">
+            <div>{records.{i.index}.data.mainsfrequency}</div>
+        </f:for>
+    </div>
+</div>
+
+</html>

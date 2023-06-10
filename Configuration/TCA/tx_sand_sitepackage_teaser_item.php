@@ -412,6 +412,48 @@ return [
                 ],
             ]
         ],
+        'machinename' => [
+            'label' => 'Characteristic',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+            ],
+        ],
+        'outputpower' => [
+            'label' => 'Output power',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+            ],
+        ],
+        'outputfrequency' => [
+            'label' => 'Output frequency',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+            ],
+        ],
+        'powerconsumption' => [
+            'label' => 'Mains power consumption',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+            ],
+        ],
+        'voltage' => [
+            'label' => 'Mains voltage',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+            ],
+        ],
+        'mainsfrequency' => [
+            'label' => 'Mains frequency',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+            ],
+        ],
     ],
 ];
 

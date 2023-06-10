@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e27technicaldata ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e27technicaldata {
+            iconIdentifier = sandsitepackage-e27technicaldata
+            title = E-27 technical data
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e27technicaldata
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e27technicaldata)
+}
