@@ -1,0 +1,58 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="bg-color-truiceblue">
+    <div class="w-[90%] mx-auto md:grid hidden grid-cols-12 md:gap-10 gap-3" id="c{data.uid}">
+        <div class="col-span-6 flex flex-col items-end md:gap-10 gap-3 md:translate-y-20 translate-y-10">
+            <div class="w-full bg-color-blue content-img" style="aspect-ratio: 2.1315;">
+                <f:if condition="{image.0}">
+                    <f:image image="{image.0}" />
+                </f:if>
+            </div>
+            <div class="w-full max-w-[550px] bg-color-blue content-img" style="aspect-ratio: 1.1;">
+                <f:if condition="{image.1}">
+                    <f:image image="{image.1}" />
+                </f:if>
+            </div>
+        </div>
+        <div class="col-span-6 flex flex-col md:gap-10 gap-3 md:-translate-y-20 -translate-y-10">
+            <div class="w-full max-w-[670px] bg-color-blue content-img" style="aspect-ratio: 1.375;">
+                <f:if condition="{image.2}">
+                    <f:image image="{image.2}" />
+                </f:if>
+            </div>
+            <div class="w-full bg-color-blue content-img" style="aspect-ratio: 2.131;">
+                <f:if condition="{image.3}">
+                    <f:image image="{image.3}" />
+                </f:if>
+            </div>
+        </div>
+    </div>
+    <div
+        class="swiper-container single-slider md:hidden mt-10 overflow-hidden relative -translate-y-10 max-w-[95%] mx-auto swiper-initialized swiper-horizontal">
+        <div class="swiper-wrapper" id="swiper-wrapper-782886a9648a2663" aria-live="polite"
+            style="transition-duration: 0ms;">
+            <div class="swiper-slide w-full content-img aspect-square">
+                <f:if condition="{image.0}">
+                    <f:image image="{image.0}" />
+                </f:if>
+            </div>
+            <div class="swiper-slide w-full content-img aspect-square">
+                <f:if condition="{image.1}">
+                    <f:image image="{image.1}" />
+                </f:if>
+            </div>
+            <div class="swiper-slide w-full content-img aspect-square">
+                <f:if condition="{image.2}">
+                    <f:image image="{image.2}" />
+                </f:if>
+            </div>
+            <div class="swiper-slide w-full content-img aspect-square">
+                <f:if condition="{image.3}">
+                    <f:image image="{image.3}" />
+                </f:if>
+            </div>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+</div>
+
+</html>
