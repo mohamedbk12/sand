@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e23chartflow ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e31twocolumnstext {
+            iconIdentifier = sandsitepackage-e31twocolumnstext
+            title = E-31 two columns text
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e31twocolumnstext
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e31twocolumnstext)
+}
