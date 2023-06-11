@@ -9,66 +9,63 @@ editor:
 
         stylesSet:
             - { name: "text color blue", element: "p", attributes: { 'class': 'text-color-blue' } }
-            - { name: "content-paragraph mt-5 text-center", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-center' } }
+            - { name: "text-center", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-center' } }
             - { name: "content-paragraph", element: "p", attributes: { 'class': 'content-paragraph' } }
-            - { name: "content-paragraph text-color-blue mt-3 max-w-[980px]", element: "p", attributes: { 'class': 'content-paragraph text-color-blue mt-3 max-w-[980px]' } }
-            - { name: "content-paragraph text-color-blue", element: "p", attributes: { 'class': 'content-paragraph text-color-blue' } }
-            - { name: "content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4", element: "div", attributes: { 'class': 'content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4' } }
-            - { name: "h2", element: "h2", attributes: { 'class': ' ' } }
-            - { name: "content-bordered-y", element: "div", attributes: { 'class': 'content-bordered-y' } }
-            - { name: "strong", element: "strong", attributes: { 'class': ' ' } }
-            - { name: "span", element: "span", attributes: { 'class': ' ' } }
-            - { name: "div", element: "div", attributes: { 'class': ' ' } }
-            - { name: "content-title text-color-blue", element: "h3", attributes: { 'class': 'content-title text-color-blue' } }
-            - { name: "h3 white", element: "h3", attributes: { 'class': 'content-title' } }
-            - { name: "h2 with buttom border", element: "h2", attributes: { 'class': 'content-title border-bottom' } }
-            - { name: "h2 with buttom border", element: "h2", attributes: { 'class': 'content-title border-bottom' } }
-            - { name: "left blue text", element: "div", attributes: { 'class': 'content-paragraph mt-5' } }
+            - { name: "text-color-blue mt-3 max-w-[980px]", element: "p", attributes: { 'class': 'content-paragraph text-color-blue mt-3 max-w-[980px]' } }
+            - { name: "text-color-blue", element: "p", attributes: { 'class': 'content-paragraph text-color-blue' } }
             - { name: "blue text mt5", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-color-blue' } }
+            - { name: "list square-white", element: "p", attributes: { 'class': 'list-style-square-white' } }
+            - { name: "list square-blue", element: "p", attributes: { 'class': 'list-style-square-blue' } }
+            - { name: "list square-black", element: "p", attributes: { 'class': 'list-style-square-black' } }
+            - { name: "list circle-white", element: "p", attributes: { 'class': 'list-style-circle-white' } }
+            - { name: "list circle-blue", element: "p", attributes: { 'class': 'list-style-circle-blue' } }
+            - { name: "list circle-black", element: "p", attributes: { 'class': 'list-style-circle-black' } }
+            - { name: "list circle-trugreen", element: "p", attributes: { 'class': 'list-style-circle-trugreen' } }
+         
+            
+            - { name: "absolute left", element: "div", attributes: { 'class': 'content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4' } }
+            - { name: "content-bordered-y", element: "div", attributes: { 'class': 'content-bordered-y' } }
+            - { name: "div", element: "div", attributes: { 'class': ' ' } }
+            - { name: "left blue text", element: "div", attributes: { 'class': 'content-paragraph mt-5' } }
             - { name: "bordered text", element: "div", attributes: { 'class': 'content-bordered-y mt-12' } }
+            - { name: "px-10", element: "div", attributes: { 'class': 'content-paragraph mt-0 py-4 px-10' } }
+
+            - { name: "span", element: "span", attributes: { 'class': ' ' } }
             - { name: "blue bold font", element: "span", attributes: { 'class': 'content-title mt-0 text-color-blue text-7xl DINpro-bold font-bold' } }
             - { name: "blue font", element: "span", attributes: { 'class': 'content-title mt-0 text-color-blue mb-6' } }
             - { name: "buttom text", element: "span", attributes: { 'class': 'txt bottom' } }
+            - { name: "blue-square", element: "span", attributes: { 'class': 'blue-square square-list' } }
+       
+            - { name: "white with blue hover", element: "a", attributes: { 'class': 'btn-blue-outlined' } }
+            - { name: "white with black hover", element: "a", attributes: { 'class': 'btn-black-outlined' } }
+            - { name: "white with trugreen hover", element: "a", attributes: { 'class': 'btn-trugreen-outlined' } }
+            - { name: "blue button", element: "a", attributes: { 'class': 'btn-blue' } }
+            - { name: "black button", element: "a", attributes: { 'class': 'btn-black' } }
+            - { name: "trugreen button", element: "a", attributes: { 'class': 'btn-trugreen' } }
+
             - { name: "square li", element: "li", attributes: { 'class': 'content-paragraph mt-2 list-style-square-white' } }
             - { name: "normal li", element: "li", attributes: { 'class': 'content-paragraph mt-2 list-style-square-transparent' } }
-            - { name: "px-10", element: "div", attributes: { 'class': 'content-paragraph mt-0 py-4 px-10' } }
             - { name: "default li", element: "li", attributes: { 'class': ' ' } }
 
+            - { name: "title", element: "h1", attributes: { 'class': 'title' } }
+            - { name: "title underline", element: "h1", attributes: { 'class': 'title-underline' } }
+            - { name: "title rectangle", element: "h1", attributes: { 'class': 'title-rectangle' } }
+            - { name: "title rectangle underline", element: "h1", attributes: { 'class': 'title-rectangle-w-underline' } }
 
-            - { name: "Blue", element: "p", attributes: { 'class': 'blue' } }
-            - { name: "Text XX-Small", element: "p", attributes: { 'class': 'text-xxsmall' } }
-            - { name: "Text XS-Small", element: "p", attributes: { 'class': 'text-xsmall' } }
-            - { name: "Text Small", element: "p", attributes: { 'class': 'text-small' } }
-            - { name: "Placeholder Text", element: "p", attributes: { 'class': 'placeholder-text' } }
-            - { name: "Placeholder Text Bold", element: "p", attributes: { 'class': 'placeholder-text-bold' } }
-            - { name: "Text Default Small", element: "p", attributes: { 'class': 'text-default-small' } }
-            - { name: "Text Default Smaller", element: "p", attributes: { 'class': 'text-default-smaller' } }
-            - { name: "Text Default", element: "p", attributes: { 'class': 'text-default' } }
-            - { name: "Text Default Bold", element: "p", attributes: { 'class': 'text-default-bold' } }
-            - { name: "Link", element: "p", attributes: { 'class': 'link' } }
-            - { name: "Medium Text", element: "p", attributes: { 'class': 'medium-text' } }
-            - { name: "Text Teaser", element: "p", attributes: { 'class': 'text-teaser' } }
-            - { name: "Text Teaser Bold", element: "p", attributes: { 'class': 'text-teaser-bold' } }
-            - { name: "Text Large", element: "p", attributes: { 'class': 'text-large' } }
-            - { name: "Text X-Large", element: "p", attributes: { 'class': 'text-xlarge' } }
-            - { name: "Text No Margin", element: "p", attributes: { 'class': 'no-margin' } }
-            - { name: "H2 Heading Gold", element: "h2", attributes: { 'class': 'h1-tag' } }
-            - { name: "Link Blue", element: "a", attributes: { 'class': 'a-link-blue' } }
-            - { name: "Arrow Right", element: "a", attributes: { 'class': 'arrow-right' } }
-            - { name: "Arrow Next", element: "a", attributes: { 'class': 'arrow-next' } }
-            - { name: "Primary Button", element: "a", attributes: { 'class': 'primary-button' } }
-            - { name: "Secondary Button", element: "a", attributes: { 'class': 'secondary-button' } }
-            - { name: "Arrow Next Blue", element: "a", attributes: { 'class': 'arrow-next-blue' } }
-            - { name: "Arrow Next black", element: "a", attributes: { 'class': 'arrow-next-black' } }
-            - { name: "Round Arrow Right", element: "a", attributes: { 'class': 'round-arrow-right' } }
-            - { name: "Download Icon Big", element: "a", attributes: { 'class': 'download-link' } }
-            - { name: "Download Icon Small", element: "a", attributes: { 'class': 'download-link-down' } }
-            - { name: "Download Link Up", element: "a", attributes: { 'class': 'download-link-up' } }
-            - { name: "Download Link Right", element: "a", attributes: { 'class': 'download-link-right' } }
-            - { name: "Email Icon", element: "a", attributes: { 'class': 'icon-email-transparent-blue' } }
-            - { name: "Tel Icon", element: "a", attributes: { 'class': 'icon-mobile-transparent-blue' } }
-            - { name: "Arrows List", element: "ul", attributes: { 'class': 'arrow' } }
-            - { name: "Lines List", element: "ul", attributes: { 'class': 'line' } }
+            - { name: "h2", element: "h2", attributes: { 'class': ' ' } }
+            - { name: "h2 with buttom border", element: "h2", attributes: { 'class': 'content-title border-bottom' } }
+
+            - { name: "h3 color-blue", element: "h3", attributes: { 'class': 'content-title text-color-blue' } }
+            - { name: "h3 white", element: "h3", attributes: { 'class': 'content-title' } }
+
+            - { name: "strong", element: "strong", attributes: { 'class': ' ' } }
+
+
+            
+
+
+
+
 
         toolbarGroups:
             - { name: styles, groups: [ format, styles ] }
