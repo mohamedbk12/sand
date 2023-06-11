@@ -21,7 +21,6 @@ editor:
             - { name: "list circle-blue", element: "p", attributes: { 'class': 'list-style-circle-blue' } }
             - { name: "list circle-black", element: "p", attributes: { 'class': 'list-style-circle-black' } }
             - { name: "list circle-trugreen", element: "p", attributes: { 'class': 'list-style-circle-trugreen' } }
-         
             
             - { name: "absolute left", element: "div", attributes: { 'class': 'content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4' } }
             - { name: "content-bordered-y", element: "div", attributes: { 'class': 'content-bordered-y' } }

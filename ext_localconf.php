@@ -23,7 +23,7 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['sand_sitepackage'] = 'EXT:sand_si
  **************************/
 $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 
-$iconsContentElements = ['partners', 'hero', 'socialmediawall', 'teasergrid','download','contactteaser', 'sharelinks', 'stickylinks', 'newsletterplaceholder' , 'jumpmarks', 'subpageheader', 'twocolumnteasers', 'quoteteaser', 'text', 'downloadlist', 'sidebardownloadlist', 'fullwidthimagedownload', 'contributioncalculator', 'teasermembership', 'internalexternallinks', 'registerconfirm'];
+$iconsContentElements = ['e1swiper', 'hero', 'socialmediawall', 'teasergrid','download','contactteaser', 'sharelinks', 'stickylinks', 'newsletterplaceholder' , 'jumpmarks', 'subpageheader', 'twocolumnteasers', 'quoteteaser', 'text', 'downloadlist', 'sidebardownloadlist', 'fullwidthimagedownload', 'contributioncalculator', 'teasermembership', 'internalexternallinks', 'registerconfirm'];
 $iconsExtensions = [''];
 
 /* Register ContentElements Icons */
