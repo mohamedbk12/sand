@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="gallery-type-1 md:grid hidden gap-4 grid-cols-12" id="c{data.uid}">
+    <f:for each="{records}" as="item" iteration="i">
+        <div class="{item.data.image_position}">
+            <f:if condition="{item.records}">
+                <f:then>
+                    <f:for each="{item.records}" as="item2" iteration="i">
+                        <div class="{item2.data.color_select}">
+                            <f:if condition="{item2.image.0}">
+                                <f:image image="{item2.image.0}" />
+                            </f:if>
+                        </div>
+                    </f:for>
+                </f:then>
+                <f:else>
+                    <f:if condition="{item.image.0}">
+                        <f:image image="{item.image.0}" />
+                    </f:if>
+                </f:else>
+            </f:if>
+        </div>
+    </f:for>
+</div>
+
+<br>
+
+</html>

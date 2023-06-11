@@ -1,9 +1,9 @@
-tt_content.sandsitepackage_e33delaitandprocess =< lib.contentElement
-tt_content.sandsitepackage_e33delaitandprocess {
+tt_content.sandsitepackage_e39images2 =< lib.contentElement
+tt_content.sandsitepackage_e39images2 {
     ################
     ### TEMPLATE ###
     ################
-    templateName = E33delaitandprocess
+    templateName = E39images2
 
 ##########################
     ### DATA PREPROCESSING ###
@@ -33,7 +33,14 @@ tt_content.sandsitepackage_e33delaitandprocess {
                     as = image
                 }
             }
-            dataProcessing {
+                dataProcessing {
+                30 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                30 {
+                    references.fieldName = media
+                    as = media
+                }
+            }
+                        dataProcessing {
                 10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
                 10 {
                     table = tx_sand_sitepackage_teaser_item2
