@@ -475,6 +475,47 @@ return [
                 'eval' => 'trim',
             ],
         ],
+        'adjustline' => [
+            'label' => 'display',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    ['yes', '1'],
+                    ['no', '2'],
+                ],
+            ],
+            'MM' => '1',
+        ],
+        'brightline' => [
+            'label' => 'display',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    ['yes', '1'],
+                    ['no', '2'],
+                ],
+            ]
+        ],
+        'coolline' => [
+            'label' => 'display',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    ['yes', '1'],
+                    ['no', '2'],
+                ],
+            ]
+        ],
+        'detectline' => [
+            'label' => 'display',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    ['yes', '1'],
+                    ['no', '2'],
+                ],
+            ]
+        ],
     ],
 ];
 

@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e23chartflow ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e38producttable {
+            iconIdentifier = sandsitepackage-e38producttable
+            title = E-38 product table
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e38producttable
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e38producttable)
+}
