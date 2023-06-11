@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="box col-span-3">
+    <div class="content-img aspect-square">
+        <f:if condition="{item.image.0}">
+            <f:image image="{item.image.0}" />
+        </f:if>
+    </div>
+    <div class="active-txt">
+        <strong>{item.data.tel}</strong>
+        <span>{item.data.header}</span>
+    </div>
+</div>
+</html>

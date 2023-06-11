@@ -1,0 +1,17 @@
+#########################
+#### CE WIZARD: e23chartflow ####
+#########################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        sandsitepackage_e37teasergrid {
+            iconIdentifier = sandsitepackage-e37teasergrid
+            title = E-37 teaser grid
+            description = Content to desplay content with background image
+            tt_content_defValues {
+                CType = sandsitepackage_e37teasergrid
+            }
+        }
+    }
+    show := addToList(sandsitepackage_e37teasergrid)
+}

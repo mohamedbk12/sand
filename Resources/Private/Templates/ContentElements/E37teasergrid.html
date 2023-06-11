@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="content-template-6 md:grid flex flex-col xl:grid-cols-12 grid-cols-6" id="c{data.uid}">
+    <f:for each="{records}" as="item" iteration="i">
+        <f:if condition="{item.data.box_type} == 'smimagewithbackround'">
+            <f:then>
+                <f:render partial="E37teasergrid/Smimagewithbackround" arguments="{item : item}" />
+            </f:then>
+            <f:else>
+                <f:if condition="{item.data.box_type} == 'video'">
+                    <f:then>
+                        <f:render partial="E37teasergrid/Video" arguments="{item : item}" />
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{item.data.box_type} == 'image'">
+                            <f:then>
+                                <f:render partial="E37teasergrid/Image" arguments="{item : item}" />
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{item.data.box_type} == 'imagewithhover'">
+                                    <f:then>
+                                        <f:render partial="E37teasergrid/Imagewithhover" arguments="{item : item}" />
+
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{item.data.box_type} == 'bigimage'">
+                                            <f:then>
+                                                <f:render partial="E37teasergrid/Bigimage" arguments="{item : item}" />
+                                            </f:then>
+                                            <f:else>
+                                                <f:render partial="E37teasergrid/Bigimagewithhover"
+                                                    arguments="{item : item}" />
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:for>
+</div>
+
+<br>
+
+</html>

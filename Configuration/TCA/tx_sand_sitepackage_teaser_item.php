@@ -281,7 +281,7 @@ return [
                     'minitems' => 0,
                     'maxitems' => 1,
                 ],
-                ('youtube,vimeo,mp4,png,jpeg,jpg,gif')
+                ('youtube,vimeo,mp4')
             )
         ],
         'file' => [
