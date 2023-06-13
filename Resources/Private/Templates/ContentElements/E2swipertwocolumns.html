@@ -5,20 +5,22 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper" id="swiper-wrapper-d3c693d764ef55ab" aria-live="polite">
             <f:for each="{records}" as="item">
-                <div class="swiper-slide" role="group" 
-                    style="width: 1519px;">
-                    <f:if condition="{item.image.0}">
-                        <div class="img">
+                <div class="swiper-slide" role="group" style="width: 1519px;">
+
+                    <div class="img" style="background-color: #0c3766;">
+                        <f:if condition="{item.image.0}">
                             <f:image image="{item.image.0}" alt="alt text" />
-                        </div>
-                    </f:if>
+                        </f:if>
+                    </div>
+
                     <div class="slider-right">
                         <f:for each="{item.records}" as="item">
                             <div class="bg-color-{item.data.color_select}">
                                 <h3 class="content-title">{item.data.header}</h3>
                                 <p class="content-paragraph">{item.data.subheader}</p>
-                             
-                                <f:link.typolink parameter="{item.data.link}" class="btn-{f:if(condition: '{item.data.color_select} == blue', then: 'white', else: 'blue')}-outlined">
+
+                                <f:link.typolink parameter="{item.data.link}"
+                                    class="btn-{f:if(condition: '{item.data.color_select} == blue', then: 'white', else: 'blue')}-outlined">
                                     {item.data.link_text}
                                 </f:link.typolink>
                             </div>
