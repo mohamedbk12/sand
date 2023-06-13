@@ -85,6 +85,11 @@ page {
                 includeSpacer = 1
                 as = footersubNavigation
             } 
+            60 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            60 {
+                languages = auto
+                as = languagenavigation
+            }
         }
          settings < plugin.tx_sandsitepackage.settings
          
