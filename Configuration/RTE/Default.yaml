@@ -8,54 +8,54 @@ editor:
         contentsCss: "EXT:sand_sitepackage/Resources/Public/Css/rte.css"
 
         stylesSet:
-            - { name: "text color blue", element: "p", attributes: { 'class': 'text-color-blue' } }
-            - { name: "text-center", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-center' } }
-            - { name: "content-paragraph", element: "p", attributes: { 'class': 'content-paragraph' } }
-            - { name: "text-color-blue mt-3 max-w-[980px]", element: "p", attributes: { 'class': 'content-paragraph text-color-blue mt-3 max-w-[980px]' } }
-            - { name: "text-color-blue", element: "p", attributes: { 'class': 'content-paragraph text-color-blue' } }
-            - { name: "blue text mt5", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-color-blue' } }
-            - { name: "list square-white", element: "p", attributes: { 'class': 'list-style-square-white' } }
-            - { name: "list square-blue", element: "p", attributes: { 'class': 'list-style-square-blue' } }
-            - { name: "list square-black", element: "p", attributes: { 'class': 'list-style-square-black' } }
-            - { name: "list circle-white", element: "p", attributes: { 'class': 'list-style-circle-white' } }
-            - { name: "list circle-blue", element: "p", attributes: { 'class': 'list-style-circle-blue' } }
-            - { name: "list circle-black", element: "p", attributes: { 'class': 'list-style-circle-black' } }
-            - { name: "list circle-trugreen", element: "p", attributes: { 'class': 'list-style-circle-trugreen' } }
+            - { name: "p.sm blue text", element: "p", attributes: { 'class': 'text-color-blue' } }
+            - { name: "p.bleu text center", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-center' } }
+            - { name: "p.m blue text", element: "p", attributes: { 'class': 'content-paragraph' } }
+            - { name: "p.m blue text 2(mx980)", element: "p", attributes: { 'class': 'content-paragraph text-color-blue mt-3 max-w-[980px]' } }
+            - { name: "p.m blue text 3", element: "p", attributes: { 'class': 'content-paragraph text-color-blue' } }
+            - { name: "p.blue text mt5", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-color-blue' } }
+            - { name: "p.list square white", element: "p", attributes: { 'class': 'list-style-square-white' } }
+            - { name: "p.list square blue", element: "p", attributes: { 'class': 'list-style-square-blue' } }
+            - { name: "p.list square black", element: "p", attributes: { 'class': 'list-style-square-black' } }
+            - { name: "p.list circle white", element: "p", attributes: { 'class': 'list-style-circle-white' } }
+            - { name: "p.list circle blue", element: "p", attributes: { 'class': 'list-style-circle-blue' } }
+            - { name: "p.list circle black", element: "p", attributes: { 'class': 'list-style-circle-black' } }
+            - { name: "p.list circle trugreen", element: "p", attributes: { 'class': 'list-style-circle-trugreen' } }
             
-            - { name: "absolute left", element: "div", attributes: { 'class': 'content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4' } }
-            - { name: "content-bordered-y", element: "div", attributes: { 'class': 'content-bordered-y' } }
-            - { name: "div", element: "div", attributes: { 'class': ' ' } }
-            - { name: "left blue text", element: "div", attributes: { 'class': 'content-paragraph mt-5' } }
-            - { name: "bordered text", element: "div", attributes: { 'class': 'content-bordered-y mt-12' } }
-            - { name: "px-10", element: "div", attributes: { 'class': 'content-paragraph mt-0 py-4 px-10' } }
+            - { name: "div.absolute left", element: "div", attributes: { 'class': 'content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4' } }
+            - { name: "div.content-bordered-y", element: "div", attributes: { 'class': 'content-bordered-y' } }
+            - { name: "div.div", element: "div", attributes: { 'class': ' ' } }
+            - { name: "div.left blue text", element: "div", attributes: { 'class': 'content-paragraph mt-5' } }
+            - { name: "div.bordered text", element: "div", attributes: { 'class': 'content-bordered-y mt-12' } }
+            - { name: "div.px-10", element: "div", attributes: { 'class': 'content-paragraph mt-0 py-4 px-10' } }
 
-            - { name: "span", element: "span", attributes: { 'class': ' ' } }
-            - { name: "blue bold font", element: "span", attributes: { 'class': 'content-title mt-0 text-color-blue text-7xl DINpro-bold font-bold' } }
-            - { name: "blue font", element: "span", attributes: { 'class': 'content-title mt-0 text-color-blue mb-6' } }
-            - { name: "buttom text", element: "span", attributes: { 'class': 'txt bottom' } }
-            - { name: "blue-square", element: "span", attributes: { 'class': 'blue-square square-list' } }
+            - { name: "span.span", element: "span", attributes: { 'class': ' ' } }
+            - { name: "span.blue bold", element: "span", attributes: { 'class': 'content-title mt-0 text-color-blue text-7xl DINpro-bold font-bold' } }
+            - { name: "span.blue font", element: "span", attributes: { 'class': 'content-title mt-0 text-color-blue mb-6' } }
+            - { name: "span.buttom text", element: "span", attributes: { 'class': 'txt bottom' } }
+            - { name: "span.blue square", element: "span", attributes: { 'class': 'blue-square square-list' } }
        
-            - { name: "white with blue hover", element: "a", attributes: { 'class': 'btn-blue-outlined' } }
-            - { name: "white with black hover", element: "a", attributes: { 'class': 'btn-black-outlined' } }
-            - { name: "white with trugreen hover", element: "a", attributes: { 'class': 'btn-trugreen-outlined' } }
-            - { name: "blue button", element: "a", attributes: { 'class': 'btn-blue' } }
-            - { name: "black button", element: "a", attributes: { 'class': 'btn-black' } }
-            - { name: "trugreen button", element: "a", attributes: { 'class': 'btn-trugreen' } }
+            - { name: "a.white with blue hover", element: "a", attributes: { 'class': 'btn-blue-outlined' } }
+            - { name: "a.white with black hover", element: "a", attributes: { 'class': 'btn-black-outlined' } }
+            - { name: "a.white with trugreen hover", element: "a", attributes: { 'class': 'btn-trugreen-outlined' } }
+            - { name: "a.blue button", element: "a", attributes: { 'class': 'btn-blue' } }
+            - { name: "a.black button", element: "a", attributes: { 'class': 'btn-black' } }
+            - { name: "a.trugreen button", element: "a", attributes: { 'class': 'btn-trugreen' } }
 
-            - { name: "square li", element: "li", attributes: { 'class': 'content-paragraph mt-2 list-style-square-white' } }
-            - { name: "normal li", element: "li", attributes: { 'class': 'content-paragraph mt-2 list-style-square-transparent' } }
-            - { name: "default li", element: "li", attributes: { 'class': ' ' } }
+            - { name: "li.square li", element: "li", attributes: { 'class': 'content-paragraph mt-2 list-style-square-white' } }
+            - { name: "li.normal li", element: "li", attributes: { 'class': 'content-paragraph mt-2 list-style-square-transparent' } }
+            - { name: "li.default li", element: "li", attributes: { 'class': ' ' } }
 
-            - { name: "title", element: "h1", attributes: { 'class': 'title' } }
-            - { name: "title underline", element: "h1", attributes: { 'class': 'title-underline' } }
-            - { name: "title rectangle", element: "h1", attributes: { 'class': 'title-rectangle' } }
-            - { name: "title rectangle underline", element: "h1", attributes: { 'class': 'title-rectangle-w-underline' } }
+            - { name: "h1.title", element: "h1", attributes: { 'class': 'title' } }
+            - { name: "h1.title underline", element: "h1", attributes: { 'class': 'title-underline' } }
+            - { name: "h1.title rectangle", element: "h1", attributes: { 'class': 'title-rectangle' } }
+            - { name: "h1.title rectangle underline", element: "h1", attributes: { 'class': 'title-rectangle-w-underline' } }
 
-            - { name: "h2", element: "h2", attributes: { 'class': ' ' } }
-            - { name: "h2 with buttom border", element: "h2", attributes: { 'class': 'content-title border-bottom' } }
+            - { name: "h2.h2", element: "h2", attributes: { 'class': ' ' } }
+            - { name: "h2.h2 with buttom border", element: "h2", attributes: { 'class': 'content-title border-bottom' } }
 
-            - { name: "h3 color-blue", element: "h3", attributes: { 'class': 'content-title text-color-blue' } }
-            - { name: "h3 white", element: "h3", attributes: { 'class': 'content-title' } }
+            - { name: "h3.h3 color-blue", element: "h3", attributes: { 'class': 'content-title text-color-blue' } }
+            - { name: "h3.h3 white", element: "h3", attributes: { 'class': 'content-title' } }
 
             - { name: "strong", element: "strong", attributes: { 'class': ' ' } }
 
