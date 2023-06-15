@@ -1,6 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <div class="default-container">
-    <div class="vertical-content grid lg:grid-cols-12 grid-cols-4 pb-0 gap-10" id="c{data.uid}">
+    <div class="vertical-content grid lg:grid-cols-12 grid-cols-4 pb-0 gap-10 {data.space_before_class}" id="c{data.uid}">
         <f:for each="{records}" as="item" iteration="count">
             <div class="col-span-4 bg-color-blue content-bg flex flex-col items-center">
                 <span class="underline">{item.data.email}</span>

@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="default-container md:grid flex flex-col gap-5 grid-cols-12" id="c{data.uid}">
+<div class="default-container md:grid flex flex-col gap-5 grid-cols-12 {data.space_before_class}" id="c{data.uid}">
     <f:for each="{records}" as="item" iteration="i">
         <div class="{item.data.image_position}">
             <f:if condition="{item.data.image_position} == 'col-span-6 grid grid-cols-12'">

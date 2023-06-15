@@ -54,7 +54,9 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e10squarearchive'] = arr
             --palette--;;hidden,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
-            rowDescription,
+                        rowDescription,        
+            --div--;spacement,
+            space_before_class,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
         '
     ]
@@ -68,7 +70,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e10squarearchive']['colu
                     '1' => [
                         'showitem' => '
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            color_select,header,subheader,date,bodytext,link,
+                            image_position,color_select,header,subheader,date,bodytext,link,
                             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
@@ -87,6 +89,21 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e10squarearchive']['colu
                                 ['green', 'green'],
                                 ['powder', 'powder'],
                                 ['white', 'white'],
+                            ],
+                        ]
+                    ],
+                    'image_position' => [
+                        'label' => 'cols',
+                        'config' => [
+                            'type' => 'select',
+                            'renderType' => 'selectSingle',
+                            'items' => [
+                                ['col-span-4', 'col-span-4'],
+                                ['col-span-5', 'col-span-5'],
+                                ['col-span-6', 'col-span-6'],
+                                ['col-span-7', 'col-span-7'],
+                                ['col-span-8', 'col-span-8'],
+                                ['col-span-9', 'col-span-9'],
                             ],
                         ]
                     ],

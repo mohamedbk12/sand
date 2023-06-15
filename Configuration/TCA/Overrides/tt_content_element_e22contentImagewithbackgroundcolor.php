@@ -54,7 +54,9 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e22contentImagewithbackg
             --palette--;;hidden,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
-            rowDescription,
+                        rowDescription,        
+            --div--;spacement,
+            space_before_class,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
         '
     ]
