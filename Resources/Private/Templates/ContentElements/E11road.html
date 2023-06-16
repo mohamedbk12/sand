@@ -6,33 +6,50 @@
             <div class="col-span-4 bg-color-{item.data.color_select} content-bg flex flex-col items-center">
                 <f:if condition="{item.data.color_select} == 'blue' ||  {item.data.color_select} == 'green'">
                     <f:then>
-                        <span class="underline">{item.data.email}</span>
-                        <div class="white-vertical-line-2x"></div>
-                        <span class="text-3xl">{item.data.link_text}</span>
-                        <div class="white-vertical-line-4x"></div>
-                        <span class="text-7xl font-semibold">{item.data.header}</span>
-                        <div class="white-vertical-line-6x"></div>
-                        <span class="text-base">{item.data.subheader}</span>
-                        <div class="white-vertical-line-6x"></div>
-                        <span class="text-7xl font-semibold">{item.data.bodytext}</span>
-                        <div class="white-vertical-line-4x"></div>
+                        <f:if condition="{item.data.email}">
+                            <span class="underline">{item.data.email}</span>
+                            <div class="white-vertical-line-2x"></div>
+                        </f:if>
+                        <f:if condition="{item.data.link_text}">
+                            <span class="text-3xl">{item.data.link_text}</span>
+                            <div class="white-vertical-line-4x"></div>
+                        </f:if>
+                        <f:if condition="{item.data.header}">
+                            <span class="text-7xl font-semibold">{item.data.header}</span>
+                            <div class="white-vertical-line-6x"></div>
+                        </f:if>
+                        <f:if condition="{item.data.subheader}">
+                            <span class="text-base">{item.data.subheader}</span>
+                            <div class="white-vertical-line-6x"></div>
+                        </f:if>
+                        <f:if condition="{item.data.bodytext}">
+                            <span class="text-7xl font-semibold">{item.data.bodytext}</span>
+                            <div class="white-vertical-line-4x"></div>
+                        </f:if>
                     </f:then>
                     <f:else>
-                        <span class="underline custom-bleu-text">{item.data.email}</span>
-                        <div class="white-vertical-line-2x custom-bleu-backround-color"></div>
-                        <span class="text-3xl custom-bleu-text">{item.data.link_text}</span>
-                        <div class="white-vertical-line-4x custom-bleu-backround-color"></div>
-                        <span class="text-7xl font-semibold custom-bleu-text">{item.data.header}</span>
-                        <div class="white-vertical-line-6x custom-bleu-backround-color"></div>
-                        <span class="text-base custom-bleu-text">{item.data.subheader}</span>
-                        <div class="white-vertical-line-6x custom-bleu-backround-color"></div>
-                        <span class="text-7xl font-semibold custom-bleu-text">{item.data.bodytext}</span>
-                        <div class="white-vertical-line-4x custom-bleu-backround-color"></div>
+                        <f:if condition="{item.data.email}">
+                            <span class="underline custom-bleu-text">{item.data.email}</span>
+                            <div class="white-vertical-line-2x custom-bleu-backround-color"></div>
+                        </f:if>
+                        <f:if condition="{item.data.link_text}">
+                            <span class="text-3xl custom-bleu-text">{item.data.link_text}</span>
+                            <div class="white-vertical-line-4x custom-bleu-backround-color"></div>
+                        </f:if>
+                        <f:if condition="{item.data.header}">
+                            <span class="text-7xl font-semibold custom-bleu-text">{item.data.header}</span>
+                            <div class="white-vertical-line-6x custom-bleu-backround-color"></div>
+                        </f:if>
+                        <f:if condition="{item.data.subheader}">
+                            <span class="text-base custom-bleu-text">{item.data.subheader}</span>
+                            <div class="white-vertical-line-6x custom-bleu-backround-color"></div>
+                        </f:if>
+                        <f:if condition="{item.data.bodytext}">
+                            <span class="text-7xl font-semibold custom-bleu-text">{item.data.bodytext}</span>
+                            <div class="white-vertical-line-4x custom-bleu-backround-color"></div>
+                        </f:if>
                     </f:else>
-
-
                 </f:if>
-
             </div>
         </f:for>
     </div>
