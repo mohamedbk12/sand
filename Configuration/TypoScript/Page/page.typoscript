@@ -58,10 +58,11 @@ page {
                 includeSpacer = 1
                 as = mainnavigation
             }
+
             30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             30 {
                 special = directory
-                special.value = 15
+                special.value = {$plugin.tx_sandsitepackage.settings.menu.footerNavigation}
                 levels = 3
                 includeSpacer = 1
                 as = footerNavigation
@@ -70,7 +71,7 @@ page {
             40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             40 {
                 special = directory
-                special.value = 2
+                special.value = {$plugin.tx_sandsitepackage.settings.menu.HeaderMenu}
                 levels = 3
                 includeSpacer = 1
                 as = topNavigation
@@ -80,7 +81,7 @@ page {
             50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             50 {
                 special = directory
-                special.value = 20
+                special.value = {$plugin.tx_sandsitepackage.settings.menu.footerSubNavigation}
                 levels = 3
                 includeSpacer = 1
                 as = footersubNavigation
