@@ -182,6 +182,7 @@ page {
         sand_sitepackage_layout = EXT:sand_sitepackage/Resources/Public/Dist/dist.main.min.css
         sand_sitepackage_layout2 = EXT:sand_sitepackage/Resources/Public/Dist/input.css
         swiper = https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css
+        additional = EXT:sand_sitepackage/Resources/Public/Dist/additional.css
     }
 
     includeJSLibs {

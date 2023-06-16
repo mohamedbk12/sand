@@ -62,6 +62,9 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e11road'] = array_replac
     ]
 );
 
+
+
+
 $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e11road']['columnsOverrides'] = [
     'tx_sand_sitepackage_teaser_item' => [
         'config' => [
@@ -70,7 +73,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e11road']['columnsOverri
                     '1' => [
                         'showitem' => '
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            email,link_text,header,subheader,bodytext,
+                            color_select,email,link_text,header,subheader,bodytext,
                             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
@@ -79,6 +82,20 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e11road']['columnsOverri
                     ],
                 ],
                 'columns' => [
+                    'color_select' => [
+                        'label' => 'Box Color',
+                        'config' => [
+                            'type' => 'select',
+                            'renderType' => 'selectSingle',
+                            'items' => [
+                                ['blue', 'blue'],
+                                ['grey', 'grey'],
+                                ['truiceblue', 'truiceblue'],
+                                ['white', 'white'],
+                                ['green', 'green'],
+                            ],
+                        ],
+                    ],
                     'email' => [
                         'label' => 'Text 1',
                         'config' => [
