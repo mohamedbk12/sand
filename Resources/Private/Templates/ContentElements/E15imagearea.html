@@ -25,15 +25,15 @@
                 </div>
             </f:then>
             <f:else>
-                <f:format.html>{data.bodytext}</f:format.html>
+                <div class="content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4">
+                    <div>
+                        <h2>{data.header}</h2>
+                        <f:format.html>{data.bodytext}</f:format.html>
+                    </div>
+                </div>
             </f:else>
         </f:if>
-      
     </div>
 </div>
-<br>
-
-
-
 
 </html>
