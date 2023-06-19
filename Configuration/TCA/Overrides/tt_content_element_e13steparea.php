@@ -70,7 +70,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e13steparea']['columnsOv
                     '1' => [
                         'showitem' => '
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            header,bodytext,color_select,
+                            image_position,header,bodytext,color_select,
                             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
@@ -79,6 +79,22 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e13steparea']['columnsOv
                     ],
                 ],
                 'columns' => [
+                    'image_position' => [
+                        'label' => 'cols',
+                        'config' => [
+                            'type' => 'select',
+                            'renderType' => 'selectSingle',
+                            'items' => [
+                                ['col-span-3', 'col-span-3'],
+                                ['col-span-4', 'col-span-4'],
+                                ['col-span-5', 'col-span-5'],
+                                ['col-span-6', 'col-span-6'],
+                                ['col-span-7', 'col-span-7'],
+                                ['col-span-8', 'col-span-8'],
+                                ['col-span-9', 'col-span-9'],
+                            ],
+                        ]
+                    ],
                     'color_select' => [
                         'label' => 'Background color',
                         'config' => [
@@ -86,8 +102,6 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e13steparea']['columnsOv
                             'renderType' => 'selectSingle',
                             'items' => [
                                 ['blue', 'blue'],
-                                ['green', 'green'],
-                                ['powder', 'powder'],
                                 ['white', 'white'],
                             ],
                         ]

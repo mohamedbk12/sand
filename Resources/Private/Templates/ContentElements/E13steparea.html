@@ -6,7 +6,7 @@
     <div class="steps">
         <f:for each="{records}" as="item" iteration="i">
             <div
-                class="{f:if(condition: '{item.data.color_select} == white', then: 'col-span-3', else: 'col-span-3 bg-color-{item.data.color_select}')}">
+                class="{f:if(condition: '{item.data.color_select} == white', then: '{item.data.image_position}', else: '{item.data.image_position} bg-color-{item.data.color_select}')}">
                 <div
                     class="count {f:if(condition: '{item.data.color_select} == white', then: 'blue-square', else: 'white-square')}">
                     0{i.cycle}</div>
