@@ -86,7 +86,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e19contentlongimg']['col
                             'renderType' => 'selectSingle',
                             'items' => [
                                 ['bleu', ''],
-                                ['yellow', 'trugreen-hover'],
+                                ['Trugreen', 'trugreen-hover'],
                             ],
                         ]
                     ],
