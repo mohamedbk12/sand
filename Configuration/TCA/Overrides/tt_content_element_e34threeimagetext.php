@@ -47,7 +47,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e34threeimagetext'] = ar
         'showitem' => '
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-           tx_sand_sitepackage_teaser_item,header,subheader,
+            header,subheader,tx_sand_sitepackage_teaser_item,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
             --palette--;;language,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,

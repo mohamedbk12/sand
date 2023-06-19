@@ -38,7 +38,7 @@ if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e37teasergrid
     'tt_content',
     'CType',
     [
-        'E-36 quotes',
+        'E-37 teaser grid',
         'sandsitepackage_e37teasergrid',
         'sandsitepackage-e37teasergrid'
     ],
