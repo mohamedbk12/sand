@@ -71,7 +71,7 @@ page {
             40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             40 {
                 special = directory
-                special.value = {$plugin.tx_sandsitepackage.settings.menu.HeaderMenu}
+                special.value = {$plugin.tx_sandsitepackage.settings.menu.headerMenu}
                 levels = 3
                 includeSpacer = 1
                 as = topNavigation

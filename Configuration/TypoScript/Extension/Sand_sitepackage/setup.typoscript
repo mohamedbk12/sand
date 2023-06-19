@@ -3,7 +3,7 @@ plugin.tx_sandsitepackage {
         menu{
             footerNavigation = {$plugin.tx_sandsitepackage.settings.menu.footerNavigation}
             footerSubNavigation = {$plugin.tx_sandsitepackage.settings.menu.footerSubNavigation}
-            HeaderMenu = {$plugin.tx_sandsitepackage.settings.menu.HeaderMenu}
+            headerMenu = {$plugin.tx_sandsitepackage.settings.menu.headerMenu}
         }
 
         template {
