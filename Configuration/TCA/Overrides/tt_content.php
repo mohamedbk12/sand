@@ -205,6 +205,24 @@ $columns = [
             'rows' => '1',
         ],
     ],
+    'imageh' => [
+        'label' => 'Image height',
+        'config' => [
+            'eval' => 'trim',
+            'type' => 'text',
+            'cols' => '',
+            'rows' => '1',
+        ],
+    ],
+    'imagew' => [
+        'label' => 'Image width',
+        'config' => [
+            'eval' => 'trim',
+            'type' => 'text',
+            'cols' => '',
+            'rows' => '1',
+        ],
+    ],
     'show_icon' => [
         'label' => $ll . '',
         'config' => [

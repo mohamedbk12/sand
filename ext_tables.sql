@@ -20,6 +20,8 @@ CREATE TABLE tt_content (
     show_icon varchar(1024) DEFAULT '' NOT NULL,
     calculate_button varchar(1024) DEFAULT '' NOT NULL,
     select_container varchar(255) DEFAULT '' NOT NULL,
+    imageh varchar(255) DEFAULT '' NOT NULL,
+    imagew varchar(255) DEFAULT '' NOT NULL,
 );
 
 #

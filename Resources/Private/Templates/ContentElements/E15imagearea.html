@@ -4,12 +4,12 @@
 
         <div class="content-img">
             <f:if condition="{image.0}">
-                <f:image image="{image.0}" />
+                <f:image image="{image.0}" style="height: {data.imageh}px; width:{data.imageh}px ;" />
             </f:if>
         </div>
         <f:if condition="{data.slider_type} == 2">
             <f:then>
-                <div class="content-template-1 lg:absolute left-32 top-2/4 lg:-translate-y-2/4">
+                <div class="content-template-1 lg:absolute left-32 top-2/4 lg:-translate-y-2/4" style="opacity: {data.calculate_button}%;">
                     <div class="top">
                         <div>
                             <span>{data.link_text}</span>
@@ -25,7 +25,7 @@
                 </div>
             </f:then>
             <f:else>
-                <div class="content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4">
+                <div class="content-template-2 lg:absolute left-0 top-2/4 lg:-translate-y-2/4" style="opacity: {data.calculate_button}%;">
                     <div>
                         <h2>{data.header}</h2>
                         <f:format.html>{data.bodytext}</f:format.html>

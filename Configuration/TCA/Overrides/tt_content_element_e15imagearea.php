@@ -47,7 +47,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e15imagearea'] = array_r
         'showitem' => '
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-            slider_type,link_text,header,subheader,bodytext,image,
+            imageh,imagew,calculate_button,slider_type,link_text,header,subheader,bodytext,image,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
             --palette--;;language,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
@@ -72,6 +72,9 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e15imagearea']['columnsO
     ], 
     'header' => [
         'label' => 'Top header',
+    ],
+    'calculate_button' => [
+        'label' => 'opacity in pourcent',
     ],
     'slider_type' => [
         'exclude' => true,
