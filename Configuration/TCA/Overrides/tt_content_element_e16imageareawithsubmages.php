@@ -25,7 +25,7 @@ if (!isset($GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e16imageareaw
     'tt_content',
     'CType',
     [
-        'E-15 Image area with sub images',
+        'E-16 Image area with sub images',
         'sandsitepackage_e16imageareawithsubmages',
         'sandsitepackage-e16imageareawithsubmages'
     ],
