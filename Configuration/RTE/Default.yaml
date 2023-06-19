@@ -10,7 +10,7 @@ editor:
         stylesSet:
             - { name: "p.sm blue text", element: "p", attributes: { 'class': 'text-color-blue' } }
             - { name: "p.bleu text center", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-center' } }
-            - { name: "p.m blue text", element: "p", attributes: { 'class': 'content-paragraph' } }
+            - { name: "p.m text", element: "p", attributes: { 'class': 'content-paragraph' } }
             - { name: "p.m blue text 2(mx980)", element: "p", attributes: { 'class': 'content-paragraph text-color-blue mt-3 max-w-[980px]' } }
             - { name: "p.m blue text 3", element: "p", attributes: { 'class': 'content-paragraph text-color-blue' } }
             - { name: "p.blue text mt5", element: "p", attributes: { 'class': 'content-paragraph mt-5 text-color-blue' } }
