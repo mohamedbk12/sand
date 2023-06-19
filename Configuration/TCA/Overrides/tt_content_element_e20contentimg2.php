@@ -67,7 +67,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e20contentimg2']['column
         'config' => [
             'items' => [
                 ['bleu', 'content-bg py-14 lg:px-14 px-5 bg-color-blue lg:absolute static left-20 top-2/4 lg:-translate-y-2/4 lg:max-w-[700px]'],
-                ['blure', 'col-span-12 xl:col-span-4 flex items-center content-bg-blur-2xl left-white lg:absolute static left-32 top-2/4 lg:-translate-y-2/4 lg:max-w-[700px] lg:bg-color-transparent bg-color-blue'],
+                ['blure', 'col-span-12 xl:col-span-4 flex items-center content-bg-blur-2xl left-white lg:absolute static left-32 top-2/4 lg:-translate-y-2/4 lg:max-w-[700px] lg:bg-color-transparent bg-color-blue no-square'],
                  ['white', 'content-bg py-14 lg:px-14 px-5 bg-color-white lg:absolute static left-32 top-2/4 lg:-translate-y-2/4 lg:max-w-[400px]'],
            ],
         ],

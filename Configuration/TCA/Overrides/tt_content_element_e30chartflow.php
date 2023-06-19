@@ -71,7 +71,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e30chartflow']['columnsO
                     '1' => [
                         'showitem' => '
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            box_type,header,subheader,bodytext,
+                            box_type,header,subheader,link_text,
                             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
@@ -97,7 +97,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e30chartflow']['columnsO
                     'subheader' => [
                         'label' => 'Seconde content',
                     ],
-                    'bodytext' => [
+                    'link_text' => [
                         'label' => 'Third content',
                     ],
                 ]
