@@ -3,7 +3,7 @@ plugin.tx_sandsitepackage {
         menu{
             footerNavigation = 15
             footerSubNavigation = 20
-            HeaderMenu = 2
+            headerMenu = 2
         }
             ###################
             #### PAGE UIDs ####

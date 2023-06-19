@@ -82,13 +82,10 @@ CREATE TABLE tx_sand_sitepackage_teaser_item2 (
     link_text varchar(1024) DEFAULT '' NOT NULL,
 );
 
-CREATE TABLE fe_users (
-    companycasid    varchar(1024)   DEFAULT '' NOT NULL,
-    casid           varchar(1024)   DEFAULT '' NOT NULL,
-    title varchar(255) DEFAULT '',
-    position varchar(255) DEFAULT ''
-);
 
-CREATE TABLE fe_groups (
-    sand_cas_sync_field varchar(255) DEFAULT '' NOT NULL
+#
+# Table structure for table 'pages'
+#
+CREATE TABLE pages (
+    image varchar(1024) DEFAULT '' NOT NULL,
 );
