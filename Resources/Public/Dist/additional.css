@@ -8,3 +8,6 @@
 .no-square::before{
     opacity: 0;
 }
+.same-line{
+    margin-left: 70px
+}
