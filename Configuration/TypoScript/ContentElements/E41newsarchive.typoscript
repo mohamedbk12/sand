@@ -1,0 +1,67 @@
+tt_content.sandsitepackage_e41newsarchive =< lib.contentElement
+tt_content.sandsitepackage_e41newsarchive {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = E41newsarchive
+
+##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+        50 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        50 {
+            references.fieldName = image
+            as = image
+        }
+    }
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_sand_sitepackage_teaser_item
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+            }
+            orderBy = sorting
+                dataProcessing {
+                20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                20 {
+                    references.fieldName = image
+                    as = image
+                }
+            }
+                dataProcessing {
+                30 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                30 {
+                    references.fieldName = media
+                    as = media
+                }
+            }
+                        dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+                10 {
+                    table = tx_sand_sitepackage_teaser_item2
+                    pidInList.field = pid
+                    where {
+                        data = field:uid
+                        intval = 1
+                        wrap = tx_sand_sitepackage_teaser_item=|
+                    }
+
+                    orderBy = sorting
+                    dataProcessing {
+                        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                        10 {
+                            references.fieldName = image
+                            as = image
+                        }
+                    }
+
+                }
+             }
+        }
+    }
+}

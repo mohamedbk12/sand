@@ -47,7 +47,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e35images'] = array_repl
         'showitem' => '
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-           image,
+            link_text,image,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
             --palette--;;language,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
@@ -63,7 +63,13 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e35images'] = array_repl
 );
 
 
+
+
+
 $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e35images']['columnsOverrides'] = [
+    'link_text' => [
+        'label' => 'padding Top',
+    ], 
     'image' => [
         'label' => $ll . 'image',
         'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
