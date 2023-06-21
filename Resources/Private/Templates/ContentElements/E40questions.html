@@ -1,0 +1,77 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="default-container mt-60" id="c{data.uid}">
+    <div class="bg-color-truiceblue">
+        <div class="2xl:w-[90%] w-[95%] mx-auto overflow-hidden -translate-y-20">
+            <div class="three-slider full-height swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <div class="swiper-wrapper" id="swiper-wrapper-54ea919457df8469" aria-live="polite"
+                    style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                    <f:for each="{records}" as="item" iteration="i">
+                        <div class="swiper-slide h-auto swiper-slide-active" role="group" aria-label="1 / 4"
+                            style="width: 434.333px; margin-right: 32px;">
+                            <div class="product-template-1">
+                                <div class="img long">
+                                    <f:if condition="{item.image.0}">
+                                    <f:image image="{item.image.0}" />
+                                    </f:if>
+                                </div>
+                                <div class="detail bg-color-white">
+                                    <strong>{item.data.header} </strong>
+                                    <f:format.html>{item.data.bodytext}</f:format.html>
+                                </div>
+                            </div>
+                        </div>
+                    </f:for>
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+  
+    const SliderType1 = new Swiper('.slider-type-1', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        // autoplay: {
+        //     delay: 6000,
+        // },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.slider-type-1-container .slider-next',
+            prevEl: '.slider-type-1-container .slider-prev',
+        },
+    });
+
+    var threeSlider = new Swiper('.three-slider', {
+        spaceBetween: 32,
+        breakpoints: {
+            1280: {
+                slidesPerView: 3,
+            },
+            668: {
+                slidesPerView: 2,
+            },
+            0:{
+                slidesPerView: 1,
+            }
+        }
+    });
+
+    var twoSlider = new Swiper('.two-slider', {
+        spaceBetween: 32,
+        breakpoints: {
+            1320: {
+                slidesPerView: 2,
+            },
+            0: {
+                slidesPerView: 1,
+            }
+        }
+    });
+
+</script>
+</html>
