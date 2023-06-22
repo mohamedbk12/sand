@@ -43,7 +43,7 @@ $temporaryColumns = array(
                 'minitems' => 0,
                 'maxitems' => 1,
             ],
-            ('png, jpg, svg, jpeg,svg')
+            ('png,svg')
         ),
     ],
 );
