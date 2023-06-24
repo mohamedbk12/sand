@@ -476,7 +476,7 @@ return [
             ],
         ],
         'adjustline' => [
-            'label' => 'display',
+            'label' => 'colomn 1 caracteristique',
             'config' => [
                 'type' => 'check',
                 'items' => [
@@ -487,7 +487,7 @@ return [
             'MM' => '1',
         ],
         'brightline' => [
-            'label' => 'display',
+            'label' => 'colomn 2 caracteristique',
             'config' => [
                 'type' => 'check',
                 'items' => [
@@ -497,7 +497,7 @@ return [
             ]
         ],
         'coolline' => [
-            'label' => 'display',
+            'label' => 'colomn 3 caracteristique',
             'config' => [
                 'type' => 'check',
                 'items' => [
@@ -507,7 +507,47 @@ return [
             ]
         ],
         'detectline' => [
-            'label' => 'display',
+            'label' => 'colomn 4 caracteristique',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    ['yes', '1'],
+                    ['no', '2'],
+                ],
+            ]
+        ],
+        'column5' => [
+            'label' => 'colomn 5 caracteristique',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    ['yes', '1'],
+                    ['no', '2'],
+                ],
+            ]
+        ],
+        'column6' => [
+            'label' => 'colomn 6 caracteristique',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    ['yes', '1'],
+                    ['no', '2'],
+                ],
+            ]
+        ],
+        'column7' => [
+            'label' => 'colomn 7 caracteristique',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    ['yes', '1'],
+                    ['no', '2'],
+                ],
+            ]
+        ],
+        'column8' => [
+            'label' => 'colomn 8 caracteristique',
             'config' => [
                 'type' => 'check',
                 'items' => [

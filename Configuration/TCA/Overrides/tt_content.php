@@ -223,6 +223,94 @@ $columns = [
             'rows' => '1',
         ],
     ],
+    'name1' => [
+        'label' => 'Column 1 name',
+        'config' => [
+            'eval' => 'trim',
+            'type' => 'text',
+            'cols' => '',
+            'rows' => '1',
+        ],
+    ],
+    
+    'name2' => [
+        'label' => 'Column 2 name',
+        'config' => [
+            'eval' => 'trim',
+            'type' => 'text',
+            'cols' => '',
+            'rows' => '1',
+        ],
+    ],
+    
+    'name3' => [
+        'label' => 'Column 3 name',
+        'config' => [
+            'eval' => 'trim',
+            'type' => 'text',
+            'cols' => '',
+            'rows' => '1',
+        ],
+    ],
+    
+    'name4' => [
+        'label' => 'Column 4 name',
+        'config' => [
+            'eval' => 'trim',
+            'type' => 'text',
+            'cols' => '',
+            'rows' => '1',
+        ],
+    ],
+    
+    'name5' => [
+        'label' => 'Column 5 name',
+        'config' => [
+            'eval' => 'trim',
+            'type' => 'text',
+            'cols' => '',
+            'rows' => '1',
+        ],
+    ],
+
+
+    
+    'name6' => [
+        'label' => 'Column 6 name',
+        'config' => [
+            'eval' => 'trim',
+            'type' => 'text',
+            'cols' => '',
+            'rows' => '1',
+        ],
+    ],
+
+    
+    'name7' => [
+        'label' => 'Column 7 name',
+        'config' => [
+            'eval' => 'trim',
+            'type' => 'text',
+            'cols' => '',
+            'rows' => '1',
+        ],
+    ],
+
+
+    
+    'name8' => [
+        'label' => 'Column 8 name',
+        'config' => [
+            'eval' => 'trim',
+            'type' => 'text',
+            'cols' => '',
+            'rows' => '1',
+        ],
+    ],
+
+
+
+
     'show_icon' => [
         'label' => $ll . '',
         'config' => [

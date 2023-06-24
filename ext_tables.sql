@@ -22,6 +22,15 @@ CREATE TABLE tt_content (
     select_container varchar(255) DEFAULT '' NOT NULL,
     imageh varchar(255) DEFAULT '' NOT NULL,
     imagew varchar(255) DEFAULT '' NOT NULL,
+    name1 varchar(255) DEFAULT '' NOT NULL,
+    name2 varchar(255) DEFAULT '' NOT NULL,
+    name3 varchar(255) DEFAULT '' NOT NULL,
+    name4 varchar(255) DEFAULT '' NOT NULL,
+    name5 varchar(255) DEFAULT '' NOT NULL,
+    name6 varchar(255) DEFAULT '' NOT NULL,
+    name7 varchar(255) DEFAULT '' NOT NULL,
+    name8 varchar(255) DEFAULT '' NOT NULL,
+
 );
 
 #
@@ -61,9 +70,19 @@ CREATE TABLE tx_sand_sitepackage_teaser_item (
     brightline varchar(255) DEFAULT '' NOT NULL,
     coolline varchar(255) DEFAULT '' NOT NULL,
     detectline varchar(255) DEFAULT '' NOT NULL,
+    column5 varchar(255) DEFAULT '' NOT NULL,
+    column6 varchar(255) DEFAULT '' NOT NULL,
+    column7 varchar(255) DEFAULT '' NOT NULL,
+    column8 varchar(255) DEFAULT '' NOT NULL,
     used varchar(255) DEFAULT '' NOT NULL,
     usedpercent varchar(255) DEFAULT '' NOT NULL,
+
 );
+
+
+
+
+
 
 #
 # Table structure for table 'tx_sand_sitepackage_teaser_item2'

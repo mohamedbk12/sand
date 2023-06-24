@@ -12,68 +12,77 @@
         </f:for>
     </div>
     <div class="tb">
+        <f:if condition="{data.name1}">
+            <div>
+                <div>{data.name1}</div>
+                <f:for each="{records}" as="item" iteration="i">
+                    <div>
+                        <f:if condition="{item.data.adjustline} == 0">
+                            <f:then>
+                                <div></div>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{item.data.adjustline} == 1">
+                                    <f:then>
+                                        <div class="blue-square"></div>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{item.data.adjustline} == 2">
+                                            <f:then>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:then>
+                                            <f:else>
+                                                <div class="blue-square"></div>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+      
+        <f:if condition="{data.name2}">
+            <div>
+                <div>{data.name2}</div>
+                <f:for each="{records}" as="item" iteration="i">
+                    <div>
+                        <f:if condition="{item.data.brightline} == 0">
+                            <f:then>
+                                <div></div>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{item.data.brightline} == 1">
+                                    <f:then>
+                                        <div class="blue-square"></div>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{item.data.brightline} == 2">
+                                            <f:then>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:then>
+                                            <f:else>
+                                                <div class="blue-square"></div>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+
+        </f:if>
+
+        <f:if condition="{data.name3}">
+
         <div>
-            <div>AdjustLine</div>
-            <f:for each="{records}" as="item" iteration="i">
-                <div>
-                    <f:if condition="{item.data.adjustline} == 0">
-                        <f:then>
-                            <div></div>
-                        </f:then>
-                        <f:else>
-                            <f:if condition="{item.data.adjustline} == 1">
-                                <f:then>
-                                    <div class="blue-square"></div>
-                                </f:then>
-                                <f:else>
-                                    <f:if condition="{item.data.adjustline} == 2">
-                                        <f:then>
-                                            <div class="blue-square-outlined"></div>
-                                        </f:then>
-                                        <f:else>
-                                            <div class="blue-square"></div>
-                                            <div class="blue-square-outlined"></div>
-                                        </f:else>
-                                    </f:if>
-                                </f:else>
-                            </f:if>
-                        </f:else>
-                    </f:if>
-                </div>
-            </f:for>
-        </div>
-        <div>
-            <div>BrightLine</div>
-            <f:for each="{records}" as="item" iteration="i">
-                <div>
-                    <f:if condition="{item.data.brightline} == 0">
-                        <f:then>
-                            <div></div>
-                        </f:then>
-                        <f:else>
-                            <f:if condition="{item.data.brightline} == 1">
-                                <f:then>
-                                    <div class="blue-square"></div>
-                                </f:then>
-                                <f:else>
-                                    <f:if condition="{item.data.brightline} == 2">
-                                        <f:then>
-                                            <div class="blue-square-outlined"></div>
-                                        </f:then>
-                                        <f:else>
-                                            <div class="blue-square"></div>
-                                            <div class="blue-square-outlined"></div>
-                                        </f:else>
-                                    </f:if>
-                                </f:else>
-                            </f:if>
-                        </f:else>
-                    </f:if>
-                </div>
-            </f:for>
-        </div>
-        <div>
-            <div>CoolLine</div>
+            <div>{data.name3}</div>
             <f:for each="{records}" as="item" iteration="i">
                 <div>
                     <f:if condition="{item.data.coolline} == 0">
@@ -102,36 +111,183 @@
                 </div>
             </f:for>
         </div>
-        <div>
-            <div>DetectLine</div>
-            <f:for each="{records}" as="item" iteration="i">
-                <div>
-                    <f:if condition="{item.data.detectline} == 0">
-                        <f:then>
-                            <div></div>
-                        </f:then>
-                        <f:else>
-                            <f:if condition="{item.data.detectline} == 1">
-                                <f:then>
-                                    <div class="blue-square"></div>
-                                </f:then>
-                                <f:else>
-                                    <f:if condition="{item.data.detectline} == 2">
-                                        <f:then>
-                                            <div class="blue-square-outlined"></div>
-                                        </f:then>
-                                        <f:else>
-                                            <div class="blue-square"></div>
-                                            <div class="blue-square-outlined"></div>
-                                        </f:else>
-                                    </f:if>
-                                </f:else>
-                            </f:if>
-                        </f:else>
-                    </f:if>
-                </div>
-            </f:for>
-        </div>
+        </f:if>
+
+        <f:if condition="{data.name4}">
+            <div>
+                <div>{data.name4}</div>
+                <f:for each="{records}" as="item" iteration="i">
+                    <div>
+                        <f:if condition="{item.data.detectline} == 0">
+                            <f:then>
+                                <div></div>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{item.data.detectline} == 1">
+                                    <f:then>
+                                        <div class="blue-square"></div>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{item.data.detectline} == 2">
+                                            <f:then>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:then>
+                                            <f:else>
+                                                <div class="blue-square"></div>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+
+        <f:if condition="{data.name5}">
+            <div>
+                <div>{data.name5}</div>
+                <f:for each="{records}" as="item" iteration="i">
+                    <div>
+                        <f:if condition="{item.data.column5} == 0">
+                            <f:then>
+                                <div></div>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{item.data.column5} == 1">
+                                    <f:then>
+                                        <div class="blue-square"></div>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{item.data.column5} == 2">
+                                            <f:then>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:then>
+                                            <f:else>
+                                                <div class="blue-square"></div>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+
+        
+        <f:if condition="{data.name6}">
+            <div>
+                <div>{data.name6}</div>
+                <f:for each="{records}" as="item" iteration="i">
+                    <div>
+                        <f:if condition="{item.data.column6} == 0">
+                            <f:then>
+                                <div></div>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{item.data.column6} == 1">
+                                    <f:then>
+                                        <div class="blue-square"></div>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{item.data.column6} == 2">
+                                            <f:then>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:then>
+                                            <f:else>
+                                                <div class="blue-square"></div>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+
+
+                
+        <f:if condition="{data.name7}">
+            <div>
+                <div>{data.name6}</div>
+                <f:for each="{records}" as="item" iteration="i">
+                    <div>
+                        <f:if condition="{item.data.column7} == 0">
+                            <f:then>
+                                <div></div>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{item.data.column7} == 1">
+                                    <f:then>
+                                        <div class="blue-square"></div>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{item.data.column7} == 2">
+                                            <f:then>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:then>
+                                            <f:else>
+                                                <div class="blue-square"></div>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+
+
+
+        
+                
+        <f:if condition="{data.name8}">
+            <div>
+                <div>{data.name6}</div>
+                <f:for each="{records}" as="item" iteration="i">
+                    <div>
+                        <f:if condition="{item.data.column8} == 0">
+                            <f:then>
+                                <div></div>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{item.data.column8} == 1">
+                                    <f:then>
+                                        <div class="blue-square"></div>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{item.data.column8} == 2">
+                                            <f:then>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:then>
+                                            <f:else>
+                                                <div class="blue-square"></div>
+                                                <div class="blue-square-outlined"></div>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+
+
+
+
     </div>
 </div>
 </div>

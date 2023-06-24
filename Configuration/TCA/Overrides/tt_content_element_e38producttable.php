@@ -60,7 +60,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e38producttable'] = arra
         'showitem' => '
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-            tx_sand_sitepackage_teaser_item,
+            name1,name2,name3,name4,name5,name6,name7,,name8,tx_sand_sitepackage_teaser_item,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
             --palette--;;language,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
@@ -86,7 +86,7 @@ $GLOBALS['TCA']['tt_content']['types']['sandsitepackage_e38producttable']['colum
                     '1' => [
                         'showitem' => '
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                            machinename,adjustline,brightline,coolline,detectline,
+                            machinename,adjustline,brightline,coolline,detectline,column5,column6,column7,column8,
                             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
