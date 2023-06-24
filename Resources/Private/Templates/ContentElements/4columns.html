@@ -1,8 +1,8 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
     data-namespace-typo3-fluid="true">
 <div class="default-container">
-    <div class="lg:grid flex flex-col grid-cols-12 ">
-        <div class="col-span-6">
+    <div class="lg:grid flex flex-col grid-cols-12">
+        <div class="col-span-3">
             <f:if condition="{children.1.1}">
                 <f:for each="{children.1.1}" as="data1" iteration="i">
                     <f:if condition="{data1.data.uid}">
@@ -11,9 +11,28 @@
                 </f:for>
             </f:if>
         </div>
-        <div class="col-span-6">
+        <div class="col-span-3">
             <f:if condition="{children.1.2}">
                 <f:for each="{children.1.2}" as="data1" iteration="i">
+                    <f:if condition="{data1.data.uid}">
+                        <f:cObject typoscriptObjectPath="lib.contentElementRendering ">{data1.data.uid}</f:cObject>
+                    </f:if>
+                </f:for>
+            </f:if>
+        </div>
+        <div class="col-span-3">
+            <f:if condition="{children.1.3}">
+                <f:for each="{children.1.3}" as="data1" iteration="i">
+                    <f:if condition="{data1.data.uid}">
+                        <f:cObject typoscriptObjectPath="lib.contentElementRendering ">{data1.data.uid}</f:cObject>
+                    </f:if>
+                </f:for>
+            </f:if>
+        </div>
+
+        <div class="col-span-3">
+            <f:if condition="{children.1.4}">
+                <f:for each="{children.1.4}" as="data1" iteration="i">
                     <f:if condition="{data1.data.uid}">
                         <f:cObject typoscriptObjectPath="lib.contentElementRendering ">{data1.data.uid}</f:cObject>
                     </f:if>
