@@ -1,83 +1,90 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="main-slider slider-type-{data.slider_type}-container relative default-container mx-auto {data.space_before_class}" id="c{data.uid}">
-    <div class="swiper slider-type-{data.slider_type} swiper-initialized swiper-horizontal swiper-backface-hidden">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper" id="swiper-wrapper-72765d9937d40287" aria-live="polite">
-            <f:for each="{records}" as="item" iteration="count">
-                <f:if condition="{item.image.0}">
-                    <f:if condition="{data.slider_type} == 1">
-                        <f:then>
-                            <div class="swiper-slide" role="group" aria-label="{count.cycle} / {count.tota}"
-                                data-swiper-slide-index="{count.index}" style="width: 1519px;">
-                                <f:image image="{item.image.0}" alt="alt text" />
-                                <div class="slider-{item.data.color_select}-box">
-                                    <f:if condition="{item.data.subheader}"><b>{item.data.subheader}</b></f:if>
-                                    <f:if condition="{item.data.header}">
-                                        <h3>{item.data.header}</h3>
-                                    </f:if>
-                                    <f:if condition="{item.data.bodytext}">
-                                        <f:format.html>{item.data.bodytext}</f:format.html>
-                                    </f:if>
-                                    <f:if condition="{item.data.link}">
-                                        <f:link.typolink parameter="{item.data.link}"
-                                            additionalAttributes="{aria-label: 'link'}">
-                                            {item.data.link_text}
-                                        </f:link.typolink>
-                                    </f:if>
-                                </div>
-                            </div>
-                        </f:then>
-                        <f:else>
-                            <f:if condition="{item.data.link}">
-                                <f:link.typolink parameter="{item.data.link}" additionalAttributes="{role:group}"
-                                    class="swiper-slide">
-                                    <f:if condition="{item.image.0}">
-                                        <f:image image="{item.image.0}" alt="alt text" />
-                                    </f:if>
+<div class="{data.space_before_class}">
+    <div class="main-slider slider-type-{data.slider_type}-container relative default-container mx-auto"
+        id="c{data.uid}">
+        <div class="swiper slider-type-{data.slider_type} swiper-initialized swiper-horizontal swiper-backface-hidden">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper" id="swiper-wrapper-72765d9937d40287" aria-live="polite">
+                <f:for each="{records}" as="item" iteration="count">
+                    <f:if condition="{item.image.0}">
+                        <f:if condition="{data.slider_type} == 1">
+                            <f:then>
+                                <div class="swiper-slide" role="group" aria-label="{count.cycle} / {count.tota}"
+                                    data-swiper-slide-index="{count.index}" style="width: 1519px;">
+                                    <f:image image="{item.image.0}" alt="alt text" />
                                     <div class="slider-{item.data.color_select}-box">
                                         <f:if condition="{item.data.subheader}"><b>{item.data.subheader}</b></f:if>
                                         <f:if condition="{item.data.header}">
                                             <h3>{item.data.header}</h3>
                                         </f:if>
-                                        <button>
-                                            <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="9" height="17.038" viewBox="0 0 9 17.038">
-                                                <path id="Path_5004" data-name="Path 5004" d="M121.417,8.179,113.38.142a.482.482,0,0,0-.682.682l7.695,7.695L112.7,16.213a.484.484,0,0,0,.339.825.47.47,0,0,0,.339-.143l8.037-8.037A.48.48,0,0,0,121.417,8.179Z" transform="translate(-112.556 0)"></path>
-                                            </svg>
-                                        </button>
                                         <f:if condition="{item.data.bodytext}">
                                             <f:format.html>{item.data.bodytext}</f:format.html>
                                         </f:if>
+                                        <f:if condition="{item.data.link}">
+                                            <f:link.typolink parameter="{item.data.link}"
+                                                additionalAttributes="{aria-label: 'link'}">
+                                                {item.data.link_text}
+                                            </f:link.typolink>
+                                        </f:if>
                                     </div>
-                                </f:link.typolink>
-                            </f:if>
-                        </f:else>
+                                </div>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{item.data.link}">
+                                    <f:link.typolink parameter="{item.data.link}" additionalAttributes="{role:group}"
+                                        class="swiper-slide">
+                                        <f:if condition="{item.image.0}">
+                                            <f:image image="{item.image.0}" alt="alt text" />
+                                        </f:if>
+                                        <div class="slider-{item.data.color_select}-box">
+                                            <f:if condition="{item.data.subheader}"><b>{item.data.subheader}</b></f:if>
+                                            <f:if condition="{item.data.header}">
+                                                <h3>{item.data.header}</h3>
+                                            </f:if>
+                                            <button>
+                                                <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="9"
+                                                    height="17.038" viewBox="0 0 9 17.038">
+                                                    <path id="Path_5004" data-name="Path 5004"
+                                                        d="M121.417,8.179,113.38.142a.482.482,0,0,0-.682.682l7.695,7.695L112.7,16.213a.484.484,0,0,0,.339.825.47.47,0,0,0,.339-.143l8.037-8.037A.48.48,0,0,0,121.417,8.179Z"
+                                                        transform="translate(-112.556 0)"></path>
+                                                </svg>
+                                            </button>
+                                            <f:if condition="{item.data.bodytext}">
+                                                <f:format.html>{item.data.bodytext}</f:format.html>
+                                            </f:if>
+                                        </div>
+                                    </f:link.typolink>
+                                </f:if>
+                            </f:else>
+                        </f:if>
                     </f:if>
-                </f:if>
-            </f:for>
+                </f:for>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-    </div>
-    <!-- If we need pagination -->
-    <div class="pagination-area">
-        <div class="swiper-pagination" id="swiper-pagination"></div>
-    </div>
-    <!-- If we need navigation buttons -->
-    <div class="slider-prev slider-arr" tabindex="0" role="button" aria-label="Previous slide"
-        aria-controls="swiper-wrapper-72765d9937d40287">
-        <svg id="back" xmlns="http://www.w3.org/2000/svg" width="12.565" height="23.779" viewBox="0 0 12.565 23.779">
-            <path id="Path_5002" data-name="Path 5002"
-                d="M114.141,11.889,124.88,1.15A.673.673,0,1,0,123.929.2L112.711,11.416a.671.671,0,0,0,0,.952L123.929,23.58a.677.677,0,0,0,.473.2.656.656,0,0,0,.473-.2.671.671,0,0,0,0-.952Z"
-                transform="translate(-112.513 0)"></path>
-        </svg>
-    </div>
-    <div class="slider-next slider-arr" tabindex="0" role="button" aria-label="Next slide"
-        aria-controls="swiper-wrapper-72765d9937d40287">
-        <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="12.561" height="23.779" viewBox="0 0 12.561 23.779">
-            <path id="Path_5004" data-name="Path 5004"
-                d="M124.923,11.416,113.706.2a.673.673,0,0,0-.952.952l10.739,10.739L112.754,22.628a.675.675,0,0,0,.473,1.151.656.656,0,0,0,.473-.2l11.217-11.217A.669.669,0,0,0,124.923,11.416Z"
-                transform="translate(-112.556 0)"></path>
-        </svg>
+        <!-- If we need pagination -->
+        <div class="pagination-area">
+            <div class="swiper-pagination" id="swiper-pagination"></div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="slider-prev slider-arr" tabindex="0" role="button" aria-label="Previous slide"
+            aria-controls="swiper-wrapper-72765d9937d40287">
+            <svg id="back" xmlns="http://www.w3.org/2000/svg" width="12.565" height="23.779"
+                viewBox="0 0 12.565 23.779">
+                <path id="Path_5002" data-name="Path 5002"
+                    d="M114.141,11.889,124.88,1.15A.673.673,0,1,0,123.929.2L112.711,11.416a.671.671,0,0,0,0,.952L123.929,23.58a.677.677,0,0,0,.473.2.656.656,0,0,0,.473-.2.671.671,0,0,0,0-.952Z"
+                    transform="translate(-112.513 0)"></path>
+            </svg>
+        </div>
+        <div class="slider-next slider-arr" tabindex="0" role="button" aria-label="Next slide"
+            aria-controls="swiper-wrapper-72765d9937d40287">
+            <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="12.561" height="23.779"
+                viewBox="0 0 12.561 23.779">
+                <path id="Path_5004" data-name="Path 5004"
+                    d="M124.923,11.416,113.706.2a.673.673,0,0,0-.952.952l10.739,10.739L112.754,22.628a.675.675,0,0,0,.473,1.151.656.656,0,0,0,.473-.2l11.217-11.217A.669.669,0,0,0,124.923,11.416Z"
+                    transform="translate(-112.556 0)"></path>
+            </svg>
+        </div>
     </div>
 </div>
-<br>
 </html>

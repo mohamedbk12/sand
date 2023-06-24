@@ -1,5 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="content-template-6 md:grid flex flex-col xl:grid-cols-12 grid-cols-6 {data.space_before_class}" id="c{data.uid}">
+    <div class="{data.space_before_class}">
+
+<div class="content-template-6 md:grid flex flex-col xl:grid-cols-12 grid-cols-6 " id="c{data.uid}">
     <f:for each="{records}" as="item" iteration="i">
         <f:if condition="{item.data.box_type} == 'smimagewithbackround'">
             <f:then>
@@ -41,7 +43,7 @@
         </f:if>
     </f:for>
 </div>
+    </div>
 
-<br>
 
 </html>

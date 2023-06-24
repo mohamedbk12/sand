@@ -1,81 +1,84 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-
-
-<div class="main-slider slider-type-{data.slider_type}-container relative max-w-1920 mx-auto mt-{f:if(condition: '{data.slider_type} == 3', then: '20', else: '40')} {data.space_before_class}"
-    id="c{data.uid}">
-    <div class="bg absolute top-0 left-0 w-full">
-        <div class="content-img h-96">
-            <f:if condition="{image.0}">
-                <f:image image="{image.0}" class="blur-md" />
+<div class="{data.space_before_class}">
+    <div class="main-slider slider-type-{data.slider_type}-container relative max-w-1920 mx-auto mt-{f:if(condition: '{data.slider_type} == 3', then: '20', else: '40')} "
+        id="c{data.uid}">
+        <div class="bg absolute top-0 left-0 w-full">
+            <div class="content-img h-96">
+                <f:if condition="{image.0}">
+                    <f:image image="{image.0}" class="blur-md" />
+                </f:if>
+            </div>
+        </div>
+        <div class="absolute w-full max-w-[1640px] left-2/4 -translate-x-2/4">
+            <f:if condition="{data.link}">
+                <f:link.typolink parameter="{data.link}" class="btn-white-outlined absolute top-9 right-5">
+                    {data.link_text}
+                </f:link.typolink>
             </f:if>
         </div>
-    </div>
-    <div class="absolute w-full max-w-[1640px] left-2/4 -translate-x-2/4">
-        <f:if condition="{data.link}">
-            <f:link.typolink parameter="{data.link}" class="btn-white-outlined absolute top-9 right-5">
-                {data.link_text}
-            </f:link.typolink>
-        </f:if>
-    </div>
-    <div
-        class="swiper slider-type-{data.slider_type} relative translate-y-{f:if(condition: '{data.slider_type} == 3', then: '14', else: '28')} swiper-initialized swiper-horizontal swiper-backface-hidden">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper {f:if(condition: '{data.slider_type} == 3', then: 'pt-14', else: '')}"
-            id="{f:if(condition: '{data.slider_type} == 3', then: 'swiper-wrapper-71c6e536321d1e03', else: 'swiper-wrapper-cb1474a8c6cbc611')}"
-            aria-live="polite">
-            <f:for each="{records}" as="item" iteration="count">
-                <div class="swiper-slide" role="group" style="width: 1519px;">
-                    <div class="">
-                        <div class="img">
-                            <f:if condition="{item.image.0}">
-                                <f:image image="{item.image.0}" alt="alt text" />
-                            </f:if>
-                            <f:if condition="{data.slider_type} == 3">
-                                <svg class="" xmlns="http://www.w3.org/2000/svg" fill="#0C3766" viewBox="0 0 24 24">
-                                    <path
-                                        d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z">
-                                    </path>
-                                </svg>
-                            </f:if>
-                        </div>
-                        <div class="txt bg-color-white">
-                            <div>
-                                <f:if condition="{item.data.header}">
-                                    <h3 class="text-color-blue">{item.data.header}</h3>
+        <div
+            class="swiper slider-type-{data.slider_type} relative translate-y-{f:if(condition: '{data.slider_type} == 3', then: '14', else: '28')} swiper-initialized swiper-horizontal swiper-backface-hidden">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper {f:if(condition: '{data.slider_type} == 3', then: 'pt-14', else: '')}"
+                id="{f:if(condition: '{data.slider_type} == 3', then: 'swiper-wrapper-71c6e536321d1e03', else: 'swiper-wrapper-cb1474a8c6cbc611')}"
+                aria-live="polite">
+                <f:for each="{records}" as="item" iteration="count">
+                    <div class="swiper-slide" role="group" style="width: 1519px;">
+                        <div
+                            class="{f:if(condition: '{item.data.image_position} == right-image', then: 'reverse', else: '')}">
+                            <div class="img">
+                                <f:if condition="{item.image.0}">
+                                    <f:image image="{item.image.0}" alt="alt text" />
                                 </f:if>
-                                <f:if condition="{item.data.bodytext}">
-                                    <f:format.html>{item.data.bodytext}</f:format.html>
+                                <f:if condition="{data.slider_type} == 3">
+                                    <svg class="" xmlns="http://www.w3.org/2000/svg" fill="#0C3766" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z">
+                                        </path>
+                                    </svg>
                                 </f:if>
                             </div>
-                            <f:if condition="{item.data.link}">
-                                <f:link.typolink parameter="{item.data.link}" class="btn-blue">
-                                    {item.data.link_text}
-                                </f:link.typolink>
-                            </f:if>
+                            <div class="txt bg-color-white">
+                                <div>
+                                    <f:if condition="{item.data.header}">
+                                        <h3 class="text-color-blue">{item.data.header}</h3>
+                                    </f:if>
+                                    <f:if condition="{item.data.bodytext}">
+                                        <f:format.html>{item.data.bodytext}</f:format.html>
+                                    </f:if>
+                                </div>
+                                <f:if condition="{item.data.link}">
+                                    <f:link.typolink parameter="{item.data.link}" class="btn-blue">
+                                        {item.data.link_text}
+                                    </f:link.typolink>
+                                </f:if>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </f:for>
+                </f:for>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-    </div>
-    <!-- If we need navigation buttons -->
-    <div class="slider-prev slider-arr" tabindex="0" role="button" aria-label="Previous slide"
-        aria-controls="swiper-wrapper-71c6e536321d1e03">
-        <svg id="back" xmlns="http://www.w3.org/2000/svg" width="12.565" height="23.779" viewBox="0 0 12.565 23.779">
-            <path id="Path_5002" data-name="Path 5002"
-                d="M114.141,11.889,124.88,1.15A.673.673,0,1,0,123.929.2L112.711,11.416a.671.671,0,0,0,0,.952L123.929,23.58a.677.677,0,0,0,.473.2.656.656,0,0,0,.473-.2.671.671,0,0,0,0-.952Z"
-                transform="translate(-112.513 0)"></path>
-        </svg>
-    </div>
-    <div class="slider-next slider-arr" tabindex="0" role="button" aria-label="Next slide"
-        aria-controls="swiper-wrapper-71c6e536321d1e03">
-        <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="12.561" height="23.779" viewBox="0 0 12.561 23.779">
-            <path id="Path_5004" data-name="Path 5004"
-                d="M124.923,11.416,113.706.2a.673.673,0,0,0-.952.952l10.739,10.739L112.754,22.628a.675.675,0,0,0,.473,1.151.656.656,0,0,0,.473-.2l11.217-11.217A.669.669,0,0,0,124.923,11.416Z"
-                transform="translate(-112.556 0)"></path>
-        </svg>
+        <!-- If we need navigation buttons -->
+        <div class="slider-prev slider-arr" tabindex="0" role="button" aria-label="Previous slide"
+            aria-controls="swiper-wrapper-71c6e536321d1e03">
+            <svg id="back" xmlns="http://www.w3.org/2000/svg" width="12.565" height="23.779"
+                viewBox="0 0 12.565 23.779">
+                <path id="Path_5002" data-name="Path 5002"
+                    d="M114.141,11.889,124.88,1.15A.673.673,0,1,0,123.929.2L112.711,11.416a.671.671,0,0,0,0,.952L123.929,23.58a.677.677,0,0,0,.473.2.656.656,0,0,0,.473-.2.671.671,0,0,0,0-.952Z"
+                    transform="translate(-112.513 0)"></path>
+            </svg>
+        </div>
+        <div class="slider-next slider-arr" tabindex="0" role="button" aria-label="Next slide"
+            aria-controls="swiper-wrapper-71c6e536321d1e03">
+            <svg id="next-1" xmlns="http://www.w3.org/2000/svg" width="12.561" height="23.779"
+                viewBox="0 0 12.561 23.779">
+                <path id="Path_5004" data-name="Path 5004"
+                    d="M124.923,11.416,113.706.2a.673.673,0,0,0-.952.952l10.739,10.739L112.754,22.628a.675.675,0,0,0,.473,1.151.656.656,0,0,0,.473-.2l11.217-11.217A.669.669,0,0,0,124.923,11.416Z"
+                    transform="translate(-112.556 0)"></path>
+            </svg>
+        </div>
     </div>
 </div>
-<br>
+
 </html>

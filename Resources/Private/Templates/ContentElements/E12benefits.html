@@ -1,35 +1,24 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-
-
-
-
-
-
-
-
-<div class="flex flex-wrap gap-10 {data.space_before_class}" id="c{data.uid}">
-    <f:for each="{records}" as="item" iteration="i">
-        <div>
-            
-            <h2 class="content-title text-color-blue mb-4 {f:if(condition: '{item.data.image_position} == bar-list-out', then: 'same-line')} ">{item.data.header}</h2>
-            <div class="{item.data.image_position} max-w-[500px]">
-                <f:for each="{item.records}" as="val" iteration="j">
-                    <div>
-                        <div class="icon">
-                            <span>{j.cycle}</span>
+<div class="{data.space_before_class}">
+    <div class="flex flex-wrap gap-10 " id="c{data.uid}">
+        <f:for each="{records}" as="item" iteration="i">
+            <div>
+                <h2 class="content-title text-color-blue mb-4 {f:if(condition: '{item.data.image_position} == bar-list-out', then: 'same-line')} ">{item.data.header}</h2>
+                <div class="{item.data.image_position} max-w-[500px]">
+                    <f:for each="{item.records}" as="val" iteration="j">
+                        <div>
+                            <div class="icon">
+                                <span>{j.cycle}</span>
+                            </div>
+                            <div class="text">
+                                <f:format.html>{val.data.bodytext}</f:format.html>
+                            </div>
                         </div>
-                        <div class="text">
-                            <f:format.html>{val.data.bodytext}</f:format.html>
-                        </div>
-                    </div>
-                </f:for>
+                    </f:for>
+                </div>
             </div>
-        </div>
-    </f:for>
+        </f:for>
+    </div>
 </div>
-<br>
-
-
-
 </html>

@@ -1,6 +1,9 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<div class="content-template-7 {data.space_before_class}" id="c{data.uid}">
+
+<div class="{data.space_before_class}">
+
+<div class="content-template-7" id="c{data.uid}">
     <f:for each="{records}" as="item" iteration="i">
         <div class="box">
             <div class="content-img">
@@ -23,5 +26,6 @@
         </div>
     </f:for>
 </div>
-<br>
+
+</div>
 </html>
