@@ -21,6 +21,21 @@
 			<trans-unit id="mobilephone">
 				<source>PO number/ cost center</source>
 			</trans-unit>
+			<trans-unit id="praxisname">
+				<source>Further information</source>
+			</trans-unit>     
+			<trans-unit id="username">
+				<source>I am</source>
+			</trans-unit>   
+			<trans-unit id="email">
+				<source>New E-mail adress</source>
+			</trans-unit>   
+			<trans-unit id="telephone">
+				<source>Phone</source>
+			</trans-unit>   
+			<trans-unit id="submit">
+				<source>Submit</source>
+			</trans-unit>   
 		</body>
 	</file>
 </xliff>

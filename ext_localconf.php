@@ -102,3 +102,26 @@ foreach ($iconsExtensions as $icon) {
 //         'className' => 'Meddev\\SandSitepackage\\Controller\\AddressController'
 //     );
 // }
+
+
+/**EXTEND Sf_register **/
+    $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['sf_register']['extender'][\Evoweb\SfRegister\Domain\Model\FrontendUser::class]['sand_sitepackage'] =
+        'EXT:sand_sitepackage/Classes/Domain/Model/FrontendUser.php';
+
+    //Register New field
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
+        '@import \'EXT:sand_sitepackage/Configuration/TypoScript/Extension/SfRegister/Fields.typoscript\''
+    );
+
+    //Extend Language Sf_register
+    /**Extend LAnguage Files */
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:sf_register/Resources/Private/Language/locallang.xlf'][] = 'EXT:sand_sitepackage/Resources/Private/Language/sf_register/locallang.xlf';
+/**EXTEND felogin  **/
+if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('felogin')) {
+
+
+    //Extend Language felogin
+    /**Extend LAnguage Files */
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:felogin/Resources/Private/Language/locallang.xlf'][] = 'EXT:sand_sitepackage/Resources/Private/Language/felogin/locallang.xlf';
+}
+

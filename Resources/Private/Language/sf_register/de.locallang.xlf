@@ -27,6 +27,26 @@
 				<source>PO number/ cost center</source>
 				<target>PO-Nummer/ Kostenstelle</target>
 			</trans-unit>
+			<trans-unit id="praxisname">
+				<source>Further information</source>
+				<target>Waitere Informationen</target>
+			</trans-unit>   
+			<trans-unit id="username">
+				<source>I am</source>
+				<target>Ich bin</target>
+			</trans-unit>  
+			<trans-unit id="email">
+				<source>New E-mail adress</source>				
+				<target>Neue E-mail Adresse</target>
+			</trans-unit>  
+			<trans-unit id="telephone">
+				<source>Phone</source>
+				<target>Kundennummer</target>
+			</trans-unit>   
+			<trans-unit id="submit">
+				<source>Submit</source>
+				<target>Anmelden</target>
+			</trans-unit>   
 		</body>
 	</file>
 </xliff>

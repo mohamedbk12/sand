@@ -56,6 +56,10 @@
 				<source>Position in the company </source>
 				<target>Position im Unternehmen</target>
 			</trans-unit>
+			<trans-unit id="feUsers.field.info">
+				<source>Further information</source>
+				<target>Waitere Informationen</target>
+			</trans-unit>
         </body>
     </file>
 </xliff>

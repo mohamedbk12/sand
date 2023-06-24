@@ -1,19 +1,10 @@
 #Import maximal config for Sf_register
 @import 'EXT:sf_register/Configuration/TypoScript/maximal/setup.typoscript'
 @import 'EXT:sand_sitepackage/Configuration/TypoScript/Extension/SfRegister/Fields.typoscript'
-plugin.tx_sfregister.settings.fields.configuration {
-  gender {
-    values {
-      1 = title_none
-      2 = gender_1
-      3 = gender_2
-      4 = gender_3
-    }
-  }
-}
+
 plugin.tx_sfregister{
     persistence {
-        storagePid = 3
+        storagePid = 30
     }
     view {
          templateRootPaths {
@@ -33,39 +24,14 @@ plugin.tx_sfregister{
      }
 
     settings {
-        validation.create {
-            company {
-                1 = "Evoweb.SfRegister:Required"
-            }
-            address {
-                1 = "Evoweb.SfRegister:Required"
-            }
-            gender {
-                1 = "Evoweb.SfRegister:Required"
-            }
-            zip {
-                1 = "Evoweb.SfRegister:Required"
-            }
-            city {
-                1 = "Evoweb.SfRegister:Required"
-            }
-            passwordRepeat {
-                1 = "Evoweb.SfRegister:Required"
-                2 = "StringLength", options={"minimum": 7, "maximum": 40}
-                3 = "Evoweb.SfRegister:Repeat"
-            }
-              password {
-                1 = "Evoweb.SfRegister:Required"
-                2 = "StringLength", options={"minimum": 7, "maximum": 40}
-            }
-        }
+
         forwardToEditAfterSave = {$plugin.tx_sfregister.settings.forwardToEditAfterSave}
 
         # enable double opt in
         confirmEmailPostCreate = 1
 
-        useEmailAddressAsUsername = 1
-        acceptEmailPostConfirm = 0
+        useEmailAddressAsUsername = 0
+        acceptEmailPostConfirm = 1
 
         # notify user
         notifyUserPostCreateSave = 1
@@ -103,14 +69,15 @@ plugin.tx_sfregister{
         }
 
 
+
         notifyAdmin {
             createSave = 0
-            createConfirm = 0
+            createConfirm = 1
             createRefuse = 0
-            createAccept = 0
-            createDecline =
-            inviteInvite =
-            resendMail =
+            createAccept = 1
+            createDecline = 1
+            inviteInvite = 0
+            resendMail = 0
         }
 
         notifyUser {
@@ -118,7 +85,7 @@ plugin.tx_sfregister{
             createConfirm = 0
             createRefuse = 0
             createAccept = 1
-            createDecline = 
+            createDecline = 1
             resendMail = 0
         }
         registrationFields {

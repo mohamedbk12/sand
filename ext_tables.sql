@@ -110,6 +110,17 @@ CREATE TABLE pages (
 );
 
 
+#
+# Add SQL definition of database tables
+#
+
+CREATE TABLE fe_users (
+    praxisname varchar(1024)  DEFAULT '' NOT NULL,
+);
+
+
+
+
 INSERT INTO `tx_gridelements_backend_layout` (`uid`, `pid`, `tstamp`, `crdate`, `cruser_id`, `t3ver_oid`, `t3ver_wsid`, `t3ver_state`, `t3ver_stage`, `t3_origuid`, `sorting`, `deleted`, `hidden`, `t3ver_label`, `t3ver_count`, `t3ver_tstamp`, `t3ver_move_id`, `title`, `alias`, `frame`, `description`, `horizontal`, `top_level_layout`, `config`, `pi_flexform_ds`, `pi_flexform_ds_file`, `icon`) VALUES
 (1, 25, 1685912312, 1685868618, 1, 0, 0, 0, 0, 0, 256, 0, 0, '', 0, 0, 0, '2 columns', '2columns', 0, '', 0, 0, 'backend_layout {\r\n	colCount = 2\r\n	rowCount = 1\r\n	rows {\r\n		1 {\r\n			columns {\r\n				1 {\r\n					name = 0x0\r\n					colPos = 1\r\n				}\r\n				2 {\r\n					name = 1x0\r\n					colPos = 2\r\n				}\r\n			}\r\n		}\r\n	}\r\n}\r\n', '', '0', '0'),
 (2, 25, 1687611387, 1687599371, 1, 0, 0, 0, 0, 0, 128, 0, 0, '', 0, 0, 0, '3 columns', '3columns', 0, '', 0, 0, 'backend_layout {\r\n	colCount = 3\r\n	rowCount = 1\r\n	rows {\r\n		1 {\r\n			columns {\r\n				1 {\r\n					name = 0x0\r\n					colPos = 1\r\n					maxitems = NaN\r\n				}\r\n				2 {\r\n					name = 1x0\r\n					colPos = 2\r\n					maxitems = NaN\r\n				}\r\n				3 {\r\n					name = 2x0\r\n					colPos = 3\r\n					maxitems = NaN\r\n				}\r\n			}\r\n		}\r\n	}\r\n}\r\n', '', '0', '0'),

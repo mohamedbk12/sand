@@ -5,9 +5,6 @@ plugin.tx_sfregister{
         usergroupPostAccept = 3
         usergroupPostConfirm = 2
         usergroupPostSave = 1
-
-        redirectPostActivationPageId = 163
-        redirectPostRegistrationPageId = 154
         adminEmail {
             toName = SAND Admin
             toEmail = test@meddev-media.com
