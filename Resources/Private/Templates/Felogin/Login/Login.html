@@ -3,81 +3,38 @@
 <f:render section="content" arguments="{_all}" />
 
 <f:section name="content">
-  <div class="container">
-    <div class="login">
+
+
+
+  <div class="default-container mt-20 px-5">
+
+    <div class="form-type-1 w-full max-w-[960px]">
+      <h2 class="title-underline border-b border-color-blue pb-2">Ich bin bereits Kunde</h2>
+      <p class="content-paragraph text-color-blue mt-4 text-lg">Einloggen mit E-Mail-Adresse und Passwort</p>
       <f:form target="_top" class="login-form" fieldNamePrefix="" action="login">
-        <div class="tab">
-          <div class="row">
-            <div class="col-md-5 field-spacing">
-              <div class="form-group">
-                <label class="text-large">
-                  Login / Anmelden
-                </label>
-              </div>
+        <f:if condition="{messageKey}=='error'">
+          <p class="{messageKey}-login">
+            <f:render partial="RenderLabelOrMessage" arguments="{key: 'error_message'}" />
+          </p>
+        </f:if>
+        <div class="inputs">
+          <div class="input-area">
+            <label for="">Ihre E-Mail-Adresse</label>
+            <div class="input">
+              <f:form.textfield name="user"  placeholder="" />
             </div>
           </div>
-          <f:if condition="{messageKey}=='error'">
-            <p class="{messageKey}-login">
-              <f:render partial="RenderLabelOrMessage" arguments="{key: 'error_message'}" />
-            </p>
-          </f:if>
-          <div class="row">
-            <div class="col-md-5 field-spacing">
-              <div class="form-group">
-                <label class="placeholder-text">
-                  Benutzename / E-Mail-Adresse
-                </label>
-                <f:form.textfield name="user" class="text-default form-control" placeholder="" />
-              </div>
+          <div class="input-area">
+            <label for="">Ihr Passwort</label>
+            <div class="input">
+              <f:form.password name="pass" data="{rsa-encryption: ''}"  placeholder="" />
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-md-5 field-spacing">
-              <div class="form-group">
-                <label class="placeholder-text">
-                  Passwort:
-                </label>
-                <f:form.password name="pass" data="{rsa-encryption: ''}" class="text-default form-control"
-                  placeholder="" />
-              </div>
-            </div>
-          </div>
-
-
-
-          <div>
-            <div class="buttons-section">
-              <f:form.submit value="Anmelden" class="primary-button" name="submit" />
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-md-auto">
-
-              Sie sind noch nicht registriert?
-              <a href="{f:uri.page(pageUid:settings.meddev.pageUids.register)}" class="a-link-blue">
-                Registrieren
-              </a>
-
-            </div>
-
-          </div>
-
-          <div class="row">
-            <div class="col-md-auto">
-
-              Haben Sie ihr
-              <f:link.action action="recovery" controller="PasswordRecovery" class="a-link-blue">
-                Passwort vergessen?
-              </f:link.action>
-
-            </div>
-
-          </div>
-
         </div>
+        <f:link.action action="recovery" controller="PasswordRecovery" class="md-txt mt-3 inline-block hover:underline">
+          Ich habe mein Passwort vergessen.
+        </f:link.action>
+        <f:form.submit value="Anmelden" class="btn-blue mt-8" name="submit" />
         <div class="felogin-hidden">
           <f:form.hidden name="logintype" value="login" />
           <f:form.hidden name="pid" value="{storagePid}" />
@@ -102,6 +59,10 @@
       </f:form>
     </div>
   </div>
+
+
+
+
 
 </f:section>
 
