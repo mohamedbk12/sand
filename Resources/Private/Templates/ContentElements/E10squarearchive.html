@@ -12,7 +12,9 @@
 
         <f:for each="{records}" as="item" iteration="count">
             <div
-                class="{f:if(condition: '{item.data.color_select} == white', then: '{item.data.image_position} bg-color-white p-12 border border-color-blue relative pb-28 min-h-[500px]', else: '{item.data.image_position} bg-color-{item.data.color_select} p-12 relative pb-28 min-h-[500px]')}">
+                class="{f:if(condition: '{item.data.color_select} == white', then: '{item.data.image_position} bg-color-white p-12 border border-color-blue relative pb-28 min-h-[500px]', else: '{item.data.image_position} bg-color-{item.data.color_select} p-12 relative pb-28 min-h-[500px]')}
+                {f:if(condition: '{count.cycle} != 1', then: 'border-l-0', else: '')}
+                ">
                 <b class="content-date-text">{item.data.subheader} - <f:format.date format="d.m.Y">{item.data.date}
                     </f:format.date> </b>
                 <h2 class="content-title">{item.data.header}</h2>

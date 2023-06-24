@@ -1,10 +1,29 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="box col-span-3">
+<div class="box col-span-3" data-modal="video-modal{i.cycle}">
     <div class="content-img aspect-square">
-        <f:if condition="{item.media.0}">
-            <f:media file="{item.media.0}" />
+        <f:if condition="{item.image.0}">
+            <f:image image="{item.image.0}" />
         </f:if>
     </div>
+    <img class="play-icon" src="/typo3conf/ext/sand_sitepackage/Resources/Public/images/theme2/play-icon.png"
+        alt="">
 </div>
+
+<div class="modalx just-video" id="video-modal{i.cycle}">
+    <div class="modalx-container">
+            <f:media file="{item.media.0}" />
+            Your browser does not support the video tag.
+    </div>
+    <span class="close-btn close-modal-btn">
+        <svg class="fill-color-white" xmlns="http://www.w3.org/2000/svg" width="15.959" height="15.959" viewBox="0 0 15.959 15.959">
+          <g id="Group_189" data-name="Group 189" transform="translate(-959.682 -388.217)">
+            <rect id="Rectangle_50" data-name="Rectangle 50" width="20.995" height="1.575" transform="translate(960.796 388.217) rotate(45)"/>
+            <rect id="Rectangle_52" data-name="Rectangle 52" width="20.995" height="1.575" transform="translate(959.682 403.062) rotate(-45)"/>
+          </g>
+        </svg>
+    </span>
+</div>
+
+
 
 </html>

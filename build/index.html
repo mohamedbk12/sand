@@ -11,10 +11,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     
+    <!-- VIDEO -->
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+    
     
 </head>
 <body class="">
     <br><br><br><br><br><br><br><br><br>
+    
+    <button data-modal="video-modal">Open Video</button>
+
+    <div class="modalx just-video" id="video-modal">
+        <div class="modalx-container">
+            <video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
+                <source src="./assets/video/tru_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <span class="close-btn close-modal-btn">
+            <svg class="fill-color-white" xmlns="http://www.w3.org/2000/svg" width="15.959" height="15.959" viewBox="0 0 15.959 15.959">
+              <g id="Group_189" data-name="Group 189" transform="translate(-959.682 -388.217)">
+                <rect id="Rectangle_50" data-name="Rectangle 50" width="20.995" height="1.575" transform="translate(960.796 388.217) rotate(45)"/>
+                <rect id="Rectangle_52" data-name="Rectangle 52" width="20.995" height="1.575" transform="translate(959.682 403.062) rotate(-45)"/>
+              </g>
+            </svg>
+        </span>
+    </div>
     
     <div class="">
         <div class="default-container">
@@ -3224,7 +3246,7 @@
                         <span>LÄNDER</span>
                     </div>
                 </div>
-                <div class="box col-span-3">
+                <div class="box col-span-3" data-modal="video-modal">
                     <div class="content-img aspect-square">
                         <img src="https://d39dczdz8fv6rw.cloudfront.net/cache-buster-1677843505/HR%20Webseiten/Br%C3%BCckner%20Group/Bilder/Bilder/image-thumb__145817__wall-teaser/048.012216_BGG_EB_MA-Video_Thailand_23_Thumbnail_clean.webp" alt="">
                     </div>
@@ -3289,6 +3311,23 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./assets/js/app.js"></script>
+
+<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+<script>
+  var player = videojs('my-video', {
+    controlBar: {
+      children: [
+        'playToggle', // Oynatma/Durdurma butonu
+        'volumePanel', // Ses kontrolü
+        'currentTimeDisplay', // Geçen süre göstergesi
+        'progressControl', // İlerleme çubuğu
+        'remainingTimeDisplay', // Kalan süre göstergesi
+        'fullscreenToggle', // Tam ekran butonu
+      ]
+    }
+  });
+</script>
+
 <script>
     var singleSlider = new Swiper('.single-slider', {
         spaceBetween: 10,

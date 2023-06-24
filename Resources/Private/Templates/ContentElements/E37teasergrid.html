@@ -8,7 +8,7 @@
             <f:else>
                 <f:if condition="{item.data.box_type} == 'video'">
                     <f:then>
-                        <f:render partial="E37teasergrid/Video" arguments="{item : item}" />
+                        <f:render partial="E37teasergrid/Video" arguments="{item : item,i: i}" />
                     </f:then>
                     <f:else>
                         <f:if condition="{item.data.box_type} == 'image'">

@@ -187,33 +187,37 @@ $(document).ready(function() {
 
 
   // DYNAMIC MODALS
-  
+  let currentVideo;
   let currentModal;
 
   function checkIncludeModal(e){
-    if (!e.composedPath().includes(currentModal)) {
-      console.log(currentModal)
-      console.log('hhii')
+    if (!e.composedPath().includes(currentModal.children[0])) {
       closeModal()
     }
   }
   
   function closeModal() {
-    console.log('slm')
     currentModal.classList.remove('active')
     document.removeEventListener('click', checkIncludeModal, true)
     $('body').removeClass('no-scroll')
+    if (currentVideo) {
+      currentVideo.pause();
+      currentVideo.currentTime = 0;
+    }
   }
   function openModal(modal) {
-    console.log(modal)
     currentModal = modal
     currentModal.classList.add('active')
     document?.addEventListener('click', checkIncludeModal, true)
     $('body').addClass('no-scroll')
+    currentVideo = currentModal.querySelector("video");
+    if (currentVideo) {
+      currentVideo.currentTime = 0;
+    }
   }
   
 
-  let modalBtns = document.querySelectorAll('.modal-btn')
+  let modalBtns = document.querySelectorAll('[data-modal]')
   let closeModalBtns = document.querySelectorAll('.close-modal-btn')
 
   modalBtns.forEach(modalBtn => {
@@ -230,6 +234,22 @@ $(document).ready(function() {
 
   
   
+  // DYNAMIC MODALS
+
+  modalBtns.forEach(modalBtn => {
+      modalBtn.addEventListener('click', () => {
+          currentModal = document.getElementById(modalBtn.dataset.modal)
+          currentModal.classList.add('active')
+          document?.addEventListener('click', checkIncludeModal, true)
+
+          currentVideo = currentModal.querySelector("video");
+          if (currentVideo) {
+              currentVideo.currentTime = 0;
+          }
+      })
+  })
+
+
   
   
 });

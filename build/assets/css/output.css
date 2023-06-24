@@ -15465,6 +15465,103 @@ footer > div .bottom > div > div a:hover {
   margin-top: 40%;
 }
 
+
+.fill-color-white {
+  fill: #fff;
+}
+
+.modalx {
+  pointer-events: none;
+  position: fixed;
+  inset: 0px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.8;
+  padding: 1rem;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.modalx-container{
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .2);
+  position: relative;
+  max-height: 95vh;
+  --tw-translate-y: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  overflow-y: auto;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  margin: auto;
+}
+
+.modalx-container .close-btn {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  cursor: pointer;
+}
+
+body:has(.modalx.active) {
+  overflow: hidden;
+}
+
+.modalx.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modalx.active .modalx-container {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 1;
+}
+
+.just-video.active {
+  --tw-bg-opacity: 1;
+}
+
+.just-video .modalx-container{
+  max-height: calc(100vh - 100px);
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 95%;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .just-video .modalx-container {
+    max-width: 90%;
+  }
+}
+
+.just-video .modalx-container #my-video {
+  height: 100%;
+  width: 100%;
+}
+
+.just-video .modalx-container video {
+  height: 100%;
+  width: 100%;
+}
+
+.just-video .close-btn {
+  position: absolute;
+  right: 1.875rem;
+  top: 1.875rem;
+  z-index: 30;
+  cursor: pointer;
+}
+
 .block {
   display: block;
 }
@@ -15903,6 +16000,12 @@ footer > div .bottom > div > div a:hover {
 .border-t {
   border-top-width: 1px;
 }
+
+.border-t-0{ border-top-width: 0;}
+.border-b-0{ border-bottom-width: 0;}
+.border-l-0{ border-left-width: 0;}
+.border-r-0{ border-right-width: 0;}
+
 
 .border-color-blue {
   --tw-border-opacity: 1;
