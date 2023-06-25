@@ -3,6 +3,9 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
+
+<div class="default-container px-4 fill-space py-10">
+	<div class="text content-paragraph text-color-blue">
 	<f:if condition="{userNotFound}">
 		<f:translate id="account_not_found"/>
 	</f:if><f:if condition="{userAlreadyAccepted}">
@@ -10,6 +13,8 @@
 	</f:if><f:if condition="{userAccepted}">
 		<f:format.raw><f:translate id="account_successful_activated" arguments="{0: user.username}"/></f:format.raw>
 	</f:if>
+	</div>
+</div>
 </f:section>
 
 </html>
