@@ -1,39 +1,31 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="container">
-    <div class="reset-password">
+<div class="default-container mt-20 px-5">
+
+    <div class="form-type-1 w-full max-w-[960px]">
         <f:render partial="ValidationErrors" />
-        <div class="col-md-6">
-            <f:form action="recovery" method="post" class="login-form">
-                <fieldset>
-                    <legend class="legend-login">
-                        <label class="text-large">
-                            <f:render partial="RenderLabelOrMessage" arguments="{key: 'reset_password'}" />
-                        </label>
-                    </legend>
-                    <p>
-                        <f:translate key="forgot_reset_message" />
-                    </p>
-                    <div class="form-group">
-                        <label class="placeholder-text">
-                            <f:translate key="enter_your_data" />
-                        </label>
+        <h2 class="title-underline border-b border-color-blue pb-2">
+            <f:render partial="RenderLabelOrMessage" arguments="{key: 'reset_password'}" />
+        </h2>
+        <p class="content-paragraph text-color-blue mt-4 text-lg">
+            <f:translate key="forgot_reset_message" />
+        </p>
+        <f:form action="recovery" method="post" class="login-form">
+            <div class="inputs">
+                <div class="input-area">
+                    <label for="">Ihre E-Mail-Adresse</label>
+                    <div class="input">
                         <f:form.textfield name="userIdentifier" />
                     </div>
+                </div>
 
-                    <div class="buttons-section buttons-wrapper">
-                        <f:form.submit value="{f:translate(key: 'reset_password')}" class="primary-button login-submit" />
-                    </div>
-                </fieldset>
-            </f:form>
-        </div>
-        <f:comment>
-            <p>
-                <f:link.action action="login" controller="Login">
-                    <f:translate key="forgot_header_backToLogin" />
-                </f:link.action>
-            </p>
-        </f:comment>
+            </div>
+            <f:form.submit value="{f:translate(key: 'reset_password')}" class="btn-blue mt-8" />
+        </f:form>
     </div>
 </div>
+
+
+
+
 
 </html>
