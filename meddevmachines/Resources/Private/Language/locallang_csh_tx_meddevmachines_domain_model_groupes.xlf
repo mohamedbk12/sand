@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:meddevmachines/Resources/Private/Language/locallang_csh_tx_meddevmachines_domain_model_groupes.xlf" date="2023-07-01T13:58:07Z" product-name="meddevmachines">
+		<header/>
+		<body>
+			<trans-unit id="groupnames.description" resname="groupnames.description">
+				<source>groupnames</source>
+			</trans-unit>
+			<trans-unit id="titel.description" resname="titel.description">
+				<source>titel</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

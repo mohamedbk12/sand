@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:meddevmachines/Resources/Private/Language/locallang_db.xlf" date="2023-07-01T13:58:07Z" product-name="meddevmachines">
+		<header/>
+		<body>
+			<trans-unit id="tx_meddevmachines_domain_model_categories" resname="tx_meddevmachines_domain_model_categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_categories.description" resname="tx_meddevmachines_domain_model_categories.description">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_categories.name" resname="tx_meddevmachines_domain_model_categories.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_categories.name.description" resname="tx_meddevmachines_domain_model_categories.name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_groupes" resname="tx_meddevmachines_domain_model_groupes">
+				<source>Groupes</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_groupes.description" resname="tx_meddevmachines_domain_model_groupes.description">
+				<source>Groupes</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_groupes.groupnames" resname="tx_meddevmachines_domain_model_groupes.groupnames">
+				<source>Groupnames</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_groupes.groupnames.description" resname="tx_meddevmachines_domain_model_groupes.groupnames.description">
+				<source>Groupnames</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_groupes.titel" resname="tx_meddevmachines_domain_model_groupes.titel">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_groupes.titel.description" resname="tx_meddevmachines_domain_model_groupes.titel.description">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines" resname="tx_meddevmachines_domain_model_machines">
+				<source>Machines</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.description" resname="tx_meddevmachines_domain_model_machines.description">
+				<source>Machines</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.name" resname="tx_meddevmachines_domain_model_machines.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.name.description" resname="tx_meddevmachines_domain_model_machines.name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.tx_meddevmachines_desc" resname="tx_meddevmachines_domain_model_machines.tx_meddevmachines_desc">
+				<source>Desc</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.tx_meddevmachines_desc.description" resname="tx_meddevmachines_domain_model_machines.tx_meddevmachines_desc.description">
+				<source>Desc</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.images" resname="tx_meddevmachines_domain_model_machines.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.images.description" resname="tx_meddevmachines_domain_model_machines.images.description">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.video" resname="tx_meddevmachines_domain_model_machines.video">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.video.description" resname="tx_meddevmachines_domain_model_machines.video.description">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.tx_meddevmachines_group" resname="tx_meddevmachines_domain_model_machines.tx_meddevmachines_group">
+				<source>Group</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.tx_meddevmachines_group.description" resname="tx_meddevmachines_domain_model_machines.tx_meddevmachines_group.description">
+				<source>Group</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.category" resname="tx_meddevmachines_domain_model_machines.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.category.description" resname="tx_meddevmachines_domain_model_machines.category.description">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_machines.name" resname="tx_meddevmachines_machines.name">
+				<source>machines</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_machines.description" resname="tx_meddevmachines_machines.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

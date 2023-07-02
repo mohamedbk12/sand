@@ -1,0 +1,14 @@
+plugin.tx_meddevmachines_machines {
+    view {
+        # cat=plugin.tx_meddevmachines_machines/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:meddevmachines/Resources/Private/Templates/
+        # cat=plugin.tx_meddevmachines_machines/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:meddevmachines/Resources/Private/Partials/
+        # cat=plugin.tx_meddevmachines_machines/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:meddevmachines/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_meddevmachines_machines//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
