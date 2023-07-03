@@ -13,4 +13,10 @@ return [
             ],
         ]
     ],
+    \Meddev\Meddevmachines\Domain\Model\Category::class => [
+        'tableName' => 'sys_category',
+        'template' => [
+            'fieldName' => 'template'
+        ],
+    ],
 ];

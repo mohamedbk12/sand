@@ -6,7 +6,7 @@ namespace Meddev\Meddevmachines\Domain\Model;
 
 
 /**
- * This file is part of the "machines" Extension for TYPO3 CMS.
+ * This file is part of the "products2" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
@@ -14,37 +14,38 @@ namespace Meddev\Meddevmachines\Domain\Model;
  * (c) 2023 
  */
 
+
 /**
- * Categories
+ * Accessoiretext
  */
-class Categories extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Accessoiretext extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
-     * name
+     * text
      *
      * @var string
      */
-    protected $name = null;
+    protected $text = '';
 
     /**
-     * Returns the name
+     * Returns the text
      *
      * @return string
      */
-    public function getName()
+    public function getText()
     {
-        return $this->name;
+        return $this->text;
     }
 
     /**
-     * Sets the name
+     * Sets the text
      *
-     * @param string $name
+     * @param string $text
      * @return void
      */
-    public function setName(string $name)
+    public function setText(string $text)
     {
-        $this->name = $name;
+        $this->text = $text;
     }
 }

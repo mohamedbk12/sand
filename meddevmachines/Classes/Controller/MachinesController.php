@@ -3,7 +3,10 @@
 declare(strict_types=1);
 
 namespace Meddev\Meddevmachines\Controller;
+
 use Meddev\Meddevmachines\Domain\Repository\MachinesRepository;
+use Meddev\Meddevmachines\Domain\Repository\CategoryRepository;
+
 /**
  * This file is part of the "machines" Extension for TYPO3 CMS.
  *
@@ -18,8 +21,14 @@ use Meddev\Meddevmachines\Domain\Repository\MachinesRepository;
  */
 class MachinesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+    /**
+     * CategoryRepository
+     *
+     * @var CategoryRepository
+     */
+    protected $categoryRepository = null;
 
-        /**
+    /**
      * @var MachinesRepository
      */
     public $machinesRepository;
@@ -29,10 +38,11 @@ class MachinesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      *
      * @param MachinesRepository $machinesRepository
      */
-    public function __construct(MachinesRepository $machinesRepository )
+    public function __construct(MachinesRepository $machinesRepository
+    , CategoryRepository $categoryRepository)
     {
-      
         $this->machinesRepository = $machinesRepository;
+        $this->categoryRepository = $categoryRepository;
     }
 
 
@@ -57,6 +67,7 @@ class MachinesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function showAction(\Meddev\Meddevmachines\Domain\Model\Machines $machines): \Psr\Http\Message\ResponseInterface
     {
+        debug( $machines);
         $this->view->assign('machines', $machines);
         return $this->htmlResponse();
     }

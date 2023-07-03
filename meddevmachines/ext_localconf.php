@@ -6,11 +6,15 @@ defined('TYPO3') || die();
         'Meddevmachines',
         'Machines',
         [
-            \Meddev\Meddevmachines\Controller\MachinesController::class => 'list, show'
+            \Meddev\Meddevmachines\Controller\MachinesController::class => 'list, show',
+            \Meddev\Meddevmachines\Controller\CategoryController::class => 'list',
+
         ],
         // non-cacheable actions
         [
-            \Meddev\Meddevmachines\Controller\MachinesController::class => 'list, show'
+            \Meddev\Meddevmachines\Controller\MachinesController::class => 'list, show',
+            \Meddev\Meddevmachines\Controller\CategoryController::class => 'list',
+
         ]
     );
 
