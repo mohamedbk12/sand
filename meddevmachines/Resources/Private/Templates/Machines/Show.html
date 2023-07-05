@@ -17,5 +17,34 @@ Otherwise your changes will be overwritten the next time you save the extension 
     <f:flashMessages />
     <f:render partial="Machines/Properties" arguments="{machines:machines}" />
     <f:link.action action="list">Back to list</f:link.action><br />
+    <script>
+      var sliderThumbnail = new Swiper('.slider-thumbnail', {
+          spaceBetween: 20,
+          freeMode: true,
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
+          breakpoints: {
+              998: {
+                  slidesPerView: 4.5,
+              },
+              668: {
+                  slidesPerView: 3.5,
+              },
+              0:{
+                  slidesPerView: 2.5,
+              }
+          }
+      });
+  
+      var slider = new Swiper('.slider', {
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+          thumbs: {
+              swiper: sliderThumbnail
+          }
+      });
+  </script>
 </f:section>
 </html>
