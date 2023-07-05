@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:meddevmachines/Resources/Private/Language/locallang_csh_tx_meddevmachines_domain_model_tes.xlf" date="2023-07-01T13:43:12Z" product-name="meddevmachines">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -67,7 +67,6 @@ class MachinesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function showAction(\Meddev\Meddevmachines\Domain\Model\Machines $machines): \Psr\Http\Message\ResponseInterface
     {
-        debug( $machines);
         $this->view->assign('machines', $machines);
         return $this->htmlResponse();
     }

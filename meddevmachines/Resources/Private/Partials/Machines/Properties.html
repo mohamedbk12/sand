@@ -1,26 +1,342 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<table class="tx-meddevmachines">
-	<tr>
-		<td><f:translate key="tx_meddevmachines_domain_model_machines.name" /></td>
-		<td>{machines.name}</td>
-	</tr>
-	<tr>
-		<td><f:translate key="tx_meddevmachines_domain_model_machines.tx_meddevmachines_desc" /></td>
-		<td>{machines.desc}</td>
-	</tr>
-	<tr>
-		<td><f:translate key="tx_meddevmachines_domain_model_machines.images" /></td>
-		<td>
-				<f:image src="{machines.images.originalResource.publicUrl}" width="200"/>
-            </td>
-	</tr>
-	<tr>
-		<td><f:translate key="tx_meddevmachines_domain_model_machines.video" /></td>
-		<td>
-				<a href="{machines.video.originalResource.publicUrl}">
-					{machines.video.originalResource.name}
-				</a>
-			</td>
-	</tr>
-</table>
+{namespace meddev=Meddev\SandSitepackage\ViewHelpers}
+
+<div class="min-h-fill default-container py-10 px-3">
+	<div class="product-container">
+		<div class="product-area2">
+			<div class="img-area w-full xl:max-w-[1000px] min-w-0">
+				<div class="product-gallery2">
+					<div class="swiper-container slider swiper-initialized swiper-horizontal swiper-backface-hidden">
+						<div class="swiper-wrapper" id="swiper-wrapper-1da882e6c60b0af0" aria-live="polite">
+							<f:for each="{machines.images}" as="image" iteration="i">
+								<div class="swiper-slide swiper-slide-active" role="group"
+									aria-label="{i.cycle} / {i.total}" style="width: 875px;">
+									<f:image image="{image}" style="width: 875px;" />
+								</div>
+							</f:for>
+						</div>
+						<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+					</div>
+
+					<div
+						class="swiper-container slider-thumbnail swiper-initialized swiper-horizontal swiper-free-mode swiper-watch-progress swiper-backface-hidden swiper-thumbs">
+						<div class="swiper-wrapper" id="swiper-wrapper-36a748ebf529aa10e" aria-live="polite"
+							style="transform: translate3d(0px, 0px, 0px);">
+
+							<f:for each="{machines.images}" as="image" iteration="i">
+								<f:if condition="{i.cycle} == 1">
+									<f:then>
+										<div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active"
+											role="group" aria-label="{i.cycle} / {i.total}"
+											style="width: 178.889px; margin-right: 20px;">
+											<f:image image="{image}" style="width: 875px;" />
+										</div>
+									</f:then>
+									<f:else>
+										<div class="swiper-slide swiper-slide-visible" role="group"
+											aria-label="{i.cycle} / {i.total}"
+											style="width: 178.889px; margin-right: 20px;">
+											<f:image image="{image}" style="width: 875px;" />
+										</div>
+									</f:else>
+								</f:if>
+							</f:for>
+						</div>
+						<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+					</div>
+				</div>
+			</div>
+			<div class="detail-area2">
+				<h1>{machines.header}</h1>
+				<h2>{machines.subheader}</h2>
+				<div class="info-table">
+					<f:for each="{machines.caracteristique}" as="caracteristique" iteration="i">
+						<div>
+							<div>{caracteristique.name}</div>
+							<div>{caracteristique.value}</div>
+						</div>
+					</f:for>
+				</div>
+				<f:if condition="{machines.link}">
+					<f:link.typolink parameter="{machines.link}" class="p-btn">
+						<span>{machines.linktext}</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="22.886" height="10.329"
+							viewBox="0 0 22.886 10.329">
+							<path id="Path_5010" data-name="Path 5010"
+								d="M-405.842,33.7a.59.59,0,0,0-.837,0l-3.562,3.562V17a.6.6,0,0,0-.6-.6.6.6,0,0,0-.6.6V37.263l-3.557-3.562a.59.59,0,0,0-.837,0,.59.59,0,0,0,0,.837l4.573,4.573a.59.59,0,0,0,.421.174.589.589,0,0,0,.421-.174l4.573-4.573A.6.6,0,0,0-405.842,33.7Z"
+								transform="translate(-16.4 -405.671) rotate(-90)"></path>
+						</svg>
+					</f:link.typolink>
+				</f:if>
+			</div>
+		</div>
+		<div class="information-area2 mt-40">
+			<div class="tabs-head">
+				<f:if condition="{machines.maschineanfragen}">
+					<a class="active">Maschine anfragen</a>
+				</f:if>
+				<f:if condition="{machines.technicaldata}">
+					<a>Technical Data</a>
+				</f:if>
+				<f:if condition="{machines.accessoires}">
+					<a>Accessories</a>
+				</f:if>
+			</div>
+			<div class="tabs-body">
+				<div class="active">
+					<div class="description grid lg:grid-cols-12 gap-10">
+						<div class="col-span-6">
+							<div class="content-img">
+								<f:if condition="{machines.maschineanfragen.0.images}">
+									<f:image image="{machines.maschineanfragen.0.images}" style="width: 875px;" />
+								</f:if>
+							</div>
+							<h3 class="content-bordered-y content-title text-color-blue mt-5">
+								{machines.maschineanfragen.0.header}</h3>
+							<f:format.html>{machines.maschineanfragen.0.text}</f:format.html>
+						</div>
+
+						<div class="col-span-6">
+
+							<f:if condition="{machines.maschineanfragen.0.machineinfo}">
+
+								<div class="content-table">
+									<div class="th">MACHINE INFORMATION</div>
+									<div class="tb">
+										<f:for each="{machines.maschineanfragen.0.machineinfo}" as="machineinfo"
+											iteration="i">
+											<div>
+												<div>{machineinfo.name}</div>
+												<div>{machineinfo.value}</div>
+											</div>
+										</f:for>
+									</div>
+								</div>
+							</f:if>
+							<f:if condition="{machines.maschineanfragen.0.cuttinginformation}">
+								<div class="content-table mt-5">
+									<div class="th">MACHINE INFORMATION</div>
+									<div class="tb">
+										<f:for each="{machines.maschineanfragen.0.cuttinginformation}"
+											as="cuttinginformation" iteration="i">
+											<div>
+												<div>{cuttinginformation.name}</div>
+												<div>{cuttinginformation.value}</div>
+											</div>
+										</f:for>
+									</div>
+								</div>
+							</f:if>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="grid lg:grid-cols-12 gap-10">
+						<div class="col-span-6">
+							<h3 class="content-title text-color-blue px-5">Maschinen size</h3>
+							<h4
+								class="content-paragraph content-bordered-y text-color-blue py-3 px-5 mt-3 border-opacity-10">
+								{machines.technicaldata.0.maschinensize}</h4>
+							<div class="content-table-2 mt-5">
+								<div class="th">Working range</div>
+								<f:for each="{machines.technicaldata.0.workingrange}" as="workingrange" iteration="i">
+									<f:variable name="variable" value="{meddev:devision(data: i.total)}" />
+									<f:if condition="{i.cycle} <= {variable}">
+										<div>
+											<div>{workingrange.name}</div>
+											<div>{workingrange.value}</div>
+										</div>
+									</f:if>
+								</f:for>
+
+								<div class="th">Workpiece</div>
+
+
+								<f:for each="{machines.technicaldata.0.workpiece}" as="workpiece" iteration="i">
+									<f:variable name="variable" value="{meddev:devision(data: i.total)}" />
+									<f:if condition="{i.cycle} <= {variable}">
+										<div>
+											<div>{workpiece.name}</div>
+											<div>{workpiece.value}</div>
+										</div>
+									</f:if>
+								</f:for>
+
+								<div class="th">Max. speed</div>
+								<f:for each="{machines.technicaldata.0.maxspeed}" as="maxspeed" iteration="i">
+									<f:variable name="variable" value="{meddev:devision(data: i.total)}" />
+									<f:if condition="{i.cycle} <= {variable}">
+										<div>
+											<div>{maxspeed.name}</div>
+											<div>{maxspeed.value}</div>
+										</div>
+									</f:if>
+								</f:for>
+
+							</div>
+						</div>
+						<div class="col-span-6">
+							<h3 class="content-title text-color-blue px-5">Table size</h3>
+							<h4
+								class="content-paragraph content-bordered-y text-color-blue py-3 px-5 mt-3 border-opacity-10">
+								{machines.technicaldata.0.tablesize}</h4>
+							<div class="content-table-2 mt-5">
+
+								<div class="th">Working range</div>
+								<f:for each="{machines.technicaldata.0.workingrange}" as="workingrange" iteration="i">
+									<f:variable name="variable" value="{meddev:devision(data: i.total)}" />
+									<f:if condition="{i.cycle} > {variable}">
+										<div>
+											<div>{workingrange.name}</div>
+											<div>{workingrange.value}</div>
+										</div>
+									</f:if>
+								</f:for>
+
+
+								<div class="th">Workpiece</div>
+								<f:for each="{machines.technicaldata.0.workpiece}" as="workpiece" iteration="i">
+									<f:variable name="variable" value="{meddev:devision(data: i.total)}" />
+									<f:if condition="{i.cycle} > {variable}">
+										<div>
+											<div>{workpiece.name}</div>
+											<div>{workpiece.value}</div>
+										</div>
+									</f:if>
+								</f:for>
+								<div class="th">Max. speed</div>
+								<f:for each="{machines.technicaldata.0.maxspeed}" as="maxspeed" iteration="i">
+									<f:variable name="variable" value="{meddev:devision(data: i.total)}" />
+									<f:if condition="{i.cycle} <= {variable}">
+										<div>
+											<div>{maxspeed.name}</div>
+											<div>{maxspeed.value}</div>
+										</div>
+									</f:if>
+								</f:for>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="grid lg:grid-cols-12 gap-10">
+						<f:for each="{machines.accessoires.0.accessoireimages}" as="accessoireimages" iteration="i">
+							<div class="content-img-6 bottom-left col-span-4">
+								<div class="content-img">
+									<f:if condition="{accessoireimages.image}">
+										<f:image image="{accessoireimages.image}" />
+									</f:if>
+								</div>
+								<span>{accessoireimages.text}</span>
+							</div>
+						</f:for>
+					</div>
+
+
+
+					<div class="lg:grid lg:grid-cols-12 flex flex-col lg:gap-10 gap-14 mt-7">
+						<f:for each="{machines.accessoires.0.accessoiretext}" as="accessoiretext" iteration="i">
+							<f:if condition="{i.cycle} == 1">
+								<f:then>
+									<div class="col-span-6">
+										<f:format.html>{accessoiretext.text}</f:format.html>
+									</div>
+								</f:then>
+								<f:else>
+									<div class="col-span-3">
+										<f:format.html>{accessoiretext.text}</f:format.html>
+									</div>
+								</f:else>
+							</f:if>
+						</f:for>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="video-area mt-60">
+			<div class="grid grid-cols-12 bg-color-white">
+				<div class="col-span-12 lg:col-span-9 content-img relative">
+
+					<f:media file="{machines.video}" width="400" height="375" />
+					<span class="play-icon">
+					</span>
+				</div>
+				<div class="col-span-12 lg:col-span-3 lg:p-12 flex lg:py-28 p-5 py-10">
+					<div class="flex flex-col h-full justify-between">
+						<div>
+							<h2 class="content-title">{machines.videotitel}</h2>
+							<f:format.html>{machines.videotext}</f:format.html>
+						</div>
+						<f:if condition="{machines.videolink}">
+							<f:link.typolink parameter="{machines.videolink}"
+								class="content-button btn-blue-outlined ml-auto">
+								{machines.linktext}
+							</f:link.typolink>
+						</f:if>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="image-gallery mt-60">
+			<div
+				class="swiper-container single-slider md:hidden mb-10 overflow-hidden relative swiper-initialized swiper-horizontal">
+				<div class="swiper-wrapper" id="swiper-wrapper-87dcb8f11c69afe0" aria-live="polite"
+					style="transition-duration: 0ms;">
+					<f:for each="{machines.subimages}" as="image" iteration="i">
+						<div class="swiper-slide w-full content-img aspect-square">
+							<f:image image="{image}" />
+						</div>
+					</f:for>
+				</div>
+				<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+			</div>
+			<div class="content-img-7 flex lg:gap-10 gap-4">
+				<div class="w-full max-w-[360px] md:flex hidden flex-col lg:gap-10 gap-4">
+					<f:for each="{machines.subimages}" as="image" iteration="i">
+						<f:if condition="{i.cycle} < 3">
+						<div class="content-img h-full">
+							<f:image image="{image}" />
+						</div>
+					</f:if>
+					</f:for>
+				</div>
+				<div class="w-full flex flex-col lg:gap-10 gap-4">
+					<f:for each="{machines.subimages}" as="image" iteration="i">
+						<f:if condition="{i.cycle} == 3">
+						<div class="content-img lg:h-72 h-full md:flex hidden">
+							<f:image image="{image}" />
+						</div>
+					</f:if>
+					</f:for>
+
+
+					<div
+						class="lg:content-bg p-8 lg:min-w-0 min-w-[240px] lg:h-44 h-fit bg-color-blue flex flex-col items-center justify-center">
+						<h3 class="content-title mt-0 text-center">{machines.subimagesTitel}</h3>
+					</div>
+
+					<f:for each="{machines.subimages}" as="image" iteration="i">
+						<f:if condition="{i.cycle} == 4">
+						<div class="content-img lg:h-72 h-full md:flex hidden">
+							<f:image image="{image}" />
+						</div>
+					</f:if>
+					</f:for>
+				</div>
+
+				<div class="w-full max-w-[360px] md:flex hidden flex-col lg:gap-10 gap-4">
+					<f:for each="{machines.subimages}" as="image" iteration="i">
+						<f:if condition="{i.cycle} > 4">
+						<div class="content-img h-full">
+							<f:image image="{image}" />
+						</div>
+					</f:if>
+					</f:for>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 </html>

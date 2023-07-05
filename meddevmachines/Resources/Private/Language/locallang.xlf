@@ -75,6 +75,342 @@
 			<trans-unit id="tx_meddevmachines_domain_model_machines.category.description" resname="tx_meddevmachines_domain_model_machines.category.description">
 				<source>Category</source>
 			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines" resname="tx_meddevmachines_domain_model_machines">
+				<source>Machines</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.description" resname="tx_meddevmachines_domain_model_machines.description">
+				<source>Machines</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.name" resname="tx_meddevmachines_domain_model_machines.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.name.description" resname="tx_meddevmachines_domain_model_machines.name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.images" resname="tx_meddevmachines_domain_model_machines.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.images.description" resname="tx_meddevmachines_domain_model_machines.images.description">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.header" resname="tx_meddevmachines_domain_model_machines.header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.header.description" resname="tx_meddevmachines_domain_model_machines.header.description">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.subheader" resname="tx_meddevmachines_domain_model_machines.subheader">
+				<source>Subheader</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.subheader.description" resname="tx_meddevmachines_domain_model_machines.subheader.description">
+				<source>Subheader</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.link" resname="tx_meddevmachines_domain_model_machines.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.link.description" resname="tx_meddevmachines_domain_model_machines.link.description">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.linktext" resname="tx_meddevmachines_domain_model_machines.linktext">
+				<source>Linktext</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.linktext.description" resname="tx_meddevmachines_domain_model_machines.linktext.description">
+				<source>Linktext</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.video" resname="tx_meddevmachines_domain_model_machines.video">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.video.description" resname="tx_meddevmachines_domain_model_machines.video.description">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.videotitel" resname="tx_meddevmachines_domain_model_machines.videotitel">
+				<source>Videotitel</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.videotitel.description" resname="tx_meddevmachines_domain_model_machines.videotitel.description">
+				<source>Videotitel</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.videotext" resname="tx_meddevmachines_domain_model_machines.videotext">
+				<source>Videotext</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.videotext.description" resname="tx_meddevmachines_domain_model_machines.videotext.description">
+				<source>Videotext</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.videolink" resname="tx_meddevmachines_domain_model_machines.videolink">
+				<source>Videolink</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.videolink.description" resname="tx_meddevmachines_domain_model_machines.videolink.description">
+				<source>Videolink</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.videolinktext" resname="tx_meddevmachines_domain_model_machines.videolinktext">
+				<source>Videolinktext</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.videolinktext.description" resname="tx_meddevmachines_domain_model_machines.videolinktext.description">
+				<source>Videolinktext</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.subimages" resname="tx_meddevmachines_domain_model_machines.subimages">
+				<source>Subimages</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.subimages.description" resname="tx_meddevmachines_domain_model_machines.subimages.description">
+				<source>Subimages</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.subimages_titel" resname="tx_meddevmachines_domain_model_machines.subimages_titel">
+				<source>Subimages Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.subimages_titel.description" resname="tx_meddevmachines_domain_model_machines.subimages_titel.description">
+				<source>Subimages Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.caracteristique" resname="tx_meddevmachines_domain_model_machines.caracteristique">
+				<source>Caracteristique</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.caracteristique.description" resname="tx_meddevmachines_domain_model_machines.caracteristique.description">
+				<source>Caracteristique</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.maschineanfragen" resname="tx_meddevmachines_domain_model_machines.maschineanfragen">
+				<source>Maschineanfragen</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.maschineanfragen.description" resname="tx_meddevmachines_domain_model_machines.maschineanfragen.description">
+				<source>Maschineanfragen</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.technicaldata" resname="tx_meddevmachines_domain_model_machines.technicaldata">
+				<source>Technicaldata</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.technicaldata.description" resname="tx_meddevmachines_domain_model_machines.technicaldata.description">
+				<source>Technicaldata</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.accessoires" resname="tx_meddevmachines_domain_model_machines.accessoires">
+				<source>Accessoires</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machines.accessoires.description" resname="tx_meddevmachines_domain_model_machines.accessoires.description">
+				<source>Accessoires</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_caracteristique" resname="tx_meddevmachines_domain_model_caracteristique">
+				<source>Caracteristique</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_caracteristique.description" resname="tx_meddevmachines_domain_model_caracteristique.description">
+				<source>Caracteristique</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_caracteristique.name" resname="tx_meddevmachines_domain_model_caracteristique.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_caracteristique.name.description" resname="tx_meddevmachines_domain_model_caracteristique.name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_caracteristique.value" resname="tx_meddevmachines_domain_model_caracteristique.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_caracteristique.value.description" resname="tx_meddevmachines_domain_model_caracteristique.value.description">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen" resname="tx_meddevmachines_domain_model_maschineanfragen">
+				<source>Maschineanfragen</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.description" resname="tx_meddevmachines_domain_model_maschineanfragen.description">
+				<source>Maschineanfragen</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.images" resname="tx_meddevmachines_domain_model_maschineanfragen.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.images.description" resname="tx_meddevmachines_domain_model_maschineanfragen.images.description">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.header" resname="tx_meddevmachines_domain_model_maschineanfragen.header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.header.description" resname="tx_meddevmachines_domain_model_maschineanfragen.header.description">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.text" resname="tx_meddevmachines_domain_model_maschineanfragen.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.text.description" resname="tx_meddevmachines_domain_model_maschineanfragen.text.description">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.machineinfo" resname="tx_meddevmachines_domain_model_maschineanfragen.machineinfo">
+				<source>Machineinfo</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.machineinfo.description" resname="tx_meddevmachines_domain_model_maschineanfragen.machineinfo.description">
+				<source>Machineinfo</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.cuttinginformation" resname="tx_meddevmachines_domain_model_maschineanfragen.cuttinginformation">
+				<source>Cuttinginformation</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maschineanfragen.cuttinginformation.description" resname="tx_meddevmachines_domain_model_maschineanfragen.cuttinginformation.description">
+				<source>Cuttinginformation</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machineinfo" resname="tx_meddevmachines_domain_model_machineinfo">
+				<source>Machineinfo</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machineinfo.description" resname="tx_meddevmachines_domain_model_machineinfo.description">
+				<source>Machineinfo</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machineinfo.name" resname="tx_meddevmachines_domain_model_machineinfo.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machineinfo.name.description" resname="tx_meddevmachines_domain_model_machineinfo.name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machineinfo.value" resname="tx_meddevmachines_domain_model_machineinfo.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_machineinfo.value.description" resname="tx_meddevmachines_domain_model_machineinfo.value.description">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_cuttinginformation" resname="tx_meddevmachines_domain_model_cuttinginformation">
+				<source>Cuttinginformation</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_cuttinginformation.description" resname="tx_meddevmachines_domain_model_cuttinginformation.description">
+				<source>Cuttinginformation</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_cuttinginformation.name" resname="tx_meddevmachines_domain_model_cuttinginformation.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_cuttinginformation.name.description" resname="tx_meddevmachines_domain_model_cuttinginformation.name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_cuttinginformation.value" resname="tx_meddevmachines_domain_model_cuttinginformation.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_cuttinginformation.value.description" resname="tx_meddevmachines_domain_model_cuttinginformation.value.description">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata" resname="tx_meddevmachines_domain_model_technicaldata">
+				<source>Technicaldata</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.description" resname="tx_meddevmachines_domain_model_technicaldata.description">
+				<source>Technicaldata</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.maschinensize" resname="tx_meddevmachines_domain_model_technicaldata.maschinensize">
+				<source>Maschinensize</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.maschinensize.description" resname="tx_meddevmachines_domain_model_technicaldata.maschinensize.description">
+				<source>Maschinensize</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.tablesize" resname="tx_meddevmachines_domain_model_technicaldata.tablesize">
+				<source>Tablesize</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.tablesize.description" resname="tx_meddevmachines_domain_model_technicaldata.tablesize.description">
+				<source>Tablesize</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.workingrange" resname="tx_meddevmachines_domain_model_technicaldata.workingrange">
+				<source>Workingrange</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.workingrange.description" resname="tx_meddevmachines_domain_model_technicaldata.workingrange.description">
+				<source>Workingrange</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.workpiece" resname="tx_meddevmachines_domain_model_technicaldata.workpiece">
+				<source>Workpiece</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.workpiece.description" resname="tx_meddevmachines_domain_model_technicaldata.workpiece.description">
+				<source>Workpiece</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.maxspeed" resname="tx_meddevmachines_domain_model_technicaldata.maxspeed">
+				<source>Maxspeed</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_technicaldata.maxspeed.description" resname="tx_meddevmachines_domain_model_technicaldata.maxspeed.description">
+				<source>Maxspeed</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workingrange" resname="tx_meddevmachines_domain_model_workingrange">
+				<source>Workingrange</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workingrange.description" resname="tx_meddevmachines_domain_model_workingrange.description">
+				<source>Workingrange</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workingrange.name" resname="tx_meddevmachines_domain_model_workingrange.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workingrange.name.description" resname="tx_meddevmachines_domain_model_workingrange.name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workingrange.value" resname="tx_meddevmachines_domain_model_workingrange.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workingrange.value.description" resname="tx_meddevmachines_domain_model_workingrange.value.description">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workpiece" resname="tx_meddevmachines_domain_model_workpiece">
+				<source>Workpiece</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workpiece.description" resname="tx_meddevmachines_domain_model_workpiece.description">
+				<source>Workpiece</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workpiece.name" resname="tx_meddevmachines_domain_model_workpiece.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workpiece.name.description" resname="tx_meddevmachines_domain_model_workpiece.name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workpiece.value" resname="tx_meddevmachines_domain_model_workpiece.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_workpiece.value.description" resname="tx_meddevmachines_domain_model_workpiece.value.description">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maxspeed" resname="tx_meddevmachines_domain_model_maxspeed">
+				<source>Maxspeed</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maxspeed.description" resname="tx_meddevmachines_domain_model_maxspeed.description">
+				<source>Maxspeed</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maxspeed.name" resname="tx_meddevmachines_domain_model_maxspeed.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maxspeed.name.description" resname="tx_meddevmachines_domain_model_maxspeed.name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maxspeed.value" resname="tx_meddevmachines_domain_model_maxspeed.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_maxspeed.value.description" resname="tx_meddevmachines_domain_model_maxspeed.value.description">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoires" resname="tx_meddevmachines_domain_model_accessoires">
+				<source>Accessoires</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoires.description" resname="tx_meddevmachines_domain_model_accessoires.description">
+				<source>Accessoires</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoires.accessoireimages" resname="tx_meddevmachines_domain_model_accessoires.accessoireimages">
+				<source>Accessoireimages</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoires.accessoireimages.description" resname="tx_meddevmachines_domain_model_accessoires.accessoireimages.description">
+				<source>Accessoireimages</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoires.accessoiretext" resname="tx_meddevmachines_domain_model_accessoires.accessoiretext">
+				<source>Accessoiretext</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoires.accessoiretext.description" resname="tx_meddevmachines_domain_model_accessoires.accessoiretext.description">
+				<source>Accessoiretext</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoireimages" resname="tx_meddevmachines_domain_model_accessoireimages">
+				<source>Accessoireimages</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoireimages.description" resname="tx_meddevmachines_domain_model_accessoireimages.description">
+				<source>Accessoireimages</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoireimages.image" resname="tx_meddevmachines_domain_model_accessoireimages.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoireimages.image.description" resname="tx_meddevmachines_domain_model_accessoireimages.image.description">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoireimages.text" resname="tx_meddevmachines_domain_model_accessoireimages.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoireimages.text.description" resname="tx_meddevmachines_domain_model_accessoireimages.text.description">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoiretext" resname="tx_meddevmachines_domain_model_accessoiretext">
+				<source>Accessoiretext</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoiretext.description" resname="tx_meddevmachines_domain_model_accessoiretext.description">
+				<source>Accessoiretext</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoiretext.text" resname="tx_meddevmachines_domain_model_accessoiretext.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_meddevmachines_domain_model_accessoiretext.text.description" resname="tx_meddevmachines_domain_model_accessoiretext.text.description">
+				<source>Text</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

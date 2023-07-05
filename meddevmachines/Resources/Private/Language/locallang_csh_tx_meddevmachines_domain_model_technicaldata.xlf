@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:meddevmachines/Resources/Private/Language/locallang_csh_tx_meddevmachines_domain_model_technicaldata.xlf" date="2023-07-03T23:00:32Z" product-name="meddevmachines">
+		<header/>
+		<body>
+			<trans-unit id="maschinensize.description" resname="maschinensize.description">
+				<source>maschinensize</source>
+			</trans-unit>
+			<trans-unit id="tablesize.description" resname="tablesize.description">
+				<source>tablesize</source>
+			</trans-unit>
+			<trans-unit id="workingrange.description" resname="workingrange.description">
+				<source>workingrange</source>
+			</trans-unit>
+			<trans-unit id="workpiece.description" resname="workpiece.description">
+				<source>workpiece</source>
+			</trans-unit>
+			<trans-unit id="maxspeed.description" resname="maxspeed.description">
+				<source>maxspeed</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

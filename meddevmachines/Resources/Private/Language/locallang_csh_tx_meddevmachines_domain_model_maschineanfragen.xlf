@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:meddevmachines/Resources/Private/Language/locallang_csh_tx_meddevmachines_domain_model_maschineanfragen.xlf" date="2023-07-03T23:00:32Z" product-name="meddevmachines">
+		<header/>
+		<body>
+			<trans-unit id="images.description" resname="images.description">
+				<source>images</source>
+			</trans-unit>
+			<trans-unit id="header.description" resname="header.description">
+				<source>header</source>
+			</trans-unit>
+			<trans-unit id="text.description" resname="text.description">
+				<source>text</source>
+			</trans-unit>
+			<trans-unit id="machineinfo.description" resname="machineinfo.description">
+				<source>machineinfo</source>
+			</trans-unit>
+			<trans-unit id="cuttinginformation.description" resname="cuttinginformation.description">
+				<source>cuttinginformation</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

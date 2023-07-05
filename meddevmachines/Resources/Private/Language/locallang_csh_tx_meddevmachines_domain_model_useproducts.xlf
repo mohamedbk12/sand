@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:meddevmachines/Resources/Private/Language/locallang_csh_tx_meddevmachines_domain_model_machines.xlf" date="2023-07-03T23:00:32Z" product-name="meddevmachines">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="images.description" resname="images.description">
+				<source>images</source>
+			</trans-unit>
+			<trans-unit id="header.description" resname="header.description">
+				<source>header</source>
+			</trans-unit>
+			<trans-unit id="subheader.description" resname="subheader.description">
+				<source>subheader</source>
+			</trans-unit>
+			<trans-unit id="link.description" resname="link.description">
+				<source>link</source>
+			</trans-unit>
+			<trans-unit id="linktext.description" resname="linktext.description">
+				<source>linktext</source>
+			</trans-unit>
+			<trans-unit id="video.description" resname="video.description">
+				<source>video</source>
+			</trans-unit>
+			<trans-unit id="videotitel.description" resname="videotitel.description">
+				<source>videotitel</source>
+			</trans-unit>
+			<trans-unit id="videotext.description" resname="videotext.description">
+				<source>videotext</source>
+			</trans-unit>
+			<trans-unit id="videolink.description" resname="videolink.description">
+				<source>videolink</source>
+			</trans-unit>
+			<trans-unit id="videolinktext.description" resname="videolinktext.description">
+				<source>videolinktext</source>
+			</trans-unit>
+			<trans-unit id="subimages.description" resname="subimages.description">
+				<source>subimages</source>
+			</trans-unit>
+			<trans-unit id="subimages_titel.description" resname="subimages_titel.description">
+				<source>subimagesTitel</source>
+			</trans-unit>
+			<trans-unit id="caracteristique.description" resname="caracteristique.description">
+				<source>caracteristique</source>
+			</trans-unit>
+			<trans-unit id="maschineanfragen.description" resname="maschineanfragen.description">
+				<source>maschineanfragen</source>
+			</trans-unit>
+			<trans-unit id="technicaldata.description" resname="technicaldata.description">
+				<source>technicaldata</source>
+			</trans-unit>
+			<trans-unit id="accessoires.description" resname="accessoires.description">
+				<source>accessoires</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
